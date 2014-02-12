@@ -1,0 +1,15 @@
+{% extends "default" %}
+{% block content_wrapper %}
+    <div class="content">
+        <div class="main project">
+
+            <h2>{{ page.title }}</h2>
+
+            {% block content %}{% endblock %}
+
+            <p><small>Last modified: <em>{{ site.calculated_date | date('Y-m-d') }}</em></small></p>
+
+        </div>
+        {% include "project-sidebar.html" %}
+    </div>
+{% endblock %}

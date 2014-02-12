@@ -1,0 +1,14 @@
+sculpin:
+    output_dir: public_%kernel.environment%
+    exclude:
+        - _sass/**
+sculpin_content_types:
+    projects:
+        type: path
+        enabled: true
+        permalink: projects/:basename
+        taxonomies:
+            - tags
+            - categories
+    posts:
+        enabled: false

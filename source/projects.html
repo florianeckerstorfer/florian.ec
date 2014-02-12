@@ -1,0 +1,81 @@
+---
+layout: default
+title: Projects by Florian Eckerstorfer
+permalink: projects.html
+use: [projects_categories]
+---
+
+<div class="content">
+    <div class="main">
+
+        <h2>Projects</h2>
+
+        {% for category,projects in data.projects_categories %}
+            <h3>{{ category }}</h3>
+
+            <ul class="projects">
+                {% for project in projects %}
+                    <li>
+                        <a href="{{ project.direct_url ?: project.url }}">{{ project.title }}</a>, since {{ project.since }}<br>
+                        {{ project.description }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+
+        <h3>Open Source Projects</h3>
+
+        <ul class="projects">
+            <li>
+                <a href="http://bootstrap.braincrafted.com">BraincraftedBootstrapBundle</a><br>
+                Bundle to easily integrate Bootstrap in a Symfony2 project.
+            </li>
+            <li>
+                <a href="https://github.com/cocur/slugify">Cocur Slugify</a><br>
+                Converts a string into a slug that is usable in URLs.
+            </li>
+            <li>
+                <a href="http://banchaproject.org">Bancha</a><br>
+                A bridge between the CakePHP and Ext JS 4 framework developed in a team with four other students.
+            </li>
+            <li>
+                <a href="http://symfony.com">Symfony2 Forms Framework</a><br>
+                Contributed with three other students to a framework to create, validate and submit forms. Part of the Symfony2 Framework.
+            </li>
+        </ul>
+
+        <p>All of the open source projects I currently work on or worked on in the past can be found on my personal Github profile <a href="https://github.com/florianeckerstorfer">florianeckerstorfer</a> and in the <a href="https://github.com/braincrafted">braincrafted</a> organization.</p>
+
+        <h3>Academic Articles and Projects</h3>
+
+        <ul class="projects">
+            <li>
+                <a href="http://storage.braincrafted.com/dns.mp4">Animated explanation of DNS</a> [mp4]<br>
+                Information Design, June 2013
+            </li>
+            <li>
+                <a href="http://storage.braincrafted.com/Eckerstorfer2011NoSQLPerformance.pdf">Performance of NoSQL Databases</a> [pdf] (<a href="http://storage.braincrafted.com/Eckerstorfer2011NoSQLPerformanceSlides.pdf">Slides</a> [pdf])<br>
+                Seminar aus Datenbanken, November 2011
+            </li>
+            <li>
+                <a href="http://storage.braincrafted.com/Eckerstorfer2011WebDataExtraction.pdf">Web Data Extraction — Overview and Comparison of selected State-of-the-Art Tools</a> [pdf]<br>
+                Bachelor Thesis, May 2011
+            </li>
+            <li>
+                <a href="https://github.com/florianeckerstorfer/Snaphe">Snaphe</a> — A Web Data Extraction library written in PHP.<br>
+                Bachelor Project, May 2011
+            </li>
+        </ul>
+
+        <p><small>Last modified: <em>{{ site.calculated_date | date('Y-m-d') }}</em></small></p>
+
+    </div>
+    <div class="sidebar">
+        <strong>Related:</strong>
+        <ul>
+            <li><a href="bio.html">About</a></li>
+            <li><a href="cv.html">Curriculum vitae</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>

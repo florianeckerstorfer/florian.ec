@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Computer Modern Sans';
+    src: url('../fonts/cmunss.eot');
+    src: url('../fonts/cmunss.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cmunss.woff') format('woff'),
+         url('../fonts/cmunss.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Computer Modern Sans';
+    src: url('../fonts/cmunsi.eot');
+    src: url('../fonts/cmunsi.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cmunsi.woff') format('woff'),
+         url('../fonts/cmunsi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Computer Modern Sans';
+    src: url('../fonts/cmunsx.eot');
+    src: url('../fonts/cmunsx.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cmunsx.woff') format('woff'),
+         url('../fonts/cmunsx.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
