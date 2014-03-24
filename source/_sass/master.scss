@@ -20,26 +20,27 @@ a {
 } // a
 
 .header,
-.content {
+.content,
+.top-nav {
     @include outer-container;
-} // .header, .content
+} // .header, .content, .top-nav
 
 .header {
-    margin-bottom: 3em;
-    padding-top: 6em;
+    padding: 2em 0;
 
     header {
-        @include span-columns(12);
-    }
+        @include span-columns(10);
+    } // header
 
     h1 {
+        margin: 30px 0 0;
         color: #999;
         font: 1.2em Helvetica, Arial, sans-serif;
 
         a {
             color: #333;
             text-decoration: none;
-        }
+        } // a
 
         strong {
             color: #333;
@@ -51,25 +52,70 @@ a {
 
     aside {
         float: left;
-        margin-top: -19px;
+        width: 120px;
+        height: 120px;
         margin-right: 20px;
+        line-height: 100%;
+
+        a {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+        } // a
 
         img {
-            -webkit-border-radius: 185px;
+            border-radius: 185px;
         } // img
 
     } // aside
 
 } // #header
 
+.top-nav {
+    font: 0.9em Helvetica, Arial, sans-serif;
+
+    ul {
+        margin: 0;
+        list-style: none;
+        padding-left: 0;
+    } // ul
+
+    li {
+        display: inline-block;
+    } // li
+
+    a {
+        display: inline-block;
+        margin-right: 2px;
+        padding: 6px 5px 2px 0;
+        color: #999;
+        text-decoration: none;
+        line-height: 1em;
+
+        &.selected,
+        &:hover {
+            border-color: #000;
+            color: #000;
+        } // hover
+    } // a
+} // .top-nav
+
+.top-nav + .content {
+    margin-top: 2em;
+}
+
 .content {
     .main {
-        @include span-columns(8);
+        @include span-columns(10);
     } // .main
 
-    .sidebar {
-        @include span-columns(4);
-    } // .sidebar
+    h2 {
+        font-size: 2em;
+    } // h2
+
+    h3 {
+        font-size: 1.5em
+    } // h3
 } // .content
 
 .vcard {
@@ -90,8 +136,15 @@ a {
 
     li {
         margin-bottom: 1em;
-        padding: 0.5em;
-        background: #fff;
+
+        .title {
+            color: #999;
+            font-style: italic;
+        }
+
+        strong {
+            font-style: normal;
+        }
 
         li {
             margin-bottom: 0;

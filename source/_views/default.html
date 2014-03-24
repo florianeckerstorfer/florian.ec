@@ -24,9 +24,12 @@
 <div class="header">
     <header>
         <aside>
-            <a href="/" title="Homepage"><img src="/img/florian-eckerstorfer.jpg" alt="Photo of Florian Eckerstorfer" width="120" height="120" class="florian"></a>
+            <a href="/" title="Homepage" class="logo">
+                <img src="/img/florian-eckerstorfer.jpg" alt="Photo of Florian Eckerstorfer" width="120" height="120" class="florian">
+            </a>
         </aside>
         <h1>Hello, I'm<br><a href="/" title="Homepage"><strong>Florian Eckerstorfer</strong></a>.</h1>
+        {% include 'navigation.html' with { 'page': page } %}
     </header>
 </div>
 

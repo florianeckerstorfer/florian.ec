@@ -1,0 +1,8 @@
+<nav class="top-nav">
+    <ul>
+        <li><a href="/bio"{% if page.url == '/bio' %} class="selected"{% endif %}>About</a></li>
+        <li><a href="/cv"{% if page.url == '/cv' %} class="selected"{% endif %}>CV</a></li>
+        <li><a href="/projects"{% if page.url starts with '/project' %} class="selected"{% endif %}>Projects</a></li>
+        <li><a href="/contact"{% if page.url == '/contact' %} class="selected"{% endif %}>Contact</a></li>
+    </ul>
+</nav>

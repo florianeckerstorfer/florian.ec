@@ -6,7 +6,7 @@ sculpin_content_types:
     projects:
         type: path
         enabled: true
-        permalink: projects/:basename
+        permalink: :filename
         taxonomies:
             - tags
             - categories

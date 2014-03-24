@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Projects by Florian Eckerstorfer
-permalink: projects.html
+peramlink: projects/
 use: [projects_categories]
 ---
 
@@ -16,7 +16,7 @@ use: [projects_categories]
             <ul class="projects">
                 {% for project in projects %}
                     <li>
-                        <a href="{{ project.direct_url ?: project.url }}">{{ project.title }}</a>, since {{ project.since }}<br>
+                        <span class="title"><a href="{{ project.direct_url ?: project.url }}"><strong>{{ project.title }}</strong></a>, since {{ project.since }}</span><br>
                         {{ project.description }}
                     </li>
                 {% endfor %}
@@ -69,13 +69,5 @@ use: [projects_categories]
 
         <p><small>Last modified: <em>{{ site.calculated_date | date('Y-m-d') }}</em></small></p>
 
-    </div>
-    <div class="sidebar">
-        <strong>Related:</strong>
-        <ul>
-            <li><a href="bio.html">About</a></li>
-            <li><a href="cv.html">Curriculum vitae</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
     </div>
 </div>
