@@ -4,30 +4,37 @@
   box-sizing: border-box; }
 
 @font-face {
-  font-family: 'Computer Modern Sans';
-  src: url("../fonts/cmunss.eot");
-  src: url("../fonts/cmunss.eot?#iefix") format("embedded-opentype"), url("../fonts/cmunss.woff") format("woff"), url("../fonts/cmunss.ttf") format("truetype");
+  font-family: 'Karla';
+  src: url("../fonts/karla-regular.eot");
+  src: url("../fonts/karla-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-regular.woff") format("woff"), url("../fonts/karla-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Computer Modern Sans';
-  src: url("../fonts/cmunsi.eot");
-  src: url("../fonts/cmunsi.eot?#iefix") format("embedded-opentype"), url("../fonts/cmunsi.woff") format("woff"), url("../fonts/cmunsi.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'Karla';
+  src: url("../fonts/karla-bold.eot");
+  src: url("../fonts/karla-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bold.woff") format("woff"), url("../fonts/karla-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Karla';
+  src: url("../fonts/karla-bolditalic.eot");
+  src: url("../fonts/karla-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bolditalic.woff") format("woff"), url("../fonts/karla-bolditalic.ttf") format("truetype");
+  font-weight: bold;
   font-style: italic; }
 
 @font-face {
-  font-family: 'Computer Modern Sans';
-  src: url("../fonts/cmunsx.eot");
-  src: url("../fonts/cmunsx.eot?#iefix") format("embedded-opentype"), url("../fonts/cmunsx.woff") format("woff"), url("../fonts/cmunsx.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
+  font-family: 'Karla';
+  src: url("../fonts/karla-italic.eot");
+  src: url("../fonts/karla-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-italic.woff") format("woff"), url("../fonts/karla-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
 
 body {
   background: #fff;
   color: #111;
-  font: 1.1em 'Computer Modern Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 1.3em Karla, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 140%; }
 
 a {
@@ -39,7 +46,7 @@ a {
 .content,
 .top-nav {
   *zoom: 1;
-  max-width: 48.75em;
+  max-width: 36.25em;
   margin-left: auto;
   margin-right: auto; }
   .header:before, .header:after,
@@ -59,7 +66,7 @@ a {
   .header header {
     float: left;
     display: block;
-    margin-right: 2.5641%;
+    margin-right: 3.44828%;
     width: 100%; }
     .header header:last-child {
       margin-right: 0; }
@@ -112,7 +119,7 @@ a {
 .content .main {
   float: left;
   display: block;
-  margin-right: 2.5641%;
+  margin-right: 3.44828%;
   width: 100%; }
   .content .main:last-child {
     margin-right: 0; }
