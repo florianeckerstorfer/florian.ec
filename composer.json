@@ -1,4 +1,10 @@
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/florianeckerstorfer/sculpin"
+        }
+    ],
     "require": {
         "sculpin/sculpin": "2.*@dev",
         "dflydev/embedded-composer-console": "@dev",

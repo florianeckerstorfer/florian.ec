@@ -1,6 +1,6 @@
-@import "bourbon/bourbon";
+@import "../../components/bourbon/dist/bourbon";
 @import "grid-settings";
-@import "neat/neat";
+@import "../../components/neat/app/assets/stylesheets/neat";
 @import "fonts";
 
 $link-color: #08c;
@@ -8,7 +8,7 @@ $link-color: #08c;
 body {
     background: #fff;
     color: #111;
-    font: 1.3em Karla, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 1.3em 'Anonymous Pro', 'Courier New', Courier, monospace;
     line-height: 140%;
 } // body
 
@@ -35,7 +35,7 @@ a {
     h1 {
         margin: 17px 0 0;
         color: #999;
-        font: 1.2em Helvetica, Arial, sans-serif;
+        font-size: 1.2em;
 
         a {
             color: #333;
@@ -52,19 +52,16 @@ a {
 
     aside {
         float: left;
-        width: 120px;
-        height: 120px;
         margin-right: 20px;
         line-height: 100%;
 
         a {
             display: inline-block;
-            width: 120px;
-            height: 120px;
+            width: 116px;
+            height: 121px;
         } // a
 
         img {
-            border-radius: 185px;
         } // img
 
     } // aside

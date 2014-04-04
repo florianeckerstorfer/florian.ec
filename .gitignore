@@ -3,8 +3,11 @@
 /app/config/sculpin_kernel_*.yml
 /app/config/sculpin_site_*.yml
 /app/logs/*
+/components/*
+/node_modules/*
 /public_*/
 /source/.sass-cache/*
 /vendor/
 *.sublime-project
 *.sublime-workspace
+*.css.map
