@@ -1,14 +1,10 @@
 {% extends "default" %}
 {% block content_wrapper %}
-    <div class="content">
-        <div class="main project">
 
-            <h2>{{ page.title }}</h2>
+    <h2>{{ page.title }}</h2>
 
-            ({{ page.date|date('d M Y') }})
+    ({{ page.date|date('d M Y') }})
 
-            {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-        </div>
-    </div>
 {% endblock %}

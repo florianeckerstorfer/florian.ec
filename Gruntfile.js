@@ -43,14 +43,31 @@ module.exports = function(grunt) {
         uglify: {
             prod: {
                 files: {
-                    'public_prod/js/instantclick.min.js': ['components/instantclick/instantclick.js']
+                    'public_prod/js/main.min.js': [
+                        'components/instantclick/instantclick.js',
+                        'components/highlightjs/highlight.pack.js'
+                    ]
                 }
             },
             dev: {
                 files: {
-                    'public_dev/js/instantclick.min.js': ['components/instantclick/instantclick.js']
+                    'public_dev/js/main.min.js': [
+                        'components/instantclick/instantclick.js',
+                        'components/highlightjs/highlight.pack.js'
+                    ]
                 }
             }
+        },
+
+        concat: {
+            dev: {
+                src: ['public_dev/css/master.css', 'components/highlightjs/styles/github.css'],
+                dest: 'public_dev/css/master.css',
+            },
+            prod: {
+                src: ['public_prod/css/master.css', 'components/highlightjs/styles/github.css'],
+                dest: 'public_prod/css/master.css',
+            },
         },
 
         /*
@@ -120,6 +137,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-devcode');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Dependency management
     grunt.registerTask('install:dev', ['bower:install', 'composer:install']);
@@ -130,7 +148,13 @@ module.exports = function(grunt) {
     grunt.registerTask('update', ['update:dev']);
 
     // Build tasks
-    grunt.registerTask('build:dev', ['sass:dev', 'sculpin-generate:dev', 'uglify:dev']);
-    grunt.registerTask('build:prod', ['sass:prod', 'sculpin-generate:prod', 'devcode:prod', 'uglify:prod']);
+    grunt.registerTask('build:dev', ['sass:dev', 'sculpin-generate:dev', 'uglify:dev', 'concat:dev']);
+    grunt.registerTask('build:prod', [
+        'sass:prod',
+        'sculpin-generate:prod',
+        'devcode:prod',
+        'uglify:prod',
+        'concat:prod'
+    ]);
     grunt.registerTask('build', ['build:dev']);
 };

@@ -30,7 +30,7 @@ As a last step we need to add KnpGaufretteBundle to our applications `app/AppKer
 
 Before we can upload files to S3 we first have to setup S3 accordingly. This is possible in the [AWS Management Console](https://console.aws.amazon.com). We want to store all files uploaded from our application in a bucket we first have to create a new bucket for our application. After creating a new bucket we select the `Properties` tab in the top right. Since our files should be accessible for everyone we add a *Bucket Policy*. We select *Permissions* in the right view and click *Add bucket policy*. The following policy allows everyone to view the files in the bucket. You need to change the name of your bucket (I called mine `braincrafted.com`).
 
-<pre class="code">{
+<pre class="json"><code>{
     "Version": "2008-10-17",
     "Statement": [
         {
@@ -43,7 +43,7 @@ Before we can upload files to S3 we first have to setup S3 accordingly. This is 
             "Resource": "arn:aws:s3:::braincrafted.com/*"
         }
     ]
-}</pre>
+}</code></pre>
 
 We also need to activate *Static Website Hosting*. To activate this we select *Enable website hosting* and enter the name of an index and an error document. The documents don't have to exist, but the fields are required.
 
@@ -61,7 +61,7 @@ We can now start by configuring Gaufrette. First we need to setup an adapter to 
 
 Because Gaufrette has two levels we could use, for example, different adapters for different environments. If you have functional tests you probably don't want to upload files to S3 in those but rather use the local filesystem.
 
-<pre><code class="yaml"># app/config/config.yml
+<pre><code class="yml"># app/config/config.yml
 
 knp_gaufrette:
     adapters:
@@ -133,19 +133,34 @@ public function load(array $configs, ContainerBuilder $container)
     // ...
 
     if (!isset($config['amazon_s3']['aws_key'])) {
-        throw new \InvalidArgumentException('The option "acme_storage.amazon_s3.aws_key" must be set.');
+        throw new \InvalidArgumentException(
+            'The option "acme_storage.amazon_s3.aws_key" must be set.'
+        );
     }
-    $container->setParameter('acme_storage.amazon_s3.aws_key', $config['amazon_s3']['aws_key']);
+    $container->setParameter(
+        'acme_storage.amazon_s3.aws_key',
+        $config['amazon_s3']['aws_key']
+    );
 
     if (!isset($config['amazon_s3']['aws_secret_key'])) {
-        throw new \InvalidArgumentException('The option "acme_storage.amazon_s3.aws_secret_key" must be set.');
+        throw new \InvalidArgumentException(
+            'The option "acme_storage.amazon_s3.aws_secret_key" must be set.'
+        );
     }
-    $container->setParameter('acme_storage.amazon_s3.aws_secret_key', $config['amazon_s3']['aws_secret_key']);
+    $container->setParameter(
+        'acme_storage.amazon_s3.aws_secret_key',
+        $config['amazon_s3']['aws_secret_key']
+    );
 
     if (!isset($config['amazon_s3']['base_url'])) {
-        throw new \InvalidArgumentException('The option "acme_storage.amazon_s3.base_url" must be set.');
+        throw new \InvalidArgumentException(
+            'The option "acme_storage.amazon_s3.base_url" must be set.'
+        );
     }
-    $container->setParameter('acme_storage.amazon_s3.base_url', $config['amazon_s3']['base_url']);
+    $container->setParameter(
+        'acme_storage.amazon_s3.base_url',
+        $config['amazon_s3']['base_url']
+    );
 }
 
 // ...</code></pre>
@@ -186,7 +201,11 @@ use Gaufrette\Filesystem;
 
 class PhotoUploader
 {
-    private static $allowedMimeTypes = array('image/jpeg', 'image/png', 'image/gif');
+    private static $allowedMimeTypes = array(
+        'image/jpeg',
+        'image/png',
+        'image/gif'
+    );
 
     private $filesystem;
 
