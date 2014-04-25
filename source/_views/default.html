@@ -21,22 +21,28 @@
 </head>
 <body>
 
-<div class="header">
-    <header>
-        <aside>
-            <a href="/" title="Homepage" class="logo">
-                <img src="/img/logo.png" alt="Florian Eckerstorfer Logo" width="116" height="121" class="florian">
-            </a>
-        </aside>
-        <h1>Hello, I'm<br><a href="/" title="Homepage"><strong>Florian Eckerstorfer</strong></a>.</h1>
-        {% include 'navigation.html' with { 'page': page } %}
-    </header>
-</div>
+<header class="header">
+    <a href="/" title="Homepage" class="logo">
+        <img src="/img/logo.png" alt="Florian Eckerstorfer Logo" width="116" height="121" class="florian">
+    </a>
+</header>
 
-{% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+<nav class="top-nav">
+    {% include 'navigation.html' with { 'page': page } %}
+</nav>
+
+<section class="content">
+    <div class="main">
+        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+    </div>
+</section>
+
+</div>
 
 <script src="/js/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
+
+<script data-no-instant>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1" data-no-instant></' + 'script>')</script>
 
 </body>
 </html>

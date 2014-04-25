@@ -43,9 +43,14 @@ module.exports = function(grunt) {
             scripts: {
                 files: ['source/**'],
                 tasks: ['sass:dev', 'sculpin-generate:dev'],
-                options: {},
+                options: {
+                    livereload: true,
+                },
             },
         },
+        imageoptim: {
+            source: { src: ['source/img'] }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -54,6 +59,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-composer');
     grunt.loadNpmTasks('grunt-sculpin');
+    grunt.loadNpmTasks('grunt-imageoptim');
 
     // Dependency management
     grunt.registerTask('install:dev', ['bower:install', 'composer:install']);

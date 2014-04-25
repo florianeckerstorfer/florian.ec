@@ -1,0 +1,12 @@
+---
+layout: default
+title: Articles by Florian Eckerstorfer
+permalink: articles/
+use: [articles]
+---
+
+<ul>
+{% for article in data.articles %}
+    <li><a href="{{ article.direct_url ?: article.url }}">{{ article.title }}</a></li>
+{% endfor %}
+</ul>

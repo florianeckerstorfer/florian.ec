@@ -10,5 +10,12 @@ sculpin_content_types:
         taxonomies:
             - tags
             - categories
+    articles:
+        type: path
+        enabled: true
+        permalink: articles/:slug_title/index.html
+        taxonomies:
+            - tags
+            - categories
     posts:
         enabled: false

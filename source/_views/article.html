@@ -1,0 +1,12 @@
+{% extends "default" %}
+{% block content_wrapper %}
+    <div class="content">
+        <div class="main article">
+
+            <h2>{{ page.title }}</h2>
+
+            {% block content %}{% endblock %}
+
+        </div>
+    </div>
+{% endblock %}
