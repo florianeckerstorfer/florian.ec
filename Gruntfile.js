@@ -3,11 +3,19 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        /*
+            SCULPIN
+         */
         'sculpin-generate': {
             options: { bin: './vendor/bin/sculpin' },
             dev: { args: { env: 'dev' } },
             prod: { args: { env: 'prod' } }
         },
+
+        /*
+            STYLESHEETS
+         */
         sass: {
             dev: {
                 options: {
@@ -28,6 +36,10 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        /*
+            JAVASCRIPT
+         */
         uglify: {
             prod: {
                 files: {
@@ -40,6 +52,34 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        /*
+            REMOVE CODE FROM PRODUCTION SITE
+         */
+        devcode: {
+            options: {
+                html: true,
+                js: false,
+                css: false,
+                clean: true,
+                dest: 'prod',
+                block: {
+                    open: 'devcode',
+                    close: 'endcode'
+                },
+            },
+            prod: {
+                options: {
+                    source: 'public_prod/',
+                    dest: 'public_prod/',
+                    env: 'prod'
+                }
+            }
+        },
+
+        /*
+            DEPENDENCY MANAGEMENT
+         */
         bower: {
             install: {
                 options: {
@@ -47,14 +87,22 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        /*
+            CLEAN BUILT FILES
+         */
         clean: {
             dev: ['./public_dev'],
             prod: ['./public_prod']
         },
+
+        /*
+            WATCH
+         */
         watch: {
             scripts: {
                 files: ['source/**'],
-                tasks: ['sass:dev', 'sculpin-generate:dev'],
+                tasks: ['build:dev'],
                 options: {
                     livereload: true,
                 },
@@ -70,6 +118,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sculpin');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-targethtml');
+    grunt.loadNpmTasks('grunt-devcode');
 
     // Dependency management
     grunt.registerTask('install:dev', ['bower:install', 'composer:install']);
@@ -81,6 +131,6 @@ module.exports = function(grunt) {
 
     // Build tasks
     grunt.registerTask('build:dev', ['sass:dev', 'sculpin-generate:dev', 'uglify:dev']);
-    grunt.registerTask('build:prod', ['sass:prod', 'sculpin-generate:prod', 'uglify:prod']);
+    grunt.registerTask('build:prod', ['sass:prod', 'sculpin-generate:prod', 'devcode:prod', 'uglify:prod']);
     grunt.registerTask('build', ['build:dev']);
 };

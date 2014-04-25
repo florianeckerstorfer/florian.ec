@@ -12,7 +12,6 @@
     "grunt-bower-task": "~0.3.4",
     "grunt-composer": "~0.2.0",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-imageoptim": "~1.4.1",
-    "grunt-shell": "~0.7.0"
+    "grunt-devcode": "0.0.4-c"
   }
 }
