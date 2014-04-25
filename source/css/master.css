@@ -133,6 +133,15 @@ a:hover {
   color: #999;
 }
 
+.articles {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.articles .date {
+  color: #666;
+}
+
 .cv-list {
   margin-left: 0;
   padding-left: 0;

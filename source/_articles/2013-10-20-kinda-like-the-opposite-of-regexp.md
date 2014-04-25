@@ -2,11 +2,6 @@
 title: Kinda like the opposite of regular expressions
 ---
 
-{{ page.title }}
-----------------
-
-*Written and published on {{ page.date | date_to_string }}.*
-
 Two years ago I have written a library for a project to generate strings based on a given pattern called ExpExp. ExpExp takes a pattern (a subset of regular expressions) and returns all strings that would match the pattern. For example, the pattern `foo(bar|baz)` would expand to `foobar` and `foobaz`.
 
 Last week I found the library again and I decided, mostly for fun and pleasure, to add new features and to rewrite the whole code. I also moved to code to the Braincrafted namespace. You can find it on [Github](http://github.com/braincrafted/expexp).

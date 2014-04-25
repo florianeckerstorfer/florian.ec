@@ -5,8 +5,8 @@ permalink: articles/
 use: [articles]
 ---
 
-<ul>
+<ul class="articles">
 {% for article in data.articles %}
-    <li><a href="{{ article.direct_url ?: article.url }}">{{ article.title }}</a></li>
+    <li><a href="{{ article.direct_url ?: article.url }}"><strong>{{ article.title }}</strong></a> <span class="date">({{ article.date|date('d M Y') }})</span></li>
 {% endfor %}
 </ul>

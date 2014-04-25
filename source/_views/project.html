@@ -5,9 +5,9 @@
 
             <h2>{{ page.title }}</h2>
 
-            {% block content %}{% endblock %}
+            ({{ page.date|date('d M Y') }})
 
-            <p><small>Last modified: <em>{{ site.calculated_date | date('Y-m-d') }}</em></small></p>
+            {% block content %}{% endblock %}
 
         </div>
     </div>

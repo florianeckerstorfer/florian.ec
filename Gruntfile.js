@@ -28,6 +28,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uglify: {
+            prod: {
+                files: {
+                    'public_prod/js/instantclick.min.js': ['components/instantclick/instantclick.js']
+                }
+            },
+            dev: {
+                files: {
+                    'public_dev/js/instantclick.min.js': ['components/instantclick/instantclick.js']
+                }
+            }
+        },
         bower: {
             install: {
                 options: {
@@ -47,9 +59,6 @@ module.exports = function(grunt) {
                     livereload: true,
                 },
             },
-        },
-        imageoptim: {
-            source: { src: ['source/img'] }
         }
     });
 
@@ -59,7 +68,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-composer');
     grunt.loadNpmTasks('grunt-sculpin');
-    grunt.loadNpmTasks('grunt-imageoptim');
+    grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Dependency management
     grunt.registerTask('install:dev', ['bower:install', 'composer:install']);
@@ -70,7 +80,7 @@ module.exports = function(grunt) {
     grunt.registerTask('update', ['update:dev']);
 
     // Build tasks
-    grunt.registerTask('build:dev', ['sass:dev', 'sculpin-generate:dev']);
-    grunt.registerTask('build:prod', ['sass:prod', 'sculpin-generate:prod']);
+    grunt.registerTask('build:dev', ['sass:dev', 'sculpin-generate:dev', 'uglify:dev']);
+    grunt.registerTask('build:prod', ['sass:prod', 'sculpin-generate:prod', 'uglify:prod']);
     grunt.registerTask('build', ['build:dev']);
 };
