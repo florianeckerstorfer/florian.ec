@@ -1,5 +1,6 @@
 ---
 title: Rebuild Jekyll and Compass when a file changes
+tags: [ jekyll, compass, guard, ruby ]
 ---
 
 This blog uses Jekyll to build the HTML code, Compass for the stylesheets and JavaScript is concatenated and minified. Lately I have written more articles and every time I changed the layout or the text I had to manually recompiled using my [Makefile](https://github.com/braincrafted/braincrafted.com/blob/148b44472bb39a3ad10dfc7f24b6c0e8c7c4699b/Makefile). Every time those extra keystrokes hurt me on the inside.

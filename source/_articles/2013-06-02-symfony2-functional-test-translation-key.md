@@ -1,5 +1,6 @@
 ---
 title: Use translation keys in Symfony2 functional tests
+tags: [ symfony2, testing, translation, php ]
 ---
 
 Whenever writing functional tests I think it is a good idea to use translation keys in the assertions instead of the real text. The translation keys are less likely to change over time and it is often much simpler, because they don't contain dynamic content.

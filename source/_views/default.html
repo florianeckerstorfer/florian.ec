@@ -49,9 +49,12 @@
 </div>
 
 <script src="/js/main.min.js" data-no-instant></script>
-<script data-no-instant>InstantClick.init();</script>
-<script>
-    hljs.initHighlightingOnLoad();
+<script data-no-instant>
+    InstantClick.on('change', function () {
+        var blocks = document.querySelectorAll('pre code');
+        Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+    });
+    InstantClick.init();
 </script>
 
 <!-- devcode: !prod -->

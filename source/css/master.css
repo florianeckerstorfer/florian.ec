@@ -144,15 +144,25 @@ pre code {
   padding-left: 0;
   list-style: none;
 }
-.articles li {
+.articles > li {
   margin: 0.3em -0.5em;
   padding: 0.5em;
 }
-.articles li:hover {
-  background: #efefef;
-}
 .articles .date {
   color: #666;
+}
+.articles .tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #666;
+  font-size: 0.75em;
+  line-height: 1em;
+}
+.articles .tags li {
+  display: inline-block;
+  padding: 0.3em;
+  background: #efefef;
 }
 
 .cv-list {
