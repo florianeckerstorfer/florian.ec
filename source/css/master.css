@@ -43,6 +43,14 @@ pre code {
   overflow-x: scroll;
 }
 
+code {
+  display: inline-block;
+  padding: 0.2em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #f8f8f8;
+}
+
 .header,
 .top-nav,
 .content,
@@ -163,6 +171,17 @@ pre code {
   display: inline-block;
   padding: 0.3em;
   background: #efefef;
+}
+
+.article table tr:nth-child(2n) {
+  background: #f8f8f8;
+}
+.article table th {
+  text-align: center;
+}
+.article table td {
+  padding: 0.3em;
+  border: 0;
 }
 
 .cv-list {

@@ -7,7 +7,7 @@ Two years ago I have written a library for a project to generate strings based o
 
 Last week I found the library again and I decided, mostly for fun and pleasure, to add new features and to rewrite the whole code. I also moved to code to the Braincrafted namespace. You can find it on [Github](http://github.com/braincrafted/expexp).
 
-While my goal is to support as many patterns support by regular expressions as possible, it will ever be only a subset. For example, the star operator in regular expressions matches an infinite amount of infinite long strings. Such things will never be supported by ExpExp. Let's stop talking about whats not possible, but about the features that work right now.
+While my goal is to support as many patterns supported by regular expressions as possible, it will ever be only a subset. For example, the star operator in regular expressions matches an infinite amount of infinite long strings. ExpExp can never support such things. Let's stop talking about what's not possible, but about the features that work right now.
 
 ### Features
 
@@ -21,7 +21,7 @@ ExpExp currently supports the following operators:
 - Dot operator
 - Optional operator
 
-I now want to discuss these operators in more detail
+I am now going to discuss these operators in more detail.
 
 #### Parentheses
 

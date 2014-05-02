@@ -1,6 +1,7 @@
 @import "../../components/bourbon/dist/bourbon";
 @import "grid-settings";
 @import "../../components/neat/app/assets/stylesheets/neat";
+@import "../../components/highlightjs/styles/github.css";
 @import "fonts";
 
 $link-color: #08c;
@@ -8,9 +9,12 @@ $link-color: #08c;
 body {
     background: #fff;
     color: #111;
-    font: 1.2em 'Anonymous Pro', 'Courier New', Courier, monospace;
-    line-height: 140%;
+    font: 1.1em 'Source Sans Pro', Helvetica, Arial, sans-serif;
 } // body
+
+p {
+    line-height: 150%;
+}
 
 a {
     color: $link-color;
@@ -19,8 +23,18 @@ a {
     } // :hover
 } // a
 
+code {
+    display: inline-block;
+    padding: 0.2em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #f8f8f8;
+    font: 0.9em 'Anonymous Pro', 'Courier New', Courier, monospace;
+} // code
+
 pre {
     code {
+        padding: 0.4em;
         overflow-x: scroll;
     } // code
 } // pre
@@ -143,6 +157,32 @@ pre {
         } // li
     } // .tags
 } // .articles
+
+.article {
+    table {
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+
+
+        tr {
+            border: 0;
+
+            &:nth-child(2n) {
+                background: #f8f8f8;
+            } // :nth-child(2n)
+        } // tr
+
+        th {
+            text-align: center;
+        } // th
+
+        td {
+            padding: 0.3em;
+            border: 0;
+        } // td
+    } // table
+} // .article
 
 .cv-list {
     margin-left: 0;

@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                     sourcemap: true
                 },
                 files: {
-                    'source/css/master.css': 'source/_sass/master.scss'
+                    'public_dev/css/master.css': 'source/_sass/master.scss'
                 }
             },
             prod: {
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     sourcemap: false
                 },
                 files: {
-                    'source/css/master.css': 'source/_sass/master.scss'
+                    'public_prod/css/master.css': 'source/_sass/master.scss'
                 }
             }
         },
@@ -117,13 +117,17 @@ module.exports = function(grunt) {
             WATCH
          */
         watch: {
-            scripts: {
+            all: {
                 files: ['source/**'],
                 tasks: ['build:dev'],
                 options: {
                     livereload: true,
                 },
             },
+            sass: {
+                files: ['source/_sass/**'],
+                tasks: ['sass:dev']
+            }
         }
     });
 
@@ -148,7 +152,7 @@ module.exports = function(grunt) {
     grunt.registerTask('update', ['update:dev']);
 
     // Build tasks
-    grunt.registerTask('build:dev', ['sass:dev', 'sculpin-generate:dev', 'uglify:dev', 'concat:dev']);
+    grunt.registerTask('build:dev', ['sculpin-generate:dev', 'sass:dev', 'uglify:dev', 'concat:dev']);
     grunt.registerTask('build:prod', [
         'sass:prod',
         'sculpin-generate:prod',
