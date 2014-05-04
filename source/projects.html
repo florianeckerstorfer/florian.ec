@@ -12,7 +12,7 @@ use: [projects_categories]
         {% for project in projects %}
             <li>
                 <span class="title">
-                    <a href="{{ project.direct_url ?: project.url }}"><strong>{{ project.title }}</strong></a>
+                    <a href="{{ project.direct_url ?: project.url }}/"><strong>{{ project.title }}</strong></a>
                     {{ project.description }}
                 </span>
             </li>

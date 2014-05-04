@@ -9,6 +9,7 @@
     "bourbon": "v4.0.0-rc.1",
     "neat": "v1.6.0",
     "instantclick": "~3.0.1",
-    "highlightjs": "~8.0.0"
+    "highlightjs": "~8.0.0",
+    "picturefill": "~2.0.0"
   }
 }

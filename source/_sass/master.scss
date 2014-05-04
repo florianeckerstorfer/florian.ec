@@ -235,6 +235,10 @@ pre {
     } // img
 } // .screenshots
 
+.about-florian {
+    max-width: 100%;
+} // .about-florian
+
 .footer {
     div {
         @include span-columns(10);

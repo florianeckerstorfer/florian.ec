@@ -45,7 +45,8 @@ module.exports = function(grunt) {
                 files: {
                     'public_prod/js/main.min.js': [
                         'components/instantclick/instantclick.js',
-                        'components/highlightjs/highlight.pack.js'
+                        'components/highlightjs/highlight.pack.js',
+                        'components/picturefill/dist/picturefill.js'
                     ]
                 }
             },
@@ -53,20 +54,23 @@ module.exports = function(grunt) {
                 files: {
                     'public_dev/js/main.min.js': [
                         'components/instantclick/instantclick.js',
-                        'components/highlightjs/highlight.pack.js'
+                        'components/highlightjs/highlight.pack.js',
+                        'components/picturefill/dist/picturefill.js'
                     ]
                 }
             }
         },
 
-        concat: {
+        cssmin: {
             dev: {
-                src: ['public_dev/css/master.css', 'components/highlightjs/styles/github.css'],
-                dest: 'public_dev/css/master.css',
+                files: {
+                    'public_dev/css/master.css': ['public_dev/css/master.css']
+                }
             },
             prod: {
-                src: ['public_prod/css/master.css', 'components/highlightjs/styles/github.css'],
-                dest: 'public_prod/css/master.css',
+                files: {
+                    'public_prod/css/master.css': ['public_prod/css/master.css']
+                }
             },
         },
 
@@ -141,7 +145,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-devcode');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Dependency management
     grunt.registerTask('install:dev', ['bower:install', 'composer:install']);
@@ -152,13 +156,13 @@ module.exports = function(grunt) {
     grunt.registerTask('update', ['update:dev']);
 
     // Build tasks
-    grunt.registerTask('build:dev', ['sculpin-generate:dev', 'sass:dev', 'uglify:dev', 'concat:dev']);
+    grunt.registerTask('build:dev', ['sculpin-generate:dev', 'sass:dev', 'uglify:dev', 'cssmin:dev']);
     grunt.registerTask('build:prod', [
         'sass:prod',
         'sculpin-generate:prod',
         'devcode:prod',
         'uglify:prod',
-        'concat:prod'
+        'cssmin:prod'
     ]);
     grunt.registerTask('build', ['build:dev']);
 };

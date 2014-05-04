@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Set this to the main language of your site -->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>{% block title %}{{ page.title }}{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Florian Eckerstorfer is an Austrian Computer Science student and Web Developer. This is his private website.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Florian Eckerstorfer">
 
     <!--[if lt IE 9]>
@@ -21,13 +23,13 @@
 </head>
 <body>
 
-<header class="header">
+<header class="header" role="banner">
     <a href="/" title="Homepage" class="logo">
         <img src="/img/logo.png" alt="Florian Eckerstorfer Logo" width="116" height="121" class="florian">
     </a>
 </header>
 
-<nav class="top-nav">
+<nav class="top-nav" role="navigation">
     {% include 'navigation.html' with { 'page': page } %}
 </nav>
 
@@ -37,7 +39,7 @@
     </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" role="contentinfo">
     <div>
         <p>
             <span class="heart">&hearts;</span> 2014 Florian Eckerstorfer.
@@ -53,6 +55,10 @@
     InstantClick.on('change', function () {
         var blocks = document.querySelectorAll('pre code');
         Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+
+        picturefill({
+            reevaluate: true
+        });
     });
     InstantClick.init();
 </script>

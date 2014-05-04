@@ -8,7 +8,7 @@ use: [articles]
 <ul class="articles">
 {% for article in data.articles %}
     <li>
-        <a href="{{ article.direct_url ?: article.url }}"><strong>{{ article.title }}</strong></a>
+        <a href="{{ article.direct_url ?: article.url }}/"><strong>{{ article.title }}</strong></a>
         <span class="date">({{ article.date|date('d M Y') }})</span><br>
         <ul class="tags">
         {% for tag in article.tags %}
