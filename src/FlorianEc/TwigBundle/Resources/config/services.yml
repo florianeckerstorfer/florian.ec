@@ -1,0 +1,7 @@
+services:
+    florian_ec.twig.picture_extension:
+        class: FlorianEc\TwigBundle\Twig\PictureExtension
+        arguments:
+            - %florian_ec_twig.picture_sizes%
+        tags:
+            - { name: twig.extension }

@@ -36,6 +36,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+        cssmin: {
+            dev: {
+                files: {
+                    'public_dev/css/master.css': ['public_dev/css/master.css']
+                }
+            },
+            prod: {
+                files: {
+                    'public_prod/css/master.css': ['public_prod/css/master.css']
+                }
+            },
+        },
 
         /*
             JAVASCRIPT
@@ -61,21 +73,8 @@ module.exports = function(grunt) {
             }
         },
 
-        cssmin: {
-            dev: {
-                files: {
-                    'public_dev/css/master.css': ['public_dev/css/master.css']
-                }
-            },
-            prod: {
-                files: {
-                    'public_prod/css/master.css': ['public_prod/css/master.css']
-                }
-            },
-        },
-
         /*
-            REMOVE CODE FROM PRODUCTION SITE
+            HTML
          */
         devcode: {
             options: {
@@ -95,6 +94,29 @@ module.exports = function(grunt) {
                     dest: 'public_prod/',
                     env: 'prod'
                 }
+            }
+        },
+
+        /*
+            IMAGES
+         */
+        responsive_images: {
+            source: {
+                options: {
+                    sizes: [
+                        { name: 'small', width: 320 },
+                        { name: 'small', width: 640, suffix: '@2x' },
+                        { name: 'medium', width: 450 },
+                        { name: 'medium', width: 900, suffix: '@2x'},
+                        { name: 'large', width: 638 },
+                        { name: 'large', width: 1276, suffix: '@2x' }
+                    ]
+                },
+                files: [{
+                    expand: true,
+                    src: ['source/img/projects/**.{jpg,gif,png}'],
+                    dest: ''
+                }]
             }
         },
 
@@ -122,15 +144,25 @@ module.exports = function(grunt) {
          */
         watch: {
             all: {
-                files: ['source/**'],
-                tasks: ['build:dev'],
+                files: ['source/**/*.html', 'source/**/*.md', 'source/fonts/*', 'source/img/**'],
+                tasks: ['sculpin-generate:dev'],
                 options: {
                     livereload: true,
                 },
             },
             sass: {
                 files: ['source/_sass/**'],
-                tasks: ['sass:dev']
+                tasks: ['sass:dev', 'cssmin:dev'],
+                options: {
+                    livereload: true
+                }
+            },
+            js: {
+                files: ['source/js/*.js'],
+                tasks: ['uglify:dev'],
+                options: {
+                    livereload: true
+                }
             }
         }
     });
@@ -143,16 +175,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sculpin');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-devcode');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     // Dependency management
     grunt.registerTask('install:dev', ['bower:install', 'composer:install']);
     grunt.registerTask('install:prod', ['bower:install', 'composer:install']);
     grunt.registerTask('install', ['install:dev']);
-    grunt.registerTask('update:dev', ['bower:install', 'composer:update']);
-    grunt.registerTask('update:prod', ['bower:install', 'composer:update:no-dev']);
+    grunt.registerTask('update:dev', ['bower:update', 'composer:update']);
+    grunt.registerTask('update:prod', ['bower:update', 'composer:update:no-dev']);
     grunt.registerTask('update', ['update:dev']);
 
     // Build tasks

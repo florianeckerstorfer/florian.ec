@@ -19,3 +19,18 @@ sculpin_content_types:
             - categories
     posts:
         enabled: false
+
+florian_ec_twig:
+    picture_sizes:
+        large:
+            name: large
+            min_width: 450
+            has2x: true
+        medium:
+            name: medium
+            min_width: 320
+            has2x: true
+        small:
+            name: small
+            has2x: true
+            default: true
