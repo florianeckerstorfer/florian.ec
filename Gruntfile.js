@@ -173,7 +173,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-composer');
     grunt.loadNpmTasks('grunt-sculpin');
-    grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-devcode');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
