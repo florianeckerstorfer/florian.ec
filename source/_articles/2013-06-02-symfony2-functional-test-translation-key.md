@@ -165,7 +165,7 @@ parameters:
 
 In this case you don't need to create an additional compiler pass. However, my solution has the advantage that you can place it in my TestingBundle and have this functionality automatically in all my projects.
 
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @braincrafted on [Twitter](http://twitter.com/braincrafted) or [App.net](https://alpha.app.net/braincrafted).
+Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).
 
 [^overridetranslator]: Symfony2 Cookbook: How to Override any Part of a Bundle - [Services & Configuration](http://symfony.com/doc/2.2/cookbook/bundles/override.html#services-configuration)
 [^compilerpass]: Symfony2 Cookbook: [How to work with Compiler Passes in Bundles](http://symfony.com/doc/2.2/cookbook/service_container/compiler_passes.html)

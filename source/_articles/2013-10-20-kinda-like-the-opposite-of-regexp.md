@@ -302,4 +302,4 @@ $result = $e->expand('abc|xyz');</code></pre>
 
 That's it.
 
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @braincrafted on [Twitter](http://twitter.com/braincrafted) or [App.net](https://alpha.app.net/braincrafted).
+Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).

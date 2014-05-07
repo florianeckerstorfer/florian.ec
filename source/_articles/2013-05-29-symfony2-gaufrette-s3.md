@@ -328,4 +328,4 @@ If we now want to get the full URL to the uploaded file we can use the parameter
 
 The only thing left to do is create a route for the action and probably add some logic to store the URL returned by the `upload()` method in a database. However, that is not really the topic of this article and is explained elsewhere.
 
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @braincrafted on [Twitter](http://twitter.com/braincrafted) or [App.net](https://alpha.app.net/braincrafted).
+Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).
