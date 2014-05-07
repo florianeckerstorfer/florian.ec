@@ -1,4 +1,3 @@
 #!/bin/bash
 
-scp -r ./server/ root@florianec:/root/florianec_install
-ssh root@florianec 'cd ./florianec_install; chmod +x ./server_install.sh;./server_install.sh'
+ssh root@florianec 'cd /var/www/florian.ec; git pull origin master; grunt build:prod'
