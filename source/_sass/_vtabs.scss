@@ -1,0 +1,47 @@
+.vtabs {
+    @include outer-container();
+
+    .nav {
+        @include span-columns(3);
+        @include media($mobile) {
+            @include span-columns(10);
+        }
+        margin: 0 0 1em 0;
+        padding: 0 0.3em 0 0;
+        list-style: none;
+
+        a {
+            display: inline-block;
+            width: 100%;
+            padding: 0.4em 0.2em;
+            text-decoration: none;
+            @include media($tablet) {
+                font-size: 0.8em;
+            }
+
+            &:hover {
+                background: #efefef;
+            }
+
+            &.active {
+                border-right: 5px solid $link-color;
+                background: #EBFAFE;
+            } // &.active
+        } // a
+    } // .nav
+
+    .content {
+        @include span-columns(9);
+        @include media($mobile) {
+            @include span-columns(10);
+        }
+    } // .content
+
+    .tab-content {
+        display: none;
+
+        &.active {
+            display: block;
+        } // .active
+    } // &.tab-content
+} // .vtabs

@@ -56,18 +56,22 @@ module.exports = function(grunt) {
             prod: {
                 files: {
                     'public_prod/js/main.min.js': [
+                        'components/jquery/dist/jquery.js',
                         'components/instantclick/instantclick.js',
                         'components/highlightjs/highlight.pack.js',
-                        'components/picturefill/dist/picturefill.js'
+                        'components/picturefill/dist/picturefill.js',
+                        'source/js/vtabs.js'
                     ]
                 }
             },
             dev: {
                 files: {
                     'public_dev/js/main.min.js': [
+                        'components/jquery/dist/jquery.js',
                         'components/instantclick/instantclick.js',
                         'components/highlightjs/highlight.pack.js',
-                        'components/picturefill/dist/picturefill.js'
+                        'components/picturefill/dist/picturefill.js',
+                        'source/js/vtabs.js'
                     ]
                 }
             }
@@ -144,7 +148,7 @@ module.exports = function(grunt) {
          */
         watch: {
             all: {
-                files: ['source/**/*.html', 'source/**/*.md', 'source/fonts/*', 'source/img/**'],
+                files: ['source/**/*.html', 'source/**/*.html.twig', 'source/**/*.md', 'source/fonts/*', 'source/img/**'],
                 tasks: ['sculpin-generate:dev'],
                 options: {
                     livereload: true,

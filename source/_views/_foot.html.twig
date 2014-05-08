@@ -1,0 +1,16 @@
+<script src="/js/main.min.js" data-no-instant></script>
+<script data-no-instant>
+    InstantClick.on('change', function () {
+        var blocks = document.querySelectorAll('pre code');
+        Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+
+        picturefill({
+            reevaluate: true
+        });
+    });
+    InstantClick.init();
+</script>
+
+<!-- devcode: !prod -->
+<script data-no-instant>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1" data-no-instant></' + 'script>')</script>
+<!-- endcode -->

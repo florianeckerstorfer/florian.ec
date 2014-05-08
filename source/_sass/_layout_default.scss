@@ -1,0 +1,27 @@
+.default {
+    .header {
+        .logo {
+            @include span-columns(10);
+            @include shift(2);
+        } // .logo
+    } // .header
+
+    .top-nav {
+        ul {
+            @include span-columns(10);
+            @include shift(2);
+        }
+    }
+
+    .main {
+        @include span-columns(10);
+        @include shift(2);
+    } // .main
+
+    .footer {
+        div {
+            @include span-columns(10);
+            @include shift(2);
+        } // div
+    } // .footer
+} // .default

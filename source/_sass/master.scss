@@ -40,12 +40,31 @@ pre {
     } // code
 } // pre
 
+picture {
+    img {
+        max-width: 100%;
+    } // img
+} // picture
+
+figure {
+    margin: 0;
+} // figure
+
+video {
+    max-width: 100%;
+} // video
+
 .header,
+.small-header,
 .top-nav,
 .content,
 .footer {
     @include outer-container;
 } // .container
+
+.logo {
+    padding: 0 1em;
+} // .logo
 
 .header {
     margin: {
@@ -54,54 +73,26 @@ pre {
     } // margin:
 
     .logo {
-        @include span-columns(10);
         text-align: center;
     } // .logo
 } // .header
 
-.top-nav {
-    ul {
-        @include span-columns(10);
-        margin: {
-            top: 0;
-            bottom: 4em;
-        } // margin
-        padding-left: 0;
-        text-align: center;
-    } // ul
+.small-header {
+    margin: {
+        top: 2em;
+        bottom: 1em;
+    } // margin:
 
-    li {
-        display: inline-block;
-    } // li
-
-    a {
-        font-weight: bold;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        text-decoration: none;
-
-        &:link, &:active, &:visited {
-            padding: 0 5px;
-            border-bottom: 3px solid $link-color;
-            color: #333;
-        } // :link, :active, :visited
-
-        &:hover {
-            color: $link-color;
-        } // :hover
-
-        &.selected {
-            border-bottom-color: #000;
-        } // .selected
-    } // a
-} // .top-nav
+    .logo {
+        text-align: left;
+    } // .logo
+} // .header
 
 .content {
     margin-bottom: 3em;
 } // .content
 
 .main {
-    @include span-columns(10);
     padding: 0 1em;
 
     p {
@@ -117,142 +108,24 @@ pre {
         } // h2
 } // .main
 
-.projects {
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
+.page-header {
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    } // h1
+} // .page-header
 
-    li {
-        margin-bottom: 0.5em;
-        color: #999;
-    } // li
-} // .projects
+@import "navigation";
+@import "articles";
+@import "cv";
+@import "projects";
+@import "footer";
 
-.articles {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
+@import "vtabs";
+@import "button";
 
-    >li {
-        margin: 0.3em 0;
-    } // li
+.product-videos .nav {
+}
 
-    .date {
-        color: #666;
-    } // .date
-
-    .tags {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        color: #666;
-        font-size: 0.75em;
-        line-height: 1em;
-
-        li {
-            display: inline-block;
-            padding: 0.3em;
-            background: #efefef;
-        } // li
-    } // .tags
-} // .articles
-
-.article {
-    table {
-        border-collapse: collapse;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-
-
-        tr {
-            border: 0;
-
-            &:nth-child(2n) {
-                background: #f8f8f8;
-            } // :nth-child(2n)
-        } // tr
-
-        th {
-            text-align: center;
-        } // th
-
-        td {
-            padding: 0.3em;
-            border: 0;
-        } // td
-    } // table
-} // .article
-
-.cv-list {
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
-
-    li {
-        margin-bottom: 1em;
-
-        .title {
-            color: #999;
-            font-style: italic;
-        } // .title
-
-        strong {
-            font-style: normal;
-        } // strong
-
-        li {
-            margin-bottom: 0;
-            padding: 0;
-        } // li
-    } // li
-
-} // .cv-list, .projects
-
-.project {
-    .url {
-        display: block;
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        font: 0.9em Inconsolata, 'Courier New', monospace;
-        line-height: 100%;
-        text-decoration: none;
-
-        &:hover {
-            border-color: $link-color;
-        } // :hover
-    } // .url
-} // .projects
-
-.screenshots {
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
-
-    img {
-        max-width: 100%;
-    } // img
-} // .screenshots
-
-picture {
-    img {
-        max-width: 100%;
-    } // img
-} // picture
-
-.footer {
-    div {
-        @include span-columns(10);
-        padding: 0 1em;
-    } // div
-
-    p {
-        color: #999;
-        font-size: 0.7em;
-    } // p
-
-    .heart {
-        color: #ff3669;
-    }
-} // .footer
+@import "layout_default";
+@import "layout_wide";

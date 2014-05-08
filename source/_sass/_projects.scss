@@ -1,0 +1,36 @@
+.projects {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        margin-bottom: 0.5em;
+        color: #999;
+    } // li
+} // .projects
+
+.project {
+    .url {
+        display: block;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font: 0.9em Inconsolata, 'Courier New', monospace;
+        line-height: 100%;
+        text-decoration: none;
+
+        &:hover {
+            border-color: $link-color;
+        } // :hover
+    } // .url
+} // .projects
+
+.screenshots {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+
+    img {
+        max-width: 100%;
+    } // img
+} // .screenshots
