@@ -2,26 +2,62 @@
     .header {
         .logo {
             @include span-columns(10);
-            @include shift(2);
+            @include shift(1);
+
+            @include media($tablet) {
+                @include span-columns(12);
+                @include shift(0);
+            } // @media($tablet)
+
+            @include media($mobile) {
+               @include shift(0);
+            }  // @media($mobile)
         } // .logo
     } // .header
 
     .top-nav {
         ul {
             @include span-columns(10);
-            @include shift(2);
-        }
-    }
+            @include shift(1);
+
+            @include media($tablet) {
+                @include span-columns(12);
+                @include shift(0);
+            } // @media($tablet)
+
+            @include media($mobile) {
+               @include shift(0);
+            }  // @media($mobile)
+        } // iö
+    } // .top-nav
 
     .main {
         @include span-columns(10);
-        @include shift(2);
+        @include shift(1);
+
+        @include media($tablet) {
+            @include span-columns(12);
+            @include shift(0);
+        } // @media($tablet)
+
+        @include media($mobile) {
+            @include shift(0);
+        } // @media($mobile)
     } // .main
 
     .footer {
         div {
             @include span-columns(10);
-            @include shift(2);
+            @include shift(1);
+
+            @include media($tablet) {
+                @include span-columns(12);
+                @include shift(0);
+            } // @media($tablet)
+
+            @include media($mobile) {
+               @include shift(0);
+            }  // @media($mobile)
         } // div
     } // .footer
 } // .default
