@@ -5,12 +5,20 @@
     list-style: none;
 
     >li {
-        margin: 0.3em 0;
+        margin: 1em 0;
     } // li
+
+    .title {
+        font-weight: bold;
+    }
 
     .date {
         color: #666;
     } // .date
+
+    p {
+        margin: 0;
+    }
 
     .tags {
         margin: 0;
@@ -26,6 +34,12 @@
             background: #efefef;
         } // li
     } // .tags
+
+    .article {
+        .title {
+            font-size: 1.5em;
+        } // .title
+    } // .article
 } // .articles
 
 .article {

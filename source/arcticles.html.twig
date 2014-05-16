@@ -7,9 +7,12 @@ use: [articles]
 
 <ul class="articles">
 {% for article in data.articles %}
-    <li>
-        <a href="{{ article.direct_url ?: article.url }}/"><strong>{{ article.title }}</strong></a>
+    <li class="article">
+        <a href="{{ article.direct_url ?: article.url }}/" class="title">{{ article.title }}</a>
         <span class="date">({{ article.date|date('d M Y') }})</span><br>
+        {% if article.summary %}
+            <p>{{ article.summary }}</p>
+        {% endif %}
         <ul class="tags">
         {% for tag in article.tags %}
             <li>{{ tag }}</li>

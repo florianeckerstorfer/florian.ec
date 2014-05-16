@@ -1,6 +1,8 @@
 ---
 title: Kinda like the opposite of regular expressions
 tags: [ library, php, regular expressions ]
+summary: |
+    Regular expressions can match a pattern in a text and return the matches. However, what if we want find all texts that would match a given pattern. I created ExpExp, a PHP library, that allows you to do this.
 ---
 
 Two years ago I have written a library for a project to generate strings based on a given pattern called ExpExp. ExpExp takes a pattern (a subset of regular expressions) and returns all strings that would match the pattern. For example, the pattern `foo(bar|baz)` would expand to `foobar` and `foobaz`.

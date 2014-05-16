@@ -1,6 +1,8 @@
 ---
 title: Create a keyboard shortcut to queue songs in Spotify on OS X
 tags: [ bettertouchtool, osx, spotify ]
+summary: |
+    Sadly Spotify misses a lot of useful keyboard shortcuts, but fortunately we can use AppleScript and BetterTouchTool to create a shortcut to add a song to the queue.
 ---
 
 I spent the last hour trying to set the easiest and most reliable way to create a keyboard shortcut for Spotifys *Add to Queue* functionality on OS X. Since I found no solution for this I decided to post it here.
