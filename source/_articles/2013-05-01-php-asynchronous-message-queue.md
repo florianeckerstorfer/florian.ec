@@ -53,7 +53,7 @@ With React we can implement a simple server that listens to a socket and execute
 
 In the above script I added a simple `echo` to output the received data. We could now run `php server.php`to start our server and send messages to it by connecting to it via `telnet localhost 4000`.
 
-[![React server that echoes messages](/img/php-asynchronous-message-queue/react-server-800.png)](/img/php-asynchronous-message-queue/react-server.png)
+[{{ picture('/img/articles/php-asynchronous-message-queue/react-server.png', 'React server that echoes messages') }}](/img/articles/php-asynchronous-message-queue/react-server-original.png)
 
 Let's assume that our message queue receives messages and needs to perform some time-consuming task with them. We will simulate this with the following code.
 
@@ -130,7 +130,7 @@ The consumer is another script which is executed by the server as background pro
 
 Ok, let's try this out. In my experiment I will open four Terminal windows in parallel. The first one will run the server, the second one will watch the `message.log` log (with `tail -f`) and the third and forth will be used to write to the message server.
 
-[![Screenshot of a Terminal window running server.php, reading the log file and running two clients](/img/php-asynchronous-message-queue/mq-server-800.png)](/img/php-asynchronous-message-queue/mq-server.png)
+[{{ picture('/img/articles/php-asynchronous-message-queue/mq-server.png', 'Screenshot of a Terminal window running server.php, reading the log file and running two clients') }}](/img/articles/php-asynchronous-message-queue/mq-server-original.png)
 
 You can see that both messages are consumed in parallel and that the client is started and closes within a second.
 

@@ -113,13 +113,17 @@ module.exports = function(grunt) {
                         { name: 'medium', width: 450 },
                         { name: 'medium', width: 900, suffix: '@2x'},
                         { name: 'large', width: 638 },
-                        { name: 'large', width: 1276, suffix: '@2x' }
+                        { name: 'large', width: 1276, suffix: '@2x' },
+                        { name: 'original', width: '100%' }
                     ]
                 },
                 files: [{
                     expand: true,
-                    src: ['source/img/projects/**.{jpg,gif,png}'],
-                    dest: ''
+                    src: [
+                        '**/*.{jpg,gif,png}'
+                    ],
+                    cwd: 'source/img/original/',
+                    dest: 'source/img/'
                 }]
             }
         },
