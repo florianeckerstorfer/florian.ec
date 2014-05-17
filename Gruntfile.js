@@ -78,6 +78,20 @@ module.exports = function(grunt) {
         },
 
         /*
+            PDF
+         */
+        copy: {
+            cv_prod: {
+                src: 'cv-pdf/cv.pdf',
+                dest: 'public_prod/cv.pdf'
+            },
+            cv_dev: {
+                src: 'cv-pdf/cv.pdf',
+                dest: 'public_dev/cv.pdf'
+            }
+        },
+
+        /*
             HTML
          */
         devcode: {
@@ -90,7 +104,7 @@ module.exports = function(grunt) {
                 block: {
                     open: 'devcode',
                     close: 'endcode'
-                },
+                }
             },
             prod: {
                 options: {
@@ -184,6 +198,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-devcode');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-responsive-images');
 
     // Dependency management
@@ -195,13 +210,20 @@ module.exports = function(grunt) {
     grunt.registerTask('update', ['update:dev']);
 
     // Build tasks
-    grunt.registerTask('build:dev', ['sculpin-generate:dev', 'sass:dev', 'uglify:dev', 'cssmin:dev']);
+    grunt.registerTask('build:dev', [
+        'sculpin-generate:dev',
+        'sass:dev',
+        'uglify:dev',
+        'cssmin:dev',
+        'copy:cv_dev'
+    ]);
     grunt.registerTask('build:prod', [
         'sass:prod',
         'sculpin-generate:prod',
         'devcode:prod',
         'uglify:prod',
-        'cssmin:prod'
+        'cssmin:prod',
+        'copy:cv_prod'
     ]);
     grunt.registerTask('build', ['build:dev']);
 };

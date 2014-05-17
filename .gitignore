@@ -12,3 +12,9 @@
 *.sublime-project
 *.sublime-workspace
 *.css.map
+/cv-pdf/*.aux
+/cv-pdf/*.fdb_latexmk
+/cv-pdf/*.fls
+/cv-pdf/*.log
+/cv-pdf/*.out
+/cv-pdf/*.synctex.gz
