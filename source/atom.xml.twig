@@ -15,13 +15,13 @@ use: ["articles"]
             {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
         </author>
     {% endif %}
-    {% for article in data.articles|slice(0, 10) %}
+    {% for article in data.articles|slice(0, 20) %}
         <entry>
             <title type="html"><![CDATA[{{ article.title }}]]></title>
             <link href="{{ site.url }}{{ article.url }}"/>
             <updated>{{ article.date|date('c') }}</updated>
             <id>{{ site.url }}{{ article.url }}</id>
-            <content type="html"><![CDATA[{{ article.summary }}]]></content>
+            <content type="html"><![CDATA[{{ article.blocks.content|raw }}]]></content>
         </entry>
     {% endfor %}
 </feed>
