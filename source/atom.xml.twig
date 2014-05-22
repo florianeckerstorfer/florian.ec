@@ -21,7 +21,7 @@ use: ["articles"]
             <link href="{{ site.url }}{{ article.url }}"/>
             <updated>{{ article.date|date('c') }}</updated>
             <id>{{ site.url }}{{ article.url }}</id>
-            <content type="html"><![CDATA[{{ article.blocks.content|raw }}]]></content>
+            <content type="html"><![CDATA[{{ article.summary }}]]></content>
         </entry>
     {% endfor %}
 </feed>
