@@ -1,5 +1,4 @@
-# The contents of this file are parsed and made available as
-# via `site.*`. So for example, {{ site.title }} can be used
-# in a template to get the contents of the `title` key.
 title: Florian Eckerstorfer
-subtitle: To Get You Started
+url: https://florian.ec
+author: Florian Eckerstorfer
+email: florian@eckerstorfer.co
