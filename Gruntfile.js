@@ -88,6 +88,10 @@ module.exports = function(grunt) {
             cv_dev: {
                 src: 'cv-pdf/cv.pdf',
                 dest: 'public_dev/cv.pdf'
+            },
+            htmlinspector_dev: {
+                src: 'components/html-inspector/html-inspector.js',
+                dest: 'public_dev/js/html-inspector.js'
             }
         },
 
@@ -215,7 +219,8 @@ module.exports = function(grunt) {
         'sass:dev',
         'uglify:dev',
         'cssmin:dev',
-        'copy:cv_dev'
+        'copy:cv_dev',
+        'copy:htmlinspector_dev'
     ]);
     grunt.registerTask('build:prod', [
         'sass:prod',
