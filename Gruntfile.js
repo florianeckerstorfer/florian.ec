@@ -205,14 +205,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-responsive-images');
 
-    // Dependency management
-    grunt.registerTask('install:dev', ['bower:install', 'composer:install']);
-    grunt.registerTask('install:prod', ['bower:install', 'composer:install']);
-    grunt.registerTask('install', ['install:dev']);
-    grunt.registerTask('update:dev', ['bower:update', 'composer:update']);
-    grunt.registerTask('update:prod', ['bower:update', 'composer:update:no-dev']);
-    grunt.registerTask('update', ['update:dev']);
-
     // Build tasks
     grunt.registerTask('build:dev', [
         'sculpin-generate:dev',
