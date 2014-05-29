@@ -6,17 +6,19 @@
         @include media($mobile) {
             @include span-columns(10);
         }
-        margin: 0 0 1em 0;
-        padding: 0 0.3em 0 0;
+
         list-style: none;
+        margin: 0 0 1em;
+        padding: 0 .3em 0 0;
 
         a {
             display: inline-block;
-            width: 100%;
-            padding: 0.4em 0.2em;
+            padding: .4em .2em;
             text-decoration: none;
+            width: 100%;
+
             @include media($tablet) {
-                font-size: 0.8em;
+                font-size: .8em;
             }
 
             &:hover {
@@ -24,10 +26,11 @@
             }
 
             &.active {
+                background: #ebfafe;
                 border-right: 5px solid $link-color;
-                background: #EBFAFE;
-            } // &.active
-        } // a
+            }
+        }
+
     } // .nav
 
     .content {
@@ -35,13 +38,14 @@
         @include media($mobile) {
             @include span-columns(10);
         }
-    } // .content
+    }
 
     .tab-content {
         display: none;
 
         &.active {
             display: block;
-        } // .active
-    } // &.tab-content
+        }
+    }
+
 } // .vtabs

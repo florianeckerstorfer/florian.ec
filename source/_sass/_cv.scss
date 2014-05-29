@@ -1,8 +1,8 @@
 
 .cv-list {
+    list-style: none;
     margin-left: 0;
     padding-left: 0;
-    list-style: none;
 
     li {
         margin-bottom: 1em;
@@ -10,16 +10,17 @@
         .title {
             color: #999;
             font-style: italic;
-        } // .title
+        }
 
         strong {
             font-style: normal;
-        } // strong
+        }
 
         li {
             margin-bottom: 0;
             padding: 0;
-        } // li
+        }
+
     } // li
 
 } // .cv-list

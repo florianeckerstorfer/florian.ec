@@ -7,12 +7,13 @@
             @include media($tablet) {
                 @include span-columns(12);
                 @include shift(0);
-            } // @media($tablet)
+            }
 
             @include media($mobile) {
-               @include shift(0);
-            }  // @media($mobile)
-        } // .logo
+                @include shift(0);
+            }
+        }
+
     } // .header
 
     .top-nav {
@@ -23,12 +24,13 @@
             @include media($tablet) {
                 @include span-columns(12);
                 @include shift(0);
-            } // @media($tablet)
+            }
 
             @include media($mobile) {
-               @include shift(0);
-            }  // @media($mobile)
-        } // iö
+                @include shift(0);
+            }
+        }
+
     } // .top-nav
 
     .main {
@@ -38,11 +40,12 @@
         @include media($tablet) {
             @include span-columns(12);
             @include shift(0);
-        } // @media($tablet)
+        }
 
         @include media($mobile) {
             @include shift(0);
-        } // @media($mobile)
+        }
+
     } // .main
 
     .footer {
@@ -53,11 +56,13 @@
             @include media($tablet) {
                 @include span-columns(12);
                 @include shift(0);
-            } // @media($tablet)
+            }
 
             @include media($mobile) {
-               @include shift(0);
-            }  // @media($mobile)
-        } // div
+                @include shift(0);
+            }
+        }
+
     } // .footer
+
 } // .default

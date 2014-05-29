@@ -15,6 +15,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-devcode": "0.0.4-c",
     "grunt-responsive-images": "^0.1.2",
+    "grunt-scsslint": "^0.1.0",
     "grunt-sculpin": "~0.1.0"
   }
 }

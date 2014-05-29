@@ -2,6 +2,7 @@
     .header {
         .logo {
             @include span-columns(12);
-        } // .logo
-    } // .header
+        }
+    }
+
 } // .wide

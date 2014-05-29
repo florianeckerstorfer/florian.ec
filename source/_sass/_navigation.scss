@@ -3,33 +3,37 @@
         margin: {
             top: 0;
             bottom: 4em;
-        } // margin
+        }
         padding-left: 0;
         text-align: center;
-    } // ul
+    }
 
     li {
         display: inline-block;
-    } // li
+    }
 
     a {
+        font-size: .8em;
         font-weight: bold;
-        font-size: 0.8em;
-        text-transform: uppercase;
         text-decoration: none;
+        text-transform: uppercase;
 
-        &:link, &:active, &:visited {
-            padding: 0 5px;
+        &:link,
+        &:active,
+        &:visited {
             border-bottom: 3px solid $link-color;
             color: #333;
-        } // :link, :active, :visited
+            padding: 0 5px;
+        }
 
         &:hover {
             color: $link-color;
-        } // :hover
+        }
 
         &.selected {
             border-bottom-color: #000;
-        } // .selected
+        }
+
     } // a
+
 } // .top-nav

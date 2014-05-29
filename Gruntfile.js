@@ -48,6 +48,11 @@ module.exports = function(grunt) {
                 }
             },
         },
+        scsslint: {
+            dev: {
+                src: ['source/_sass/**'],
+            }
+        },
 
         /*
             JAVASCRIPT
@@ -147,17 +152,6 @@ module.exports = function(grunt) {
         },
 
         /*
-            DEPENDENCY MANAGEMENT
-         */
-        bower: {
-            install: {
-                options: {
-                    targetDir: './components'
-                }
-            }
-        },
-
-        /*
             CLEAN BUILT FILES
          */
         clean: {
@@ -204,6 +198,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-scsslint');
 
     // Build tasks
     grunt.registerTask('build:dev', [
