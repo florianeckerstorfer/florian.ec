@@ -6,6 +6,18 @@
 
 <body class="layout_wide">
 
+{% if page.panorama %}
+    <div class="panorama">
+        <div class="panorama__image">
+            {{ picture(page.panorama.image.src, page.panorama.image.alt, { original: true, original_min_width: 639 }) }}
+        </div>
+        <header class="panorama__header">
+            <h1 class="panorama__header__headline">{{ page.panorama.headline }}</h1>
+            <div class="panorama__header__tagline">{{ page.panorama.tagline }}</div>
+        </header>
+    </div>
+{% endif %}
+
 <header class="header header_small" role="banner">
     <a href="/" title="Homepage" class="header__logo">
         <picture>
@@ -25,13 +37,16 @@
     </nav>
 </header>
 
-<section class="content">
-    <div class="main">
-        {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
-    </div>
-</section>
+<div class="container{% if page.panorama %} container_panorama{% endif %}">
+    <section class="content">
+        <div class="main">
+            {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+        </div>
+    </section>
 
-{% include '_footer.html.twig' %}
+    {% include '_footer.html.twig' %}
+</div>
+
 {% include '_foot.html.twig' %}
 
 </body>

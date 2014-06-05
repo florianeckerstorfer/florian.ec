@@ -12,6 +12,8 @@
 
 .main {
     padding: 0 1em;
+    position: relative;
+    z-index: 100;
 
     p {
         &:first-child {
