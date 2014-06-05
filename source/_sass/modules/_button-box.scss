@@ -1,0 +1,11 @@
+.button-box {
+    text-align: center;
+}
+
+.button-box__button {
+    margin-right: .5em;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

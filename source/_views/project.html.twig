@@ -1,10 +1,20 @@
 {% extends "default" %}
 {% block content_wrapper %}
 
-    <h2>{{ page.title }}</h2>
+    <article class="article project">
+        <header class="article__header">
+            <h2>
+                {{ page.title }}
+                <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
+            </h2>
+            <ul class="article__header__tags">
+                {% for tag in page.tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </header>
 
-    ({{ page.date|date('d M Y') }})
-
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
+    </article>
 
 {% endblock %}

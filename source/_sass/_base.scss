@@ -1,0 +1,47 @@
+body {
+    background: #fff;
+    color: #111;
+    font: $font-base $sans-serif-font;
+}
+
+p {
+    line-height: 150%;
+}
+
+a {
+    color: $link-color;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+code {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: inline-block;
+    font: .9em $monospace-font;
+    padding: .2em;
+}
+
+pre {
+    code {
+        overflow-x: scroll;
+        padding: .4em;
+    }
+}
+
+picture {
+    img {
+        max-width: 100%;
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+video {
+    max-width: 100%;
+}

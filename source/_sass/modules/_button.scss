@@ -1,0 +1,36 @@
+@mixin button($size, $bg-color, $border-color, $fg-color, $icon: none) {
+    display: inline-block;
+    padding: if($size == big, 1em, .5em);
+    border: 1px solid $border-color;
+    border-radius: if($size == big, 5px, 3px);
+    background-color: $bg-color;
+    @if $icon != none {
+        padding-left: em(32px) + 1em;
+        @include retina-image($icon, if($size == big, 32px 32px, 16px 16px), 'png', '@2x');
+        background: {
+            repeat: no-repeat;
+            position: if($size == big, 1em, .5em) center;
+        } // background:
+    } // @if
+    color: $fg-color;
+    font-size: if($size == big, 1.2em, 1em);
+
+    &:link,
+    &:active,
+    &:visited {
+        text-decoration: none;
+    }
+
+    &:hover {
+        box-shadow: inset 0 0 15px #ccc;
+    }
+
+} // button()
+
+.button_github {
+    @include button(big, #efefef, #ccc, #000, '/img/icons/github-logo');
+}
+
+.button_download {
+        @include button(big, #efefef, #ccc, #000, '/img/icons/download')
+}

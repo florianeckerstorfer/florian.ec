@@ -1,6 +1,14 @@
 <ul>
-    <li><a href="/articles/"{% if page.url == '/articles/' %} class="selected"{% endif %}>Articles</a></li>
-    <li><a href="/projects/"{% if page.url starts with '/project/' %} class="selected"{% endif %}>Projects</a></li>
-    <li><a href="/about/"{% if page.url == '/about/' %} class="selected"{% endif %}>About</a></li>
-    <li><a href="/cv/"{% if page.url == '/cv/' %} class="selected"{% endif %}>CV</a></li>
+    <li class="navigation__item{% if page.url starts with '/articles' %} selected{% endif %}">
+        <a href="/articles/">Articles</a>
+    </li>
+    <li class="navigation__item{% if page.url starts with '/project' %} selected{% endif %}">
+        <a href="/projects/">Projects</a>
+    </li>
+    <li class="navigation__item{% if page.url starts with '/about' %} selected{% endif %}">
+        <a href="/about/">About</a>
+    </li>
+    <li class="navigation__item{% if page.url starts with '/cv' %} selected{% endif %}">
+        <a href="/cv/">CV</a>
+    </li>
 </ul>

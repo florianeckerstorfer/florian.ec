@@ -4,131 +4,28 @@
 @import '../../components/neat/app/assets/stylesheets/neat';
 @import '../../components/highlightjs/styles/github.css';
 @import 'fonts';
+@import 'variables';
+@import 'base';
+@import 'layouts/base';
 
-$link-color: #08c;
-$monospace-font: 'Anonymous Pro', 'Courier New', Courier, monospace;
-$sans-serif-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+@import 'modules/header';
+@import 'modules/navigation';
+@import 'modules/footer';
 
-body {
-    background: #fff;
-    color: #111;
-    font: 1.1em $sans-serif-font;
-}
+// Page-specific
+@import 'modules/articles';
+@import 'modules/article';
+@import 'modules/cv';
+@import 'modules/projects';
+@import 'modules/project';
 
-p {
-    line-height: 150%;
-}
+// Modules
+@import 'modules/page-header';
+@import 'modules/vtabs';
+@import 'modules/button';
+@import 'modules/button-box';
+@import 'modules/bucket-list';
 
-a {
-    color: $link-color;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-code {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    display: inline-block;
-    font: .9em $monospace-font;
-    padding: .2em;
-}
-
-pre {
-    code {
-        overflow-x: scroll;
-        padding: .4em;
-    }
-}
-
-picture {
-    img {
-        max-width: 100%;
-    }
-}
-
-figure {
-    margin: 0;
-}
-
-video {
-    max-width: 100%;
-}
-
-.header,
-.small-header,
-.top-nav,
-.content,
-.footer {
-    @include outer-container;
-}
-
-.logo {
-    padding: 0 1em;
-}
-
-.header {
-    margin: {
-        top: 4em;
-        bottom: 2em;
-    }
-
-    .logo {
-        text-align: center;
-    }
-}
-
-.small-header {
-    margin: {
-        top: 2em;
-        bottom: 1em;
-    }
-
-    .logo {
-        text-align: left;
-    }
-}
-
-.content {
-    margin-bottom: 3em;
-}
-
-.main {
-    padding: 0 1em;
-
-    p {
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-
-    h2 {
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-
-} // .main
-
-.page-header {
-    h1 {
-        font-size: 3em;
-        text-align: center;
-    }
-}
-
-@import 'navigation';
-@import 'articles';
-@import 'cv';
-@import 'projects';
-@import 'footer';
-
-@import 'vtabs';
-@import 'button';
-@import 'bucket-list';
-
-@import 'layout_default';
-@import 'layout_wide';
-@import 'layout_small';
+// Layouts
+@import 'layouts/default';
+@import 'layouts/wide';

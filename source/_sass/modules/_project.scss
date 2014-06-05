@@ -1,17 +1,15 @@
-.projects {
+.project__screenshots {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
 
-    li {
-        color: #999;
-        margin-bottom: .5em;
+    img {
+        max-width: 100%;
     }
 
-} // .projects
+} // .screenshots
 
-.project {
-    .url {
+.project__url {
         border: 1px solid #ccc;
         border-radius: 3px;
         display: block;
@@ -24,17 +22,4 @@
             border-color: $link-color;
         }
 
-    } // .url
-
-} // .projects
-
-.screenshots {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-
-    img {
-        max-width: 100%;
-    }
-
-} // .screenshots
+} // .project__url

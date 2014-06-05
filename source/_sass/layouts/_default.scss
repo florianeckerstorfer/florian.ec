@@ -1,22 +1,19 @@
-.default {
-    .header {
-        .logo {
-            @include span-columns(10);
-            @include shift(1);
+.layout_default {
+    .header__logo {
+        @include span-columns(10);
+        @include shift(1);
 
-            @include media($tablet) {
-                @include span-columns(12);
-                @include shift(0);
-            }
-
-            @include media($mobile) {
-                @include shift(0);
-            }
+        @include media($tablet) {
+            @include span-columns(12);
+            @include shift(0);
         }
 
-    } // .header
+        @include media($mobile) {
+            @include shift(0);
+        }
+    } // .header__logo
 
-    .top-nav {
+    .navigation {
         ul {
             @include span-columns(10);
             @include shift(1);

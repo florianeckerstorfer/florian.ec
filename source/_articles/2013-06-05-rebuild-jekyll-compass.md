@@ -116,5 +116,3 @@ When I now change something in the project, the updated page is already loaded w
 - [Reload Safari tabs in the background via AppleScript](http://hints.macworld.com/article.php?story=20090526225003768)
 - [AppleScript To open a collection of Safari tabs](http://hints.macworld.com/article.)php?story=20110415065236737
 - [Is it possible to create a multi-line string variable in a Makefile](http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile)
-
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).

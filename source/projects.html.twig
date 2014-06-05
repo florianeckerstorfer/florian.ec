@@ -10,11 +10,9 @@ use: [projects_categories]
 
     <ul class="projects">
         {% for project in projects %}
-            <li>
-                <span class="title">
-                    <a href="{{ project.direct_url ?: project.url }}/"><strong>{{ project.title }}</strong></a>
-                    {{ project.description }}
-                </span>
+            <li class="projects__project">
+                <a href="{{ project.direct_url ?: project.url }}/"><strong>{{ project.title }}</strong></a>
+                {{ project.description }}
             </li>
         {% endfor %}
     </ul>
@@ -23,28 +21,20 @@ use: [projects_categories]
 <h2>Open Source Projects</h2>
 
 <ul class="projects">
-    <li>
-        <span class="title">
-            <a href="http://bootstrap.braincrafted.com"><strong>BraincraftedBootstrapBundle</strong></a>
-        </span>
+    <li class="projects__project">
+        <a href="http://bootstrap.braincrafted.com"><strong>BraincraftedBootstrapBundle</strong></a>
         Bundle to easily integrate Bootstrap in a Symfony2 project.
     </li>
-    <li>
-        <span class="title">
-            <a href="https://github.com/cocur/slugify"><strong>Cocur Slugify</strong></a>
-        </span>
+    <li class="projects__project">
+        <a href="https://github.com/cocur/slugify"><strong>Cocur Slugify</strong></a>
         Converts a string into a slug that is usable in URLs.
     </li>
-    <li>
-        <span class="title">
-            <a href="http://banchaproject.org"><strong>Bancha</strong></a>
-        </span>
+    <li class="projects__project">
+        <a href="http://banchaproject.org"><strong>Bancha</strong></a>
         A bridge between the CakePHP and Ext JS 4 framework developed in a team with four other students.
     </li>
-    <li>
-        <span class="title">
-            <a href="http://symfony.com"><strong>Symfony2 Forms Framework</strong></a>
-        </span>
+    <li class="projects__project">
+        <a href="http://symfony.com"><strong>Symfony2 Forms Framework</strong></a>
         Contributed with three other students to a framework to create, validate and submit forms. Part of the Symfony2 Framework.
     </li>
 </ul>
@@ -54,29 +44,23 @@ use: [projects_categories]
 <h2>Academic Articles and Projects</h2>
 
 <ul class="projects">
-    <li>
-        <span class="title">
-            <a href="http://storage.braincrafted.com/dns.mp4"><strong>Animated explanation of DNS</strong></a>
-            [mp4]
-        </span><br>
+    <li class="projects__project">
+        <a href="http://storage.braincrafted.com/dns.mp4"><strong>Animated explanation of DNS</strong></a> [mp4]<br>
         Information Design, June 2013
     </li>
-    <li>
-        <span class="title">
-            <a href="http://storage.braincrafted.com/Eckerstorfer2011NoSQLPerformance.pdf"><strong>Performance of NoSQL Databases</strong></a>
-            [pdf]
-            (<a href="http://storage.braincrafted.com/Eckerstorfer2011NoSQLPerformanceSlides.pdf">Slides</a> [pdf])
-        </span><br>
+    <li class="projects__project">
+        <a href="http://storage.braincrafted.com/Eckerstorfer2011NoSQLPerformance.pdf"><strong>Performance of NoSQL Databases</strong></a>[pdf]
+        (<a href="http://storage.braincrafted.com/Eckerstorfer2011NoSQLPerformanceSlides.pdf">Slides</a> [pdf])<br>
         Seminar aus Datenbanken, November 2011
     </li>
-    <li>
-        <span class="title">
-            <a href="http://storage.braincrafted.com/Eckerstorfer2011WebDataExtraction.pdf"><strong>Web Data Extraction — Overview and Comparison of selected State-of-the-Art Tools</strong></a> [pdf]
-        </span><br>
+    <li class="projects__project">
+        <a href="http://storage.braincrafted.com/Eckerstorfer2011WebDataExtraction.pdf"><strong>Web Data Extraction — Overview and Comparison of selected State-of-the-Art Tools</strong></a> [pdf]
+        <br>
         Bachelor Thesis, May 2011
     </li>
-    <li>
-        <span class="title"><a href="https://github.com/florianeckerstorfer/Snaphe"><strong>Snaphe</strong></a>— A Web Data Extraction library written in PHP.</span><br>
+    <li class="projects__project">
+        <a href="https://github.com/florianeckerstorfer/Snaphe"><strong>Snaphe</strong></a>— A Web Data Extraction library written in PHP.
+        <br>
         Bachelor Project, May 2011
     </li>
 </ul>
@@ -84,22 +68,19 @@ use: [projects_categories]
 <h2>Talks</h2>
 
 <ul class="projects">
-    <li>
-        <span class="title">
-            <a href="https://speakerdeck.com/florianeckerstorfer/machine-learning-with-node-dot-js-and-predictionio-1"><strong>Machine Learning with Node.js and PredictionIO</strong></a>
-        </span><br>
+    <li class="projects__project">
+        <a href="https://speakerdeck.com/florianeckerstorfer/machine-learning-with-node-dot-js-and-predictionio-1"><strong>Machine Learning with Node.js and PredictionIO</strong></a>
+        <br>
         Node.js Vienna Meetup on May 13, 2014
     </li>
-    <li>
-        <span class="title">
-            <a href="https://speakerdeck.com/florianeckerstorfer/machine-learning-with-node-dot-js-and-predictionio"><strong>Machine Learning with Node.js and PredictionIO</strong></a>
-        </span><br>
+    <li class="projects__project">
+        <a href="https://speakerdeck.com/florianeckerstorfer/machine-learning-with-node-dot-js-and-predictionio"><strong>Machine Learning with Node.js and PredictionIO</strong></a>
+        <br>
         Vienna.js Meetup on April 30, 2014
     </li>
-    <li>
-        <span class="title">
-            <a href="https://speakerdeck.com/florianeckerstorfer/grunt-dot-js-for-php-developers"><strong>Grunt.js for PHP Developers</strong></a>
-        </span><br>
+    <li class="projects__project">
+        <a href="https://speakerdeck.com/florianeckerstorfer/grunt-dot-js-for-php-developers"><strong>Grunt.js for PHP Developers</strong></a>
+        <br>
         ViennaPHP Meetup on April 9, 2014
     </li>
 </ul>

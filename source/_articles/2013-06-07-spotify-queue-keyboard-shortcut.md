@@ -21,6 +21,4 @@ The shortcut to add only the selected songs to the queue is very similar, just s
 
 *Please note that the mouse has to be hovered over the selected songs when triggered the shortcut.*
 
-Feedback to this article is welcome and especially appreciated if you know how to improve these shortcuts to also work without hovering the mouse over the selected songs. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).
-
 [^capslockkey]: [A useful Caps Lock key - BrettTerpstra.com](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)

@@ -303,5 +303,3 @@ $e = new ExpExp();
 $result = $e->expand('abc|xyz');</code></pre>
 
 That's it.
-
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).

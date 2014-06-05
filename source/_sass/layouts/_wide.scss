@@ -1,0 +1,12 @@
+.layout_wide {
+    .header__logo {
+        @include span-columns(2);
+
+    } // .header__logo
+
+    .navigation {
+        @include span-columns(10);
+
+    } // .navigation
+
+} // .layout_wide

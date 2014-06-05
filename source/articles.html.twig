@@ -1,0 +1,30 @@
+---
+layout: default
+title: Articles by Florian Eckerstorfer
+permalink: articles/
+use: [articles]
+---
+
+<ul class="articles">
+{% for article in data.articles %}
+    <li class="articles__article">
+        <header class="article__header">
+            <h2>
+                <a href="{{ article.direct_url ?: article.url }}/" class="article__header__title">
+                    {{ article.title }}
+                </a>
+                <span class="article__header__date">({{ article.date|date('d M Y') }})</span>
+            </h2>
+            <ul class="article__header__tags">
+                {% for tag in article.tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </header>
+        {% if article.summary %}
+            <p>{{ article.summary }}</p>
+        {% endif %}
+
+    </li>
+{% endfor %}
+</ul>

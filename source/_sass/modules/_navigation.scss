@@ -1,4 +1,4 @@
-.top-nav {
+.navigation {
     ul {
         margin: {
             top: 0;
@@ -8,12 +8,13 @@
         text-align: center;
     }
 
-    li {
-        display: inline-block;
-    }
+} // .top-nav
+
+.navigation__item {
+    display: inline-block;
 
     a {
-        font-size: .8em;
+        font-size: $font-sm;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
@@ -30,10 +31,12 @@
             color: $link-color;
         }
 
-        &.selected {
-            border-bottom-color: #000;
-        }
-
     } // a
 
-} // .top-nav
+    &.selected {
+        a {
+            border-bottom-color: #000;
+        }
+    }
+}
+

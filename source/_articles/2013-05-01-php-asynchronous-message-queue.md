@@ -168,6 +168,4 @@ I created a library from the code described in this article. The principles are 
 
 If you want to use the code in a Symfony2 application I made things even easier by creating a bundle that encapsulates BcMq. The bundle uses services to consume messages which makes it quite easy and elegant. Detailed instructions on how to install and use the bundle can be found on Github: [BcMqBundle](https://github.com/braincrafted/mq-bundle).
 
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).
-
 [^pthreads]: However, there is an extension called [pthreads](http://docs.php.net/manual/en/book.pthreads.php)

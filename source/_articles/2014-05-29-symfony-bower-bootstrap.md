@@ -137,5 +137,3 @@ You can now create a basic layout and include the Bootstrap CSS and JavaScript a
 [{{ picture('/img/articles/symfony-bower-bootstrap/login.png', 'BetterTouchTool') }}](/img/articles/symfony-bower-bootstrap/login-original.png)
 
 In addition to this article I also created a demo project where you can follow the steps in this article in a full Symfony project. The source code of this demo project resides on Github: <code><a href="https://github.com/florianeckerstorfer/symfony-bower-bootstrap">florianeckerstorfer/symfony-bower-bootstrap</a></code>.
-
-If you have thoughts or comments about this article please provide feedback. You can [email](mailto:florian@eckerstorfer.co) me or contact [@Florian_](http://twitter.com/Florian_).

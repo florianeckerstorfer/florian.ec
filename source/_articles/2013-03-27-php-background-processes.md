@@ -113,6 +113,4 @@ It is also possible to install the package through composer:
         }
     }
 
-Feedback to this article is welcome. Please [email](mailto:florian@eckerstorfer.co) me or contact @Florian_ on [Twitter](http://twitter.com/Florian_).
-
 [^biek]: [Answer to "PHP execute a background process" on Stack Overflow](http://stackoverflow.com/a/45966/776654)

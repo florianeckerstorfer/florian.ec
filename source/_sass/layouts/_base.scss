@@ -1,0 +1,28 @@
+.header,
+.small-header,
+.top-nav,
+.content,
+.footer {
+    @include outer-container;
+}
+
+.content {
+    margin-bottom: 3em;
+}
+
+.main {
+    padding: 0 1em;
+
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h2 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+} // .main

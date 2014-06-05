@@ -1,10 +1,24 @@
 {% extends "default" %}
 {% block content_wrapper %}
 
-    <h2>{{ page.title }}</h2>
+    <article class="article">
+        <header class="article__header">
+            <h2>
+                {{ page.title }}
+                <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
+            </h2>
+            <ul class="article__header__tags">
+                {% for tag in page.tags %}
+                <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </header>
 
-    <div class="article">
         {% block content %}{% endblock %}
-    </div>
+
+        <footer class="article__feedback">
+            <p>If you have an question or want to provide feedback please feel free to contact me. I am <a href="https://twitter.com/Florian_">@Florian_</a> on Twitter and you can send mails to <a href="mailto:florian@eckerstorfer.co">florian@eckerstorfer.co</a>.</p>
+        </footer>
+    </article>
 
 {% endblock %}

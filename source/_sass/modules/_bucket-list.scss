@@ -1,0 +1,36 @@
+.bucket-list {
+    @include clearfix();
+    font: 1em $monospace-font;
+    list-style: none;
+    padding-left: 0;
+
+} // .bucket-list
+
+.bucket-list__item {
+    float: left;
+    padding: .3em 0;
+    width: 50%;
+
+    @include media($mobile) {
+        float: none;
+        width: 100%;
+    }
+
+} // .bucket-list__item
+
+.bucket-list__item__strike-through {
+    display: inline-block;
+    margin-top: -23px;
+
+    &:before {
+        background: rgba(255, 0, 0, .5);
+        content: "";
+        display: inline-block;
+        height: 3px;
+        left: -4%;
+        position: relative;
+        top: 16px;
+        width: 108%;
+    }
+
+} // bucket-list__item__strike-through

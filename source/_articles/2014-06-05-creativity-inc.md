@@ -11,18 +11,18 @@ Last Saturday I finished reading [Creativity, Inc.](http://www.amazon.de/gp/prod
 I really enjoyed reading the book and I think most of the principles do not only apply to movie companies but to all companies that employ creative people. That includes software companies. It also made me want to watch Pixar movies. Last weekend I already saw Toy Story 3 and Brave. Seven more movies to go.
 
 <ul class="bucket-list">
-    <li><span class="strike-through">Toy Story</span></li>
-    <li><span class="strike-through">A Bug's Life</span></li>
-    <li>Toy Story 2</li>
-    <li>Monsters, Inc.</li>
-    <li><span class="strike-through">Finding Nemo</span></li>
-    <li>The Incredibles</li>
-    <li>Cars</li>
-    <li>Ratatouille</li>
-    <li><span class="strike-through">WALL-E</span></li>
-    <li><span class="strike-through">Up</span></li>
-    <li><span class="strike-through">Toy Story 3</span></li>
-    <li>Cars 2</li>
-    <li><span class="strike-through">Brave</span></li>
-    <li>Monsters University</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story</span></li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">A Bug's Life</span></li>
+    <li class="bucket-list__item">Toy Story 2</li>
+    <li class="bucket-list__item">Monsters, Inc.</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Finding Nemo</span></li>
+    <li class="bucket-list__item">The Incredibles</li>
+    <li class="bucket-list__item">Cars</li>
+    <li class="bucket-list__item">Ratatouille</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">WALL-E</span></li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Up</span></li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story 3</span></li>
+    <li class="bucket-list__item">Cars 2</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Brave</span></li>
+    <li class="bucket-list__item">Monsters University</li>
 </ul>
