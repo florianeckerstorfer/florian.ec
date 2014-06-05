@@ -6,11 +6,13 @@
 @import 'fonts';
 
 $link-color: #08c;
+$monospace-font: 'Anonymous Pro', 'Courier New', Courier, monospace;
+$sans-serif-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
 body {
     background: #fff;
     color: #111;
-    font: 1.1em 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font: 1.1em $sans-serif-font;
 }
 
 p {
@@ -30,7 +32,7 @@ code {
     border: 1px solid #ddd;
     border-radius: 3px;
     display: inline-block;
-    font: .9em 'Anonymous Pro', 'Courier New', Courier, monospace;
+    font: .9em $monospace-font;
     padding: .2em;
 }
 
@@ -125,6 +127,7 @@ video {
 
 @import 'vtabs';
 @import 'button';
+@import 'bucket-list';
 
 @import 'layout_default';
 @import 'layout_wide';

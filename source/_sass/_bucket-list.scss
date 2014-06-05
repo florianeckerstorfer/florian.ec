@@ -1,0 +1,27 @@
+.bucket-list {
+    padding-left: 0;
+    list-style: none;
+    font: 1em $monospace-font;
+
+    li {
+        width: 50%;
+        float: left;
+        padding: .3em 0;
+    }
+
+    .strike-through {
+        display: inline-block;
+        margin-top: -23px;
+
+        &:before {
+            display: inline-block;
+            width: 108%;
+            height: 3px;
+            position: relative;
+            left: -4%;
+            top: 16px;
+            background: rgba(255, 0, 0, .5);
+            content: ""
+        }
+    }
+}
