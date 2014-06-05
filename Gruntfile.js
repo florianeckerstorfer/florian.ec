@@ -65,7 +65,8 @@ module.exports = function(grunt) {
                         'components/instantclick/instantclick.js',
                         'components/highlightjs/highlight.pack.js',
                         'components/picturefill/dist/picturefill.js',
-                        'source/js/vtabs.js'
+                        'source/js/vtabs.js',
+                        'source/js/top-nav.js'
                     ]
                 }
             },
@@ -76,7 +77,8 @@ module.exports = function(grunt) {
                         'components/instantclick/instantclick.js',
                         'components/highlightjs/highlight.pack.js',
                         'components/picturefill/dist/picturefill.js',
-                        'source/js/vtabs.js'
+                        'source/js/vtabs.js',
+                        'source/js/top-nav.js'
                     ]
                 }
             }
