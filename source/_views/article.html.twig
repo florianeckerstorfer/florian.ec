@@ -1,20 +1,11 @@
 {% extends "default" %}
 {% block content_wrapper %}
 
-    <article class="article">
-        <header class="article__header">
-            <h2>
-                {{ page.title }}
-                <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
-            </h2>
-            <ul class="article__header__tags">
-                {% for tag in page.tags %}
-                <li>{{ tag }}</li>
-                {% endfor %}
-            </ul>
-        </header>
+    {% set article_type = page.type ? page.type : 'default' %}
+    {% set article_template = 'article/_'~article_type~'.html.twig' %}
 
-        {% block content %}{% endblock %}
+    <article class="article {{ article_type }}">
+        {% include article_template with { 'page': page } %}
 
         <footer class="article__feedback">
             <p>If you have an question or want to provide feedback please feel free to contact me. I am <a href="https://twitter.com/Florian_">@Florian_</a> on Twitter and you can send mails to <a href="mailto:florian@eckerstorfer.co">florian@eckerstorfer.co</a>.</p>

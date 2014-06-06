@@ -1,0 +1,9 @@
+{{ page.blocks.content|raw }}
+
+<footer class="article__footer">
+    <ul class="article__tags">
+        {% for tag in page.tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
+</footer>

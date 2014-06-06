@@ -1,0 +1,10 @@
+{{ article.content|raw }}
+
+<footer>
+    <ul class="article__tags">
+        {% for tag in article.tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ article.direct_url ?: article.url }}/">&#8734;</a>
+</footer>

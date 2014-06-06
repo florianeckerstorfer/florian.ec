@@ -7,24 +7,10 @@ use: [articles]
 
 <ul class="articles">
 {% for article in data.articles %}
-    <li class="articles__article">
-        <header class="article__header">
-            <h2>
-                <a href="{{ article.direct_url ?: article.url }}/" class="article__header__title">
-                    {{ article.title }}
-                </a>
-                <span class="article__header__date">({{ article.date|date('d M Y') }})</span>
-            </h2>
-            <ul class="article__header__tags">
-                {% for tag in article.tags %}
-                <li>{{ tag }}</li>
-                {% endfor %}
-            </ul>
-        </header>
-        {% if article.summary %}
-            <p>{{ article.summary }}</p>
-        {% endif %}
-
+    {% set article_type = article.type ? article.type : 'default' %}
+    {% set article_template = 'articles/_article_'~article_type~'.html.twig' %}
+    <li class="articles__article {{ article_type }}">
+        {% include article_template with { 'article': article } %}
     </li>
 {% endfor %}
 </ul>
