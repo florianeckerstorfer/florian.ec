@@ -17,7 +17,8 @@ Last Monday Apple released a new programming language for the iOS and Mac platfo
     <p>While I don't intend to write an exhaustive guide to Swift the article in its current form still misses some crucial pieces.</p>
 </div>
 
-## Table of Contents <a name="table-of-contents"></a>
+<a name="table-of-contents"></a>
+## Table of Contents
 
 1. [Getting Started](#getting-started)
 2. [Constants & Variables](#constants-variables)
