@@ -1,25 +1,32 @@
 ---
 draft: true
 layout: wide-small
-title: Prague May 2014
+title: Prague, May 2014
 tags: [ photos, travel, prague, czech republic ]
 slug: prague-may-2014
-panorama:
-    image:
-        src: /img/photos/prague-may-2014/IMG_6523.jpg
-        alt: Prague, May 2014
-    headline: Prague
-    tagline: May 2014
+panorama: true
 ---
 
 {% block summary %}
 
-<p>In the beginning of May I spent a weekend with some friends in Prague, Czech Republic. Here are some of the photos I took on this weekend.</p>
+<p>In the beginning of May I spent a weekend with some friends in Prague, Czech Republic. Due to a late arrival and a thorough exploration of Pragues nightlife I had only half a day to walk around the city. Here are some of the photos I took on this weekend.</p>
+
+{% endblock %}
+
+{% block panorama %}
+
+<div class="panorama">
+    <div class="panorama__image">
+        {{ picture('/img/photos/prague-may-2014/IMG_6523.jpg', 'Prague, May 2014', { original: true, original_min_width: 639 }) }}
+    </div>
+    <header class="panorama__header">
+        <h1 class="panorama__header__headline">Prague</h1>
+        <div class="panorama__header__tagline">May 2014</div>
+    </header>
+</div>
 
 {% endblock %}
 
 {% block content %}
-
-<p>In the beginning of May I spent a weekend with some friends in Prague, Czech Republic. Due to a late arrival and a thorough exploration of Pragues nightlife I had only half a day to walk around the city. Here are some of the photos I took on this weekend.</p>
 
 {% endblock %}
