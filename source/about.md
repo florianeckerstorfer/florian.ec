@@ -40,4 +40,4 @@ I never stopped creating websites and applications about stuff I am passionate a
 
 ## About this site
 
-I use [Sculpin](https://sculpin.io), [Sass](http://sass-lang.com) and [Grunt](http://gruntjs.com) to build this page and write most content in Markdown. Additionally I use some libraries, including [Bourbon](http://bourbon.io), [Neat](http://neat.bourbon.io), [Highlight.js](http://highlightjs.org), [Instantclick](http://highlightjs.org) and [Picturefill](http://scottjehl.github.io/picturefill/). [Nginx](http://nginx.org) serves this website (if you use a modern browser it will use [SPDY](http://en.wikipedia.org/wiki/SPDY)).
+I use [Sculpin](https://sculpin.io), [Sass](http://sass-lang.com) and [Grunt](http://gruntjs.com) to build this page and write most content in Markdown. Additionally I use some libraries, including [Bourbon](http://bourbon.io), [Neat](http://neat.bourbon.io), [Highlight.js](http://highlightjs.org), [Instantclick](http://instantclick.io) and [Picturefill](http://scottjehl.github.io/picturefill/). [Nginx](http://nginx.org) serves this website (if you use a modern browser it will use [SPDY](http://en.wikipedia.org/wiki/SPDY)).
