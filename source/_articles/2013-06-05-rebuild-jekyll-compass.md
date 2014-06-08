@@ -1,9 +1,15 @@
 ---
 title: Rebuild Jekyll and Compass when a file changes
 tags: [ jekyll, compass, guard, ruby ]
-summary: |
-    Guard is a ruby tool to execute commands when file changes and can be used to rebuild a Jekyll site whenever its content changes and Compaass whenever the stylesheets change.
 ---
+
+{% block summary %}
+
+Guard is a ruby tool to execute commands when file changes and can be used to rebuild a Jekyll site whenever its content changes and Compaass whenever the stylesheets change.
+
+{% endblock %}
+
+{% block content %}
 
 This blog uses Jekyll to build the HTML code, Compass for the stylesheets and JavaScript is concatenated and minified. Lately I have written more articles and every time I changed the layout or the text I had to manually recompiled using my [Makefile](https://github.com/braincrafted/braincrafted.com/blob/148b44472bb39a3ad10dfc7f24b6c0e8c7c4699b/Makefile). Every time those extra keystrokes hurt me on the inside.
 
@@ -116,3 +122,5 @@ When I now change something in the project, the updated page is already loaded w
 - [Reload Safari tabs in the background via AppleScript](http://hints.macworld.com/article.php?story=20090526225003768)
 - [AppleScript To open a collection of Safari tabs](http://hints.macworld.com/article.)php?story=20110415065236737
 - [Is it possible to create a multi-line string variable in a Makefile](http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile)
+
+{% endblock %}

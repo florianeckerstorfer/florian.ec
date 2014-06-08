@@ -12,6 +12,10 @@
     </ul>
 </header>
 {% if article.summary %}
-    <p>{{ article.summary }}</p>
+    <p>{{ article.summary|raw }}</p>
+{% elseif article.blocks.summary %}
+    {{ article.blocks.summary|raw }}
+{% else %}
+    {{ article.blocks.content|raw }}
 {% endif %}
 <a href="{{ article.direct_url ?: article.url }}/">&#8734;</a>

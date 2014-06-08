@@ -1,7 +1,9 @@
 sculpin:
     output_dir: public_%kernel.environment%
     exclude:
-        - _sass/**
+        - _sass/**+
+sculpin_markdown:
+    parser_class: Michelf\Markdown
 sculpin_content_types:
     projects:
         type: path

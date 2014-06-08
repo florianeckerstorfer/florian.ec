@@ -1,10 +1,13 @@
 ---
 title: Running background processes in PHP
 tags: [ php, process ]
-summary: |
-    PHP can, by default, not create processes that continue to run in the background even after the parent process terminates. This article explain how you can trick PHP into doing it anyway. I also created a library to simplify the process and explain how it works in the end.
 ---
 
+{% block summary %}
+PHP can, by default, not create processes that continue to run in the background even after the parent process terminates. This article explain how you can trick PHP into doing it anyway. I also created a library to simplify the process and explain how it works in the end.
+{% endblock %}
+
+{% block content %}
 I often have long running tasks, for example, generating a report or performing an analysis of large amounts of data, that run minutes or even hours. Today I encountered a situation where I needed to start such task from a button in a browser window. Since the task takes three to five hours it was impossible to invoke the task directly.
 
 My Internet research on this topic revelead a wide range of different solutions, from hacky to weird. The best I could find was the anwer of Mark Biek[^biek] to a question on Stack Overflow.
@@ -114,3 +117,5 @@ It is also possible to install the package through composer:
     }
 
 [^biek]: [Answer to "PHP execute a background process" on Stack Overflow](http://stackoverflow.com/a/45966/776654)
+
+{% endblock %}

@@ -1,9 +1,15 @@
 ---
 title: Upload files to Amazon S3 with Symfony2 and Gaufrette
 tags: [ aws s3, symfony2, gaufrette, php ]
-summary: |
-    Gaufrette, a PHP library, abstracts reading and writing files and allows us to write code independent of the underlying filesystem. In this article we want to store photos on Amazon S3 in a way that we can change the filesystem without changing our code.
 ---
+
+{% block summary %}
+
+Gaufrette, a PHP library, abstracts reading and writing files and allows us to write code independent of the underlying filesystem. In this article we want to store photos on Amazon S3 in a way that we can change the filesystem without changing our code.
+
+{% endblock %}
+
+{% block content %}
 
 Often it can be a little bit tricky to upload files to a web server and things become even more complicated when you want to store the uploaded files on Amazon S3. In this article I am going to explain how you can use Gaufrette to upload photos to S3 from a Symfony2 application.
 
@@ -329,3 +335,5 @@ If we now want to get the full URL to the uploaded file we can use the parameter
 );</code></pre>
 
 The only thing left to do is create a route for the action and probably add some logic to store the URL returned by the `upload()` method in a database. However, that is not really the topic of this article and is explained elsewhere.
+
+{% endblock %}

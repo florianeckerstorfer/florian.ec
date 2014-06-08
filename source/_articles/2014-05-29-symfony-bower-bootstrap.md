@@ -2,11 +2,15 @@
 title: Using Bower with Symfony2 and Bootstrap
 tags: [ symfony2, php, bootstrap, bootstrap-bundle ]
 slug: symfony-bower-bootstrap
-summary: |
-    There exist a lot of different ways to get third party assets into your project and one such way is Bower. Bower is an asset management tool from Twitter and you can use it to get Bootstrap into your Symfony project. I will explain how you can use it in combination with BraincraftedBootstrapBundle, my bundle that integrates Bootstrap into Symfony.
 ---
 
-<p>{{ page.summary }}</p>
+{% block summary %}
+
+There exist a lot of different ways to get third party assets into your project and one such way is Bower. Bower is an asset management tool from Twitter and you can use it to get Bootstrap into your Symfony project. I will explain how you can use it in combination with BraincraftedBootstrapBundle, my bundle that integrates Bootstrap into Symfony.
+
+{% endblock %}
+
+{% block content %}
 
 First I will assume that we have a fresh installation of [Symfony Framwork standard edition](http://symfony.com/download) and that you have [Bower](http://bower.io) installed. If you don't, do it now:
 
@@ -137,3 +141,5 @@ You can now create a basic layout and include the Bootstrap CSS and JavaScript a
 [{{ picture('/img/articles/symfony-bower-bootstrap/login.png', 'BetterTouchTool') }}](/img/articles/symfony-bower-bootstrap/login-original.png)
 
 In addition to this article I also created a demo project where you can follow the steps in this article in a full Symfony project. The source code of this demo project resides on Github: <code><a href="https://github.com/florianeckerstorfer/symfony-bower-bootstrap">florianeckerstorfer/symfony-bower-bootstrap</a></code>.
+
+{% endblock %}
