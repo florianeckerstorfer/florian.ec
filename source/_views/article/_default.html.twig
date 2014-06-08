@@ -3,11 +3,14 @@
         {{ page.title }}
         <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
     </h2>
-    <ul class="article__tags">
-        {% for tag in page.tags %}
-        <li>{{ tag }}</li>
-        {% endfor %}
-    </ul>
+    <div>
+        <ul class="article__tags">
+            {% for tag in page.tags %}
+            <li>{{ tag }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ article.direct_url ?: article.url }}/" class="article__header__permalink">&#8734; <span class="hide show-on-hover">Permalink</span></a>
+    </div>
 </header>
 
 {{ page.blocks.summary|raw }}

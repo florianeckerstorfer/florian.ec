@@ -63,8 +63,14 @@
 
 } // .article__header__date
 
+.article__header__permalink {
+    font-size: $font-xs;
+    line-height: 1em;
+}
+
 .article__tags {
     color: #666;
+    display: inline-block;
     font-size: $font-xs;
     line-height: 1em;
     list-style: none;

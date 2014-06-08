@@ -5,17 +5,19 @@
         </a>
         <span class="article__header__date">({{ article.date|date('d M Y') }})</span>
     </h2>
-    <ul class="article__tags">
-        {% for tag in article.tags %}
-        <li>{{ tag }}</li>
-        {% endfor %}
-    </ul>
+    <div>
+        <ul class="article__tags">
+            {% for tag in article.tags %}
+            <li>{{ tag }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ article.direct_url ?: article.url }}/" class="article__header__permalink">&#8734; <span class="hide show-on-hover">Permalink</span></a>
+    </div>
 </header>
-{% if article.summary %}
-    <p>{{ article.summary|raw }}</p>
-{% elseif article.blocks.summary %}
+
+{% if article.blocks.summary %}
     {{ article.blocks.summary|raw }}
+    <p><a href="{{ article.direct_url ?: article.url }}/">Read the rest of the article</a></p>
 {% else %}
     {{ article.blocks.content|raw }}
 {% endif %}
-<a href="{{ article.direct_url ?: article.url }}/">&#8734;</a>
