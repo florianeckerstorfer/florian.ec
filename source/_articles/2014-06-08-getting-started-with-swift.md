@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Getting Started with Swift
 tags: [ swift, programming ]
 slug: swift-getting-started
