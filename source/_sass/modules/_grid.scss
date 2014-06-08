@@ -1,0 +1,25 @@
+.grid__container {
+    @include outer-container;
+}
+
+.grid__row {
+    @include row();
+}
+
+@mixin grid-col() {
+    picture {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.grid__col-6 {
+    @include grid-col();
+    @include span-columns(6);
+}
+
+.grid__col-12 {
+    @include grid-col();
+    @include span-columns(12);
+}

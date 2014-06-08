@@ -1,5 +1,15 @@
 .layout_wide {
     .header__logo {
+        @include span-columns(12);
+
+        @include media($tablet) {
+            @include span-columns(12);
+        }
+    } // .header__logo
+}
+
+.header_small {
+    .header__logo {
         @include span-columns(2);
 
     } // .header__logo
