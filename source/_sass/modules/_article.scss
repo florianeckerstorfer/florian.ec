@@ -66,6 +66,12 @@
 .article__header__permalink {
     font-size: $font-xs;
     line-height: 1em;
+
+    &:link,
+    &:visited,
+    &:active {
+        text-decoration: none;
+    }
 }
 
 .article__tags {
