@@ -10,16 +10,16 @@
 } // .screenshots
 
 .project__url {
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        display: block;
-        font: .9em Inconsolata, 'Courier New', monospace;
-        line-height: 100%;
-        padding: 5px;
-        text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    font: .9em Inconsolata, 'Courier New', monospace;
+    line-height: 100%;
+    padding: 5px;
+    text-decoration: none;
 
-        &:hover {
-            border-color: $link-color;
-        }
+    &:hover {
+        border-color: $link-color;
+    }
 
 } // .project__url

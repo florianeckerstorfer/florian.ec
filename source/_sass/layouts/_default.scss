@@ -11,6 +11,7 @@
         @include media($mobile) {
             @include shift(0);
         }
+
     } // .header__logo
 
     .navigation {

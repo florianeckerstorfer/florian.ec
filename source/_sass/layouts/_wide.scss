@@ -5,6 +5,7 @@
         @include media($tablet) {
             @include span-columns(12);
         }
+
     } // .header__logo
 }
 
@@ -22,8 +23,8 @@
 } // .layout_wide
 
 .container_panorama {
-    position: absolute;
-    width: 100%;
-    top: 100%;
     padding-top: 2em;
+    position: absolute;
+    top: 100%;
+    width: 100%;
 }

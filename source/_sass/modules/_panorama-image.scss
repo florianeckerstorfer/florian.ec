@@ -9,11 +9,11 @@
 }
 
 .panorama__header {
-    -webkit-transform: translateX(-50%) translateY(-50%);
     left: 50%;
     position: absolute;
     text-align: center;
     top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     vertical-align: middle;
     width: 100%;
