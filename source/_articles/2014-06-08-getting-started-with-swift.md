@@ -26,7 +26,8 @@ Last Monday Apple released a new programming language for the iOS and Mac platfo
 4. [Collections](#collections)
 5. [Loops](#loops)
 6. [Conditional Statements](#conditional-statements)
-7. [Updates](#updates)
+7. [Optional Variables](#optional-variables)
+8. [Updates](#updates)
 
 <a name="getting-started"></a>
 ## Getting Started
@@ -81,6 +82,8 @@ var anBoolean: Bool = true
 var aString: String = "Hello"
 var aDouble: Double = 4.2
 var aFloat: Float = 9.9</code></pre>
+
+In general variables also have to have a value. However, Swifts has the concept of <a href="#optional-variables">Optional Variables</a> that I will cover in a later chapter.
 
 
 <a name="arrays"></a>
@@ -236,7 +239,72 @@ if num == 5 {
 }
 // "You've found the answer"</code></pre>
 
-<hr>
+<a name="optional-variables"></a>
+## Optional Variables
+
+As mentioned in the [Constants & Variables](#constants-variables) chapter Swift requires you to always set a value for a variable for you can read it. In other programming languages variables have a default value (for example, `null` in PHP or `undefined` in JavaScript) when you use a variable before it has a value assigned. When you execute the following code snippet you will get a compiler error.
+
+<pre><code class="swift">var foo: Int
+
+if foo == 5 {
+    "The value is 5"
+}
+// Compiler error: "error: variable 'foo' used before being initialized"
+</code></pre>
+
+This behaviour helps you catch a lot of errors where you forgot to assign a value or assigned a value to the wrong variable. However, there exist situations where you cannot assign a value to variable because we don't know the value yet. For example, when retrieving data using an HTTP request we may not have a value when the request fails. For such cases you can specifically define a variable as *optional* and assign `nil` to the variable. If you explicitely state that a variable is optional it is your responsibility to check whether a value has been asigned before using it. You can define an optional variable by adding a question mark `?` to the type definition.
+
+<pre><code class="swift">var foo: Int?
+
+if foo {
+    "Foo is initialized"
+} else {
+    "Foo is not initialized"
+}
+// "Foo is not initialized"</code></pre>
+
+In this example the conditional evaluates to `true` if the variable `foo` has a value assigned (is not `nil`) and to `false` otherwise (is `nil`). You can also assign `nil` later to a variable.
+
+<pre><code class="swift">var foo: Int?
+foo = 5
+
+if foo {
+    "Foo is initialized"
+} else {
+    "Foo is not initialized"
+}
+
+foo = nil
+
+if foo {
+    "Foo is initialized"
+} else {
+    "Foo is not initialized"
+}
+// "Foo is initialized"
+// "Foo is not initialized"</code></pre>
+
+It's important to note that only the variable name (`foo` in the examples above) is only a valid `LogicValue` that can be used in a conditional if the variable is optional. The following example will throw a compiler error:
+
+<pre><code class="swift">var bar: Int = 5
+if bar {
+    "Bar is initialized"
+}
+// Compiler error: "type 'Int' does not conform to protocol 'LogicValue'"</code></pre>
+
+It is a common scenario that you have a variable with an optional value and after you check that it has a value it should always have a value. You can use `var foo = optionalFoo` inside the conditional to assign the optional value to a non-optional value.
+
+<pre><code class="swift">var foo: Int? = 5
+
+if var bar = foo {
+    bar = 7
+    bar = nil
+}
+// Compiler error: "could not find an overload for '__conversion' that accepts the supplied arguments"</code></pre>
+
+The first assignment `bar = 7` goes through, however, the compiler will throw an error when you want to assign `nil` to `bar`.
+
+---
 
 Please note that this article can be considered as a working draft. At this point it includes some of the basic concepts of the Swift programming language, but there exists a lot of stuff that is not covered. If you are eager to learn more please read [The Swift Programming Language](https://itunes.apple.com/at/book/swift-programming-language/id881256329?l=en&mt=11) (iBook Store) from Apple. You can read the book also [online](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/BasicOperators.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0). If you want to try things out and don't want to type every example you can download the [Swift Tour](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1) as a playground file.
 
@@ -248,5 +316,7 @@ Please note that this article can be considered as a working draft. At this poin
 - **June 8, 2014**
     - Extended and rewritten section on [Conditional Statements](#conditional-statements)
     - Added [Table of Contents](#table-of-contents)
+- **June 15, 2014**
+    - Added chapter on [Optional Variables](#optional-variables)
 
 {% endblock %}
