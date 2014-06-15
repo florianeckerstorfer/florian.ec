@@ -304,6 +304,16 @@ if var bar = foo {
 
 The first assignment `bar = 7` goes through, however, the compiler will throw an error when you want to assign `nil` to `bar`.
 
+It is worth noting that constants can also have an optional type.
+
+<pre><code class="swift">let foo: Int?
+
+if foo {
+    "init"
+} else {
+    "not init"
+}</code></pre>
+
 ---
 
 Please note that this article can be considered as a working draft. At this point it includes some of the basic concepts of the Swift programming language, but there exists a lot of stuff that is not covered. If you are eager to learn more please read [The Swift Programming Language](https://itunes.apple.com/at/book/swift-programming-language/id881256329?l=en&mt=11) (iBook Store) from Apple. You can read the book also [online](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/BasicOperators.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0). If you want to try things out and don't want to type every example you can download the [Swift Tour](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1) as a playground file.
