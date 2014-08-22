@@ -3,11 +3,15 @@ title: Building Symfony2 Applications with Gulp
 tags: [ gulp, symfony2, sass, assets, build ]
 slug: buliding-symfony2-with-gulp
 ---
-{% block content %}
+{% block summary %}
 
 Today [Bernhard asked on Twitter](https://twitter.com/webmozart/status/502808064542912512) where we see asset handling going and I replied that [Grunt](http://gruntjs.com) or [Gulp](http://gulpjs.com) will take over. I am currently using Grunt in some of my projects (including to build this website) and Gulp for some smaller stuff. However, I wanted to move one of my larger Symfony2 projects from Grunt to Gulp for a while now and I took the discussion on Twitter as a reason to finally do it. In this article I want to explain some of the aspects of using Gulp (and Bower) in a Symfony2 project.
 
 I use Gulp not only for building my assets but also to run my tests, code coverage and checkstyle and I will tackle all these aspects in these article.
+
+{% endblock %}
+
+{% block content %}
 
 ## Table of Contents
 
