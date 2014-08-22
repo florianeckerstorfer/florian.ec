@@ -114,7 +114,7 @@ Unlike in more low-level languages like Objective C or C types in Swift have met
 <pre><code class="swift">houses.count
 // 4</code></pre>
 
-Arrays are ordered, therefore each element has an index (must be unique) and there are no gaps in the list of indeces. If you have an array with 5 elements and you remove the element with index 2, the element at index 4 will be moved to index 2 and the element at index 4 will be moved to index 3.
+Arrays are ordered, therefore each element has an index (must be unique) and there are no gaps in the list of indeces. If you have an array with 5 elements and you remove the element with index 2, the element at index 3 will be moved to index 2 and the element at index 4 will be moved to index 3.
 
 <a name="collections"></a>
 ## Collections
