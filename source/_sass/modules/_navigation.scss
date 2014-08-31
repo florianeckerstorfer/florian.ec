@@ -1,11 +1,13 @@
 .navigation {
     ul {
-        margin: {
-            top: 0;
-            bottom: 4em;
-        }
+        margin: 0;
         padding-left: 0;
-        text-align: center;
+        text-align: right;
+        line-height: 61px;
+
+        @include media($tablet) {
+            text-align: center;
+        }
     }
 
 } // .top-nav

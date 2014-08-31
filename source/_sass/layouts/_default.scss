@@ -1,35 +1,22 @@
 .layout_default {
     .header__logo {
-        @include span-columns(10);
+        @include span-columns(5);
         @include shift(1);
 
         @include media($tablet) {
             @include span-columns(12);
             @include shift(0);
         }
-
-        @include media($mobile) {
-            @include shift(0);
-        }
-
     } // .header__logo
 
     .navigation {
-        ul {
-            @include span-columns(10);
-            @include shift(1);
+        @include span-columns(5);
 
-            @include media($tablet) {
-                @include span-columns(12);
-                @include shift(0);
-            }
-
-            @include media($mobile) {
-                @include shift(0);
-            }
+        @include media($tablet) {
+            @include span-columns(12);
+            @include shift(0);
         }
-
-    } // .top-nav
+    } // .navigation
 
     .main {
         @include span-columns(10);
