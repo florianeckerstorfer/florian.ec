@@ -1,5 +1,8 @@
 .footer {
+    @include outer-container;
+
     position: relative;
+    font: $font-base $sans-serif-font;
     z-index: 100;
 
     p {

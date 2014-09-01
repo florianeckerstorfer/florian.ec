@@ -1,8 +1,5 @@
 .header,
-.small-header,
-.top-nav,
-.content,
-.footer {
+.content {
     @include outer-container;
 }
 

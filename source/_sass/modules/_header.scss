@@ -45,30 +45,3 @@
         text-align: center;
     }
 } // .header__logo
-
-.header_small {
-    margin: {
-        top: 2em;
-        bottom: 1em;
-    }
-
-    .header__logo {
-        text-align: left;
-
-    } // .header__logo
-
-    .navigation {
-        ul {
-            line-height: 61px;
-            margin: 0;
-            text-align: left;
-
-            &.active {
-                display: block;
-            }
-        }
-
-    } // .navigation
-
-} // .header_small
-

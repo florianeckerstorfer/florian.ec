@@ -23,7 +23,8 @@ module.exports = function(grunt) {
                     sourcemap: true
                 },
                 files: {
-                    'public_dev/css/master.css': 'source/_sass/master.scss'
+                    'public_dev/css/master.css': 'source/_sass/master.scss',
+                    'public_dev/css/cocur.css': 'source/_sass/cocur.scss'
                 }
             },
             prod: {
@@ -32,19 +33,22 @@ module.exports = function(grunt) {
                     sourcemap: false
                 },
                 files: {
-                    'public_prod/css/master.css': 'source/_sass/master.scss'
+                    'public_prod/css/master.css': 'source/_sass/master.scss',
+                    'public_prod/css/cocur.css': 'source/_sass/cocur.scss'
                 }
             }
         },
         cssmin: {
             dev: {
                 files: {
-                    'public_dev/css/master.css': ['public_dev/css/master.css']
+                    'public_dev/css/master.css': ['public_dev/css/master.css'],
+                    'public_dev/css/cocur.css': ['public_dev/css/cocur.css']
                 }
             },
             prod: {
                 files: {
-                    'public_prod/css/master.css': ['public_prod/css/master.css']
+                    'public_prod/css/master.css': ['public_prod/css/master.css'],
+                    'public_prod/css/cocur.css': ['public_prod/css/cocur.css']
                 }
             },
         },
