@@ -15,24 +15,8 @@
             @include span-columns(12);
         }
     }
-}
 
-.header_small {
-    .header__logo {
-        @include span-columns(2);
-
-    } // .header__logo
-
-    .navigation {
-        @include span-columns(10);
-
-    } // .navigation
-
-} // .layout_wide
-
-.container_panorama {
-    padding-top: 2em;
-    position: absolute;
-    top: 100%;
-    width: 100%;
+    .footer__padder {
+        @include span-columns(12);
+    } // .footer__padder
 }

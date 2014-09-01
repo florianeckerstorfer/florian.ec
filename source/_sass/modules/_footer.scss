@@ -1,13 +1,9 @@
 .footer {
-    @include outer-container;
-
-    position: relative;
-    font: $font-base $sans-serif-font;
-    z-index: 100;
+    font-family: $sans-serif-font;
 
     p {
+        font-size: .8em;
         color: #999;
-        font-size: .7em;
     }
 
     .heart {

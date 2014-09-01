@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include '_head.html.twig' with {'master_css': '/css/cocur.css'} %}
+</head>
+
+<body class="layout_cocur">
+
+<div class="wrap">
+    <header class="header" role="banner">
+
+        <div class="header__logo">
+            <a href="/">
+                <picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="/img/logo-cocur.png, /img/logo-cocur.png 2x">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img srcset="/img/logo-cocur.png, /img/logo-cocur.png 2x" alt="Cocur" width="127" height="47">
+                </picture>
+            </a>
+        </div>
+
+    </header>
+
+    <main class="main" role="main">
+        {% block content_wrapper %}{% block content %}No content. Sadface.{% endblock %}{% endblock %}
+    </main>
+</div>
+
+{% include '_footer.html.twig' %}
+{% include '_foot.html.twig' %}
+
+</body>
+</html>

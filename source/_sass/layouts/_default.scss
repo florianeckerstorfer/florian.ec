@@ -33,21 +33,19 @@
 
     } // .main
 
-    .footer {
-        div {
-            @include span-columns(10);
-            @include shift(1);
+    .footer__padder {
+        @include span-columns(10);
+        @include shift(1);
 
-            @include media($tablet) {
-                @include span-columns(12);
-                @include shift(0);
-            }
-
-            @include media($mobile) {
-                @include shift(0);
-            }
+        @include media($tablet) {
+            @include span-columns(12);
+            @include shift(0);
         }
 
-    } // .footer
+        @include media($mobile) {
+            @include shift(0);
+        }
+
+    } // .footer__padder
 
 } // .default
