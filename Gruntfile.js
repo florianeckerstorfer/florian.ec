@@ -24,7 +24,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'public_dev/css/master.css': 'source/_sass/master.scss',
-                    'public_dev/css/cocur.css': 'source/_sass/cocur.scss'
+                    'public_dev/css/cocur.css': 'source/_sass/cocur.scss',
+                    'public_dev/css/braincrafted.css': 'source/_sass/braincrafted.scss'
                 }
             },
             prod: {
@@ -34,7 +35,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'public_prod/css/master.css': 'source/_sass/master.scss',
-                    'public_prod/css/cocur.css': 'source/_sass/cocur.scss'
+                    'public_prod/css/cocur.css': 'source/_sass/cocur.scss',
+                    'public_prod/css/braincrafted.css': 'source/_sass/braincrafted.scss'
                 }
             }
         },
@@ -42,13 +44,15 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     'public_dev/css/master.css': ['public_dev/css/master.css'],
-                    'public_dev/css/cocur.css': ['public_dev/css/cocur.css']
+                    'public_dev/css/cocur.css': ['public_dev/css/cocur.css'],
+                    'public_dev/css/braincrafted.css': ['public_dev/css/braincrafted.css']
                 }
             },
             prod: {
                 files: {
                     'public_prod/css/master.css': ['public_prod/css/master.css'],
-                    'public_prod/css/cocur.css': ['public_prod/css/cocur.css']
+                    'public_prod/css/cocur.css': ['public_prod/css/cocur.css'],
+                    'public_prod/css/braincrafted.css': ['public_prod/css/braincrafted.css']
                 }
             },
         },
