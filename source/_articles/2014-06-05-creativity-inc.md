@@ -19,7 +19,7 @@ I really enjoyed reading the book and I think most of the principles do not only
     <li class="bucket-list__item">Toy Story 2</li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Monsters, Inc.</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Finding Nemo</span></li>
-    <li class="bucket-list__item">The Incredibles</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">The Incredibles</span></li>
     <li class="bucket-list__item">Cars</li>
     <li class="bucket-list__item">Ratatouille</li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">WALL-E</span></li>
@@ -27,7 +27,7 @@ I really enjoyed reading the book and I think most of the principles do not only
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story 3</span></li>
     <li class="bucket-list__item">Cars 2</li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Brave</span></li>
-    <li class="bucket-list__item">Monsters University</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Monsters University</span></li>
 </ul>
 
 {% endblock %}
