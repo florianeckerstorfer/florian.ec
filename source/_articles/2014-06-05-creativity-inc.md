@@ -17,7 +17,7 @@ I really enjoyed reading the book and I think most of the principles do not only
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">A Bug's Life</span></li>
     <li class="bucket-list__item">Toy Story 2</li>
-    <li class="bucket-list__item">Monsters, Inc.</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Monsters, Inc.</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Finding Nemo</span></li>
     <li class="bucket-list__item">The Incredibles</li>
     <li class="bucket-list__item">Cars</li>
