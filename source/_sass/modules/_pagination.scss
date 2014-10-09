@@ -1,0 +1,17 @@
+.pagination {
+    @include clearfix();
+}
+
+.pagination__newer,
+.pagination__older {
+    width: 50%;
+}
+
+.pagination__newer {
+    float: left;
+}
+
+.pagination__older {
+    float: right;
+    text-align: right;
+}

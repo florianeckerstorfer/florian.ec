@@ -1,12 +1,17 @@
 ---
 layout: default
 title: Articles by Florian Eckerstorfer
-permalink: articles/
-use: [articles]
+permalink: articles/index.html
+generator: pagination
+pagination:
+    max_per_page: 15
+    provider: data.articles
+use:
+    - articles
 ---
 
 <ul class="articles">
-{% for article in data.articles %}
+{% for article in page.pagination.items %}
     {% set article_type = article.type ? article.type : 'default' %}
     {% set article_template = 'articles/_article_'~article_type~'.html.twig' %}
     <li class="articles__article {{ article_type }}">
@@ -14,3 +19,14 @@ use: [articles]
     </li>
 {% endfor %}
 </ul>
+
+<nav class="pagination">
+{% if page.pagination.previous_page or page.pagination.next_page %}
+    {% if page.pagination.previous_page %}
+        <a href="{{ page.pagination.previous_page.url }}" class="pagination__newer">&#65513; Newer articles</a>
+    {% endif %}
+    {% if page.pagination.next_page %}
+        <a href="{{ page.pagination.next_page.url }}" class="pagination__older">Older articles &#65515;</a>
+    {% endif %}
+{% endif %}
+</nav>
