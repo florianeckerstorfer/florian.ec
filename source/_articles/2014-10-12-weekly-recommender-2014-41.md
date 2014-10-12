@@ -5,9 +5,9 @@ slug: weekly-recommender-2014-41
 ---
 
 {% block summary %}
-It's easy to press star, like, favorite or bookmark in an app while consuming content. I do this regularly in Feedbin, Instapaper or Pinboard, but once I pressed the button I never revisit the saved stuff. There are many great articles, libraries and tools out there that I saved for keeping because they could be useful to me at some point in the future, but I when I would need them I don't think about looking in my archives because I forgot that I encountered and saved them.
+It's easy to press star, like, favorite or bookmark in an app while consuming content. I do this regularly in Feedbin, [Instapaper](https://www.instapaper.com/p/florianec) or [Pinboard](https://pinboard.in/u:florian.eckerstorfer), but once I pressed the button I never revisit the saved stuff. There are many great articles, libraries and tools out there that I saved for keeping because they could be useful to me at some point in the future, but when I would need them I don't think about looking in my archives because I forgot that I encountered and saved them.
 
-The Weekly Recommender is a new weekly series that I plan to write for two purposes, giving myself a reason to revisit the content I encountered the past week, collect them in one place and make it accessible to my readers.
+The Weekly Recommender is a new weekly series that I plan to write for two purposes, giving myself a reason to revisit the content I encountered the past week, collect them in one place and make the highlights accessible to my readers.
 {% endblock %}
 
 {% block content %}
