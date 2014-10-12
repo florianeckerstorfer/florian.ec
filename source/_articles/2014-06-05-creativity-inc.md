@@ -21,7 +21,7 @@ I really enjoyed reading the book and I think most of the principles do not only
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Finding Nemo</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">The Incredibles</span></li>
     <li class="bucket-list__item">Cars</li>
-    <li class="bucket-list__item">Ratatouille</li>
+    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Ratatouille</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">WALL-E</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Up</span></li>
     <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story 3</span></li>
