@@ -3,7 +3,7 @@ sculpin:
     exclude:
         - _sass/**+
 sculpin_markdown:
-    parser_class: Michelf\Markdown
+    parser_class: Sculpin\Bundle\MarkdownBundle\PhpMarkdownExtraParser
 sculpin_content_types:
     projects:
         type: path
