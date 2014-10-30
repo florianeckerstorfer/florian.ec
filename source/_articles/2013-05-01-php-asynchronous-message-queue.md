@@ -11,7 +11,7 @@ A fun exercise in programming. Implementing a asynchronous, non-blocking message
 
 {% block content %}
 
-Unlike most other programming and scripting languages PHP does not support threads[^pthreads] and threads would be required to implement a truly asynchronous, non-blocking message queue. Challange accepted.
+Unlike most other programming and scripting languages PHP does not support threads (there is a third-party library called [pthreads](http://docs.php.net/manual/en/book.pthreads.php)) and threads would be required to implement a truly asynchronous, non-blocking message queue. Challange accepted.
 
 In this article I am going to explain how you can implement a message queue in PHP. I do this mostly for fun and pleasure, because in most production scenarios you probably want to use a real message queue like [RabbitMQ](http://www.rabbitmq.com).
 
@@ -25,37 +25,41 @@ Running in the background, listening to a port, reacting when a message arrives.
 
 If you are using [Composer](http://getcomposer.org) (if not you really should) you can add `react/socket` to your project.
 
-    // composer.json
-    {
-        "require": {
-            "react/socket": "0.3.*"
-        }
+```json
+// composer.json
+{
+    "require": {
+        "react/socket": "0.3.*"
     }
+}
+```
 
 With React we can implement a simple server that listens to a socket and executes code whenever new data arrives at the socket.
 
-    // server.php
+```php
+// server.php
 
-    require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 
-    // Create loop and socket
-    $loop   = React\EventLoop\Factory::create();
-    $socket = new React\Socket\Server($loop);
+// Create loop and socket
+$loop   = React\EventLoop\Factory::create();
+$socket = new React\Socket\Server($loop);
 
-    // New connection is established
-    $socket->on('connection', function (\React\Socket\ConnectionInterface $conn) {
-        // New data arrives at the socket
-        $conn->on('data', function ($data) use ($conn) {
-            // TODO: Handle message
-            echo "$data";
-            // Close the connection when we consumed the message
-            $conn->close();
-        });
+// New connection is established
+$socket->on('connection', function (\React\Socket\ConnectionInterface $conn) {
+    // New data arrives at the socket
+    $conn->on('data', function ($data) use ($conn) {
+        // TODO: Handle message
+        echo "$data";
+        // Close the connection when we consumed the message
+        $conn->close();
     });
+});
 
-    // The socket should listen to port 4000
-    $socket->listen(4000);
-    $loop->run();
+// The socket should listen to port 4000
+$socket->listen(4000);
+$loop->run();
+```
 
 In the above script I added a simple `echo` to output the received data. We could now run `php server.php`to start our server and send messages to it by connecting to it via `telnet localhost 4000`.
 
@@ -63,26 +67,30 @@ In the above script I added a simple `echo` to output the received data. We coul
 
 Let's assume that our message queue receives messages and needs to perform some time-consuming task with them. We will simulate this with the following code.
 
-    function consume($data, \React\Socket\ConnectionInterface $conn)
-    {
-        for ($i = 0; $i < 5; $i++) {
-            echo sprintf("%s: Do something with %s\n", date('H:i:s'), $data);
-            sleep(1);
-        }
+```php
+function consume($data, \React\Socket\ConnectionInterface $conn)
+{
+    for ($i = 0; $i < 5; $i++) {
+        echo sprintf("%s: Do something with %s\n", date('H:i:s'), $data);
+        sleep(1);
     }
+}
+```
 
 When we run two `telnet` simultaneously we will receive the following output:
 
-    19:18:07: Do something with foo
-    19:18:08: Do something with foo
-    19:18:09: Do something with foo
-    19:18:10: Do something with foo
-    19:18:11: Do something with foo
-    19:18:12: Do something with bar
-    19:18:13: Do something with bar
-    19:18:14: Do something with bar
-    19:18:15: Do something with bar
-    19:18:16: Do something with bar
+```text
+19:18:07: Do something with foo
+19:18:08: Do something with foo
+19:18:09: Do something with foo
+19:18:10: Do something with foo
+19:18:11: Do something with foo
+19:18:12: Do something with bar
+19:18:13: Do something with bar
+19:18:14: Do something with bar
+19:18:15: Do something with bar
+19:18:16: Do something with bar
+```
 
 Client 1 has an open connection to the server for five seconds and client 2 has an open connection to the server for ten seconds. We want that the clients tranfer a message to the server and immediately close the connection while the server accepts new messages and works on those tasks in the background.
 
@@ -173,7 +181,5 @@ I created a library from the code described in this article. The principles are 
 ### BcMqBundle
 
 If you want to use the code in a Symfony2 application I made things even easier by creating a bundle that encapsulates BcMq. The bundle uses services to consume messages which makes it quite easy and elegant. Detailed instructions on how to install and use the bundle can be found on Github: [BcMqBundle](https://github.com/braincrafted/mq-bundle).
-
-[^pthreads]: However, there is an extension called [pthreads](http://docs.php.net/manual/en/book.pthreads.php)
 
 {% endblock %}

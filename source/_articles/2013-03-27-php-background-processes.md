@@ -10,7 +10,7 @@ PHP can, by default, not create processes that continue to run in the background
 {% block content %}
 I often have long running tasks, for example, generating a report or performing an analysis of large amounts of data, that run minutes or even hours. Today I encountered a situation where I needed to start such task from a button in a browser window. Since the task takes three to five hours it was impossible to invoke the task directly.
 
-My Internet research on this topic revelead a wide range of different solutions, from hacky to weird. The best I could find was the anwer of Mark Biek[^biek] to a question on Stack Overflow.
+My Internet research on this topic revelead a wide range of different solutions, from hacky to weird. The best I could find was the [answer of Mark Biek to a question on Stack Overflow](http://stackoverflow.com/a/45966/776654).
 
 In PHP there are several functions to execute a command, for example, `exec` and `shell_exec`. However, there are several things to consider when a command should run in the background. But let's first take a look at the most simple example:
 
@@ -35,10 +35,48 @@ In order to be able to look this up, we need the PID of the process. In a shell 
 
 It is now relatively easy to retrieve the status of the process. *The following code is taken directly from the already mentioned Stack Overflow question.*
 
-    function isRunning($pid)
+```php
+function isRunning($pid)
+{
+    try {
+        $result = shell_exec(sprintf('ps %d', $pid));
+        if(count(preg_split("/\n/", $result)) > 2) {
+            return true;
+        }
+    } catch(Exception $e) {}
+
+    return false;
+}
+```
+
+At this point I have everything I need and the only thing left to do is pack the code in a class with an easy-to-use interface:
+
+```php
+namespace Bc\BackgroundProcess;
+
+class BackgroundProcess
+{
+    private $command;
+    private $pid;
+
+    public function __construct($command)
+    {
+        $this->command = $command;
+    }
+
+    public function run($outputFile = '/dev/null')
+    {
+        $this->pid = shell_exec(sprintf(
+            '%s > %s 2>&amp;1 &amp; echo $!',
+            $this->command,
+            $outputFile
+        ));
+    }
+
+    public function isRunning()
     {
         try {
-            $result = shell_exec(sprintf('ps %d', $pid));
+            $result = shell_exec(sprintf('ps %d', $this->pid));
             if(count(preg_split("/\n/", $result)) > 2) {
                 return true;
             }
@@ -47,60 +85,28 @@ It is now relatively easy to retrieve the status of the process. *The following 
         return false;
     }
 
-At this point I have everything I need and the only thing left to do is pack the code in a class with an easy-to-use interface:
-
-    namespace Bc\BackgroundProcess;
-
-    class BackgroundProcess
+    public function getPid()
     {
-        private $command;
-        private $pid;
-
-        public function __construct($command)
-        {
-            $this->command = $command;
-        }
-
-        public function run($outputFile = '/dev/null')
-        {
-            $this->pid = shell_exec(sprintf(
-                '%s > %s 2>&amp;1 &amp; echo $!',
-                $this->command,
-                $outputFile
-            ));
-        }
-
-        public function isRunning()
-        {
-            try {
-                $result = shell_exec(sprintf('ps %d', $this->pid));
-                if(count(preg_split("/\n/", $result)) > 2) {
-                    return true;
-                }
-            } catch(Exception $e) {}
-
-            return false;
-        }
-
-        public function getPid()
-        {
-            return $this->pid;
-        }
+        return $this->pid;
     }
+}
+```
 
 It's now relatively easy to execute a command in a background process:
 
-    use Bc\BackgroundProcess\BackgroundProcess;
+```php
+use Bc\BackgroundProcess\BackgroundProcess;
 
-    $process = new BackgroundProcess('sleep 5');
-    $process->run();
+$process = new BackgroundProcess('sleep 5');
+$process->run();
 
-    echo sprintf('Crunching numbers in process %d', $process->getPid());
-    while ($process->isRunning()) {
-        echo '.';
-        sleep(1);
-    }
-    echo "\nDone.\n"
+echo sprintf('Crunching numbers in process %d', $process->getPid());
+while ($process->isRunning()) {
+    echo '.';
+    sleep(1);
+}
+echo "\nDone.\n"
+```
 
 In this example the command `sleep 5` is executed in the background. As long as the process is running a dot is printed every second.
 
@@ -110,12 +116,14 @@ In this example the command `sleep 5` is executed in the background. As long as 
 
 It is also possible to install the package through composer:
 
-    {
-        "require": {
-            "braincrafted/background-process": "dev-master"
-        }
+```yaml
+{
+    "require": {
+        "braincrafted/background-process": "dev-master"
     }
+}
+```
 
-[^biek]: [Answer to "PHP execute a background process" on Stack Overflow](http://stackoverflow.com/a/45966/776654)
+[^1]: [Answer to "PHP execute a background process" on Stack Overflow](http://stackoverflow.com/a/45966/776654)
 
 {% endblock %}

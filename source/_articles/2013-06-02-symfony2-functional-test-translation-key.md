@@ -55,9 +55,9 @@ class NoTranslator implements TranslatorInterface
     }
 }</code></pre>
 
-Now we need a way to switch the default translatior to our `NoTranslator`. The easiest way to do this is override the `translator.class` variable[^overridetranslator], however, this changes the translation for all environments and I want to change the translator only in the test environment.
+Now we need a way to switch the default translatior to our `NoTranslator`. The easiest way to do this is override the `translator.class` variable, however, this changes the translation for all environments and I want to change the translator only in the test environment.
 
-Another way to override a service is to write a compiler pass[^compilerpass].
+Another way to override a service is to write a compiler pass.
 
 <pre><code class="php"># src/Acme/DemoBundle/DependencyInjection/Compiler/TranslatorCompilerPass.php
 
@@ -173,7 +173,7 @@ parameters:
 
 In this case you don't need to create an additional compiler pass. However, my solution has the advantage that you can place it in my TestingBundle and have this functionality automatically in all my projects.
 
-[^overridetranslator]: Symfony2 Cookbook: How to Override any Part of a Bundle - [Services & Configuration](http://symfony.com/doc/2.2/cookbook/bundles/override.html#services-configuration)
-[^compilerpass]: Symfony2 Cookbook: [How to work with Compiler Passes in Bundles](http://symfony.com/doc/2.2/cookbook/service_container/compiler_passes.html)
+Symfony2 Cookbook: How to Override any Part of a Bundle - [Services & Configuration](http://symfony.com/doc/2.2/cookbook/bundles/override.html#services-configuration)
+Symfony2 Cookbook: [How to work with Compiler Passes in Bundles](http://symfony.com/doc/2.2/cookbook/service_container/compiler_passes.html)
 
 {% endblock %}

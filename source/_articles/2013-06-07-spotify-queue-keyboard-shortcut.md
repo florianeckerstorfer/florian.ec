@@ -21,12 +21,12 @@ There is no menu bar entry for this functionality in Spotify and therefore no wa
 
 In the main BetterTouchTool window you first need to add *Spotify* to the list of applications. Just press the small plus button in the bottom of the list. I created two shortcuts. One for adding all tracks in the current view to the queue and another one for adding all currently selected tracks to the queue.
 
-Let's first create the shortcut for adding all tracks in the current view to the queue. Manually we would first press **Cmd+A** to select all tracks, then click the right mouse button and select the second entry from the context menu. We need to create a new shortcut by pressing the *Add New Shortcut* button in the lower right corner. Define your favourite shortcut to it (I mapped the CAPSLOCK key to Crtl+Option+Shift+Command[^capslockkey] and used **CL+Q**) and set *Trigger Other Keyboard Shortcut* to **Cmd+A**. Click *Attach Another Action* and set *Trigger Prefefined Action* to *Rightclick*. Next we need to attach <strike>two</strike> six more actions that <strike>both</strike> all should trigger the *Down* key. The last action we need to attach is the *Enter* key.
+Let's first create the shortcut for adding all tracks in the current view to the queue. Manually we would first press **Cmd+A** to select all tracks, then click the right mouse button and select the second entry from the context menu. We need to create a new shortcut by pressing the *Add New Shortcut* button in the lower right corner. Define your favourite shortcut to it (I mapped the CAPSLOCK key to Crtl+Option+Shift+Command and used **CL+Q**) and set *Trigger Other Keyboard Shortcut* to **Cmd+A**. Click *Attach Another Action* and set *Trigger Prefefined Action* to *Rightclick*. Next we need to attach <strike>two</strike> six more actions that <strike>both</strike> all should trigger the *Down* key. The last action we need to attach is the *Enter* key.
 
 The shortcut to add only the selected songs to the queue is very similar, just set the shortcut to trigger *Rightclick* instead of *Cmd+A*.
 
 *Please note that the mouse has to be hovered over the selected songs when triggered the shortcut.*
 
-[^capslockkey]: [A useful Caps Lock key - BrettTerpstra.com](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)
+[A useful Caps Lock key - BrettTerpstra.com](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)
 
 {% endblock %}
