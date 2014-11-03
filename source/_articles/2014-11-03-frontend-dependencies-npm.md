@@ -5,7 +5,7 @@ slug: frontend-dependencies-npm
 ---
 
 {% block summary %}
-Until recently I used [Bower](http://bower.io) to manage the frontend dependencies, JavaScript and Sass/CSS libraries and [NPM](https://www.npmjs.org) to manage [Gulp](http://gulpjs.com)/[Grunt](http://gruntjs.com) and plugins required for my build process. Since all packages I use in Bower are also on NPM I removed Bower from the list of tools I use and manage my packages exculsively with NPM.
+Until recently I used [Bower](http://bower.io) to manage the frontend dependencies, JavaScript and Sass/CSS libraries and [NPM](https://www.npmjs.org) to manage [Gulp](http://gulpjs.com)/[Grunt](http://gruntjs.com) and plugins required for my build process. Since all packages I use in Bower are on NPM I removed Bower from the list of tools I use and manage my packages exculsively with NPM.
 {% endblock %}
 
 {% block content %}

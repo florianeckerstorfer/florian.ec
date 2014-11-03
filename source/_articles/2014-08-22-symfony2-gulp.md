@@ -36,6 +36,7 @@ I use Gulp not only for building my assets but also to run my tests, code covera
     - [Symfony2 Commands](#symfony2-commands)
 - [Roadmap](#roadmap)
 - [Conclusion](#conclusion)
+- [Updates](#updates)
 
 
 <a name="dependencies"></a>
@@ -446,5 +447,11 @@ My Gulpfile still misses some other smaller things. For example, I want to use [
 I'm satisfied with my current Gulp setup. As mentioned above it lacks some features I need to add before going in to production. The build system is fast, flexible and (hopefully) will scale well. It's not fully automatic, I have to add a little bit of configuration when creating a new bundle, but that happens not often and I prefer control over automation in these cases.
 
 The system is opiniated and it works well in my setup and with my project structure. If you have made different decisions about structure or need some other features there might be problems. Still I am happy about feedback regarding my system. I am new to Gulp and havn't used it in a production project so suggestions are very welcome.
+
+<a name="updates"></a>
+
+## Updates
+
+- *3 November 2014:* Since the end of October I use [NPM intead of Bower to manage frontend dependencies](/articles/frontend-dependencies-npm/).
 
 {% endblock %}
