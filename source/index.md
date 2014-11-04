@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Florian Eckerstorfer
-peramlink: /
+permalink: /
 ---
 
 I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna**.
