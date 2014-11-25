@@ -54,6 +54,8 @@ First I need to talk about the software and libraries I am using in my project a
 - **[PHPUnit](http://phpunit.de)** to run my tests and code coverage
 - **[PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)** to check the style of my PHP code
 
+_**Please note** that this article has been updated to reflect the changes in the directory structure in [boostrap-sass v3.2](https://github.com/twbs/bootstrap-sass/releases/tag/v3.2.0)_
+
 <a name="project-structure"></a>
 
 ## Project Structure
@@ -144,7 +146,7 @@ I use my [BraincraftedBootstrapBundle](http://bootstrap.braincrafted.com) to int
 
 <pre><code class="scss">// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
 
-@import '../../../components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/bootstrap';
+@import '../../../components/bootstrap-sass-official/assets/stylesheets/_bootstrap';
 
 @import '../../acmeuser/sass/master';
 @import '../../acmeother/sass/master';</code></pre>
@@ -188,7 +190,7 @@ Bootstrap includes Glyphicons, an icon font, in its stylesheets by referencing t
 var copy = copy = require('gulp-copy');
 
 gulp.task('fonts', function () {
-    return gulp.src('./web/components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*')
+    return gulp.src('./web/components/bootstrap-sass-official/assets/fonts/bootstrap/*')
         .pipe(copy('./web/fonts', {prefix: 7}));
 });</code></pre>
 
@@ -285,7 +287,7 @@ Actually, in my current setup I don't really build JavaScript files. Because I u
 gulp.task('js', function() {
     gulp.src([
             './web/bundles/*/js/**/*.js',
-            './web/components/bootstrap-sass-official/vendor/assets/javascripts/*/*.js',
+            './web/components/bootstrap-sass-official/assets/javascripts/bootstrap/*.js',
             './web/components/jquery/dist/jquery.js',
             './web/components/requirejs/require.js'
         ])
@@ -453,5 +455,6 @@ The system is opiniated and it works well in my setup and with my project struct
 ## Updates
 
 - *3 November 2014:* Since the end of October I use [NPM intead of Bower to manage frontend dependencies](/articles/frontend-dependencies-npm/).
+- *25 November 2014:* I updated the article to reflect the directory structure changes in [bootstrap-sass v3.2.0](https://github.com/twbs/bootstrap-sass/releases/tag/v3.2.0).
 
 {% endblock %}
