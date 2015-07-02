@@ -1,7 +1,7 @@
 ---
-title: "AppleScripts for Working With Safari"
+title: "Save Current Safari Session with AppleScript"
 tags: [ applescript, osx, automation, safari ]
-slug: safari-applescripts
+slug: save-safari-session
 ---
 {% block summary %}
 John Gruber was guest at the latest episode of [Mac Power Users](http://www.relay.fm/mpu/264) and towards the end he talked with hosts Katie and David about his workflow and some of the scripts, AppleScript and otherwise, he uses. John posted one of these, an AppleScript allows him to retrieve all open URLs from Safari, present them in a list and insert one of them in the current text field to [Gist](https://gist.github.com/gruber/90bb418dcab16ded7630).
