@@ -1,11 +1,11 @@
 ---
-title: "My Favorite Albums of 2015 (so far)"
+title: "My Favourite Albums of 2015 (so far)"
 tags: [ music, albums, 2015 ]
-slug: favorite-albums-2015-so-far
+slug: favourite-albums-2015-so-far
 ---
 {% block summary %}
 
-I really love smart playlists in Apple Music. When I first switched to streaming services I really missed this feature in Spotify and Rdio, but now I finally can stream music and create smart playlists. One of the things I did was that I created a smart playlist for *loved* tracks as well as smart playlists for *loved* tracks that have been released in a specific year. And I noticed that 2015 have been a really good year for music so far. Without further ado, here are my favorite albums of 2015 so far.
+I really love smart playlists in Apple Music. When I first switched to streaming services I really missed this feature in Spotify and Rdio, but now I finally can stream music and create smart playlists. One of the things I did was that I created a smart playlist for *loved* tracks as well as smart playlists for *loved* tracks that have been released in a specific year. And I noticed that 2015 have been a really good year for music so far. Without further ado, here are my favourite albums of 2015 so far.
 
 {% endblock %}
 
