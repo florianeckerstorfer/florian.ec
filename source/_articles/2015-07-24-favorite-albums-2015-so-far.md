@@ -26,8 +26,7 @@ I really love smart playlists in Apple Music. When I first switched to streaming
 {{ picture('/img/articles/favorite-albums-2015-so-far/marriages-salome.jpg', 'Marriages - Salome') }}
 **Salome** by Marriages ([iTunes](https://geo.itunes.apple.com/us/album/salome/id969263672?uo=4&partnerId=11&at=11lSjE), [Apple Music](https://geo.itunes.apple.com/us/album/salome/id969263672?uo=4&partnerId=11&at=11lSjE&app=music), [Spotify](https://open.spotify.com/album/0Abaj1a9EzxXGULZD798HK), [Amazon](http://www.amazon.de/gp/product/B00U25DDHA/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00U25DDHA&linkCode=as2&tag=fecom-21&linkId=IOM4HZ6MTVDSHEVH))
 
-![Natalie Prass - Natalie Prass](/img/articles/favorite-albums-2015-so-far/natalie-prass-natalie-prass.jpg)
-{{ picture('/img/articles/favorite-albums-2015-so-far/girlpool-before-the-world-was-big.jpg', 'Girlpool - Before The World Was Big') }}
+{{ picture('/img/articles/favorite-albums-2015-so-far/natalie-prass-natalie-prass.jpg', 'Natalie Prass - Natalie Prass') }}
 **Natalie Prass** by Natalie Prass ([iTunes](https://geo.itunes.apple.com/us/album/natalie-prass/id958344368?uo=4&partnerId=11&at=11lSjE), [Apple Music](https://geo.itunes.apple.com/us/album/natalie-prass/id958344368?uo=4&partnerId=11&at=11lSjE&app=music), [Spotify](https://open.spotify.com/album/1rRFEJvwq1Bdutw6q3Nz9e), [Amazon](http://www.amazon.de/gp/product/B00PA3DV1M/ref=as_li_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00PA3DV1M&linkCode=as2&tag=fecom-21&linkId=5G5BI24LJWBMIFDM))
 
 {{ picture('/img/articles/favorite-albums-2015-so-far/of-monders-and-men-beneath-the-skin.jpg', 'Of Monsters And Men - Beneath The Skin') }}
