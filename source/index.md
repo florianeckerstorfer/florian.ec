@@ -8,7 +8,6 @@ I study **Software Engineering &amp; Internet Computing** and **Innovation** and
 
 You can find me at numerous social networks and web services, including
     [Twitter](http://twitter.com/Florian_),
-    [App.net](http://app.net/florian),
     [Pinboard](https://pinboard.in/u:florian.eckerstorfer),
     [Instagram](http://instagram.com/florian_) and
     [Last.fm](http://www.last.fm/user/feredir)</a>.
@@ -17,6 +16,6 @@ You can find me at numerous social networks and web services, including
     [Packagist](https://packagist.org/users/florianeckerstorfer/),
     [NPM](https://www.npmjs.org/~florianeckerstorfer) and
     [RubyGems](https://rubygems.org/profiles/florianeckerstorfer)</a>.
-    I also like to take [photos](http://photos.florian.ec).
+    I also like to take [photos](http://42reasons.com).
 
 You can also send me an [email](mailto:florian@eckerstorfer.co).
