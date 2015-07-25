@@ -5,7 +5,7 @@ slug: ios-search-bar-ionic
 ---
 {% block summary %}
 
-In iOS there is a very specific interaction when using a search bar in a list view. When the user focuses the input field, the field moves into the header and the cancel button is slided in from the right. The interaction looks like this in Contacts, but it is also used in Mail and apps like Tweetbot.
+In iOS there is a very specific interaction when using a search bar in a list view. When the user focuses the input field, the field moves into the header and the cancel button slides in from the right. The interaction looks like this in Contacts, but it is also used in Mail and apps like Tweetbot.
 
 ![iOS Search Bar Interaction](/img/articles/ios-search-bar-ionic/ios-search-bar.gif)
 
