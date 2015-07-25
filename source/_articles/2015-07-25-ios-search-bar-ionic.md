@@ -2,6 +2,7 @@
 title: "Replicating the iOS Search Bar with Ionic"
 tags: [ ios, ionic, cordova, search, ux ]
 slug: ios-search-bar-ionic
+date: Sat, 25 July 2015 15:30:00
 ---
 {% block summary %}
 
