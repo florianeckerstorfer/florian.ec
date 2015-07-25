@@ -34,7 +34,7 @@ After we came back to Loosbühelalm it rained for a while and was foggy, but the
 Looking back at Loosbühelalm after we left on the second morning.
 
 {{ picture('/img/articles/hiking-looesbuehelalm-draugstein/IMG_0815.jpg', 'View from Gründegg') }}
-We climbed Gründegg (2168m) and we got some pretty light and shadow play.
+We climbed Gründegg (2168m) and got some pretty light and shadow play.
 
 {{ picture('/img/articles/hiking-looesbuehelalm-draugstein/IMG_0819.jpg', 'Summit cross at Gründegg') }}
 Summit cross at Gründegg
