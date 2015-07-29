@@ -10,20 +10,3 @@
     });
     InstantClick.init();
 </script>
-
-<!-- devcode: !prod -->
-<script data-no-instant>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1" data-no-instant></' + 'script>')</script>
-
-<script src="/js/html-inspector.js"></script>
-<script>
-HTMLInspector.rules.extend("validate-attributes", {
-    whitelist: [/srcset/]
-});
-HTMLInspector.rules.extend("validate-elements", {
-    whitelist: [/picture/]
-});
-HTMLInspector.inspect({
-    excludeElements: ["svg"],
-});
-</script>
-<!-- endcode -->

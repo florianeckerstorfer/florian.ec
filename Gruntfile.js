@@ -69,24 +69,18 @@ module.exports = function(grunt) {
             prod: {
                 files: {
                     'public_prod/js/main.min.js': [
-                        'components/jquery/dist/jquery.js',
                         'components/instantclick/instantclick.js',
-                        'components/highlightjs/highlight.pack.js',
                         'components/picturefill/dist/picturefill.js',
-                        'source/js/vtabs.js',
-                        'source/js/top-nav.js'
+                        'source/js/highlight.pack.js'
                     ]
                 }
             },
             dev: {
                 files: {
                     'public_dev/js/main.min.js': [
-                        'components/jquery/dist/jquery.js',
                         'components/instantclick/instantclick.js',
-                        'components/highlightjs/highlight.pack.js',
                         'components/picturefill/dist/picturefill.js',
-                        'source/js/vtabs.js',
-                        'source/js/top-nav.js'
+                        'source/js/highlight.pack.js'
                     ]
                 }
             }
