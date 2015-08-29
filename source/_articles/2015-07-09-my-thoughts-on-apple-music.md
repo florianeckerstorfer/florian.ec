@@ -10,11 +10,13 @@ The other thing about Apple Music is the software. iTunes is a mess, but I argue
 
 When it comes to music, the main advantage of Apple Music is that it combines local and cloud music into one library. I can create playlists, even smart playlists, that can contain songs from both. Spotify has support for local files, but it is primitive and I never used it. However, one thing that Apple has to work on is discovery in *My Music*. Currently you can only view either *Recently Added* or *All*. You can sort that view, but the current options are useless for streaming-size libraries. I am not going to rate hundreds of albums. I don't know what *Most Played* means in Spotify (because the list definitly does not contain my most played stuff), but Apple Music needs something like this. Not an all time most played/best rated, but more like most played/best rated in the last couple of weeks.
 
-Sometimes I like a song from an album that has not yet been released yet and Apple Music let me add unreleased albums to my library. They become playable once released, until then I can play the single. That is a pretty great feature.
+Sometimes I like a song from an album that has not yet been released yet and Apple Music let me add unreleased albums to my library. They become playable once released, until then I can play the single. That is a pretty great feature. (*Update:* However, currently this feature is buggy. For me, it worked for two albums, but for most albums it does not and I have to remove and readd the album to get all tracks into my library.)
 
 I like Beats 1 more than expected. Based on the Beats brand I figured that it will be heavy on rap and beat-based music, but I already found one or two artists that I enjoy. It will not become my primary method of music listening, but I will tune in from time to time.
 
 Scrobbling to Last.fm works. [Sometimes](https://florian.ec/articles/apple-music-last-fm-scrobbling/). Connect is useless, but you can [turn it off](http://www.macworld.com/article/2943254/turning-off-connect-makes-apple-music-better.html).
+
+*I have updated the article to reflect that automatically adding music once it is released does currently not work as I described it.*
 {% endblock %}
 
 {% block content %}
