@@ -1,12 +1,2 @@
-<script src="/js/main.min.js" data-no-instant></script>
-<script data-no-instant>
-    InstantClick.on('change', function () {
-        var blocks = document.querySelectorAll('pre code');
-        Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+<script src="/js/main.min.js"></script>
 
-        picturefill({
-            reevaluate: true
-        });
-    });
-    InstantClick.init();
-</script>
