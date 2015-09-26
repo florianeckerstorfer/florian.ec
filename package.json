@@ -17,6 +17,7 @@
     "gulp-uncss": "^1.0.4",
     "gulp-zopfli": "^1.0.0",
     "imagemin-pngquant": "^4.2.0",
+    "psi": "^1.0.6",
     "rimraf": "^2.4.3",
     "yargs": "^3.26.0"
   },

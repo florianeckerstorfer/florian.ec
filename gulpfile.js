@@ -75,7 +75,7 @@ gulp.task('build-js', function () {
 gulp.task('build-fonts', function () {
     return gulp
         .src(DIR.fontsSrc+'/**/*.{eot,svg,ttf,woff,woff2}')
-        .pipe(gulpif(env === 'prod', zopfli({append: false})))
+        // .pipe(gulpif(env === 'prod', zopfli({append: false})))
         .pipe(gulp.dest(DIR.fontsDest))
         .pipe(size({title: 'Fonts'}));
 })
