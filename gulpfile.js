@@ -8,6 +8,7 @@ var gulp       = require('gulp')
     responsive = require('gulp-responsive'),
     imagemin   = require('gulp-imagemin'),
     sourcemaps = require('gulp-sourcemaps'),
+    uncss      = require('gulp-uncss'),
     gulpif     = require('gulp-if'),
     rimraf     = require('rimraf'),
     pngquant   = require('imagemin-pngquant');
@@ -45,6 +46,7 @@ gulp.task('build-css', function () {
         .src(DIR.sassSrc)
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(sass())
+        .pipe(gulpif(env === 'prod', uncss({html: [DIR.dest+'/**/*.html']})))
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.cssDest));
