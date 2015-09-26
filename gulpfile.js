@@ -1,6 +1,6 @@
 var gulp       = require('gulp')
     sass       = require('gulp-sass'),
-    cssmin     = require('gulp-cssmin'),
+    cssnano    = require('gulp-cssnano'),
     uglify     = require('gulp-uglify'),
     concat     = require('gulp-concat'),
     shell      = require('gulp-shell'),
@@ -45,7 +45,7 @@ gulp.task('build-css', function () {
         .src(DIR.sassSrc)
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(sass())
-        .pipe(gulpif(env === 'prod', cssmin()))
+        .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.cssDest));
 });
