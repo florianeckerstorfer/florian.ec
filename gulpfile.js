@@ -14,6 +14,7 @@ var gulp       = require('gulp')
     gulpif     = require('gulp-if'),
     rimraf     = require('rimraf'),
     pngquant   = require('imagemin-pngquant'),
+    psi        = require('psi'),
     args       = require('yargs').argv;
 
 var DIR = {},
@@ -122,4 +123,28 @@ gulp.task('build-responsive-img', function () {
 // Runs Sculpin to build the page
 gulp.task('build-page', function () {
     return gulp.src('').pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: true}));
+});
+
+gulp.task('perf', ['perf-mobile', 'perf-desktop']);
+
+gulp.task('perf-mobile', function () {
+    return psi('https://florian.ec', {
+        // key: key
+        nokey: 'true',
+        strategy: 'mobile',
+    }, function (err, data) {
+        console.log(data.score);
+        console.log(data.pageStats);
+    });
+});
+
+gulp.task('perf-desktop', function () {
+    return psi('https://florian.ec', {
+        nokey: 'true',
+        // key: key,
+        strategy: 'desktop',
+    }, function (err, data) {
+        console.log(data.score);
+        console.log(data.pageStats);
+    });
 });
