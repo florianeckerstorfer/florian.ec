@@ -1,5 +1,8 @@
-d:
+deploy:
 	./server/deploy.sh
 
-b:
-	grunt build:dev
+dev:
+	gulp build
+
+prod:
+	ENVIRONMENT=prod gulp build
