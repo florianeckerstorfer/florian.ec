@@ -11,11 +11,14 @@
     "gulp-responsive": "^1.2.1",
     "gulp-sass": "^2.0.4",
     "gulp-shell": "^0.4.3",
+    "gulp-size": "^2.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.4.1",
     "gulp-uncss": "^1.0.4",
+    "gulp-zopfli": "^1.0.0",
     "imagemin-pngquant": "^4.2.0",
-    "rimraf": "^2.4.3"
+    "rimraf": "^2.4.3",
+    "yargs": "^3.26.0"
   },
   "dependencies": {}
 }

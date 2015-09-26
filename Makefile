@@ -5,4 +5,4 @@ dev:
 	gulp build
 
 prod:
-	ENVIRONMENT=prod gulp build
+	gulp build --prod

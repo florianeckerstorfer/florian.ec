@@ -4,6 +4,7 @@ sculpin:
         - _sass/**
         - js/**
         - img/**
+        - fonts/**
 sculpin_markdown:
     parser_class: Sculpin\Bundle\MarkdownBundle\PhpMarkdownExtraParser
 sculpin_content_types:

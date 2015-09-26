@@ -9,12 +9,15 @@ var gulp       = require('gulp')
     imagemin   = require('gulp-imagemin'),
     sourcemaps = require('gulp-sourcemaps'),
     uncss      = require('gulp-uncss'),
+    size       = require('gulp-size'),
+    zopfli     = require('gulp-zopfli'),
     gulpif     = require('gulp-if'),
     rimraf     = require('rimraf'),
-    pngquant   = require('imagemin-pngquant');
+    pngquant   = require('imagemin-pngquant'),
+    args       = require('yargs').argv;
 
 var DIR = {},
-    env = process.env.ENVIRONMENT || 'dev';
+    env = args.prod ? 'prod' : 'dev';
 
 DIR.src                = 'source';
 DIR.dest               = 'public_'+env;
@@ -22,6 +25,8 @@ DIR.imgSrc             = DIR.src+'/img';
 DIR.imgDest            = DIR.dest+'/img';
 DIR.imgResponsiveSrc   = DIR.src+'/img/original';
 DIR.imgResponsiveDest  = DIR.src+'/img';
+DIR.fontsSrc           = DIR.src+'/fonts';
+DIR.fontsDest          = DIR.dest+'/fonts';
 DIR.sassSrc            = DIR.src+'/_sass/*.scss';
 DIR.cssDest            = DIR.dest+'/css';
 DIR.jsDest             = DIR.dest+'/js';
@@ -49,7 +54,8 @@ gulp.task('build-css', function () {
         .pipe(gulpif(env === 'prod', uncss({html: [DIR.dest+'/**/*.html']})))
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
-        .pipe(gulp.dest(DIR.cssDest));
+        .pipe(gulp.dest(DIR.cssDest))
+        .pipe(size({title: 'CSS'}));
 });
 
 // Compiles JavaScript into single file, uglifies it, and
@@ -61,8 +67,17 @@ gulp.task('build-js', function () {
         .pipe(concat('main.min.js'))
         .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
-        .pipe(gulp.dest(DIR.jsDest));
+        .pipe(gulp.dest(DIR.jsDest))
+        .pipe(size({title: 'CSS'}));
 });
+
+gulp.task('build-fonts', function () {
+    return gulp
+        .src(DIR.fontsSrc+'/**/*.{eot,svg,ttf,woff}')
+        .pipe(gulpif(env === 'prod', zopfli({append: false})))
+        .pipe(gulp.dest(DIR.fontsDest))
+        .pipe(size({title: 'Fonts'}));
+})
 
 // Minifies images and moves them into the `public_*` directory.
 gulp.task('build-img', ['build-responsive-img'], function () {
