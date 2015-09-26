@@ -34,6 +34,4 @@ Using content blockers does not fully solve this problem, but at least it gives 
 
 **Update September 24, 2015:**
 Removed the links to both Peace and Crystal from the article. Peace [has been pulled from the App Store](http://www.marco.org/2015/09/18/just-doesnt-feel-good) and Crystal now [accepts payments from advertises to whitelists](http://www.wsj.com/articles/propelled-by-apple-ad-blocking-cottage-industry-emerges-1443115929) ads. Doesn't feel good to recommend Crystal anymore.
-
-Test Edit
 {% endblock %}
