@@ -17,7 +17,7 @@ I spent the last hour trying to set the easiest and most reliable way to create 
 
 There is no menu bar entry for this functionality in Spotify and therefore no way to use an ApplyScript. I had to simulate mouse clicks to get this done. There exists a range of different tools to set keyboard shortcuts, but I personally prefer [BetterTouchToul](http://www.bettertouchtool.net) from Andreas Hegenberg.
 
-[{{ picture('/img/articles/spotify-queue-keyboard-shortcut/bettertouchtool.png', 'BetterTouchTool') }}](/img/articles/spotify-queue-keyboard-shortcut/bettertouchtool-original.png)
+[{{ picture('/img/articles/spotify-queue-keyboard-shortcut/bettertouchtool.png', 'BetterTouchTool') }}](/img/articles/spotify-queue-keyboard-shortcut/bettertouchtool.png)
 
 In the main BetterTouchTool window you first need to add *Spotify* to the list of applications. Just press the small plus button in the bottom of the list. I created two shortcuts. One for adding all tracks in the current view to the queue and another one for adding all currently selected tracks to the queue.
 

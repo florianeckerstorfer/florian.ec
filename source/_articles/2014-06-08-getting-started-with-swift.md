@@ -36,11 +36,11 @@ To get started with Swift you need the new Xcode 6 Beta. You can download it fro
 
 Open Xcode and create a new file (File > New > File) and select the **Playground** template in iOS > Source:
 
-[{{ picture('/img/articles/swift-getting-started/xcode-new-file.png', 'Xcode 6 Beta New File Dialog') }}](/img/articles/swift-getting-started/xcode-new-file-original.png)
+[{{ picture('/img/articles/swift-getting-started/xcode-new-file.png', 'Xcode 6 Beta New File Dialog') }}](/img/articles/swift-getting-started/xcode-new-file.png)
 
 Next you need to select a folder where to save your playground file and enter a filename. If you have done that you should see a new window where you can start to write some Swift code.
 
-[{{ picture('/img/articles/swift-getting-started/xcode-new-swift-file.png', 'New Swift Playground in Xcode 6 Beta') }}](/img/articles/swift-getting-started/xcode-new-swift-file-original.png)
+[{{ picture('/img/articles/swift-getting-started/xcode-new-swift-file.png', 'New Swift Playground in Xcode 6 Beta') }}](/img/articles/swift-getting-started/xcode-new-swift-file.png)
 
 <a name="constants-variables"></a>
 ## Constants & Variables
@@ -142,7 +142,7 @@ One of the most common things you want to do with an array or a collection is th
     <strong>Note</strong>
     <p>If you type this code in a playground in Xcode you will see the number of times the body of the loop is executed. In the example above this would be four times. You can click on the circle icon right to this to view the value of the variable <code>house</code> in each iteration.</p>
 
-    <a href="/img/articles/swift-getting-started/xcode-for-in-original.png">{{ picture('/img/articles/swift-getting-started/xcode-for-in.png', 'Value of variable in for-in loop in Xcode') }}</a>
+    <a href="/img/articles/swift-getting-started/xcode-for-in.png">{{ picture('/img/articles/swift-getting-started/xcode-for-in.png', 'Value of variable in for-in loop in Xcode') }}</a>
 </div>
 
 If you don't want to iterate through an array or collection but rather iterate to a range of values you can use the range operator. In fact, in Swift there are two range operators. The **closed range operator** is `a...b` and returns all numbers between `a` and `b` including `a` and `b`. The **half-closed range operator** is `a..b` and returns the numbers between `a` and `b` including `a` but excluding `b`.
