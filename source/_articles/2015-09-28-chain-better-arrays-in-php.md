@@ -22,7 +22,7 @@ $arr = array_filter(
 );
 ```
 
-How long do you need to look at the following peace of code to understand it?
+How long do you need to look at the following piece of code to understand it?
 
 ```php
 echo array_sum(array_intersect(
