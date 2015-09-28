@@ -6,6 +6,6 @@
         "composer/composer": "@dev"
     },
     "autoload": {
-        "psr-0": { "FlorianEc\\TwigBundle": "src" }
+        "psr-0": { "FlorianEc": "src" }
     }
 }
