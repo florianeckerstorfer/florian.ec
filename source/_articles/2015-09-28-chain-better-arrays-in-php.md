@@ -22,7 +22,7 @@ $arr = array_filter(
 );
 ```
 
-How long do you need to look at the following peace of code to understand it?
+How long do you need to look at the following piece of code to understand it?
 
 ```php
 echo array_sum(array_intersect(
@@ -31,7 +31,7 @@ echo array_sum(array_intersect(
 ));
 ```
 
-I use the kind of array operations frequently in other languages, but only very seldom in PHP. Today while talking
+I use the kind of array operations frequently in other languages, but only very seldom in PHP. Today while taking
 a walk I thought about this problem and a possible solution. What I came up with is
 [Chain](https://github.com/cocur/chain), an object-oriented wrapper for arrays that allow chaining of array
 manipulations.
