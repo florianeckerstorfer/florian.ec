@@ -1,7 +1,6 @@
 (function () {
     function forceTouchLogo() {
-        var img = document.querySelector('.header__logo img');
-        var background = document.querySelector('.content');
+        var img   = document.querySelector('.header__logo img');
         var touch = null;
 
         addForceTouchToElement(img);
@@ -40,10 +39,8 @@
         }
 
         function renderElement(forceValue) {
-            // element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
             document.body.style.background = 'rgba(255, 129, 255, '+forceValue+')';
             img.style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
-            forceValueOutput.innerHTML = 'Force: ' + forceValue;
         }
 
         function addForceTouchToElement(elem) {
