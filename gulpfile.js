@@ -1,21 +1,22 @@
-var gulp       = require('gulp')
-    sass       = require('gulp-sass'),
-    cssnano    = require('gulp-cssnano'),
-    uglify     = require('gulp-uglify'),
-    concat     = require('gulp-concat'),
-    shell      = require('gulp-shell'),
-    newer      = require('gulp-newer'),
-    responsive = require('gulp-responsive'),
-    imagemin   = require('gulp-imagemin'),
-    sourcemaps = require('gulp-sourcemaps'),
-    uncss      = require('gulp-uncss'),
-    size       = require('gulp-size'),
-    zopfli     = require('gulp-zopfli'),
-    gulpif     = require('gulp-if'),
-    rimraf     = require('rimraf'),
-    pngquant   = require('imagemin-pngquant'),
-    psi        = require('psi'),
-    args       = require('yargs').argv;
+var gulp        = require('gulp')
+    sass        = require('gulp-sass'),
+    cssnano     = require('gulp-cssnano'),
+    uglify      = require('gulp-uglify'),
+    concat      = require('gulp-concat'),
+    shell       = require('gulp-shell'),
+    newer       = require('gulp-newer'),
+    responsive  = require('gulp-responsive'),
+    imagemin    = require('gulp-imagemin'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    uncss       = require('gulp-uncss'),
+    size        = require('gulp-size'),
+    zopfli      = require('gulp-zopfli'),
+    gulpif      = require('gulp-if'),
+    rimraf      = require('rimraf'),
+    pngquant    = require('imagemin-pngquant'),
+    psi         = require('psi'),
+    browserSync = require('browser-sync').create()
+    args        = require('yargs').argv;
 
 var DIR = {},
     env = args.prod ? 'prod' : 'dev';
@@ -28,8 +29,9 @@ DIR.imgResponsiveSrc   = DIR.src+'/img/original';
 DIR.imgResponsiveDest  = DIR.src+'/img';
 DIR.fontsSrc           = DIR.src+'/fonts';
 DIR.fontsDest          = DIR.dest+'/fonts';
-DIR.sassSrc            = DIR.src+'/_sass/*.scss';
+DIR.sassSrc            = DIR.src+'/_sass/';
 DIR.cssDest            = DIR.dest+'/css';
+DIR.jsSrc              = DIR.src+'/js';
 DIR.jsDest             = DIR.dest+'/js';
 
 gulp.task('default', ['build', 'watch']);
@@ -41,21 +43,28 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', function () {
+    browserSync.init({
+        proxy: "florian.ec.dev:8000"
+    });
+
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
+    gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']);
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif}', ['build-img']);
-    gulp.watch(['source/**/*.{html,html.twig,md}', 'source/fonts/*', 'source/img/**'], ['build-page']);
+    gulp.watch(['source/**/*.{html,html.twig,md}', 'source/fonts/*', 'source/img/**'], ['build-page'])
+        .on('change', browserSync.reload);
 });
 
 // Compiles SCSS into CSS, minifies it and moves it into correct directory.
 gulp.task('build-css', function () {
     return gulp
-        .src(DIR.sassSrc)
+        .src(DIR.sassSrc+'/**/*.scss')
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(sass())
         .pipe(gulpif(env === 'prod', uncss({html: [DIR.dest+'/**/*.html']})))
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.cssDest))
+        // .pipe(browserSync.stream())
         .pipe(size({title: 'CSS'}));
 });
 
@@ -63,14 +72,19 @@ gulp.task('build-css', function () {
 // moves it into the correct directory.
 gulp.task('build-js', function () {
     return gulp
-        .src(['components/picturefill/dist/picturefill.js', 'source/js/highlight.pack.js'])
+        .src([
+            'components/picturefill/dist/picturefill.js',
+            'source/js/highlight.pack.js',
+            'source/js/main.js'
+        ])
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(concat('main.min.js'))
         .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.jsDest))
+        // .pipe(browserSync.reload)
         .pipe(size({title: 'CSS'}));
-});
+})
 
 gulp.task('build-fonts', function () {
     return gulp
