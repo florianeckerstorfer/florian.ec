@@ -61,7 +61,7 @@ gulp.task('build-css', function () {
         .pipe(sass())
         .pipe(gulpif(env === 'prod', uncss({
             html:   [DIR.dest+'/**/*.html'],
-            ignore: [/\hljs-[A-Za-z0-9-]+/]
+            ignore: [/\hljs-[A-Za-z0-9-]+/, '.hljs']
         })))
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
