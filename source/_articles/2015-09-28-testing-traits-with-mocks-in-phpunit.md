@@ -10,10 +10,10 @@ a class that *uses* a trait.
 
 Creating a mock is pretty straight forward with PHPUnit:
 
-```php
+~~~php
 $mock = $this->getMockForTrait('TraitUnderTest');
 $mock->foo();
-```
+~~~
 
 In addition you can mock methods of the *using* object that are called by the mock.
 

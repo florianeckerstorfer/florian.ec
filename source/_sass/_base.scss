@@ -32,20 +32,12 @@ code {
 
 code,
 pre {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 3px;
     font: .9em $monospace-font;
-    padding: .2em;
 }
 
 pre {
     code {
-        background: none;
-        border: 0;
-        border-radius: 0;
         display: block;
-        padding: .4em;
     }
 }
 

@@ -15,7 +15,8 @@ var gulp        = require('gulp')
     rimraf      = require('rimraf'),
     pngquant    = require('imagemin-pngquant'),
     psi         = require('psi'),
-    browserSync = require('browser-sync').create()
+    browserSync = require('browser-sync').create(),
+    syncCss     = require('browser-sync').create(),
     args        = require('yargs').argv;
 
 var DIR = {},
@@ -43,12 +44,10 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', function () {
-    browserSync.init({
-        proxy: "florian.ec.dev:8000"
-    });
+    browserSync.init({server: 'public_dev'});
 
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
-    gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']);
+    gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']).on('change', browserSync.reload);
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif}', ['build-img']);
     gulp.watch(['source/**/*.{html,html.twig,md}', 'source/fonts/*', 'source/img/**'], ['build-page'])
         .on('change', browserSync.reload);
@@ -64,7 +63,7 @@ gulp.task('build-css', function () {
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.cssDest))
-        // .pipe(browserSync.stream())
+        .pipe(browserSync.stream())
         .pipe(size({title: 'CSS'}));
 });
 
@@ -82,8 +81,7 @@ gulp.task('build-js', function () {
         .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.jsDest))
-        // .pipe(browserSync.reload)
-        .pipe(size({title: 'CSS'}));
+        .pipe(size({title: 'JS'}));
 })
 
 gulp.task('build-fonts', function () {
