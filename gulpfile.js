@@ -44,7 +44,7 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', function () {
-    browserSync.init({server: 'public_dev'});
+    browserSync.init({server: 'public_'+env});
 
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
     gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']).on('change', browserSync.reload);
@@ -59,7 +59,10 @@ gulp.task('build-css', function () {
         .src(DIR.sassSrc+'/**/*.scss')
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(sass())
-        .pipe(gulpif(env === 'prod', uncss({html: [DIR.dest+'/**/*.html']})))
+        .pipe(gulpif(env === 'prod', uncss({
+            html:   [DIR.dest+'/**/*.html'],
+            ignore: [/\hljs-[A-Za-z0-9-]+/]
+        })))
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.cssDest))
