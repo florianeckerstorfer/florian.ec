@@ -124,5 +124,5 @@ These have already been linked in the article, but you still might want to take 
 
 ## Slides
 
-This article is the novelization of my talk at the ViennaJS meetup on 24 June 2015. The [slides](https://speakerdeck.com/florianeckerstorfer/streams-in-gulp-dot-js) are already online. The event was filmed and I plan to update this article when the video is online.
+This article is the novelization of my talk at the ViennaJS meetup on 24 June 2015. The [slides](https://speakerdeck.com/florianeckerstorfer/streams-in-gulp-dot-js) are already online. <strike>The event was filmed and I plan to update this article when the video is online.</strike> The [video is now online](https://www.youtube.com/watch?v=hRe7_xsQBUQ).
 {% endblock %}
