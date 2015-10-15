@@ -10,36 +10,8 @@
 
 } // .header
 
-.header__logo__name {
-    display: none;
-    margin-left: 1.5em;
-    line-height: 61px;
-    font-size: $font-sm;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-} // .header__logo__name
-
 .header__logo {
     padding: 0 1em;
-
-    picture {
-        float: left;
-
-        @include media($tablet) {
-            float: none;
-        }
-    }
-
-    &:hover {
-        .header__logo__name {
-            display: inline-block;
-
-            @include media($tablet) {
-                display: none;
-            }
-        } // .header__logo__name
-    }
 
     @include media($tablet) {
         text-align: center;

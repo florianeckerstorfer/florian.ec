@@ -48,7 +48,7 @@ gulp.task('watch', function () {
 
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
     gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']).on('change', browserSync.reload);
-    gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif}', ['build-img']);
+    gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', ['build-img']);
     gulp.watch(['source/**/*.{html,html.twig,md}', 'source/fonts/*', 'source/img/**'], ['build-page'])
         .on('change', browserSync.reload);
 });
@@ -98,7 +98,7 @@ gulp.task('build-fonts', function () {
 // Minifies images and moves them into the `public_*` directory.
 gulp.task('build-img', ['build-responsive-img'], function () {
     return gulp
-        .src([DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif}', '!'+DIR.imgSrc+'/original'])
+        .src([DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', '!'+DIR.imgSrc+'/original'])
         .pipe(newer(DIR.imgDest))
         .pipe(gulpif(env === 'prod', imagemin({use: [pngquant()]})))
         .pipe(gulp.dest(DIR.imgDest));

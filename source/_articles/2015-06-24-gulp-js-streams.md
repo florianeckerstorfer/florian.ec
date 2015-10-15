@@ -1,6 +1,6 @@
 ---
 title: "Streams in Gulp.js"
-tags: [ gulp, build, task runner, node, streams]
+tags: [ gulp, build, task runner, node, streams, highlight ]
 slug: gulp-js-streams
 ---
 {% block summary %}

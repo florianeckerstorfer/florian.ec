@@ -20,14 +20,7 @@ You can find me at numerous social networks and web services, including
 
 You can also send me an [email](mailto:florian@eckerstorfer.co).
 
-<picture class="about-florian">
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source srcset="/img/florian/201404-park-638.jpg, /img/florian/201404-park-638@2x.jpg 2x" media="(min-width: 450px)">
-    <source srcset="/img/florian/201404-park-450.jpg, /img/florian/201404-park-450@2x.jpg 2x" media="(min-width: 320px)">
-    <source srcset="/img/florian/201404-park-320.jpg, /img/florian/201404-park-320@2x.jpg 2x">
-    <!--[if IE 9]></video><![endif]-->
-    <img srcset="/img/florian/201404-park-320.jpg, /img/florian/201404-park-320@2x.jpg 2x" alt="Florian Eckerstorfer in April 2014.">
-</picture>
+{{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
 
 ## Biography
 

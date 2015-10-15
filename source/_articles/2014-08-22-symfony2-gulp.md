@@ -1,6 +1,6 @@
 ---
 title: Building Symfony2 Applications with Gulp
-tags: [ gulp, symfony2, sass, assets, build ]
+tags: [ gulp, symfony2, sass, assets, build, highlight ]
 slug: buliding-symfony2-with-gulp
 ---
 {% block summary %}

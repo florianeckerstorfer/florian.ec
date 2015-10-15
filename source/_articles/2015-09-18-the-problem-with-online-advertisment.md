@@ -1,6 +1,6 @@
 ---
 title: "The Problem with Online Advertisement"
-tags: [ ads, privacy, tracker, advertisement, ad blocker, content blocker ]
+tags: [ ads, privacy, tracker, advertisement, ad blocker, content blocker, highlight ]
 slug: the-problem-with-online-advertisement
 ---
 {% block summary %}
