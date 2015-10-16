@@ -16,6 +16,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.4.1",
     "gulp-uncss": "^1.0.4",
+    "gulp-util": "^3.0.6",
     "gulp-zopfli": "^1.0.0",
     "imagemin-pngquant": "^4.2.0",
     "psi": "^1.0.6",

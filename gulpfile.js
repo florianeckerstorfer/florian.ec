@@ -12,6 +12,7 @@ var gulp        = require('gulp')
     size        = require('gulp-size'),
     zopfli      = require('gulp-zopfli'),
     gulpif      = require('gulp-if'),
+    gutil       = require('gulp-util'),
     rimraf      = require('rimraf'),
     pngquant    = require('imagemin-pngquant'),
     psi         = require('psi'),
