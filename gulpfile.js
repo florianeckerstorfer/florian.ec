@@ -38,8 +38,8 @@ DIR.jsDest             = DIR.dest+'/js';
 
 gulp.task('default', ['build', 'watch']);
 
-gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function () {
-    gutil.log('Done.');
+gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function (cb) {
+    cb();
 });
 
 gulp.task('clean', function (cb) {
