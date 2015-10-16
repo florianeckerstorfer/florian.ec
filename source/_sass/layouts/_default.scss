@@ -1,11 +1,9 @@
 .layout_default {
     .header__logo {
         @include span-columns(5);
-        @include shift(1);
 
         @include media($tablet) {
-            @include span-columns(12);
-            @include shift(0);
+            @include span-columns(10);
         }
     } // .header__logo
 
@@ -13,39 +11,16 @@
         @include span-columns(5);
 
         @include media($tablet) {
-            @include span-columns(12);
-            @include shift(0);
+            @include span-columns(10);
         }
     } // .navigation
 
     .main {
         @include span-columns(10);
-        @include shift(1);
-
-        @include media($tablet) {
-            @include span-columns(12);
-            @include shift(0);
-        }
-
-        @include media($mobile) {
-            @include shift(0);
-        }
-
     } // .main
 
     .footer__padder {
         @include span-columns(10);
-        @include shift(1);
-
-        @include media($tablet) {
-            @include span-columns(12);
-            @include shift(0);
-        }
-
-        @include media($mobile) {
-            @include shift(0);
-        }
-
     } // .footer__padder
 
 } // .default

@@ -2,8 +2,30 @@
 layout: default
 title: Projects by Florian Eckerstorfer
 permalink: projects/
-use: [projects_categories]
+use: [projects_categories, projects_tags]
 ---
+
+{% for tag,projects in data.projects_tags %}
+    {% if tag == 'highlight' %}
+    <ul class="projects--highlights">
+        {% for project in projects %}
+            <li class="projects--highlights__project">
+                {% if project.hero_image ends with 'png' %}
+                    {{ picture(project.hero_image, project.title) }}
+                {% else %}
+                    <img src="{{ project.hero_image }}" alt="{{ project.title }}">
+                {% endif %}
+
+                <h3>
+                    {{ project.title }}
+                    {% if project.link %}<a href="{{ project.link }}/">{{ project.link }}</a>{% endif %}
+                </h3>
+                {{ project.description }}
+            </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endfor %}
 
 {% for category,projects in data.projects_categories %}
     <h2>{{ category }}</h2>

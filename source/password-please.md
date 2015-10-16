@@ -1,5 +1,5 @@
 ---
-layout: wide-small
+layout: default
 title: "Password Please"
 permalink: password-please/
 ---

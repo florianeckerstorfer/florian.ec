@@ -38,8 +38,7 @@ DIR.jsDest             = DIR.dest+'/js';
 
 gulp.task('default', ['build', 'watch']);
 
-gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function (cb) {
-    cb();
+gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function () {
     process.exit(0);
 });
 
@@ -48,14 +47,16 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', function () {
-    browserSync.init({server: 'public_'+env});
+    browserSync.init({server: {baseDir: 'public_'+env}});
 
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
     gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']).on('change', browserSync.reload);
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', ['build-img']);
-    gulp.watch(['source/**/*.{html,html.twig,md}', 'source/fonts/*', 'source/img/**'], ['build-page'])
-        .on('change', browserSync.reload);
+    gulp.watch([DIR.src+'/**/*.{html,html.twig,md}', DIR.fontsSrc+'/*', DIR.imgSrc+'/**'], ['watch-page']);
 });
+
+// This task is required as a hack to reload the browser AFTER Sculpin is finished building the page
+gulp.task('watch-page', ['build-page'], browserSync.reload);
 
 // Compiles SCSS into CSS, minifies it and moves it into correct directory.
 gulp.task('build-css', function () {
@@ -141,7 +142,8 @@ gulp.task('build-responsive-img', function () {
 
 // Runs Sculpin to build the page
 gulp.task('build-page', function () {
-    return gulp.src('').pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: true}));
+    return gulp.src('')
+        .pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: false}));
 });
 
 gulp.task('perf', ['perf-mobile', 'perf-desktop']);
