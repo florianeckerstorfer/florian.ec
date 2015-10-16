@@ -37,7 +37,9 @@ DIR.jsDest             = DIR.dest+'/js';
 
 gulp.task('default', ['build', 'watch']);
 
-gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts']);
+gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function () {
+    gutil.log('Done.');
+});
 
 gulp.task('clean', function (cb) {
     rimraf('public_dev', cb);
