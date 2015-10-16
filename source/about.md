@@ -6,6 +6,8 @@ permalink: about/
 
 I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna**.
 
+{{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
+
 You can find me at numerous social networks and web services, including
     [Twitter](http://twitter.com/Florian_),
     [Pinboard](https://pinboard.in/u:florian.eckerstorfer),
@@ -18,9 +20,7 @@ You can find me at numerous social networks and web services, including
     [RubyGems](https://rubygems.org/profiles/florianeckerstorfer)</a>.
     I also like to take [photos](http://42reasons.com).
 
-You can also send me an [email](mailto:florian@eckerstorfer.co).
-
-{{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
+You can also send me an [email](mailto:florian@eckerstorfer.co) ([GPG Key](/key.asc)).
 
 ## Biography
 
@@ -32,4 +32,4 @@ I never stopped creating websites and applications about stuff I am passionate a
 
 ## About this site
 
-I use [Sculpin](https://sculpin.io), [Sass](http://sass-lang.com) and [Grunt](http://gruntjs.com) to build this page and write most content in Markdown. Additionally I use some libraries, including [Bourbon](http://bourbon.io), [Neat](http://neat.bourbon.io), [Highlight.js](http://highlightjs.org), [Instantclick](http://instantclick.io) and [Picturefill](http://scottjehl.github.io/picturefill/). [Nginx](http://nginx.org) serves this website (if you use a modern browser it will use [SPDY](http://en.wikipedia.org/wiki/SPDY)). Hosted at [DigitalOcean](https://www.digitalocean.com/?refcode=018832e0a1a8).
+I use [Sculpin](https://sculpin.io), [Sass](http://sass-lang.com) and [Gulp](http://gulpjs.com) to build this page and write most content in Markdown. Additionally I use some libraries, including [Bourbon](http://bourbon.io), [Neat](http://neat.bourbon.io), [Highlight.js](http://highlightjs.org) and [Picturefill](http://scottjehl.github.io/picturefill/). [Nginx](http://nginx.org) serves this website (if you use a modern browser it will use [SPDY](http://en.wikipedia.org/wiki/SPDY)). Hosted at [DigitalOcean](https://www.digitalocean.com/?refcode=018832e0a1a8).

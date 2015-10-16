@@ -23,7 +23,7 @@ You can find me at numerous social networks and web services, including
     [RubyGems](https://rubygems.org/profiles/florianeckerstorfer)</a>.
     I also like to take [photos](http://42reasons.com).
 
-You can also send me an [email](mailto:florian@eckerstorfer.co).
+You can also send me an [email](mailto:florian@eckerstorfer.co) ([GPG Key](/key.asc)).
 
 ## Highlighted Articles {{page.tag}}
 
