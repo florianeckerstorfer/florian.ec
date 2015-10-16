@@ -1,5 +1,5 @@
 deploy:
-	./server/deploy.sh
+	ssh root@florianec '/var/www/florian.ec/server/deploy.sh'
 
 dev:
 	gulp build
