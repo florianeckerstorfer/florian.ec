@@ -40,6 +40,7 @@ gulp.task('default', ['build', 'watch']);
 
 gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function (cb) {
     cb();
+    process.exit(0);
 });
 
 gulp.task('clean', function (cb) {
