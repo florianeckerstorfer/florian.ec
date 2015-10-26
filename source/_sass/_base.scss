@@ -36,8 +36,11 @@ pre {
 }
 
 pre {
+    overflow: initial;
+
     code {
         display: block;
+        overflow: auto;
     }
 }
 

@@ -16,7 +16,7 @@ Often it can be a little bit tricky to upload files to a web server and things b
 I will use three different libraries in this article: [Gaufrette](https://github.com/knplabs/Gaufrette), [KnpGaufretteBundle](https://github.com/KnpLabs/KnpGaufretteBundle) and [AWS SDK for PHP](https://github.com/aws/aws-sdk-php). Gaufrette is an abstraction layer for filesystems. That is, it offers a transparent interface to various types of filesystems, like a local filesystem, FTP, Dropbox, S3 and many others. The library is integrated into Symfony2 by KnpGaufretteBundle which makes it easy to setup and configure Gaufrette. Gaufrette requires the AWS SDK for communication with the S3 service.
 
 ---
- **Heads up:** I have written this tutorial in 2013, since then some of the libraries used have had major new releases, including a new release of the [AWS SDK](https://github.com/aws/aws-sdk-php) which has major differences.
+ **Heads up:** I have written this tutorial in 2013, since then some of the libraries had major updates, including [AWS SDK](https://github.com/aws/aws-sdk-php).
  ---
 
 ### Installation
