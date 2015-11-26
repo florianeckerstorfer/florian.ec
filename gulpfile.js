@@ -90,7 +90,7 @@ gulp.task('build-js', function () {
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.jsDest))
         .pipe(size({title: 'JS'}));
-})
+});
 
 gulp.task('build-fonts', function () {
     return gulp
