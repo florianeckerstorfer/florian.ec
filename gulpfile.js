@@ -17,7 +17,6 @@ var gulp        = require('gulp')
     pngquant    = require('imagemin-pngquant'),
     psi         = require('psi'),
     browserSync = require('browser-sync').create(),
-    syncCss     = require('browser-sync').create(),
     args        = require('yargs').argv;
 
 var DIR = {},
@@ -63,7 +62,7 @@ gulp.task('build-css', function () {
     return gulp
         .src(DIR.sassSrc+'/**/*.scss')
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
-        .pipe(sass())
+        .pipe(sass().on('error', gutil.log))
         .pipe(gulpif(env === 'prod', uncss({
             html:   [DIR.dest+'/**/*.html'],
             ignore: [/\hljs-[A-Za-z0-9-]+/, '.hljs']
@@ -95,7 +94,6 @@ gulp.task('build-js', function () {
 gulp.task('build-fonts', function () {
     return gulp
         .src(DIR.fontsSrc+'/**/*.{eot,svg,ttf,woff,woff2}')
-        // .pipe(gulpif(env === 'prod', zopfli({append: false})))
         .pipe(gulp.dest(DIR.fontsDest))
         .pipe(size({title: 'Fonts'}));
 })
@@ -146,6 +144,7 @@ gulp.task('build-page', function () {
         .pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: false}));
 });
 
+// Evaluate performance
 gulp.task('perf', ['perf-mobile', 'perf-desktop']);
 
 gulp.task('perf-mobile', function () {
@@ -154,8 +153,8 @@ gulp.task('perf-mobile', function () {
         nokey: 'true',
         strategy: 'mobile',
     }, function (err, data) {
-        console.log(data.score);
-        console.log(data.pageStats);
+        var color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
+        gutil.log(gutil.colors.underline('PageSpeed Mobile Score'), '', color.bold(data.score));
     });
 });
 
@@ -165,7 +164,7 @@ gulp.task('perf-desktop', function () {
         // key: key,
         strategy: 'desktop',
     }, function (err, data) {
-        console.log(data.score);
-        console.log(data.pageStats);
+        var color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
+        gutil.log(gutil.colors.underline('PageSpeed Desktop Score'), color.bold(data.score));
     });
 });
