@@ -27,19 +27,22 @@
         &:active,
         &:visited {
             border-bottom: 3px solid $link-color;
-            color: #333;
+            color: $link-color;
             padding: 0 5px;
         }
 
         &:hover {
-            color: $link-color;
+            background: $link-color;
+            color: $white;
         }
 
     } // a
 
     &.selected {
         a {
-            border-bottom-color: #000;
+            background: $black;
+            border-bottom-color: $black;
+            color: $white;
         }
     }
 }
