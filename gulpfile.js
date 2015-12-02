@@ -51,11 +51,12 @@ gulp.task('watch', function () {
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
     gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']).on('change', browserSync.reload);
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', ['build-img']);
-    gulp.watch([DIR.src+'/**/*.{html,html.twig,md}', DIR.fontsSrc+'/*', DIR.imgSrc+'/**'], ['watch-page']);
+    gulp.watch([DIR.src+'/**/*.{html,html.twig,md}', DIR.fontsSrc+'/*', DIR.imgSrc+'/**'], ['build-page'])
+        .on('change', function () { setTimeout(browserSync.reload, 5000)});
 });
 
 // This task is required as a hack to reload the browser AFTER Sculpin is finished building the page
-gulp.task('watch-page', ['build-page'], browserSync.reload);
+gulp.task('watch-page', browserSync.reload);
 
 // Compiles SCSS into CSS, minifies it and moves it into correct directory.
 gulp.task('build-css', function () {
