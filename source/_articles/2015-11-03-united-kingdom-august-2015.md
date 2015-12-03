@@ -1,6 +1,8 @@
 ---
-title: "United Kingdom (August 2015)"
-tags: [ photos, united kingdom, uk, scotland, england, wales ]
+title: "United Kingdom, August 2015"
+tags: [ photos, united kingdom, uk, scotland, england, wales, highlight ]
+slug: united-kingdom-august-2015
+category: Photos
 ---
 {% block summary %}
 For the last couple days the weather in Vienna was cold, wet, and windy. This reminded me of my trip to Scotland in the summer and the fact that I still have not posted any pictures here. Many of these I have already put on [Instagram](https://www.instagram.com/florian_/) or [Tumblr](http://42reasons.com), but I wanted to all have them here on my on server.

@@ -3,6 +3,7 @@ title: "Hiking at Loosbühelalm and Draugstein"
 tags: [ hiking, mountains, looesbühelalm, draugstein, großartl ]
 slug: hiking-looesbuehelalm-draugstein
 date: Sat, 25 July 2015 21:37:00
+category: Photos
 ---
 {% block summary %}
 

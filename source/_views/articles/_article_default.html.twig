@@ -1,7 +1,7 @@
 <header class="article__header">
     <h2>
         <a href="{{ article.direct_url ?: article.url }}/" class="article__header__title">
-            {{ article.title }}
+            {% if article.category %}{{ article.category }}: {% endif %}{{ article.title }}
         </a>
         <span class="article__header__date">({{ article.date|date('d M Y') }})</span>
     </h2>

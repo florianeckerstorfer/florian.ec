@@ -17,7 +17,7 @@ use: ["articles"]
     {% endif %}
     {% for article in data.articles|slice(0, 20) %}
         <entry>
-            <title type="html"><![CDATA[{{ article.title }}]]></title>
+            <title type="html"><![CDATA[{% if article.category %}{{ article.category }}: {% endif %}{{ article.title }}]]></title>
             <link href="{{ site.url }}{{ article.url }}"/>
             <updated>{{ article.date|date('c') }}</updated>
             <id>{{ site.url }}{{ article.url }}</id>

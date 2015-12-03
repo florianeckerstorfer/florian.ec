@@ -1,6 +1,6 @@
 <header class="article__header">
     <h2>
-        {{ page.title }}
+        {% if page.category %}{{ page.category }}: {% endif %}{{ page.title }}
         <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
     </h2>
     <div>

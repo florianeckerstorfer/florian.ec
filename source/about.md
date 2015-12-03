@@ -4,7 +4,7 @@ title: About Florian Eckerstorfer
 permalink: about/
 ---
 
-I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna**.
+I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Software Developer** in **Vienna, Europe**.
 
 {{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
 

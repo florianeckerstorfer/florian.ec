@@ -7,9 +7,11 @@ use:
     - posts_categories
 ---
 
-I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna**.
+I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna, Europe**.
 
-{{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
+<div class="frontpage__picture">
+    {{ picture('/img/florian/florian-square.jpg', 'Photo of Florian Eckerstorfer') }}
+</div>
 
 You can find me at numerous social networks and web services, including
     [Twitter](http://twitter.com/Florian_),
@@ -33,7 +35,7 @@ You can also send me an [email](mailto:florian@eckerstorfer.co) ([GPG Key](/key.
         {% for article in articles %}
         <li>
             <a href="{{ article.url }}">{{ article.title }}</a>
-            <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
+            <span class="article__header__date">({{ article.date|date('d M Y') }})</span>
         </li>
         {% endfor %}
     {% endif %}
