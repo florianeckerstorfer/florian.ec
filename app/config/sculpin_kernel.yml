@@ -39,3 +39,4 @@ florian_ec_twig:
             name: small
             has2x: true
             default: true
+    mapbox_token: pk.eyJ1IjoiZmxvcmlhbmVja2Vyc3RvcmZlciIsImEiOiJjaWxqdTNiM3QwMGFwdmptNDZjZHF2NjY1In0.AWaTE9ymrzzkEq0JNIg_ZQ

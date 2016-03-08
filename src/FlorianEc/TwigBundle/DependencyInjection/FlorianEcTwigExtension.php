@@ -25,5 +25,6 @@ class FlorianEcTwigExtension extends Extension
         $loader->load('services.yml');
 
         $container->setParameter('florian_ec_twig.picture_sizes', $config['picture_sizes']);
+        $container->setParameter('florian_ec_twig.mapbox_token', $config['mapbox_token']);
     }
 }

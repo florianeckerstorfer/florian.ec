@@ -5,3 +5,9 @@ services:
             - %florian_ec_twig.picture_sizes%
         tags:
             - { name: twig.extension }
+    florian_ec.twig.mapbox_extension:
+        class: FlorianEc\TwigBundle\Twig\MapboxExtension
+        arguments:
+            - %florian_ec_twig.mapbox_token%
+        tags:
+            - { name: twig.extension }

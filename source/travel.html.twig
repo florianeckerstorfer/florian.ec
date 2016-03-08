@@ -1,0 +1,119 @@
+---
+layout: travel
+title: Travel by Florian Eckerstorfer
+permalink: travel/index.html
+---
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZmxvcmlhbmVja2Vyc3RvcmZlciIsImEiOiJjaWxqdTNiM3QwMGFwdmptNDZjZHF2NjY1In0.AWaTE9ymrzzkEq0JNIg_ZQ';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style:     'mapbox://styles/florianeckerstorfer/cilju3pxw005occm7iwt8c1k0', //stylesheet location
+    center:    [16.370092, 48.202588], // Vienna, Austria
+    zoom:      2 // starting zoom
+});
+map.on('style.load', function () {
+    map.addSource("cities", {
+        "type": "geojson",
+        "data": {
+            "type":     "FeatureCollection",
+            "features": [
+                {{ mapboxMarker('Prague, Czech Republic', [14.437800, 50.075538], 'May 2014') }},
+                {{ mapboxMarker('Copenhagen, Denmark', [12.568337, 55.676097]) }},
+                {{ mapboxMarker('Marseille, France', [5.369780, 43.296482], 'August 2011') }},
+                {{ mapboxMarker('Avignon, France', [4.805528, 43.949317]) }},
+                {{ mapboxMarker('Nice, France', [7.261953, 43.710173], 'August 2011') }},
+                {{ mapboxMarker('Paris, France', [2.352222, 48.856614]) }},
+                {{ mapboxMarker('Berlin, Germany', [13.404954, 52.520007]) }},
+                {{ mapboxMarker('Bremen, Germany', [8.801694, 53.079296], 'July 2014') }},
+                {{ mapboxMarker('Bremerhaven, Germany', [8.580942, 53.539584], 'July 2014') }},
+                {{ mapboxMarker('Cologne, Germany', [6.960279, 50.937531], 'August 2015') }},
+                {{ mapboxMarker('Hamburg, Germany', [9.993682, 53.551085], 'July 2014') }},
+                {{ mapboxMarker('Kreta, Greece', [24.809269, 35.240117]) }},
+                {{ mapboxMarker('Genoa, Italy', [8.946256, 44.405650], 'August 2011') }},
+                {{ mapboxMarker('Florence, Italy', [11.255814, 43.769560]) }},
+                {{ mapboxMarker('Milan, Italy', [9.185924, 45.465422], 'August 2011') }},
+                {{ mapboxMarker('Rome, Italy', [12.496366, 41.902783]) }},
+                {{ mapboxMarker('Turin, Italy', [7.686856, 45.070312]) }},
+                {{ mapboxMarker('Vaduz, Liechtenstein', [9.520928, 47.141030]) }},
+                {{ mapboxMarker('Amsterdam, Netherlands', [4.895168, 52.370216], ['April 2015']) }},
+                {{ mapboxMarker('Utrecht, Netherlands', [5.121420, 52.090737], 'April 2015') }},
+                {{ mapboxMarker('Oslo, Norway', [10.752245, 59.913869], 'March 2016') }},
+                {{ mapboxMarker('Lisbon, Portugal', [-9.139337, 38.722252]) }},
+                {{ mapboxMarker('Edinburgh, Scotland', [-3.188267, 55.953252], 'August 2015') }},
+                {{ mapboxMarker('Glasgow, Scotland', [-4.251806, 55.864237], 'August 2015') }},
+                {{ mapboxMarker('Inverness, Scotland', [-4.224721, 57.477773], 'August 2015') }},
+                {{ mapboxMarker('Pitlochery, Scotland', [-3.729711, 56.704361], 'August 2015') }},
+                {{ mapboxMarker('Sterling, Scotland', [-3.936903, 56.116523], 'August 2015') }},
+                {{ mapboxMarker('Bratislava, Slovakia', [17.107748, 48.148596]) }},
+                {{ mapboxMarker('Barcelona, Spain', [2.173403, 41.385064], ['August 2011']) }},
+                {{ mapboxMarker('Granada, Spain', [-3.598557, 37.177336]) }},
+                {{ mapboxMarker('Madrid, Spain', [-3.703790, 40.416775], ['August 2011']) }},
+                {{ mapboxMarker('Malaga, Spain', [-4.421266, 36.721261]) }},
+                {{ mapboxMarker('Sevilla, Spain', [-5.984459, 37.389092]) }},
+                {{ mapboxMarker('Valencia, Spain', [-0.376288, 39.469907], 'August 2011') }},
+                {{ mapboxMarker('Malmö, Sweden', [13.003822, 55.604981]) }},
+                {{ mapboxMarker('Stockholm, Sweden', [18.068581, 59.329323], 'July 2014') }},
+                {{ mapboxMarker('Antalya, Turkey', [30.713323, 36.896891]) }},
+                {{ mapboxMarker('Istanbul, Turkey', [28.978359, 41.008238]) }},
+                {{ mapboxMarker('London, United Kingdom', [-0.127758, 51.507351], ['August 2011', 'August 2015']) }},
+                {{ mapboxMarker('Brighton, United Kingdom', [-0.137163, 50.822530], 'August 2015') }},
+                {{ mapboxMarker('Gibraltar', [-5.353585, 36.140751]) }},
+                {{ mapboxMarker('Newcastle-upon-Thyne, United Kingdom', [-1.617068, 54.968551], 'August 2015') }},
+                {{ mapboxMarker('Liverpool, United Kingdom', [-2.991573, 53.408371], 'August 2015') }},
+                {{ mapboxMarker('Chicago, Illinois, USA', [-87.629798, 41.878114], 'August 2013') }},
+                {{ mapboxMarker('Denver, Colorada, USA', [-104.990251, 39.739236], 'August 2013') }},
+                {{ mapboxMarker('Detroit, Michigan, USA', [-83.045754, 42.331427], 'August 2013') }},
+                {{ mapboxMarker('New York City, New York, USA', [-74.005941, 40.712784], 'August 2013') }},
+                {{ mapboxMarker('Portland, Oregon, USA', [-122.676482, 45.523062], 'August 2013') }},
+                {{ mapboxMarker('Seattle, Washington, USA', [-122.332071, 47.606209], 'August 2013') }},
+                {{ mapboxMarker('Cardiff, Wales', [-3.179090, 51.481581], 'August 2015') }}
+            ]
+        }
+    });
+
+    map.addLayer({
+        "id":     "markers",
+        "source": "cities",
+        "type":   "circle",
+        "interactive": true,
+        "paint": {
+            "circle-color":  "#E7546C",
+            "circle-radius": 5,
+            "circle-blur":   1
+        }
+    });
+
+    var popup = new mapboxgl.Popup();
+
+    map.on('click', function (e) {
+        map.featuresAt(e.point, {
+            radius:          7.5, // Half the marker size (15px).
+            layer:           "markers",
+            includeGeometry: true
+        }, function (err, features) {
+            if (err || !features.length) {
+                popup.remove();
+                return;
+            }
+
+            var feature = features[0];
+
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(feature.geometry.coordinates)
+                .setHTML('<strong>'+feature.properties.title+'</strong><ul>'+feature.properties.description+'</ul>')
+                .addTo(map);
+        });
+    });
+
+    map.on("mousemove", function (e) {
+        map.featuresAt(e.point, {
+            radius: 5,
+            layer:  "markers"
+        }, function (err, features) {
+            map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
+        });
+    });
+});
+</script>
