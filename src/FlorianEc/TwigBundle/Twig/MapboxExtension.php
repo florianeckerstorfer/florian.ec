@@ -31,7 +31,7 @@ class MapboxExtension extends \Twig_Extension
             ],
             'properties' => [
                 'title'         => $title,
-                'description'   => array_map(function ($v) { return '<li>'.$v.'</li>'; }, $dates),
+                'description'   => implode('', array_map(function ($v) { return '<li>'.$v.'</li>'; }, $dates)),
                 'marker-symbol' => 'circle'
             ],
         ];

@@ -1,0 +1,15 @@
+#map {
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.mapboxgl-popup-content {
+    padding-right: 30px;
+
+    ul {
+        margin: 0;
+        padding-left: 15px;
+    }
+}
