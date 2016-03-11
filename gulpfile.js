@@ -28,6 +28,8 @@ DIR.imgSrc             = DIR.src+'/img';
 DIR.imgDest            = DIR.dest+'/img';
 DIR.imgResponsiveSrc   = DIR.src+'/img/original';
 DIR.imgResponsiveDest  = DIR.src+'/img';
+DIR.videoSrc           = DIR.src+'/img';
+DIR.videoDest          = DIR.dest+'/img';
 DIR.fontsSrc           = DIR.src+'/fonts';
 DIR.fontsDest          = DIR.dest+'/fonts';
 DIR.sassSrc            = DIR.src+'/_sass/';
@@ -37,7 +39,7 @@ DIR.jsDest             = DIR.dest+'/js';
 
 gulp.task('default', ['build', 'watch']);
 
-gulp.task('build', ['build-page', 'build-img', 'build-css', 'build-js', 'build-fonts'], function () {
+gulp.task('build', ['build-page', 'build-video', 'build-img', 'build-css', 'build-js', 'build-fonts'], function () {
     process.exit(0);
 });
 
@@ -51,6 +53,7 @@ gulp.task('watch', function () {
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
     gulp.watch(DIR.jsSrc+'/**/*.js', ['build-js']).on('change', browserSync.reload);
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', ['build-img']);
+    gulp.watch(DIR.videoSrc+'/**/*.{m4v}', ['build-video']);
     gulp.watch([DIR.src+'/**/*.{html,html.twig,md}', DIR.fontsSrc+'/*', DIR.imgSrc+'/**'], ['build-page'])
         .on('change', function () { setTimeout(browserSync.reload, 5000)});
 });
@@ -98,6 +101,13 @@ gulp.task('build-fonts', function () {
         .pipe(gulp.dest(DIR.fontsDest))
         .pipe(size({title: 'Fonts'}));
 })
+
+gulp.task('build-video', function () {
+    return gulp
+        .src(DIR.videoSrc+'/**/*.m4v')
+        .pipe(newer(DIR.videoDest))
+        .pipe(gulp.dest(DIR.videoDest));
+});
 
 // Minifies images and moves them into the `public_*` directory.
 gulp.task('build-img', ['build-responsive-img'], function () {
