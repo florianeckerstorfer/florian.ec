@@ -68,7 +68,7 @@ The next day we took the subway (T-banen) to Holmenkolmmen, visited the Ski Muse
 
 {{ picture('/img/articles/oslo-bylarm-march-2016/IMG_4255.jpg', 'Biathlon World Championship at Holmenkolmmen, Oslo') }}
 
-{{ picture('/img/articles/oslo-bylarm-march-2016/IMG_4254.jpg', 'Holmenkollbakken, Oslo') }}
+{{ picture('/img/articles/oslo-bylarm-march-2016/IMG_4256.jpg', 'Holmenkollbakken, Oslo') }}
 
 {{ picture('/img/articles/oslo-bylarm-march-2016/IMG_4259.jpg', 'View from Holmenkollbakken, Oslo') }}
 
