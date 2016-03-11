@@ -34,7 +34,7 @@ On the second day snow from the previous night was still covered the ground of O
 
 In the evening we attended so many shows. I started with Siv Jakobsen (photo) and Karin later joined me at Café Mono for Pale Honey (photo), Ida Stein (photo) at Sentrum Scene, Charlotte Dos Santos at Gamla, Abra (photo) at Internasjonalen, Little Jinder at Drømmelteltet and Dolores Haze (photo) at Verkstedet.
 
-{{ picture('/img/articles/oslo-bylarm-march-2016/IMG_3665.jpg', 'Siv Jakobsen at Café Mono, By:Larm Festival 2016, Oslo') }}
+{{ picture('/img/articles/oslo-bylarm-march-2016/IMG_3666.jpg', 'Siv Jakobsen at Café Mono, By:Larm Festival 2016, Oslo') }}
 
 {{ picture('/img/articles/oslo-bylarm-march-2016/IMG_3671.jpg', 'Pale Honey at Café Mono, By:Larm Festival 2016, Oslo') }}
 
