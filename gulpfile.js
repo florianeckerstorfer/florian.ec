@@ -13,6 +13,7 @@ var gulp        = require('gulp')
     zopfli      = require('gulp-zopfli'),
     gulpif      = require('gulp-if'),
     gutil       = require('gulp-util'),
+    chalk       = require('chalk'),
     rimraf      = require('rimraf'),
     pngquant    = require('imagemin-pngquant'),
     psi         = require('psi'),
@@ -24,6 +25,7 @@ var DIR = {},
 
 DIR.src                = 'source';
 DIR.dest               = 'public_'+env;
+DIR.cvPdfSrc           = 'cv-pdf';
 DIR.imgSrc             = DIR.src+'/img';
 DIR.imgDest            = DIR.dest+'/img';
 DIR.imgResponsiveSrc   = DIR.src+'/img/original';
@@ -155,6 +157,13 @@ gulp.task('build-page', function () {
         .pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: false}));
 });
 
+gulp.task('build-cv-pdf', shell.task('pdflatex cv.tex', {cwd: DIR.cvPdfSrc}));
+
+gulp.task('build-cv', ['build-cv-pdf'], function () {
+    gulp.src(DIR.cvPdfSrc+'/cv.pdf')
+        .pipe(gulp.dest(DIR.src));
+});
+
 // Evaluate performance
 gulp.task('perf', ['perf-mobile', 'perf-desktop']);
 
@@ -165,7 +174,7 @@ gulp.task('perf-mobile', function () {
         strategy: 'mobile',
     }, function (err, data) {
         var color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
-        gutil.log(gutil.colors.underline('PageSpeed Mobile Score'), '', color.bold(data.score));
+        gutil.log(gutil.colors.underline('PageSpeed Mobile Score'), '', gutil.colors.bold(data.score));
     });
 });
 
@@ -176,6 +185,6 @@ gulp.task('perf-desktop', function () {
         strategy: 'desktop',
     }, function (err, data) {
         var color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
-        gutil.log(gutil.colors.underline('PageSpeed Desktop Score'), color.bold(data.score));
+        gutil.log(gutil.colors.underline('PageSpeed Desktop Score'), gutil.colors.bold(data.score));
     });
 });
