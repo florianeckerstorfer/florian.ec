@@ -1,7 +1,5 @@
 @import '../../components/normalize-css/normalize';
 @import '../../components/bourbon/dist/bourbon';
-@import 'grid-settings';
-@import '../../components/neat/app/assets/stylesheets/neat';
 @import '../../components/highlightjs/styles/tomorrow-night-bright';
 @import 'fonts';
 @import 'variables';
@@ -12,7 +10,6 @@
 @import 'modules/header';
 @import 'modules/navigation';
 @import 'modules/footer';
-@import 'modules/grid';
 
 // Page-specific
 @import 'modules/articles';
@@ -25,7 +22,6 @@
 
 // Modules
 @import 'modules/page-header';
-@import 'modules/vtabs';
 @import 'modules/button';
 @import 'modules/button-box';
 @import 'modules/bucket-list';

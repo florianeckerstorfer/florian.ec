@@ -1,0 +1,15 @@
+<header class="article__header">
+    <h2>
+        <a href="{{ page.direct_url ?: page.url }}/" class="article__header__title">
+            {% if page.category %}{{ page.category }}: {% endif %}{{ page.title }}
+        </a>
+    </h2>
+    <div>
+        <div class="article__header__date">{{ page.date|date('d M Y') }}</div>
+        <ul class="article__tags">
+            {% for tag in page.tags %}
+            <li>{{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>

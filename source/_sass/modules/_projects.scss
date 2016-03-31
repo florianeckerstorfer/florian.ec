@@ -1,7 +1,10 @@
 .projects,
 .projects--highlights {
     list-style: none;
-    margin-left: 0;
+    margin: {
+        left: 1em;
+        right: 1em;
+    }
     padding-left: 0;
 }
 

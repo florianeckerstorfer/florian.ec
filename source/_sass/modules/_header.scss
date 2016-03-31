@@ -1,6 +1,4 @@
 .header {
-    @include outer-container;
-
     margin: {
         top: 3em;
         bottom: 2em;
@@ -11,9 +9,12 @@
 } // .header
 
 .header__logo {
+    float: none;
     padding: 0 1em;
+    text-align: center;
 
-    @include media($tablet) {
+    @media screen and (min-width: $media-mobile) {
+        float: left;
         text-align: center;
     }
 } // .header__logo

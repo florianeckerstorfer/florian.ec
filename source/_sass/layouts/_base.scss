@@ -1,7 +1,8 @@
 .header,
 .content,
 .footer {
-    @include outer-container;
+    margin: 0 auto;
+    max-width: 640px;
 }
 
 .content {
@@ -9,19 +10,35 @@
 }
 
 .main {
-    padding: 0 1em;
     position: relative;
     z-index: 100;
 
     p {
+        margin: {
+            left: 1em;
+            right: 1em;
+        }
+
         &:first-child {
             margin-top: 0;
         }
     }
 
     h2 {
+        margin: {
+            left: .67em;
+            right: .67em;
+        }
+
         &:first-child {
             margin-top: 0;
+        }
+    }
+
+    h3 {
+        margin: {
+            left: .85em;
+            right: .85em;
         }
     }
 

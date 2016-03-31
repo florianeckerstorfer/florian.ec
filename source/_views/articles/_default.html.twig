@@ -1,0 +1,10 @@
+{% include 'article/_default-header.html.twig' with { 'page': page } %}
+
+<div class="article__text">
+    {% if page.blocks.summary %}
+        {{ page.blocks.summary|raw }}
+        <p><a href="{{ page.direct_url ?: page.url }}/">Read the rest of the article</a></p>
+    {% else %}
+        {{ page.blocks.content|raw }}
+    {% endif %}
+</div>

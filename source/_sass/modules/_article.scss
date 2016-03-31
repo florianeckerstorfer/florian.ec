@@ -39,7 +39,11 @@
 } // .article
 
 .article__header {
-    margin-bottom: 1em;
+    margin: {
+        bottom: 1em;
+        left: 1em;
+        right: 1em;
+    }
 
     h2 {
         margin: 0;
@@ -58,9 +62,8 @@
 
 .article__header__date {
     color: #666;
-    font-size: .7em;
-    font-weight: normal;
-
+    float: left;
+    margin-right: .5em;
 } // .article__header__date
 
 .article__header__permalink {
@@ -76,7 +79,7 @@
 
 .article__tags {
     color: #666;
-    display: inline-block;
+    display: inline;
     font-size: $font-xs;
     line-height: 1em;
     list-style: none;

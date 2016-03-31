@@ -7,13 +7,11 @@
 } // .bucket-list
 
 .bucket-list__item {
-    float: left;
-    padding: .3em 0;
-    width: 50%;
 
-    @include media($mobile) {
-        float: none;
-        width: 100%;
+    @media screen and (min-width: $media-mobile) {
+        float: left;
+        padding: .3em 0;
+        width: 50%;
     }
 
 } // .bucket-list__item

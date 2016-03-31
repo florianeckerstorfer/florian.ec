@@ -7,7 +7,7 @@
         text-align: right;
         line-height: 61px;
 
-        @include media($tablet) {
+        @media screen and (max-width: $media-tablet) {
             text-align: center;
         }
     }

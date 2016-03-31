@@ -1,17 +1,6 @@
-<header class="article__header">
-    <h2>
-        {% if page.category %}{{ page.category }}: {% endif %}{{ page.title }}
-        <span class="article__header__date">({{ page.date|date('d M Y') }})</span>
-    </h2>
-    <div>
-        <ul class="article__tags">
-            {% for tag in page.tags %}
-            <li>{{ tag }}</li>
-            {% endfor %}
-        </ul>
-        <a href="{{ page.direct_url ?: page.url }}/" class="article__header__permalink">&#8734; <span class="hide show-on-hover">Permalink</span></a>
-    </div>
-</header>
+{% include 'article/_default-header.html.twig' with { 'page': page } %}
 
-{{ page.blocks.summary|raw }}
-{{ page.blocks.content|raw }}
+<div class="article__text">
+    {{ page.blocks.summary|raw }}
+    {{ page.blocks.content|raw }}
+</div>

@@ -13,9 +13,9 @@ use:
 <ul class="articles">
 {% for article in page.pagination.items %}
     {% set article_type = article.type ? article.type : 'default' %}
-    {% set article_template = 'articles/_article_'~article_type~'.html.twig' %}
+    {% set article_template = 'articles/_'~article_type~'.html.twig' %}
     <li class="articles__article {{ article_type }}">
-        {% include article_template with { 'article': article } %}
+        {% include article_template with { 'page': article } %}
     </li>
 {% endfor %}
 </ul>

@@ -9,9 +9,7 @@ use:
 
 I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna, Europe**.
 
-<div class="frontpage__picture">
-    {{ picture('/img/florian/florian-square.jpg', 'Photo of Florian Eckerstorfer') }}
-</div>
+{{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
 
 You can find me at numerous social networks and web services, including
     [Twitter](http://twitter.com/Florian_),
@@ -27,15 +25,15 @@ You can find me at numerous social networks and web services, including
 
 You can also send me an [email](mailto:florian@eckerstorfer.co) ([GPG Key](/key.asc)).
 
-## Highlighted Articles {{page.tag}}
+## Highlighted Articles
 
-<ul>
+<ul class="frontpage__articles">
 {% for tag,articles in data.articles_tags %}
     {% if tag == 'highlight' %}
         {% for article in articles %}
         <li>
+            <span class="article__header__date">{{ article.date|date('d M Y') }}</span>
             <a href="{{ article.url }}">{{ article.title }}</a>
-            <span class="article__header__date">({{ article.date|date('d M Y') }})</span>
         </li>
         {% endfor %}
     {% endif %}
