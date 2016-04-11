@@ -1,25 +1,19 @@
 .navigation {
-    padding-right: 1em;
-
     ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
         margin: 0;
         padding-left: 0;
-        text-align: right;
-        line-height: 61px;
-
-        @media screen and (max-width: $media-tablet) {
-            text-align: center;
-        }
     }
 
 } // .navigation
 
 .navigation__item {
-    display: inline-block;
-
     a {
         font-size: $font-sm;
         font-weight: bold;
+        margin: -3px .1em 0;
         text-decoration: none;
         text-transform: uppercase;
 

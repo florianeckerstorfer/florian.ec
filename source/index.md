@@ -7,7 +7,7 @@ use:
     - posts_categories
 ---
 
-I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna, Europe**.
+Hello, I am **Florian Eckerstorfer**, I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna, Europe**.
 
 {{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
 
