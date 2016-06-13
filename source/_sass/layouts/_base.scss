@@ -15,8 +15,15 @@
 
     p {
         margin: {
-            left: 1em;
-            right: 1em;
+            left: 10px;
+            right: 10px;
+        }
+
+        @media screen and (min-width: $media-mobile) {
+            margin: {
+                left: 20px;
+                right: 20px;
+            }
         }
 
         &:first-child {
@@ -26,8 +33,15 @@
 
     h2 {
         margin: {
-            left: .67em;
-            right: .67em;
+            left: 10px;
+            right: 10px;
+        }
+
+        @media screen and (min-width: $media-mobile) {
+            margin: {
+                left: 20px;
+                right: 20px;
+            }
         }
 
         &:first-child {

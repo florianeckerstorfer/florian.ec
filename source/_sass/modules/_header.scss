@@ -12,9 +12,13 @@
 } // .header
 
 .header__logo {
-    padding: 0 1em;
+    padding: 0 10px;
     text-align: center;
 
     @media screen and (min-width: $media-mobile) {
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
     }
 } // .header__logo
