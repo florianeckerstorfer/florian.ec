@@ -161,4 +161,7 @@ This has nothing really to do with databases, but just don't forget that when yo
 Considering that full UTF8 support is pretty important these days it's probably worth converting tables to `utf8mb4` or at least use `utf8mb4` in new projects. I heard some evidence that `utf8mb4` is slower than `utf8`, but I couldn't find some definitive performance measurements. Michael Simmons found that joining string columns with different encodings [is extremely slower](http://info.michael-simons.eu/2013/01/21/java-mysql-and-multi-byte-utf-8-support/) than joining columns with the same encoding (which makes sense). In my opinion this should not keep you from using `utf8mb4` now.
 
 And don't forget to treat yourself with a &#x1f37a; after dealing with all this encoding stuff.
+
+**Update 25th of July 2016** Starting with MySQL 5.7.7 this is no longer a problem. More information can be found [here](https://github.com/doctrine/dbal/pull/851#issuecomment-104269536).
+
 {% endblock %}
