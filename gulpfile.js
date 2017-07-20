@@ -70,10 +70,10 @@ gulp.task('build-css', () => {
         .src(DIR.sassSrc+'/**/*.scss')
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(sass().on('error', gutil.log))
-        .pipe(gulpif(env === 'prod', uncss({
-            html:   [DIR.dest+'/**/*.html'],
-            ignore: [/\hljs-[A-Za-z0-9-]+/, '.hljs']
-        })))
+        // .pipe(gulpif(env === 'prod', uncss({
+        //     html:   [DIR.dest+'/**/*.html'],
+        //     ignore: [/\hljs-[A-Za-z0-9-]+/, '.hljs']
+        // })))
         .pipe(gulpif(env === 'prod', cssnano()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(gulp.dest(DIR.cssDest))

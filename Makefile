@@ -1,5 +1,6 @@
 deploy:
-	ssh root@florianec '/var/www/florian.ec/server/deploy.sh'
+	gulp build --prod
+	rsync -r ./public_prod root@florianec:/var/www/florian.ec/public_prod
 
 dev:
 	gulp build
