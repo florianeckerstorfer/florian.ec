@@ -1,26 +1,26 @@
-var gulp        = require('gulp')
-    sass        = require('gulp-sass'),
-    cssnano     = require('gulp-cssnano'),
-    uglify      = require('gulp-uglify'),
-    concat      = require('gulp-concat'),
-    shell       = require('gulp-shell'),
-    newer       = require('gulp-newer'),
-    responsive  = require('gulp-responsive'),
-    imagemin    = require('gulp-imagemin'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    uncss       = require('gulp-uncss'),
-    size        = require('gulp-size'),
-    zopfli      = require('gulp-zopfli'),
-    gulpif      = require('gulp-if'),
-    gutil       = require('gulp-util'),
-    rimraf      = require('rimraf'),
-    pngquant    = require('imagemin-pngquant'),
-    psi         = require('psi'),
-    browserSync = require('browser-sync').create(),
-    args        = require('yargs').argv;
+const gulp        = require('gulp');
+const sass        = require('gulp-sass');
+const cssnano     = require('gulp-cssnano');
+const uglify      = require('gulp-uglify');
+const concat      = require('gulp-concat');
+const shell       = require('gulp-shell');
+const newer       = require('gulp-newer');
+const responsive  = require('gulp-responsive');
+const imagemin    = require('gulp-imagemin');
+const sourcemaps  = require('gulp-sourcemaps');
+const uncss       = require('gulp-uncss');
+const size        = require('gulp-size');
+const zopfli      = require('gulp-zopfli');
+const gulpif      = require('gulp-if');
+const gutil       = require('gulp-util');
+const rimraf      = require('rimraf');
+const pngquant    = require('imagemin-pngquant');
+const psi         = require('psi');
+const browserSync = require('browser-sync').create();
+const args        = require('yargs').argv;
 
-var DIR = {},
-    env = args.prod ? 'prod' : 'dev';
+const DIR = {};
+const env = args.prod ? 'prod' : 'dev';
 
 DIR.src                = 'source';
 DIR.dest               = 'public_'+env;
@@ -40,15 +40,17 @@ DIR.jsDest             = DIR.dest+'/js';
 
 gulp.task('default', ['build', 'watch']);
 
-gulp.task('build', ['build-page', 'build-video', 'build-img', 'build-css', 'build-js', 'build-fonts'], function () {
-    process.exit(0);
-});
+gulp.task(
+    'build',
+    ['build-page', 'build-video', 'build-img', 'build-css', 'build-js', 'build-fonts'],
+    () => { process.exit(0); }
+);
 
-gulp.task('clean', function (cb) {
+gulp.task('clean', (cb) => {
     rimraf('public_dev', cb);
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', () => {
     browserSync.init({server: {baseDir: 'public_'+env}});
 
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
@@ -56,14 +58,14 @@ gulp.task('watch', function () {
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', ['build-img']);
     gulp.watch(DIR.videoSrc+'/**/*.{m4v}', ['build-video']);
     gulp.watch([DIR.src+'/**/*.{html,html.twig,md}', DIR.fontsSrc+'/*', DIR.imgSrc+'/**'], ['build-page'])
-        .on('change', function () { setTimeout(browserSync.reload, 5000)});
+        .on('change', () => { setTimeout(browserSync.reload, 5000)});
 });
 
 // This task is required as a hack to reload the browser AFTER Sculpin is finished building the page
 gulp.task('watch-page', browserSync.reload);
 
 // Compiles SCSS into CSS, minifies it and moves it into correct directory.
-gulp.task('build-css', function () {
+gulp.task('build-css', () => {
     return gulp
         .src(DIR.sassSrc+'/**/*.scss')
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
@@ -81,7 +83,7 @@ gulp.task('build-css', function () {
 
 // Compiles JavaScript into single file, uglifies it, and
 // moves it into the correct directory.
-gulp.task('build-js', function () {
+gulp.task('build-js', () => {
     return gulp
         .src([
             'components/picturefill/dist/picturefill.js',
@@ -96,14 +98,14 @@ gulp.task('build-js', function () {
         .pipe(size({title: 'JS'}));
 });
 
-gulp.task('build-fonts', function () {
+gulp.task('build-fonts', () => {
     return gulp
         .src(DIR.fontsSrc+'/**/*.{eot,svg,ttf,woff,woff2}')
         .pipe(gulp.dest(DIR.fontsDest))
         .pipe(size({title: 'Fonts'}));
 })
 
-gulp.task('build-video', function () {
+gulp.task('build-video', () => {
     return gulp
         .src(DIR.videoSrc+'/**/*.m4v')
         .pipe(newer(DIR.videoDest))
@@ -111,7 +113,7 @@ gulp.task('build-video', function () {
 });
 
 // Minifies images and moves them into the `public_*` directory.
-gulp.task('build-img', ['build-responsive-img'], function () {
+gulp.task('build-img', ['build-responsive-img'], () => {
     return gulp
         .src([DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', '!'+DIR.imgSrc+'/original'])
         .pipe(newer(DIR.imgDest))
@@ -120,45 +122,45 @@ gulp.task('build-img', ['build-responsive-img'], function () {
 });
 
 // Creates versions for all different sizes classes (responsive images).
-gulp.task('build-responsive-img', function () {
+gulp.task('build-responsive-img', () => {
     return gulp
         .src(DIR.imgResponsiveSrc+'/**/*.{jpg,jpeg,png}')
         .pipe(newer(DIR.imgResponsiveDest))
         .pipe(responsive({
-            '**/*.{jpg,jpeg,png}': [{
+            '**/*': [{
                 width:  320,
-                rename: function (path) { path.basename += '-small'; return path; }
+                rename: (path) => { path.basename += '-small'; return path; },
             }, {
                 width:  640,
-                rename: function (path) { path.basename += '-small@2x'; return path; }
+                rename: (path) => { path.basename += '-small@2x'; return path; },
             }, {
                 width:  450,
-                rename: function (path) { path.basename += '-medium'; return path; }
+                rename: (path) => { path.basename += '-medium'; return path; },
             }, {
                 width:  900,
-                rename: function (path) { path.basename += '-medium@2x'; return path; }
+                rename: (path) => { path.basename += '-medium@2x'; return path; },
             }, {
                 width:  640,
-                rename: function (path) { path.basename += '-large'; return path; }
+                rename: (path) => { path.basename += '-large'; return path; },
             }, {
                 width:  1280,
-                rename: function (path) { path.basename += '-large@2x'; return path; }
+                rename: (path) => { path.basename += '-large@2x'; return path; },
             }, {
-                width: '100%'
+                width: '100%',
             }]
-        }, {errorOnEnlargement: false, errorOnUnusedConfig: false}))
+        }, {errorOnEnlargement: false, errorOnUnusedConfig: false, silent: true}))
         .pipe(gulp.dest(DIR.imgResponsiveDest));
 });
 
 // Runs Sculpin to build the page
-gulp.task('build-page', function () {
+gulp.task('build-page', () => {
     return gulp.src('')
         .pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: false}));
 });
 
 gulp.task('build-cv-pdf', shell.task('pdflatex cv.tex', {cwd: DIR.cvPdfSrc}));
 
-gulp.task('build-cv', ['build-cv-pdf'], function () {
+gulp.task('build-cv', ['build-cv-pdf'], () => {
     gulp.src(DIR.cvPdfSrc+'/cv.pdf')
         .pipe(gulp.dest(DIR.src));
 });
@@ -166,24 +168,24 @@ gulp.task('build-cv', ['build-cv-pdf'], function () {
 // Evaluate performance
 gulp.task('perf', ['perf-mobile', 'perf-desktop']);
 
-gulp.task('perf-mobile', function () {
+gulp.task('perf-mobile', () => {
     return psi('https://florian.ec', {
         // key: key
         nokey: 'true',
         strategy: 'mobile',
-    }, function (err, data) {
-        var color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
+    }, (err, data) => {
+        const color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
         gutil.log(gutil.colors.underline('PageSpeed Mobile Score'), '', gutil.colors.bold(data.score));
     });
 });
 
-gulp.task('perf-desktop', function () {
+gulp.task('perf-desktop', () => {
     return psi('https://florian.ec', {
         nokey: 'true',
         // key: key,
         strategy: 'desktop',
-    }, function (err, data) {
-        var color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
+    }, (err, data) => {
+        const color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
         gutil.log(gutil.colors.underline('PageSpeed Desktop Score'), gutil.colors.bold(data.score));
     });
 });
