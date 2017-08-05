@@ -43,14 +43,14 @@ gulp.task('default', ['build', 'watch']);
 gulp.task(
     'build',
     ['build-page', 'build-video', 'build-img', 'build-css', 'build-js', 'build-fonts'],
-    () => { process.exit(0); }
+    function () { process.exit(0); }
 );
 
-gulp.task('clean', (cb) => {
+gulp.task('clean', function (cb) {
     rimraf('public_dev', cb);
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', function () {
     browserSync.init({server: {baseDir: 'public_'+env}});
 
     gulp.watch(DIR.sassSrc+'/**/*.scss', ['build-css']);
@@ -58,14 +58,14 @@ gulp.task('watch', () => {
     gulp.watch(DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', ['build-img']);
     gulp.watch(DIR.videoSrc+'/**/*.{m4v}', ['build-video']);
     gulp.watch([DIR.src+'/**/*.{html,html.twig,md}', DIR.fontsSrc+'/*', DIR.imgSrc+'/**'], ['build-page'])
-        .on('change', () => { setTimeout(browserSync.reload, 5000)});
+        .on('change', function () { setTimeout(browserSync.reload, 5000)});
 });
 
 // This task is required as a hack to reload the browser AFTER Sculpin is finished building the page
 gulp.task('watch-page', browserSync.reload);
 
 // Compiles SCSS into CSS, minifies it and moves it into correct directory.
-gulp.task('build-css', () => {
+gulp.task('build-css', function () {
     return gulp
         .src(DIR.sassSrc+'/**/*.scss')
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
@@ -83,7 +83,7 @@ gulp.task('build-css', () => {
 
 // Compiles JavaScript into single file, uglifies it, and
 // moves it into the correct directory.
-gulp.task('build-js', () => {
+gulp.task('build-js', function () {
     return gulp
         .src([
             'components/picturefill/dist/picturefill.js',
@@ -98,14 +98,14 @@ gulp.task('build-js', () => {
         .pipe(size({title: 'JS'}));
 });
 
-gulp.task('build-fonts', () => {
+gulp.task('build-fonts', function () {
     return gulp
         .src(DIR.fontsSrc+'/**/*.{eot,svg,ttf,woff,woff2}')
         .pipe(gulp.dest(DIR.fontsDest))
         .pipe(size({title: 'Fonts'}));
 })
 
-gulp.task('build-video', () => {
+gulp.task('build-video', function () {
     return gulp
         .src(DIR.videoSrc+'/**/*.m4v')
         .pipe(newer(DIR.videoDest))
@@ -113,7 +113,7 @@ gulp.task('build-video', () => {
 });
 
 // Minifies images and moves them into the `public_*` directory.
-gulp.task('build-img', ['build-responsive-img'], () => {
+gulp.task('build-img', ['build-responsive-img'], function () {
     return gulp
         .src([DIR.imgSrc+'/**/*.{jpg,jpeg,png,gif,svg}', '!'+DIR.imgSrc+'/original'])
         .pipe(newer(DIR.imgDest))
@@ -122,29 +122,29 @@ gulp.task('build-img', ['build-responsive-img'], () => {
 });
 
 // Creates versions for all different sizes classes (responsive images).
-gulp.task('build-responsive-img', () => {
+gulp.task('build-responsive-img', function () {
     return gulp
         .src(DIR.imgResponsiveSrc+'/**/*.{jpg,jpeg,png}')
         .pipe(newer(DIR.imgResponsiveDest))
         .pipe(responsive({
             '**/*': [{
                 width:  320,
-                rename: (path) => { path.basename += '-small'; return path; },
+                rename: function (path) { path.basename += '-small'; return path; },
             }, {
                 width:  640,
-                rename: (path) => { path.basename += '-small@2x'; return path; },
+                rename: function (path) { path.basename += '-small@2x'; return path; },
             }, {
                 width:  450,
-                rename: (path) => { path.basename += '-medium'; return path; },
+                rename: function (path) { path.basename += '-medium'; return path; },
             }, {
                 width:  900,
-                rename: (path) => { path.basename += '-medium@2x'; return path; },
+                rename: function (path) { path.basename += '-medium@2x'; return path; },
             }, {
                 width:  640,
-                rename: (path) => { path.basename += '-large'; return path; },
+                rename: function (path) { path.basename += '-large'; return path; },
             }, {
                 width:  1280,
-                rename: (path) => { path.basename += '-large@2x'; return path; },
+                rename: function (path) { path.basename += '-large@2x'; return path; },
             }, {
                 width: '100%',
             }]
@@ -153,14 +153,14 @@ gulp.task('build-responsive-img', () => {
 });
 
 // Runs Sculpin to build the page
-gulp.task('build-page', () => {
+gulp.task('build-page', function () {
     return gulp.src('')
         .pipe(shell(['./vendor/bin/sculpin generate --env='+env], {quiet: false}));
 });
 
 gulp.task('build-cv-pdf', shell.task('pdflatex cv.tex', {cwd: DIR.cvPdfSrc}));
 
-gulp.task('build-cv', ['build-cv-pdf'], () => {
+gulp.task('build-cv', ['build-cv-pdf'], function () {
     gulp.src(DIR.cvPdfSrc+'/cv.pdf')
         .pipe(gulp.dest(DIR.src));
 });
@@ -168,23 +168,23 @@ gulp.task('build-cv', ['build-cv-pdf'], () => {
 // Evaluate performance
 gulp.task('perf', ['perf-mobile', 'perf-desktop']);
 
-gulp.task('perf-mobile', () => {
+gulp.task('perf-mobile', function () {
     return psi('https://florian.ec', {
         // key: key
         nokey: 'true',
         strategy: 'mobile',
-    }, (err, data) => {
+    }, function (err, data) {
         const color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
         gutil.log(gutil.colors.underline('PageSpeed Mobile Score'), '', gutil.colors.bold(data.score));
     });
 });
 
-gulp.task('perf-desktop', () => {
+gulp.task('perf-desktop', function () {
     return psi('https://florian.ec', {
         nokey: 'true',
         // key: key,
         strategy: 'desktop',
-    }, (err, data) => {
+    }, function (err, data) {
         const color = data.score >= 85 ? gutil.colors.green : gutil.colors.orange;
         gutil.log(gutil.colors.underline('PageSpeed Desktop Score'), gutil.colors.bold(data.score));
     });
