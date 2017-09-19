@@ -8,6 +8,18 @@ permalink: concerts/
 
 A list of concerts I have been. There might be missing some, especially from the early years.
 
+### Plans
+
+- 09-19 Chastity Belt, Waxahatchee (Arena, Vienna)
+- 09-28 Waves Festival (Vienna)
+- 09-29 Waves Festival (Vienna)
+- 09-30 Waves Festival (Vienna)
+- 10-02 Diet Cig (B72, Vienna)
+- 10-12 EMA (Arena, Vienna)
+- 11-11 Nick Cave & The Bad Seeds (Stadthalle, Vienna)
+- 11-21 Zola Jesus (Fluc Wanne, Vienna)
+- 11-27 Emma Ruth Rundle + Jaye Jayle (Arena, Vienna)
+
 ### 2017
 
 - 07-18 [of Montreal](https://www.instagram.com/p/BWvQ6oOF8vG) (Fluc Wanne, Vienna)
