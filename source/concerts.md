@@ -10,9 +10,6 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-- 09-28 Waves Festival (Vienna)
-- 09-29 Waves Festival (Vienna)
-- 09-30 Waves Festival (Vienna)
 - 10-02 Diet Cig (B72, Vienna)
 - 10-12 EMA (Arena, Vienna)
 - 11-1 Nick Cave & The Bad Seeds (Stadthalle, Vienna)
@@ -21,6 +18,9 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### 2017
 
+- 09-30 Waves Festival: [Any Other](https://www.instagram.com/p/BZreoizFO5R), Brunettes Shoot Blondes, [Birthh](https://www.instagram.com/p/BZsuLeul3Bc), [Giungla](https://www.instagram.com/p/BZtYXxxFjAB) ([2](https://www.instagram.com/p/BZtaJxwlOGu)) (Vienna)
+- 09-29 Waves Festival: [Nite Jewel](https://www.instagram.com/p/BZqEDQLlvfI), [Gaddafi Girls](https://www.instagram.com/p/BZqR-FoFf6B), [lilly among clouds](https://www.instagram.com/p/BZq1ZY5F06g), [E^ST](https://www.instagram.com/p/BZrNJiQl6ju) (Vienna)
+- 09-28 Waves Festival: [Tolstoys](https://www.instagram.com/p/BZmhrcQFFQP), [Emily Roberts](https://www.instagram.com/p/BZmkFmIFrLV), Serafyn, [Little Big Sea](https://www.instagram.com/p/BZnksamFhHS), [Be Charlotte](https://www.instagram.com/p/BZn8lA2lLTF) (Vienna)
 - 09-19 [Chastity Belt](https://www.instagram.com/p/BZPS1pdlyfZ) ([2](https://www.instagram.com/p/BZPS8UnlZSY), [3](https://www.instagram.com/p/BZPSwC1l4BM)), [Waxahatchee](https://www.instagram.com/p/BZPR9lel33G), [Magic Potion](https://www.instagram.com/p/BZPP7uDFW6b) (Arena, Vienna)
 - 08-21 [Perfume Genius](https://www.instagram.com/p/BYEn3EqFkrg) (Arena, Vienna)
 - 07-18 [of Montreal](https://www.instagram.com/p/BWvQ6oOF8vG) (Fluc Wanne, Vienna)
