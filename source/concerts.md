@@ -10,7 +10,6 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-- 10-02 Diet Cig (B72, Vienna)
 - 10-12 EMA (Arena, Vienna)
 - 11-1 Nick Cave & The Bad Seeds (Stadthalle, Vienna)
 - 11-21 Zola Jesus (Fluc Wanne, Vienna)
@@ -18,6 +17,8 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### 2017
 
+- 10-06 [5K HD](https://www.instagram.com/p/BZ8gsUDlGqu) (WUK, Vienna)
+- 10-02 [Diet Cig](https://www.instagram.com/p/BZwtRdTF1Xq) ([2](https://www.instagram.com/p/BZ0euLIlevS)), The Spook School (B72, Vienna)
 - 09-30 Waves Festival: [Any Other](https://www.instagram.com/p/BZreoizFO5R), Brunettes Shoot Blondes, [Birthh](https://www.instagram.com/p/BZsuLeul3Bc), [Giungla](https://www.instagram.com/p/BZtYXxxFjAB) ([2](https://www.instagram.com/p/BZtaJxwlOGu)) (Vienna)
 - 09-29 Waves Festival: [Nite Jewel](https://www.instagram.com/p/BZqEDQLlvfI), [Gaddafi Girls](https://www.instagram.com/p/BZqR-FoFf6B), [lilly among clouds](https://www.instagram.com/p/BZq1ZY5F06g), [E^ST](https://www.instagram.com/p/BZrNJiQl6ju) (Vienna)
 - 09-28 Waves Festival: [Tolstoys](https://www.instagram.com/p/BZmhrcQFFQP), [Emily Roberts](https://www.instagram.com/p/BZmkFmIFrLV), Serafyn, [Little Big Sea](https://www.instagram.com/p/BZnksamFhHS), [Be Charlotte](https://www.instagram.com/p/BZn8lA2lLTF) (Vienna)
