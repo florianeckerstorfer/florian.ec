@@ -11,9 +11,13 @@ A list of concerts I have been. There might be missing some, especially from the
 ### Plans
 
 - 10-12 EMA (Arena, Vienna)
-- 11-1 Nick Cave & The Bad Seeds (Stadthalle, Vienna)
+- 11-01 Nick Cave & The Bad Seeds (Stadthalle, Vienna)
 - 11-21 Zola Jesus (Fluc Wanne, Vienna)
 - 11-27 Emma Ruth Rundle + Jaye Jayle (Arena, Vienna)
+- 12-09 FM Belfast (Grelle Forelle, Vienna)
+- 01-14 Wolf Alice (Arena, Vienna)
+- 02-06 Iron & Wine (WUK, Vienna)
+- 02-21 Ghostpoet (Flex, Vienna)
 
 ### 2017
 
