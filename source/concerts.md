@@ -10,8 +10,6 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-- 10-12 EMA (Arena, Vienna)
-- 11-01 Nick Cave & The Bad Seeds (Stadthalle, Vienna)
 - 11-21 Zola Jesus (Fluc Wanne, Vienna)
 - 11-27 Emma Ruth Rundle + Jaye Jayle (Arena, Vienna)
 - 12-09 FM Belfast (Grelle Forelle, Vienna)
@@ -21,6 +19,8 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### 2017
 
+- 11-01 [Nick Cave & The Bad Seeds](https://www.instagram.com/p/Ba-FN-olddI) (Stadthalle, Vienna)
+- 10-12 [EMA](https://www.instagram.com/p/BaKj0jFFXOg) ([2](https://www.instagram.com/p/BaKj6rklOrW)) (Arena, Vienna)
 - 10-06 [5K HD](https://www.instagram.com/p/BZ8gsUDlGqu) (WUK, Vienna)
 - 10-02 [Diet Cig](https://www.instagram.com/p/BZwtRdTF1Xq) ([2](https://www.instagram.com/p/BZ0euLIlevS)), The Spook School (B72, Vienna)
 - 09-30 Waves Festival: [Any Other](https://www.instagram.com/p/BZreoizFO5R), Brunettes Shoot Blondes, [Birthh](https://www.instagram.com/p/BZsuLeul3Bc), [Giungla](https://www.instagram.com/p/BZtYXxxFjAB) ([2](https://www.instagram.com/p/BZtaJxwlOGu)) (Vienna)
