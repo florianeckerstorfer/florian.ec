@@ -14,6 +14,8 @@ A list of concerts I have been. There might be missing some, especially from the
 - 11-27 Emma Ruth Rundle + Jaye Jayle (Arena, Vienna)
 - 12-09 FM Belfast (Grelle Forelle, Vienna)
 - 01-14 Wolf Alice (Arena, Vienna)
+- 01-21 Liima (B72, Vienna)
+- 01-26 Ja Ja Ja Festival (WUK, Vienna)
 - 02-06 Iron & Wine (WUK, Vienna)
 - 02-21 Ghostpoet (Flex, Vienna)
 - 03-03 Alvvays (Flex, Vienna)
