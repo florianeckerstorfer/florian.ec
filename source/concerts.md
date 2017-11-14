@@ -18,7 +18,9 @@ A list of concerts I have been. There might be missing some, especially from the
 - 01-26 Ja Ja Ja Festival (WUK, Vienna)
 - 02-06 Iron & Wine (WUK, Vienna)
 - 02-21 Ghostpoet (Flex, Vienna)
+- 03-01 Son Lux (Arena, Vienna)
 - 03-03 Alvvays (Flex, Vienna)
+- 03-24 Mynth (Progy & Bess, Vienna)
 - 04-15 Sunflower Bean (Chelsea, Vienna)
 
 ### 2017
