@@ -10,8 +10,6 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-- 11-21 Zola Jesus (Fluc Wanne, Vienna)
-- 11-27 Emma Ruth Rundle + Jaye Jayle (Arena, Vienna)
 - 12-09 FM Belfast (Grelle Forelle, Vienna)
 - 01-14 Wolf Alice (Arena, Vienna)
 - 01-21 Liima (B72, Vienna)
@@ -27,6 +25,8 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### 2017
 
+- 11-27 [Emma Ruth Rundle](https://www.instagram.com/p/BcBAMl9lTpF) + [Jaye Jayle](https://www.instagram.com/p/BcBAAXilkdc) (Arena, Vienna)
+- 11-21 [Zola Jesus](https://www.instagram.com/p/BbxmGbGFyq8) ([https://www.instagram.com/p/Bbxmu8UlvDA](2)), [Devon Welsh](https://www.instagram.com/p/Bbxj7OKlgTa) (Fluc Wanne, Vienna)
 - 11-01 [Nick Cave & The Bad Seeds](https://www.instagram.com/p/Ba-FN-olddI) (Stadthalle, Vienna)
 - 10-12 [EMA](https://www.instagram.com/p/BaKj0jFFXOg) ([2](https://www.instagram.com/p/BaKj6rklOrW)) (Arena, Vienna)
 - 10-06 [5K HD](https://www.instagram.com/p/BZ8gsUDlGqu) (WUK, Vienna)
