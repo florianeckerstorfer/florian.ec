@@ -9,19 +9,19 @@ use:
 
 Hello, I am **Florian Eckerstorfer**, I study **Software Engineering &amp; Internet Computing** and **Innovation** and work as a **Web Developer** in **Vienna, Europe**.
 
-{{ picture('/img/florian/florian.jpg', 'Photo of Florian Eckerstorfer') }}
+{{ picture('/img/florian/florian-2.jpg', 'Photo of Florian Eckerstorfer') }}
 
 You can find me at numerous social networks and web services, including
-    [Twitter](http://twitter.com/Florian_),
-    [Pinboard](https://pinboard.in/u:florian.eckerstorfer),
-    [Instagram](http://instagram.com/florian_) and
-    [Last.fm](http://www.last.fm/user/feredir)</a>.
-    You can find code I write on
-    [Github](https://github.com/florianeckerstorfer),
-    [Packagist](https://packagist.org/users/florianeckerstorfer/),
-    [NPM](https://www.npmjs.org/~florianeckerstorfer) and
-    [RubyGems](https://rubygems.org/profiles/florianeckerstorfer)</a>.
-    I also like to take [photos](http://42reasons.com) and love to [travel](/travel) and go to [concerts](/concerts).
+[Twitter](http://twitter.com/Florian_),
+[Pinboard](https://pinboard.in/u:florian.eckerstorfer),
+[Instagram](http://instagram.com/florian_) and
+[Last.fm](http://www.last.fm/user/feredir)</a>.
+You can find code I write on
+[Github](https://github.com/florianeckerstorfer),
+[Packagist](https://packagist.org/users/florianeckerstorfer/),
+[NPM](https://www.npmjs.org/~florianeckerstorfer) and
+[RubyGems](https://rubygems.org/profiles/florianeckerstorfer)</a>.
+I also like to take [photos](http://42reasons.com) and love to [travel](/travel) and go to [concerts](/concerts).
 
 You can also send me an [email](mailto:florian@eckerstorfer.co) ([GPG Key](/key.asc)).
 
