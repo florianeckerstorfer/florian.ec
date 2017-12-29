@@ -1,6 +1,6 @@
 ---
 title: "My Favourite Albums of 2017"
-tags: [ music ]
+tags: [ music, highlight ]
 slug: favourite-albums-2017
 ---
 
