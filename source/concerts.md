@@ -10,12 +10,6 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-* Jan 14 Wolf Alice (Arena, Vienna)
-* Jan 21 Liima (B72, Vienna)
-* Jan 26 Ja Ja Ja Festival (WUK, Vienna)
-* Feb 06 Iron & Wine (WUK, Vienna)
-* Feb 19 Fever Ray (Simm City, Vienna)
-* Feb 21 Ghostpoet (Flex, Vienna)
 * Mar 01 Son Lux (Arena, Vienna)
 * Mar 03 Alvvays (Flex, Vienna)
 * Mar 24 Mynth (Progy & Bess, Vienna)
@@ -24,6 +18,14 @@ A list of concerts I have been. There might be missing some, especially from the
 * May 30 - Jun 3 Primavera Sound (Barcelona)
 * Jun 18 Arcade Fire (Stadthalle, Vienna)
 * Sep 27 - 29 Waves Festival (Vienna)
+
+### 2018
+
+* Jan 21 [Liima](https://www.instagram.com/p/BeOoVM2lCNg) (B72, Vienna)
+* Jan 26 Ja Ja Ja Festival: [Velvet Volume](https://www.instagram.com/p/BebsBxUlhwd), Úlfur Úlfur, The Holy, [Pom Poko](https://www.instagram.com/p/BebrDddFb6M), [Goss](https://www.instagram.com/p/BebqgjOl7Qt) (WUK, Vienna)
+* Feb 06 [Iron & Wine](https://www.instagram.com/p/Be3yXDrF7Oi), [Half Waif](https://www.instagram.com/p/Be3hI4nFOtI) (WUK, Vienna)
+* Feb 19 [Fever Ray](https://www.instagram.com/p/BfZOX9ElXd0) (Gasometer, Vienna)
+* Feb 21 [Ghostpoet](https://www.instagram.com/p/BfebLohl02S) (Flex, Vienna)
 
 ### 2017
 
