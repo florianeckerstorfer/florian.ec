@@ -10,11 +10,12 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-* Mar 01 Son Lux (Arena, Vienna)
-* Mar 03 Alvvays (Flex, Vienna)
 * Mar 24 Mynth (Progy & Bess, Vienna)
+* Apr 03 Braids (B72, Vienna)
 * Apr 07 Nada Surf (WUK, Vienna)
 * Apr 15 Sunflower Bean (Chelsea, Vienna)
+* Apr 27 Wye Oak (Fluc, Vienna)
+* May 08 Hey Elbow (Rhiz, Vienna)
 * May 30 - Jun 3 Primavera Sound (Barcelona)
 * Jun 18 Arcade Fire (Stadthalle, Vienna)
 * Sep 27 - 29 Waves Festival (Vienna)
@@ -26,6 +27,8 @@ A list of concerts I have been. There might be missing some, especially from the
 * Feb 06 [Iron & Wine](https://www.instagram.com/p/Be3yXDrF7Oi), [Half Waif](https://www.instagram.com/p/Be3hI4nFOtI) (WUK, Vienna)
 * Feb 19 [Fever Ray](https://www.instagram.com/p/BfZOX9ElXd0) (Gasometer, Vienna)
 * Feb 21 [Ghostpoet](https://www.instagram.com/p/BfebLohl02S) (Flex, Vienna)
+* Mar 01 [Son Lux](https://www.instagram.com/p/BfzG5ORl5sV), [Hanna Benn](https://www.instagram.com/p/BfzGvRilz0l) (Arena, Vienna)
+* Mar 03 [Alvvays](https://www.instagram.com/p/Bf4FJVGF6us) (Flex, Vienna)
 
 ### 2017
 
