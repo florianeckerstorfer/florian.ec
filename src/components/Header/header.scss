@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $page-margin 0;
+
+  > a {
+    height: 32px;
+    line-height: 1;
+  }
+}

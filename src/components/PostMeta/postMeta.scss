@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.post-meta {
+  display: flex;
+  flex-direction: row;
+
+  .dot {
+    color: $primary-color;
+    font-weight: bold;
+    margin: 0 .5rem;
+  }
+}

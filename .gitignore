@@ -26,3 +26,5 @@
 /source/img/florian
 *.log
 /.vscode
+/.cache
+/public

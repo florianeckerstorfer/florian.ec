@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.post-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: .5rem $page-margin * -1 1rem;
+
+  h2,
+  ol,
+  p,
+  ul {
+    margin-left: $page-margin;
+    margin-right: $page-margin;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .gatsby-resp-image-figure {
+    margin: 0;
+    width: 100%;
+  }
+
+  .gatsby-resp-image-figcaption {
+    color: $grey-color;
+    margin: .5rem $page-margin;
+  }
+
+  &--photo-story {
+    .gatsby-resp-image-container {
+      margin: 2rem 0;
+    }
+
+    .gatsby-resp-image-link {
+      width: 100%;
+    }
+  }
+}
