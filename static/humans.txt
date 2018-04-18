@@ -7,7 +7,6 @@
 
 # TECHNOLOGY COLOPHON
 
-    PHP, CSS3, HTML5, JavaScript
-    Sculpin, Grunt, jQuery, Normalize.css, Bourbon, Neat, InstantClick, PictureFill
+    HTML, CSS, JavaScript, Markdown, Gatsby, React, ESLint, Prettier
 
     Source: https://github.com/florianeckerstorfer/florian.ec
