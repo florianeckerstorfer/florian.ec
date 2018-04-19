@@ -58,6 +58,7 @@
     "develop": "gatsby develop --port 8040",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "cv-pdf": "cd cv-pdf && pdflatex cv.tex && cp cv.pdf florian-eckerstorfer-cv.pdf"
+    "cv-pdf": "cd cv-pdf && pdflatex cv.tex && cp cv.pdf florian-eckerstorfer-cv.pdf",
+    "clean": "rm -rf .cache/"
   }
 }
