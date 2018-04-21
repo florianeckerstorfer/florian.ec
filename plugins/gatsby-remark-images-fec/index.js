@@ -1,11 +1,11 @@
-const select = require(`unist-util-select`)
-const path = require(`path`)
-const isRelativeUrl = require(`is-relative-url`)
-const _ = require(`lodash`)
-const { sizes } = require(`gatsby-plugin-sharp`)
-const Promise = require(`bluebird`)
-const cheerio = require(`cheerio`)
-const slash = require(`slash`)
+const select = require(`unist-util-select`);
+const path = require(`path`);
+const isRelativeUrl = require(`is-relative-url`);
+const _ = require(`lodash`);
+const { sizes } = require(`gatsby-plugin-sharp`);
+const Promise = require(`bluebird`);
+const cheerio = require(`cheerio`);
+const slash = require(`slash`);
 
 // If the image is relative (not hosted elsewhere)
 // 1. Find the image file
@@ -24,63 +24,63 @@ module.exports = (
     linkImagesToOriginal: true,
     showCaptions: false,
     pathPrefix,
-  }
+  };
 
-  const options = _.defaults(pluginOptions, defaults)
+  const options = _.defaults(pluginOptions, defaults);
 
   // This will only work for markdown syntax image tags
-  const markdownImageNodes = select(markdownAST, `image`)
+  const markdownImageNodes = select(markdownAST, `image`);
 
   // This will also allow the use of html image tags
-  const rawHtmlNodes = select(markdownAST, `html`)
+  const rawHtmlNodes = select(markdownAST, `html`);
 
   // Takes a node and generates the needed images and then returns
   // the needed HTML replacement for the image
   const generateImagesAndUpdateNode = async function(node, resolve) {
     // Check if this markdownNode has a File parent. This plugin
     // won't work if the image isn't hosted locally.
-    const parentNode = getNode(markdownNode.parent)
-    let imagePath
+    const parentNode = getNode(markdownNode.parent);
+    let imagePath;
     if (parentNode && parentNode.dir) {
-      imagePath = slash(path.join(parentNode.dir, node.url))
+      imagePath = slash(path.join(parentNode.dir, node.url));
     } else {
-      return null
+      return null;
     }
 
     const imageNode = _.find(files, file => {
       if (file && file.absolutePath) {
-        return file.absolutePath === imagePath
+        return file.absolutePath === imagePath;
       }
-      return null
-    })
+      return null;
+    });
 
     if (!imageNode || !imageNode.absolutePath) {
-      return resolve()
+      return resolve();
     }
 
-    let responsiveSizesResult = await sizes({
+    const responsiveSizesResult = await sizes({
       file: imageNode,
       args: options,
       reporter,
-    })
+    });
 
     if (!responsiveSizesResult) {
-      return resolve()
+      return resolve();
     }
 
     // Calculate the paddingBottom %
-    const ratio = `${1 / responsiveSizesResult.aspectRatio * 100}%`
+    const ratio = `${1 / responsiveSizesResult.aspectRatio * 100}%`;
 
-    const originalImg = responsiveSizesResult.originalImg
-    const fallbackSrc = responsiveSizesResult.src
-    const srcSet = responsiveSizesResult.srcSet
-    const presentationWidth = responsiveSizesResult.presentationWidth
+    const originalImg = responsiveSizesResult.originalImg;
+    const fallbackSrc = responsiveSizesResult.src;
+    const srcSet = responsiveSizesResult.srcSet;
+    const presentationWidth = responsiveSizesResult.presentationWidth;
 
     // Generate default alt tag
-    const srcSplit = node.url.split(`/`)
-    const fileName = srcSplit[srcSplit.length - 1]
-    const fileNameNoExt = fileName.replace(/\.[^/.]+$/, ``)
-    const defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, ` `)
+    const srcSplit = node.url.split(`/`);
+    const fileName = srcSplit[srcSplit.length - 1];
+    const fileNameNoExt = fileName.replace(/\.[^/.]+$/, ``);
+    const defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, ` `);
 
     // TODO
     // Fade in images on load.
@@ -92,19 +92,19 @@ module.exports = (
     class="gatsby-resp-image-wrapper"
     style="position: relative; display: block; ${
       options.wrapperStyle
-      }; max-width: ${presentationWidth}px; margin-left: auto; margin-right: auto;"
+    }; max-width: ${presentationWidth}px; margin-left: auto; margin-right: auto;"
   >
     <span
       class="gatsby-resp-image-background-image"
       style="padding-bottom: ${ratio}; position: relative; bottom: 0; left: 0; background-image: url('${
       responsiveSizesResult.base64
-      }'); background-size: cover; display: block;"
+    }'); background-size: cover; display: block;"
     >
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px ${
-      options.backgroundColor
-      };"
+          options.backgroundColor
+        };"
         alt="${node.alt ? node.alt : defaultAlt}"
         title="${node.title ? node.title : ``}"
         src="${fallbackSrc}"
@@ -113,7 +113,7 @@ module.exports = (
       />
     </span>
   </span>
-  `
+  `;
 
     // Make linking to original image optional.
     if (options.linkImagesToOriginal) {
@@ -127,7 +127,7 @@ module.exports = (
   >
   ${rawHTML}
   </a>
-    `
+    `;
     }
 
     // Wrap in figure and use title as caption
@@ -138,20 +138,20 @@ module.exports = (
   ${rawHTML}
   <figcaption class="gatsby-resp-image-figcaption">${node.title}</figcaption>
   </figure>
-      `
+      `;
     }
 
     rawHTML = `<div class=gatsby-resp-image-container>${rawHTML}</div>`;
 
-    return rawHTML
-  }
+    return rawHTML;
+  };
 
   return Promise.all(
     // Simple because there is no nesting in markdown
     markdownImageNodes.map(
       node =>
         new Promise(async (resolve, reject) => {
-          const fileType = node.url.slice(-3)
+          const fileType = node.url.slice(-3);
 
           // Ignore gifs as we can't process them,
           // svgs as they are already responsive by definition
@@ -160,18 +160,17 @@ module.exports = (
             fileType !== `gif` &&
             fileType !== `svg`
           ) {
-            const rawHTML = await generateImagesAndUpdateNode(node, resolve)
+            const rawHTML = await generateImagesAndUpdateNode(node, resolve);
 
             if (rawHTML) {
               // Replace the image node with an inline HTML node.
-              node.type = `html`
-              node.value = rawHTML
+              node.type = `html`;
+              node.value = rawHTML;
             }
-            return resolve(node)
-          } else {
-            // Image isn't relative so there's nothing for us to do.
-            return resolve()
+            return resolve(node);
           }
+          // Image isn't relative so there's nothing for us to do.
+          return resolve();
         })
     )
   ).then(markdownImageNodes =>
@@ -182,32 +181,32 @@ module.exports = (
         node =>
           new Promise(async (resolve, reject) => {
             if (!node.value) {
-              return resolve()
+              return resolve();
             }
 
-            const $ = cheerio.load(node.value)
+            const $ = cheerio.load(node.value);
             if ($(`img`).length === 0) {
               // No img tags
-              return resolve()
+              return resolve();
             }
 
-            let imageRefs = []
+            const imageRefs = [];
             $(`img`).each(function() {
-              imageRefs.push($(this))
-            })
+              imageRefs.push($(this));
+            });
 
-            for (let thisImg of imageRefs) {
+            for (const thisImg of imageRefs) {
               // Get the details we need.
-              let formattedImgTag = {}
-              formattedImgTag.url = thisImg.attr(`src`)
-              formattedImgTag.title = thisImg.attr(`title`)
-              formattedImgTag.alt = thisImg.attr(`alt`)
+              const formattedImgTag = {};
+              formattedImgTag.url = thisImg.attr(`src`);
+              formattedImgTag.title = thisImg.attr(`title`);
+              formattedImgTag.alt = thisImg.attr(`alt`);
 
               if (!formattedImgTag.url) {
-                return resolve()
+                return resolve();
               }
 
-              const fileType = formattedImgTag.url.slice(-3)
+              const fileType = formattedImgTag.url.slice(-3);
 
               // Ignore gifs as we can't process them,
               // svgs as they are already responsive by definition
@@ -219,26 +218,26 @@ module.exports = (
                 const rawHTML = await generateImagesAndUpdateNode(
                   formattedImgTag,
                   resolve
-                )
+                );
 
                 if (rawHTML) {
                   // Replace the image string
-                  thisImg.replaceWith(rawHTML)
+                  thisImg.replaceWith(rawHTML);
                 } else {
-                  return resolve()
+                  return resolve();
                 }
               }
             }
 
             // Replace the image node with an inline HTML node.
-            node.type = `html`
-            node.value = $(`body`).html() // fix for cheerio v1
+            node.type = `html`;
+            node.value = $(`body`).html(); // fix for cheerio v1
 
-            return resolve(node)
+            return resolve(node);
           })
       )
     ).then(htmlImageNodes =>
       markdownImageNodes.concat(htmlImageNodes).filter(node => !!node)
     )
-  )
-}
+  );
+};

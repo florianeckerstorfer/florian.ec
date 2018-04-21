@@ -1,7 +1,61 @@
+const siteUrl = (() => {
+  if (process.env.NODE_ENV === 'production') {
+    return 'https://florian.ec';
+  } else if (process.env.NODE_ENV === 'staging') {
+    return 'https://staging.florian.ec';
+  }
+  return 'http://localhost:8040';
+})();
+
+console.log('Use siteUrl', siteUrl);
+
+const feedGeneratorPlugin = {
+  resolve: 'gatsby-plugin-feed-fec',
+  options: {
+    generator: `GatsbyJS`,
+    rss: true,
+    json: true,
+    siteQuery: `
+      {
+        site {
+          siteMetadata {
+            title
+            description
+            siteUrl
+            author
+          }
+        }
+      }
+    `,
+    feedQuery: `
+      {
+        allMarkdownRemark(
+          sort: {order: DESC, fields: [frontmatter___date]}, 
+          limit: 100,
+        ) {
+          edges {
+            node {
+              html
+              frontmatter {
+                date
+                path
+                title
+              }
+            }
+          }
+        }
+      }
+    `,
+  },
+};
+
 module.exports = {
   siteMetadata: {
     title: 'Florian Eckerstorfer',
     author: 'Florian Eckerstorfer',
+    siteUrl,
+    description:
+      'Florian Eckerstorfer writes code and takes pictures. He also likes walking and music',
   },
   plugins: [
     {
@@ -40,5 +94,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    feedGeneratorPlugin,
   ],
 };
