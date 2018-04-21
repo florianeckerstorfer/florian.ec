@@ -28,3 +28,4 @@
 /.vscode
 /.cache
 /public
+/plugins/gatsby-plugin-feed-fec/*.js
