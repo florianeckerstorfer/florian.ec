@@ -4,8 +4,10 @@ import React from 'react';
 import PostMeta from '../PostMeta/PostMeta';
 import PostTitle from '../PostTitle/PostTitle';
 
+import './postHeader.scss';
+
 const PostHeader = ({ detail, frontmatter }) => (
-  <header className="postHeader">
+  <header className="post-header">
     <PostTitle
       title={frontmatter.title}
       path={frontmatter.path}

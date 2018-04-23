@@ -20,6 +20,9 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 640px;
-  padding: 0 $page-margin;
+  max-width: $content-width;
+
+  @media (min-width: $content-width-lg) {
+    max-width: $content-width-lg;
+  }
 }

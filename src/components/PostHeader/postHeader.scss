@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.post-header {
+  margin-left: $page-margin;
+  margin-right: $page-margin;
+
+  @media (min-width: $content-width-lg) {
+    margin-left: $page-margin-lg;
+    margin-right: $page-margin-lg;
+  }
+}

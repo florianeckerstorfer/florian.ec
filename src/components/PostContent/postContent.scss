@@ -3,7 +3,7 @@
 .post-content {
   font-size: 1rem;
   line-height: 1.5;
-  margin: .5rem $page-margin * -1 1rem;
+  margin: .5rem 0 1rem;
 
   h2,
   ol,
@@ -11,6 +11,11 @@
   ul {
     margin-left: $page-margin;
     margin-right: $page-margin;
+
+    @media (min-width: $content-width-lg) {
+      margin-left: $page-margin-lg;
+      margin-right: $page-margin-lg;
+    }
   }
 
   h2 {

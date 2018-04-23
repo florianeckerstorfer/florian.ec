@@ -5,7 +5,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: $page-margin;
+  margin-right: $page-margin;
   padding: $page-margin 0;
+
+  @media (min-width: $content-width-lg) {
+    margin-left: $page-margin-lg;
+    margin-right: $page-margin-lg;
+  }
 
   > a {
     height: 32px;

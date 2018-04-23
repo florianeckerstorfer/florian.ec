@@ -4,6 +4,11 @@
   background: $primary-color;
   color: $primary-contrast-color;
   margin-top: 2rem;
-  padding: 1rem .5rem;
+  padding: 1rem $page-margin;
   text-align: center;
+
+  @media (min-width: $content-width-lg) {
+    padding-left: $page-margin-lg;
+    padding-right: $page-margin-lg;
+  }
 }

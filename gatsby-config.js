@@ -72,7 +72,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images-fec`,
             options: {
-              maxWidth: 640,
+              maxWidth: 736,
               quality: 80,
               showCaptions: true,
             },
