@@ -11,7 +11,7 @@ For a while I am posting my favorite new albums of the week on Friday on Twitter
 
 ## I Don't Run by Hinds
 
-![I don't Run by Hinds](./hinds-i-dont-run.jpg)
+![Cover of I don't Run by Hinds](./hinds-i-dont-run.jpg)
 
 Try the music video for [The Club](https://www.youtube.com/watch?v=3zf9aO2qpn0).
 
@@ -21,7 +21,7 @@ Try the music video for [The Club](https://www.youtube.com/watch?v=3zf9aO2qpn0).
 
 ## The Louder I Call, The Faster It Runs by Wye Oak
 
-![The Louder I Call, The Faster It Runs by Wye Oak](./wye-oak-the-louder-i-call-the-faster-it-runs.jpg)
+![Cover The Louder I Call, The Faster It Runs by Wye Oak](./wye-oak-the-louder-i-call-the-faster-it-runs.jpg)
 
 Try [Lifer](https://www.youtube.com/watch?v=ojvwB6u30Ks).
 
@@ -31,7 +31,7 @@ Try [Lifer](https://www.youtube.com/watch?v=ojvwB6u30Ks).
 
 ## Bark Your Head Off, Dog by Hop Along
 
-![Bark Your Head Off, Dog by Hop Along](./hop-along-bark-your-head-off-dog.jpg)
+![Cover Bark Your Head Off, Dog by Hop Along](./hop-along-bark-your-head-off-dog.jpg)
 
 Try [Prior Things](https://www.youtube.com/watch?v=6IbBU4QXxD4).
 
@@ -41,7 +41,7 @@ Try [Prior Things](https://www.youtube.com/watch?v=6IbBU4QXxD4).
 
 ## Sex & Food by Unknown Mortal Orchestra
 
-![Sex & Food by Unknown Mortal Orchestra](./unknown-mortal-orchestra-sex-and-food.jpg)
+![Cover of Sex & Food by Unknown Mortal Orchestra](./unknown-mortal-orchestra-sex-and-food.jpg)
 
 Try [Not in Love We're Just High](https://www.youtube.com/watch?v=uY82vChor2A).
 
@@ -51,7 +51,7 @@ Try [Not in Love We're Just High](https://www.youtube.com/watch?v=uY82vChor2A).
 
 ## Static (EP) by boerd
 
-![Static (EP) by boerd](./boerd-static.jpg)
+![Cover Static (EP) by boerd](./boerd-static.jpg)
 
 Try [Blind](https://www.youtube.com/watch?v=Qgv4hQ_C9ds).
 
@@ -60,7 +60,7 @@ Try [Blind](https://www.youtube.com/watch?v=Qgv4hQ_C9ds).
 
 ## The Deconstruction by Eels
 
-![The Deconstruction by Eels](./eels-the-deconstruction.jpg)
+![Cover The Deconstruction by Eels](./eels-the-deconstruction.jpg)
 
 Try [Today Is The Day](https://www.youtube.com/watch?v=qx3sKPoeOis).
 
@@ -69,7 +69,7 @@ Try [Today Is The Day](https://www.youtube.com/watch?v=qx3sKPoeOis).
 
 ## Okovi: Additions by Zola Jesus
 
-![Okovi: Additions by Zola Jesus](./zola-jesus-okovi-additions.jpg)
+![Cover Okovi: Additions by Zola Jesus](./zola-jesus-okovi-additions.jpg)
 
 - [Apple Music](https://itunes.apple.com/at/album/okovi-additions/1346854452?l=en)
 - [Spotify](https://open.spotify.com/album/6gIClbeFY916nkjAnc2cK9)
