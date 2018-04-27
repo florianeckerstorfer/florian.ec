@@ -22,13 +22,13 @@ A list of concerts I have been. There might be missing some, especially from the
 * Apr 07 [Nada Surf](https://www.instagram.com/p/BhSM12yFln8) (WUK, Vienna)
 * Apr 03 [Braids](https://www.instagram.com/p/BhH3wSklHZu) (B72, Vienna)
 * Mar 24 [Mynth](https://www.instagram.com/p/BguNZudl2eT) (Progy & Bess, Vienna)
-* Jan 21 [Liima](https://www.instagram.com/p/BeOoVM2lCNg) (B72, Vienna)
-* Jan 26 Ja Ja Ja Festival: [Velvet Volume](https://www.instagram.com/p/BebsBxUlhwd), Úlfur Úlfur, The Holy, [Pom Poko](https://www.instagram.com/p/BebrDddFb6M), [Goss](https://www.instagram.com/p/BebqgjOl7Qt) (WUK, Vienna)
-* Feb 06 [Iron & Wine](https://www.instagram.com/p/Be3yXDrF7Oi), [Half Waif](https://www.instagram.com/p/Be3hI4nFOtI) (WUK, Vienna)
-* Feb 19 [Fever Ray](https://www.instagram.com/p/BfZOX9ElXd0) (Gasometer, Vienna)
-* Feb 21 [Ghostpoet](https://www.instagram.com/p/BfebLohl02S) (Flex, Vienna)
-* Mar 01 [Son Lux](https://www.instagram.com/p/BfzG5ORl5sV), [Hanna Benn](https://www.instagram.com/p/BfzGvRilz0l) (Arena, Vienna)
 * Mar 03 [Alvvays](https://www.instagram.com/p/Bf4FJVGF6us) (Flex, Vienna)
+* Mar 01 [Son Lux](https://www.instagram.com/p/BfzG5ORl5sV), [Hanna Benn](https://www.instagram.com/p/BfzGvRilz0l) (Arena, Vienna)
+* Feb 21 [Ghostpoet](https://www.instagram.com/p/BfebLohl02S) (Flex, Vienna)
+* Feb 19 [Fever Ray](https://www.instagram.com/p/BfZOX9ElXd0) (Gasometer, Vienna)
+* Feb 06 [Iron & Wine](https://www.instagram.com/p/Be3yXDrF7Oi), [Half Waif](https://www.instagram.com/p/Be3hI4nFOtI) (WUK, Vienna)
+* Jan 26 Ja Ja Ja Festival: [Velvet Volume](https://www.instagram.com/p/BebsBxUlhwd), Úlfur Úlfur, The Holy, [Pom Poko](https://www.instagram.com/p/BebrDddFb6M), [Goss](https://www.instagram.com/p/BebqgjOl7Qt) (WUK, Vienna)
+* Jan 21 [Liima](https://www.instagram.com/p/BeOoVM2lCNg) (B72, Vienna)
 
 ### 2017
 
