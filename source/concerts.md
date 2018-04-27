@@ -10,7 +10,6 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### Plans
 
-* Apr 27 Wye Oak (Fluc, Vienna)
 * May 08 Hey Elbow (Rhiz, Vienna)
 * May 30 - Jun 3 Primavera Sound (Barcelona)
 * Jun 18 Arcade Fire (Stadthalle, Vienna)
@@ -18,6 +17,7 @@ A list of concerts I have been. There might be missing some, especially from the
 
 ### 2018
 
+* Apr 27 [Wye Oak](https://www.instagram.com/p/BiFlIOzAhKP/), [Suno Deko](https://www.instagram.com/p/BiFk3jHg-XF/) (Fluc, Vienna)
 * Apr 15 [Sunflower Bean](https://www.instagram.com/p/BhmwtMCgQt5) (Chelsea, Vienna)
 * Apr 07 [Nada Surf](https://www.instagram.com/p/BhSM12yFln8) (WUK, Vienna)
 * Apr 03 [Braids](https://www.instagram.com/p/BhH3wSklHZu) (B72, Vienna)
