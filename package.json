@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gatsby": "^1.9.246",
+    "gatsby-image": "^1.0.48",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-feed": "^1.3.20",
     "gatsby-plugin-feed-generator": "^1.0.6",

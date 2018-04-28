@@ -1,0 +1,43 @@
+.concerts {
+  display: grid;
+  grid-template-columns: repeat(4, 178px);
+  grid-auto-rows: 119px;
+  grid-gap: 1rem;
+
+  &__year {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    grid-column: span 4;
+  }
+
+  &__item {
+    .gatsby-image-outer-wrapper {
+      width: 100%;
+    }
+
+    figcaption {
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .75));
+      bottom: 0;
+      color: white;
+      font-size: 14px;
+      left: 0;
+      padding: .5rem;
+      position: absolute;
+      width: 100%;
+    }
+
+    figure {
+      background-size: cover;
+      height: 100%;
+      margin: 0;
+      width: 100%;
+      position: relative;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
