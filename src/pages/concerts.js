@@ -21,11 +21,7 @@ const sizesPropType = PropTypes.shape({
 
 const ConcertItem = ({ concert }) => (
   <div
-    className="concerts__item"
-    style={{
-      gridColumn: concert.columns || null,
-      gridRow: concert.rows || null,
-    }}
+    className={`concerts__item concerts__item--${concert.layout}`}
   >
     <figure style={{ backgroundImage: `url(${concert.sizes.src})` }}>
       <figcaption>{concert.title}</figcaption>
@@ -129,7 +125,7 @@ export const query = graphql`
         node {
           relativePath
           childImageSharp {
-            sizes(maxWidth: 736) {
+            sizes(maxWidth: 1520) {
               ...GatsbyImageSharpSizes
             }
           }
