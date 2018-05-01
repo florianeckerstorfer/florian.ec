@@ -1,0 +1,21 @@
+@import './variables';
+
+@mixin content {
+  h2,
+  ol,
+  p,
+  ul {
+    margin-left: $page-margin;
+    margin-right: $page-margin;
+
+    @media (min-width: $content-width-lg) {
+      margin-left: $page-margin-lg;
+      margin-right: $page-margin-lg;
+    }
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+}

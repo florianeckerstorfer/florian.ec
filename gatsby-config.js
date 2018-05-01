@@ -92,8 +92,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `concerts`,
-        path: `${__dirname}/concerts/img/`,
+        name: `images`,
+        path: `${__dirname}/images/`,
       },
     },
     `gatsby-transformer-sharp`,

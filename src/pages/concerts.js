@@ -20,9 +20,7 @@ const sizesPropType = PropTypes.shape({
 });
 
 const ConcertItem = ({ concert }) => (
-  <div
-    className={`concerts__item concerts__item--${concert.layout}`}
-  >
+  <div className={`concerts__item concerts__item--${concert.layout}`}>
     <figure style={{ backgroundImage: `url(${concert.sizes.src})` }}>
       <figcaption>{concert.title}</figcaption>
     </figure>
@@ -58,18 +56,24 @@ class ConcertsPage extends React.PureComponent {
   }
 
   buildConcertsYear(concerts, data) {
-    return concerts.map(concert => ({
-      ...concert,
-      sizes: data.allFile.edges.find(
-        edge => edge.node.relativePath === `${concert.name}.jpg`,
-      ).node.childImageSharp.sizes,
-    }));
+    return concerts.map(concert => {
+      const image = data.allFile.edges.find(
+        edge => edge.node.relativePath === `concerts/${concert.name}.jpg`,
+      );
+      return {
+        ...concert,
+        sizes: image ? image.node.childImageSharp.sizes : null,
+      };
+    });
   }
 
   buildConcerts(data) {
-    console.log(data);
     return {
       2018: this.buildConcertsYear(concertData[2018], data),
+      2017: this.buildConcertsYear(concertData[2017], data),
+      2016: this.buildConcertsYear(concertData[2016], data),
+      2015: this.buildConcertsYear(concertData[2015], data),
+      2014: this.buildConcertsYear(concertData[2014], data),
     };
   }
 
@@ -83,9 +87,43 @@ class ConcertsPage extends React.PureComponent {
             <div className="concerts__year">
               <h2>2018</h2>
             </div>
-            {this.state.concerts[2018].map(concert => (
-              <ConcertItem key={concert.name} concert={concert} />
-            ))}
+            {this.state.concerts[2018]
+              .filter(concert => concert.sizes !== null)
+              .map(concert => (
+                <ConcertItem key={concert.name} concert={concert} />
+              ))}
+            <div className="concerts__year">
+              <h2>2017</h2>
+            </div>
+            {this.state.concerts[2017]
+              .filter(concert => concert.sizes !== null)
+              .map(concert => (
+                <ConcertItem key={concert.name} concert={concert} />
+              ))}
+            <div className="concerts__year">
+              <h2>2016</h2>
+            </div>
+            {this.state.concerts[2016]
+              .filter(concert => concert.sizes !== null)
+              .map(concert => (
+                <ConcertItem key={concert.name} concert={concert} />
+              ))}
+            <div className="concerts__year">
+              <h2>2015</h2>
+            </div>
+            {this.state.concerts[2015]
+              .filter(concert => concert.sizes !== null)
+              .map(concert => (
+                <ConcertItem key={concert.name} concert={concert} />
+              ))}
+            <div className="concerts__year">
+              <h2>2014</h2>
+            </div>
+            {this.state.concerts[2014]
+              .filter(concert => concert.sizes !== null)
+              .map(concert => (
+                <ConcertItem key={concert.name} concert={concert} />
+              ))}
           </div>
         </div>
       </div>
@@ -120,7 +158,7 @@ ConcertsPage.propTypes = {
 
 export const query = graphql`
   query GatsbyImageConcertsQuery {
-    allFile(filter: { absolutePath: { regex: "/concerts/img/" } }) {
+    allFile(filter: { absolutePath: { regex: "/images/concerts/" } }) {
       edges {
         node {
           relativePath

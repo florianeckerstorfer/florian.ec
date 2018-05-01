@@ -1,3 +1,4 @@
+@import '../../mixins';
 @import '../../variables';
 
 .post-content {
@@ -5,23 +6,7 @@
   line-height: 1.5;
   margin: .5rem 0 1rem;
 
-  h2,
-  ol,
-  p,
-  ul {
-    margin-left: $page-margin;
-    margin-right: $page-margin;
-
-    @media (min-width: $content-width-lg) {
-      margin-left: $page-margin-lg;
-      margin-right: $page-margin-lg;
-    }
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-  }
+  @include content;
 
   .gatsby-resp-image-figure {
     margin: 0;

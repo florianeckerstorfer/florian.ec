@@ -43,6 +43,23 @@
       }
     }
 
+    &--square {
+      figure {
+        padding-top: 100%;
+      }
+    }
+
+    &--square-full {
+      @media (min-width: 640px) {
+        grid-column: span 2;
+        grid-row: span 4;
+      }
+
+      figure {
+        padding-top: 100%;
+      }
+    }
+
     .gatsby-image-outer-wrapper {
       width: 100%;
     }
