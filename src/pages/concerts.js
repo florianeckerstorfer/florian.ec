@@ -58,7 +58,7 @@ class ConcertsPage extends React.PureComponent {
   buildConcertsYear(concerts, data) {
     return concerts.map(concert => {
       const image = data.allFile.edges.find(
-        edge => edge.node.relativePath === `concerts/${concert.name}.jpg`,
+        edge => edge.node.relativePath === `concerts/${concert.name}.jpg`
       );
       return {
         ...concert,
@@ -150,7 +150,7 @@ ConcertsPage.propTypes = {
               sizes: sizesPropType,
             }),
           }),
-        }),
+        })
       ),
     }),
   }),

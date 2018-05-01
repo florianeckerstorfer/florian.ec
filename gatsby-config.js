@@ -7,8 +7,6 @@ const siteUrl = (() => {
   return 'http://localhost:8040';
 })();
 
-console.log('Use siteUrl', siteUrl);
-
 const feedGeneratorPlugin = {
   resolve: 'gatsby-plugin-feed-fec',
   options: {

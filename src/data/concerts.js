@@ -531,7 +531,8 @@ const concerts = {
       layout: 'landscape',
     },
     {
-      title: 'of Montreal at Paradiso, Amsterdam, Netherlands on April 25, 2015',
+      title:
+        'of Montreal at Paradiso, Amsterdam, Netherlands on April 25, 2015',
       name: '2015-04-25-of-montreal',
       layout: 'landscape',
     },

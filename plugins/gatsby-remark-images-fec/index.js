@@ -71,10 +71,8 @@ module.exports = (
     // Calculate the paddingBottom %
     const ratio = `${1 / responsiveSizesResult.aspectRatio * 100}%`;
 
-    const originalImg = responsiveSizesResult.originalImg;
+    const { originalImg, presentationWidth, srcSet } = responsiveSizesResult;
     const fallbackSrc = responsiveSizesResult.src;
-    const srcSet = responsiveSizesResult.srcSet;
-    const presentationWidth = responsiveSizesResult.presentationWidth;
 
     // Generate default alt tag
     const srcSplit = node.url.split(`/`);
@@ -150,7 +148,7 @@ module.exports = (
     // Simple because there is no nesting in markdown
     markdownImageNodes.map(
       node =>
-        new Promise(async (resolve, reject) => {
+        new Promise(async resolve => {
           const fileType = node.url.slice(-3);
 
           // Ignore gifs as we can't process them,
@@ -179,19 +177,19 @@ module.exports = (
       // Complex because HTML nodes can contain multiple images
       rawHtmlNodes.map(
         node =>
-          new Promise(async (resolve, reject) => {
+          new Promise(async resolve => {
             if (!node.value) {
               return resolve();
             }
 
             const $ = cheerio.load(node.value);
-            if ($(`img`).length === 0) {
+            if ($('img').length === 0) {
               // No img tags
               return resolve();
             }
 
             const imageRefs = [];
-            $(`img`).each(function() {
+            $('img').each(() => {
               imageRefs.push($(this));
             });
 

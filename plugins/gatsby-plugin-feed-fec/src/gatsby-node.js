@@ -4,9 +4,8 @@ import { defaultOptions, runQuery, writeFile } from './internals';
 
 const publicPath = './public';
 
-const buildFeed = () => {};
-
 exports.onPostBuild = async ({ graphql }, pluginOptions) => {
+  // eslint-disable-next-line
   delete pluginOptions.plugins;
   const options = {
     ...defaultOptions,

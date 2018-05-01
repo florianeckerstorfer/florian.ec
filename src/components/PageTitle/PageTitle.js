@@ -3,15 +3,12 @@ import React from 'react';
 
 import './pageTitle.scss';
 
-const PageTitle = ({ title }) => (
-  <h1 className="page-title">{title}</h1>
-);
+const PageTitle = ({ title }) => <h1 className="page-title">{title}</h1>;
 
 PageTitle.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-PageTitle.defaultProps = {
-};
+PageTitle.defaultProps = {};
 
 export default PageTitle;
