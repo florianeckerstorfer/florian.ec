@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+pre[class*="language-"] {
+  @media (min-width: $content-width) {
+    border-radius: 3px;
+  }
+}
+
 a {
   color: $primary-color;
 

@@ -9,7 +9,7 @@ const PostFooter = ({ frontmatter }) => (
     {frontmatter.tags && (
       <div className="tags">
         {frontmatter.tags.map(tag => (
-          <Link to={`/tags/${tag}`} key={tag}>
+          <Link to={`/tags/${tag.toLowerCase()}`} key={tag}>
             #<span className="tag">{tag}</span>
           </Link>
         ))}

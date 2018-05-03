@@ -1,6 +1,9 @@
 @import './variables';
 
 @mixin content {
+  font-size: 1rem;
+  line-height: 1.5;
+
   h2,
   ol,
   p,
@@ -17,5 +20,10 @@
   h2 {
     margin-bottom: 1rem;
     margin-top: 2rem;
+  }
+
+  .emoji {
+    display: inline-block;
+    text-decoration: none;
   }
 }

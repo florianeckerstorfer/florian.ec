@@ -1,6 +1,7 @@
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
+import 'prism-themes/themes/prism-duotone-dark.css';
 
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';

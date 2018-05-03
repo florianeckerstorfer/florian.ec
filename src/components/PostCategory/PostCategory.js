@@ -6,7 +6,7 @@ import './post-category.scss';
 
 const PostCategory = ({ category }) => (
   <div className="post-category">
-    <Link to={`/categories/${category}`}>{category}</Link>
+    <Link to={`/categories/${category.toLowerCase()}`}>{category}</Link>
   </div>
 );
 

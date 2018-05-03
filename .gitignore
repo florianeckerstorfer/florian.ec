@@ -29,3 +29,4 @@
 /.cache
 /public
 /plugins/gatsby-plugin-feed-fec/*.js
+plugins/gatsby-remark-a11y-emoji/node_modules/*
