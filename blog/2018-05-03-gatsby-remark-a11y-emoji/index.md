@@ -40,6 +40,6 @@ module.exports = {
 };
 ```
 
-You can also find the project on [Github](https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji) and NPM.
+You can also find the project on [Github](https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji) and [NPM](https://www.npmjs.com/package/gatsby-remark-a11y-emoji).
 
 If you have any questions, please let me know on [Twitter](https://florian.ec) or [Micro.blog](http://micro.florian.ec).
