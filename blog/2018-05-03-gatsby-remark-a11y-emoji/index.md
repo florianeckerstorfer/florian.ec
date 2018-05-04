@@ -21,7 +21,7 @@ You can install the plugin now using NPM or Yarn:
 npm install --save gatsby-remark-a11y-emoji
 ```
 
-Then you need to add the plugin to `gatsby-config.js` as a plugin to `gatsby-transformer-remark`. I recommend adding it at the very end of the list, because the plugin the Remark `text` nodes into `html` nodes.
+Then you need to add the plugin to `gatsby-config.js` as a plugin to `gatsby-transformer-remark`. I recommend adding it at the very end of the list, because the plugin transforms Remark *text* nodes into *html* nodes.
 
 ```js
 module.exports = {
@@ -41,5 +41,3 @@ module.exports = {
 ```
 
 You can also find the project on [Github](https://github.com/florianeckerstorfer/gatsby-remark-a11y-emoji) and [NPM](https://www.npmjs.com/package/gatsby-remark-a11y-emoji).
-
-If you have any questions, please let me know on [Twitter](https://florian.ec) or [Micro.blog](http://micro.florian.ec).
