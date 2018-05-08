@@ -30,6 +30,7 @@
     "gatsby-transformer-sharp": "^1.6.1",
     "i": "^0.3.6",
     "lodash": "^4.15.0",
+    "moment": "^2.22.1",
     "npm": "^6.0.0",
     "prism-themes": "^1.0.1",
     "prop-types": "^15.6.1",

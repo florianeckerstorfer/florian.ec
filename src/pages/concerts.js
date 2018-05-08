@@ -2,6 +2,7 @@
 /* global graphql */
 
 import Helmet from 'react-helmet';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -55,25 +56,40 @@ class ConcertsPage extends React.PureComponent {
     }
   }
 
-  buildConcertsYear(concerts, data) {
-    return concerts.map(concert => {
-      const image = data.allFile.edges.find(
-        edge => edge.node.relativePath === `concerts/${concert.name}.jpg`
-      );
-      return {
-        ...concert,
-        sizes: image ? image.node.childImageSharp.sizes : null,
-      };
+  buildConcertsYear(concerts, year, data) {
+    const flatConcerts = [];
+    concerts.forEach(concert => {
+      if (concert.bands) {
+        concert.bands.forEach(band => {
+          flatConcerts.push({ ...concert, ...band });
+        });
+      } else {
+        flatConcerts.push(concert);
+      }
     });
+    return flatConcerts
+      .filter(concert => new Date(concert.date).getFullYear() === year)
+      .map(concert => {
+        const date = moment(concert.date).format('MMMM D, YYYY');
+        const image = data.allFile.edges.find(
+          edge => edge.node.relativePath === `concerts/${concert.image}.jpg`
+        );
+        const title = `${concert.name} at ${concert.location} on ${date}`;
+        return {
+          ...concert,
+          title,
+          sizes: image ? image.node.childImageSharp.sizes : null,
+        };
+      });
   }
 
   buildConcerts(data) {
     return {
-      2018: this.buildConcertsYear(concertData[2018], data),
-      2017: this.buildConcertsYear(concertData[2017], data),
-      2016: this.buildConcertsYear(concertData[2016], data),
-      2015: this.buildConcertsYear(concertData[2015], data),
-      2014: this.buildConcertsYear(concertData[2014], data),
+      2018: this.buildConcertsYear(concertData, 2018, data),
+      2017: this.buildConcertsYear(concertData, 2017, data),
+      2016: this.buildConcertsYear(concertData, 2016, data),
+      2015: this.buildConcertsYear(concertData, 2015, data),
+      2014: this.buildConcertsYear(concertData, 2014, data),
     };
   }
 
@@ -150,7 +166,7 @@ ConcertsPage.propTypes = {
               sizes: sizesPropType,
             }),
           }),
-        })
+        }),
       ),
     }),
   }),
