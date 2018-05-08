@@ -166,7 +166,7 @@ ConcertsPage.propTypes = {
               sizes: sizesPropType,
             }),
           }),
-        }),
+        })
       ),
     }),
   }),

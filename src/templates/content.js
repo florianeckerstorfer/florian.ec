@@ -1,4 +1,5 @@
 /* global graphql */
+/* eslint-disable react/no-danger */
 
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
