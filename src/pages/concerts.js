@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import React from 'react';
+import queryString from 'query-string';
 
 import PageHeader from '../components/PageHeader/PageHeader';
 import ConcertGrid from '../components/ConcertGrid/ConcertGrid';
@@ -23,10 +24,23 @@ const sizesPropType = PropTypes.shape({
   srcSet: PropTypes.string.isRequired,
 });
 
+const DEFAULT_DISPLAY = 'grid';
+
 class ConcertsPage extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = { concerts: buildConcertsObject(concertData, props.data) };
+    this.state = {
+      concerts: buildConcertsObject(concertData, props.data),
+      display: DEFAULT_DISPLAY,
+    };
+  }
+
+  componentWillMount() {
+    const { history } = this.context.router;
+    history.listen(location => {
+      const query = queryString.parse(location.search);
+      this.setState({ display: query.display || DEFAULT_DISPLAY });
+    });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -34,6 +48,19 @@ class ConcertsPage extends React.PureComponent {
       const concerts = buildConcertsObject(concertData, nextProps.data);
       this.setState({ concerts });
     }
+  }
+
+  isActiveDisplay(display) {
+    return this.state.display === display;
+  }
+
+  renderDisplayLink(name, display) {
+    const className = this.isActiveDisplay(display) ? 'active' : '';
+    return (
+      <Link to={`/concerts?display=${display}`} className={className}>
+        {name}
+      </Link>
+    );
   }
 
   render() {
@@ -45,13 +72,15 @@ class ConcertsPage extends React.PureComponent {
           <header className="page-bar">
             <h1>Concerts</h1>
             <div className="page-bar__links">
-              <Link to="/concerts" className="active">
-                Grid
-              </Link>
-              <Link to="/concerts?display=list">List</Link>
+              {this.renderDisplayLink('Grid', 'grid')}
+              {this.renderDisplayLink('List', 'list')}
             </div>
           </header>
-          <ConcertGrid concerts={this.state.concerts} />
+          {this.isActiveDisplay('grid') ? (
+            <ConcertGrid concerts={this.state.concerts} />
+          ) : (
+            <div>list</div>
+          )}
         </div>
       </div>
     );
@@ -81,6 +110,10 @@ ConcertsPage.propTypes = {
       ),
     }),
   }),
+};
+
+ConcertsPage.contextTypes = {
+  router: PropTypes.object,
 };
 
 export const query = graphql`
