@@ -6,7 +6,7 @@ import React from 'react';
 
 import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
 
-import './tags.scss';
+import '../components/PageBar/pageBar.scss';
 
 const Categories = ({ pathContext, data }) => {
   const { category } = pathContext;
@@ -15,7 +15,7 @@ const Categories = ({ pathContext, data }) => {
 
   return (
     <div className="tag-page">
-      <header className="tag-page__header">
+      <header className="page-bar">
         <h1>
           {`${category} `}
           <em>

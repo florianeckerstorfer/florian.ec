@@ -1,0 +1,46 @@
+@import '../../variables';
+
+.page-bar {
+  align-items: center;
+  background: $grey-color;
+  color: $grey-contrast-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0;
+
+  @media (min-width: $content-width) {
+    border-radius: 3px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    padding: .5rem;
+  }
+
+  a {
+    background: $primary-color;
+    color: $primary-contrast-color;
+    display: block;
+    padding: .5rem;
+
+    &.active {
+      background: $grey-color;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      @media (min-width: $content-width) {
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+  }
+}

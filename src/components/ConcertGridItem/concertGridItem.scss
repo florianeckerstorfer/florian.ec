@@ -1,0 +1,72 @@
+.concert-grid-item {
+  &--portrait {
+    grid-row: span 2;
+
+    figure {
+      padding-top: 150%;
+    }
+  }
+
+  &--landscape {
+    figure {
+      padding-top: 65%
+    }
+  }
+
+  &--landscape-full {
+    figure {
+      padding-top: 65%
+    }
+
+    @media (min-width: 640px) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+  &--square {
+    figure {
+      padding-top: 100%;
+    }
+  }
+
+  &--square-full {
+    @media (min-width: 640px) {
+      grid-column: span 2;
+      grid-row: span 4;
+    }
+
+    figure {
+      padding-top: 100%;
+    }
+  }
+
+  .gatsby-image-outer-wrapper {
+    width: 100%;
+  }
+
+  figcaption {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .75));
+    bottom: 0;
+    color: white;
+    font-size: 14px;
+    left: 0;
+    padding: .5rem;
+    position: absolute;
+    width: 100%;
+  }
+
+  figure {
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
