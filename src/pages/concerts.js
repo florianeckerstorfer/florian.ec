@@ -15,6 +15,7 @@ import concertData from '../data/concerts';
 import './concerts.scss';
 import '../components/PageBar/pageBar.scss';
 import buildConcertsObject from '../util/buildConcertsObject';
+import ConcertList from '../components/ConcertList/ConcertList';
 
 const sizesPropType = PropTypes.shape({
   aspectRatio: PropTypes.number.isRequired,
@@ -37,9 +38,9 @@ class ConcertsPage extends React.PureComponent {
 
   componentWillMount() {
     const { history } = this.context.router;
+    this.parseDisplayFromQuery(window.location);
     history.listen(location => {
-      const query = queryString.parse(location.search);
-      this.setState({ display: query.display || DEFAULT_DISPLAY });
+      this.parseDisplayFromQuery(location);
     });
   }
 
@@ -48,6 +49,11 @@ class ConcertsPage extends React.PureComponent {
       const concerts = buildConcertsObject(concertData, nextProps.data);
       this.setState({ concerts });
     }
+  }
+
+  parseDisplayFromQuery(location) {
+    const query = queryString.parse(location.search);
+    this.setState({ display: query.display || DEFAULT_DISPLAY });
   }
 
   isActiveDisplay(display) {
@@ -79,7 +85,7 @@ class ConcertsPage extends React.PureComponent {
           {this.isActiveDisplay('grid') ? (
             <ConcertGrid concerts={this.state.concerts} />
           ) : (
-            <div>list</div>
+            <ConcertList concerts={this.state.concerts} />
           )}
         </div>
       </div>
