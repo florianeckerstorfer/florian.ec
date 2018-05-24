@@ -17,10 +17,10 @@ Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der V
 
 ### Verantwortlicher
 
-Florian Eckerstorfer
-Sobieskigasse 12
-1090 Wien, Österreich
-E-Mailadresse: florian@eckerstorfer.co
+- Florian Eckerstorfer
+- Sobieskigasse 12
+- 1090 Wien, Österreich
+- E-Mailadresse: florian@eckerstorfer.co
 
 ### Arten der verarbeiteten Daten:
 
