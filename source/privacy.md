@@ -9,7 +9,7 @@ permalink: privacy/
 - My website does not use cookies.
 - My website does not embed code, videos, images or fonts from other websites.
 - My website is hosted at Digital Ocean in Amsterdam, Europe.
-- My server keeps server logs, these are deleted after 30 days.
+- My server keeps logs (which include your IP address), these are deleted after 30 days.
 
 ## Datenschutzerklärung (für Jus-Nerds)
 
