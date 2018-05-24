@@ -21,7 +21,7 @@ You can find code I write on
 [Packagist](https://packagist.org/users/florianeckerstorfer/),
 [NPM](https://www.npmjs.org/~florianeckerstorfer) and
 [RubyGems](https://rubygems.org/profiles/florianeckerstorfer)</a>.
-I also like to take [photos](http://42reasons.com) and love to [travel](/travel) and go to [concerts](/concerts).
+I also like to take [photos](http://42reasons.com) and love to travel and go to [concerts](/concerts).
 
 You can also send me an [email](mailto:florian@eckerstorfer.co) ([GPG Key](/key.asc)).
 
