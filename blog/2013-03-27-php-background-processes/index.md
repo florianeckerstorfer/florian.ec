@@ -1,21 +1,23 @@
 ---
 title: Running background processes in PHP
+date: 2013-03-27T00:00:00.000Z
 tags: [ php, process ]
+category: Development
+path: /php-background-processes/
+published: true
 ---
 
-{% block summary %}
 PHP can, by default, not create processes that continue to run in the background even after the parent process terminates. This article explain how you can trick PHP into doing it anyway. I also created a library to simplify the process and explain how it works in the end.
-{% endblock %}
 
-{% block content %}
 I often have long running tasks, for example, generating a report or performing an analysis of large amounts of data, that run minutes or even hours. Today I encountered a situation where I needed to start such task from a button in a browser window. Since the task takes three to five hours it was impossible to invoke the task directly.
 
 My Internet research on this topic revelead a wide range of different solutions, from hacky to weird. The best I could find was the [answer of Mark Biek to a question on Stack Overflow](http://stackoverflow.com/a/45966/776654).
 
 In PHP there are several functions to execute a command, for example, `exec` and `shell_exec`. However, there are several things to consider when a command should run in the background. But let's first take a look at the most simple example:
 
-<pre><code class="php">shell_exec(sprintf('%s > /dev/null 2>&amp;1 &amp;', $command));
-</code></pre>
+```php
+shell_exec(sprintf('%s > /dev/null 2>&amp;1 &amp;', $command));
+```
 
 There three important things in this snippet:
 
@@ -27,11 +29,15 @@ Of course it would also be possible to redirect `STDOUT` and `STDERR` to a file.
 
 Since the command will run multiple hours I'm also interested in the current status, that is, is the process still running. We can check if a process is running by using `ps`, for example:
 
-<pre><code class="bash">ps $PID</code></pre>
+```bash
+ps $PID
+```
 
 In order to be able to look this up, we need the PID of the process. In a shell the PID of the last process is stored in the variable `$!` and we can pass it to PHP by echoing it.
 
-<pre><code class="php">$pid = shell_exec(sprintf('%s > /dev/null 2>&amp;1 &amp; echo $!', $command));</code></pre>
+```php
+$pid = shell_exec(sprintf('%s > /dev/null 2>&amp;1 &amp; echo $!', $command));
+```
 
 It is now relatively easy to retrieve the status of the process. *The following code is taken directly from the already mentioned Stack Overflow question.*
 
@@ -126,4 +132,3 @@ It is also possible to install the package through composer:
 
 [^1]: [Answer to "PHP execute a background process" on Stack Overflow](http://stackoverflow.com/a/45966/776654)
 
-{% endblock %}
