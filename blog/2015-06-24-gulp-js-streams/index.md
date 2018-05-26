@@ -1,15 +1,16 @@
 ---
-title: "Streams in Gulp.js"
-tags: [ gulp, build, task runner, node, streams, highlight ]
-slug: gulp-js-streams
+title: Streams in Gulp.js
+date: 2015-06-24T00:00:00.000Z
+category: Development
+tags: [ gulp, nodejs ]
+path: /gulp-js-streams/
+published: true
 ---
-{% block summary %}
+
 Gulp is different than other build systems or task runners (like [Make](https://www.gnu.org/software/make/), [Ant](https://ant.apache.org), [Phing](http://www.phing.info), [Rake](http://rake.rubyforge.org), or [Grunt](http://gruntjs.com)) in two major ways. First, you define tasks using code instead of configuration, which gives you a lot of flexibility when it comes to building and reusing tasks. The second difference, and the one I want to focus on in this article, is that it uses Node streams.
 
 Gulp did not invent streams, they are part of Node, but it standardizes them for build systems in a way that code from different authors can work togehter without knowing about each other.
-{% endblock %}
 
-{% block content %}
 [Streams in Node.js](https://nodejs.org/api/stream.html) work a lot like streams work on YouTube. You can start consuming data while the data is not fully loaded, but every chunk of loaded data is given to you immediately after it is loaded and you are not currently processing the previous chunk. Loading does not necessarily mean downloading from the internet, it could also mean reading data from disk or from a database.
 
 Let us consider the following scenario: you have your source code written in CoffeeScript and stored in a bunch of `.coffee` files. To deploy to production you need to compile CoffeeScript to JavaScript, concatenate them into one big file, minify the source code, and move the file to a `dist/` directory.
@@ -125,4 +126,3 @@ These have already been linked in the article, but you still might want to take 
 ## Slides
 
 This article is the novelization of my talk at the ViennaJS meetup on 24 June 2015. The [slides](https://speakerdeck.com/florianeckerstorfer/streams-in-gulp-dot-js) are already online. <strike>The event was filmed and I plan to update this article when the video is online.</strike> The [video is now online](https://www.youtube.com/watch?v=hRe7_xsQBUQ).
-{% endblock %}
