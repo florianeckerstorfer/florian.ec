@@ -1,15 +1,12 @@
 ---
 title: Rebuild Jekyll and Compass when a file changes
+date: 2013-06-05T00:00:00.000Z
+category: Development
 tags: [ jekyll, compass, guard, ruby ]
+path: /rebuild-jekyll-compass/
 ---
 
-{% block summary %}
-
 Guard is a ruby tool to execute commands when file changes and can be used to rebuild a Jekyll site whenever its content changes and Compaass whenever the stylesheets change.
-
-{% endblock %}
-
-{% block content %}
 
 This blog uses Jekyll to build the HTML code, Compass for the stylesheets and JavaScript is concatenated and minified. Lately I have written more articles and every time I changed the layout or the text I had to manually recompiled using my [Makefile](https://github.com/braincrafted/braincrafted.com/blob/148b44472bb39a3ad10dfc7f24b6c0e8c7c4699b/Makefile). Every time those extra keystrokes hurt me on the inside.
 
@@ -25,7 +22,8 @@ Requirement number 1 is important because the builders will place the generated 
 
 Installation of Guard was pretty easy, at least after I reinstalled my messed up Ruby installation and the syntax for the `Guardfile` is straight forward.
 
-<pre><code class="ruby"># ./Guardfile
+```ruby
+# ./Guardfile
 
 # Notification via Growl when files change
 notification :growl
@@ -57,19 +55,22 @@ guard :shell do
     end
 
 end
-</code></pre>
+```
 
 I added a target to my `Makefile` to make things even more intuitive.
 
-<pre><code class="bash"># ./Makefile
+```bash
+# ./Makefile
 
 watch:
     @echo "Watching for changes..."
-    @bundle exec guard</code></pre>
+    @bundle exec guard
+```
 
 Since I was already at it, I also wanted Safari to automatically reload the page (or open it in a new tab if it is not already open). I inlined some lines of AppleScript in my `Makefile` to accomplish this.
 
-<pre><code class="bash"> # ./Makefile
+```bash
+# ./Makefile
 
 DEV_URL         = http:\/\/braincrafted.com.dev
 PROD_URL        = http:\/\/braincrafted.com
@@ -110,11 +111,12 @@ run-dev:
 run:
     @echo "Open site in production environment...  \c"
     @echo "$$OPEN_SCRIPT" | sed "s/__OPEN_URL__/${PROD_URL}/" | osascript
-    @echo "${CHECK} Done"</code></pre>
+    @echo "${CHECK} Done"
+```
 
 When I now change something in the project, the updated page is already loaded when I switch to Safari.
 
-### Resources
+## Resources
 
 - [Guard README](https://github.com/guard/guard/blob/master/README.md)
 - [Guard::Shell](https://github.com/guard/guard-shell)
@@ -123,4 +125,3 @@ When I now change something in the project, the updated page is already loaded w
 - [AppleScript To open a collection of Safari tabs](http://hints.macworld.com/article.)php?story=20110415065236737
 - [Is it possible to create a multi-line string variable in a Makefile](http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile)
 
-{% endblock %}
