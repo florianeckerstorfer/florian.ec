@@ -1,16 +1,16 @@
 ---
 title: "The Weekly Recommender, 2014/41"
-tags: [ weekly recommender ]
-slug: weekly-recommender-2014-41
+date: 2014-10-12T00:00:00.000Z
+category: Links
+path: /weekly-recommender-2014-41/
+published: true
 ---
 
-{% block summary %}
 It's easy to press star, like, favorite or bookmark in an app while consuming content. I do this regularly in Feedbin, [Instapaper](https://www.instapaper.com/p/florianec) or [Pinboard](https://pinboard.in/u:florian.eckerstorfer), but once I pressed the button I never revisit the saved stuff. There are many great articles, libraries and tools out there that I saved for keeping because they could be useful to me at some point in the future, but when I would need them I don't think about looking in my archives because I forgot that I encountered and saved them.
 
 The Weekly Recommender is a new weekly series that I plan to write for two purposes, giving myself a reason to revisit the content I encountered the past week, collect them in one place and make the highlights accessible to my readers.
 {% endblock %}
 
-{% block content %}
 ### Development
 
 - [AngularJS Tutorial: A Comprehensive 10,000 Word Guide](http://www.airpair.com/angularjs)
@@ -36,4 +36,3 @@ The Weekly Recommender is a new weekly series that I plan to write for two purpo
 - [Laurie Penny: Why We’re Winning: Social Justice Warriors and the New Culture War](http://laurie-penny.com/why-were-winning-social-justice-warriors-and-the-new-culture-war/)
 - [If Ron Swanson Quotes Were Motivational Posters](http://www.buzzfeed.com/juliapugachevsky/if-ron-swanson-quotes-were-motivational-posters#4hjk6yw)
 
-{% endblock %}
