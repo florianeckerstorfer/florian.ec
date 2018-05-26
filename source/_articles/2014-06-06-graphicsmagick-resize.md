@@ -1,7 +1,7 @@
 ---
 title: Resize images with GraphicsMagick
 tags: [ graphicsmagick, image ]
-slug: graphicsmagick-resize
+path: /graphicsmagick-resize/
 ---
 {% block content %}
 
