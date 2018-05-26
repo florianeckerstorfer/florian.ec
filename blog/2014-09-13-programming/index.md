@@ -1,14 +1,13 @@
 ---
 title: What Does it Mean to be a Programmer
+date: 2014-09-13T00:00:00.000Z
+category: Development
 tags: [ programming ]
-slug: programming
+path: /programming/
 ---
 
-{% block summary %}
 When I first dabbled into writing software 15 years ago the world of programming was an easy place. When you would write on the internet that PHP is a programming language, someone would remind you that PHP is a scripting language because the computer interprets it instead of compiling it. You had scripting languages, like PHP, JavaScript or Python and programming languages like C, C++ or Java. It's not that easy anymore. Facebook created HipHop to compile PHP into C++ code (technically that's a [transpiler](http://en.wikipedia.org/wiki/Source-to-source_compiler)) and later switched to a [Just-in-Time (JIT) compiler](http://en.wikipedia.org/wiki/Just-in-time_compilation) called [HHVM](http://hhvm.com). Google, Apple, Mozilla and Microsoft doing [crazy optimizations](http://arstechnica.com/information-technology/2014/05/apple-integrates-llvm-compiler-to-boost-webkit-javascript-performance/) to make JavaScript execution to run nearly as fast as native code.
-{% endblock %}
 
-{% block content %}
 One of the consequences of these developments is that, for example, PHP does no longer mean the full stack of the programming language. You can write code in PHP syntax and interpret it with the official PHP interpreter or you can HHVM`s Just-in-Time compiler. Another example is [Dart](https://www.dartlang.org), a language developed by Google that can run in a VM or you can transpile it to JavaScript to run in a browser. We need to separate the writing of the code (a human using the syntax of a language to create a program) from the execution of the code (a machine reading the code and converting it into a form understood by the hardware). The choice of programming language (or syntax) no longer gives us any indication how and where the code runs.
 
 If you write code in JavaScript you should be aware that this code might execute in a browser, or on a [server](http://nginx.org), or on a [desktop computer](https://github.com/rogerwang/node-webkit) or in a [native phone app](https://cordova.apache.org).
@@ -23,7 +22,8 @@ I find the hard part of learning a new programming language is not the language 
 
 Above I said that I am confident that I can write any program in any language. What I didn't say is that I can write any program in the best possible way in any language. You still need years of experience to master the nitty gritty details of a programming language. And often execution environment matters in addition to the syntax of the language. Let me give you a quick example in PHP:
 
-<pre><code class="php">// Merge the following two arrays
+```php
+// Merge the following two arrays
 $array1 = ['PHP', 'Ruby', 'Python', 'JavaScript'];
 $array2 = ['Java', 'C', 'C++'];
 
@@ -34,7 +34,8 @@ $fullArray = array_merge($array1, $array2);
 $fullArray = $array1;
 foreach ($array2 => $value) {
     $fullArray[] = $value;
-}</code></pre>
+}
+```
 
 Which of the two methods executes faster? Well. It depends.
 
@@ -44,4 +45,3 @@ Which of the two methods executes faster? Well. It depends.
 Clearly there have been some optimizations to the `array_merge` method over the years. I don't have an installation of HHVM ready but the results there may be different again. I don't know such specific performance implications when writing Ruby oder Python code. Years and years of experience, debugging and frustrations gave me such a deep knowledge about PHP. As we can see in the differences between PHP 5.3 and 5.5 the behaviour of the platforms changes in addition to the syntax; if I once knew every optimization doesn't mean I know them in the next version.
 
 I believe that a programmer becomes a professional programmer by being able to generalise specific solutions in a specific programming language on a specific platform to programming in general. If you can systematically identify problems and solve them systematically (and reproducable) you have become a professional programmer.
-{% endblock %}
