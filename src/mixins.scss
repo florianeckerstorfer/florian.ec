@@ -20,6 +20,13 @@
       margin-left: $page-margin-lg;
       margin-right: $page-margin-lg;
     }
+
+    ol,
+    p,
+    ul {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   h2 {
