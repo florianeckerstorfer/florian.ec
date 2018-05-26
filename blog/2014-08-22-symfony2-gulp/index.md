@@ -1,17 +1,14 @@
 ---
 title: Building Symfony2 Applications with Gulp
-tags: [ gulp, symfony2, sass, assets, build, highlight ]
-slug: buliding-symfony2-with-gulp
+date: 2014-08-22T00:00:00.000Z
+category: Development
+tags: [ gulp, symfony2, sass ]
+path: /buliding-symfony2-with-gulp/
 ---
-{% block summary %}
 
 Today [Bernhard asked on Twitter](https://twitter.com/webmozart/status/502808064542912512) where we see asset handling going and I replied that [Grunt](http://gruntjs.com) or [Gulp](http://gulpjs.com) will take over. I am currently using Grunt in some of my projects (including to build this website) and Gulp for some smaller stuff. However, I wanted to move one of my larger Symfony2 projects from Grunt to Gulp for a while now and I took the discussion on Twitter as a reason to finally do it. In this article I want to explain some of the aspects of using Gulp (and Bower) in a Symfony2 project.
 
 I use Gulp not only for building my assets but also to run my tests, code coverage and checkstyle and I will tackle all these aspects in these article.
-
-{% endblock %}
-
-{% block content %}
 
 ## Table of Contents
 
@@ -62,7 +59,8 @@ _**Please note** that this article has been updated to reflect the changes in th
 
 Every Symfony2 project (that uses the standard edition) has the same basic structure. However, since it is a backend framework it gives you little guidance on how to organize assets. Per convention Symfonys `assets:install` command will copy everything from a bundles `Resources/public` directory into the `web/` folder of the project. I am using this convention to make dealing with assets path in my Sass, JavaScript and Gulp files easier. Here are the parts of my project structure that are relevant to this article:
 
-<pre><code>- src/Bundle/
+```
+- src/Bundle/
     - AcmeDemo/
         - Resources/public/
             - js/
@@ -81,14 +79,17 @@ web/
     - css/
     - fonts/
     - js/
-Gulpfile.js</code></pre>
+Gulpfile.js
+```
 
 If I run the `assets:install --symlink` command, Symfony will create symlinks from the `web/bundles/` directory to the  `public` directory in the corresponding bundle for me. With my structure the `web/bundles/` directory looks like this:
 
-<pre><code>- web/bundles/
+```
+- web/bundles/
     - acmedemo/
     - acmefrontend/
-    - acmeuser/</code></pre>
+    - acmeuser/
+```
 
 I think it is obvious that the `web/css/` directory will hold the compiled CSS files, `web/fonts/` the font files and `web/js/` the JavaScript files. The `web/components/` directory stores the assets downloaded by Bower and I will take little bit more about it later.
 
@@ -100,14 +101,18 @@ If you have never worked with Gulp and need to know how to install it and learn 
 
 You need to install Gulp both globally and locally in your project:
 
-<pre><code class="shell">$ npm install -g gulp
-$ npm install --save-dev gulp</code></pre>
+```shell
+$ npm install -g gulp
+$ npm install --save-dev gulp
+```
 
 Now you can create a `Gulpfile.js` and require the `gulp` module:
 
-<pre><code class="javascript">var gulp = require('gulp');
+```javascript
+var gulp = require('gulp');
 
-gulp.task('default', function () {});</code></pre>
+gulp.task('default', function () {});
+```
 
 <a name="stylesheets"></a>
 
@@ -121,10 +126,12 @@ First I want to talk about managing and building the stylesheets for my project.
 
 Sass has great features that make it superiour to plain CSS and one of them is the ability to define variables. However, if I compile the different Sass files separately and concatenate them later I can't reference variables from different source files. Because I want a single Sass file anyway I use the `import` statement to include them into a single master file. I place a `master.scss` in every bundle and import every `.scss` file of the bundle. The `master.scss` of the *AcmeFrontendBundle* includes the `master.scss` from every other bundle. It looks like this:
 
-<pre><code class="scss">// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
+```scss
+// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
 
 @import '../../acmeuser/sass/master';
-@import '../../acmeother/sass/master';</code></pre>
+@import '../../acmeother/sass/master';
+```
 
 <a name="managing-assets-with-bower"></a>
 
@@ -132,9 +139,11 @@ Sass has great features that make it superiour to plain CSS and one of them is t
 
 Before I can talk about how I use Bootstrap I need to talk about Bower. The first thing with Bower I did was changing the default download directory by creating a `.bowerrc` file.
 
-<pre><code class="json">{
+```json
+{
   "directory": "web/components"
-}</code></pre>
+}
+```
 
 Then I downloaded `bootstrap-sass-official` (as the name says the official Sass port of Bootstrap) using `bower install --save bootstrap-sass-official`.
 
@@ -144,12 +153,14 @@ Then I downloaded `bootstrap-sass-official` (as the name says the official Sass 
 
 I use my [BraincraftedBootstrapBundle](http://bootstrap.braincrafted.com) to integrate Bootstrap into Symfony. However, I disabled the auto configuration feature for Assetic because I want to configure it myself using Bower and Gulp and therefore it's not relevant if you use the bundle or not. Bower downloads the Sass files into `components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/` and I just import it from my `master.scss` in *AcmeFrontendBundle*. Remember that the `assets:install` commands copies the files into `web/bundles/` and the compilation takes place there.
 
-<pre><code class="scss">// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
+```scss
+// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
 
 @import '../../../components/bootstrap-sass-official/assets/stylesheets/_bootstrap';
 
 @import '../../acmeuser/sass/master';
-@import '../../acmeother/sass/master';</code></pre>
+@import '../../acmeother/sass/master';
+```
 
 <a name="building-stylesheets"></a>
 
@@ -157,11 +168,14 @@ I use my [BraincraftedBootstrapBundle](http://bootstrap.braincrafted.com) to int
 
 Finally I have reached a point where we can talk about building the stylesheets, that is, compiling Sass into CSS code. To actually compile Sass I use [gulp-sass](https://github.com/dlmanning/gulp-sass) and the Node.js port of Sass (it's faster).
 
-<pre><code class="shell">$ npm install --save-dev gulp-sass</code></pre>
+```shell
+$ npm install --save-dev gulp-sass
+```
 
 Because of the way how I import everything I need into my master Sass file the code for the Gulp task remains small and simple.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 var sass = sass = require('gulp-sass');
 
@@ -169,13 +183,16 @@ gulp.task('sass', function () {
     gulp.src('./web/bundles/acmefrontend/sass/master.scss')
         .pipe(sass({sourceComments: 'map'}))
         .pipe(gulp.dest('./web/css/'));
-});</code></pre>
+});
+```
 
 First I need to symlink the assets into `web/bundles/` by running `php app/console assets:install --symlink`. Executing the task with `gulp sass` will compile the stylesheets from all bundles and Bootstrap and saves them in `web/css/master.css`. In my project I have a layout template in my frontend bundle where I can now include this stylesheet.
 
-<pre><code class="twig">&lt;!-- src/Acme/Bundle/FrontendBundle/Resources/views/layout.html.twig --&gt;
+```twig
+<!-- src/Acme/Bundle/FrontendBundle/Resources/views/layout.html.twig -->
 
-&lt;link href="{{ "{{ asset('/css/master.css') }}" }}" rel="stylesheet"&gt;</code></pre>
+<link href="{{ "{{ asset('/css/master.css') }}" }}" rel="stylesheet">
+```
 
 Everything regarding stylesheets should work now; except the Glyphicons provided by Bootstrap.
 
@@ -185,21 +202,24 @@ Everything regarding stylesheets should work now; except the Glyphicons provided
 
 Bootstrap includes Glyphicons, an icon font, in its stylesheets by referencing them with `bootstrap/`. However, the font files are located in `web/components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/` and the CSS code in `web/css/`. I could just change the path to point to `web/components`, but I am picky when it comes to path and how they look (what if somebody checks the source?) and therefore I copy them into the `web/fonts/` directory using a Gulp task. The [gulp-copy](https://github.com/klaascuvelier/gulp-copy) plugin provides exactly the functionality I require. It has a `prefix` option that removes the unwanted directories from the beginning of source path.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 var copy = copy = require('gulp-copy');
 
 gulp.task('fonts', function () {
     return gulp.src('./web/components/bootstrap-sass-official/assets/fonts/bootstrap/*')
         .pipe(copy('./web/fonts', {prefix: 7}));
-});</code></pre>
+});
+```
 
 However, the path is still wrong, instead of `bootstrap/` it should be `../fonts/`. Luckily Bootstrap uses a variable for this path and I can change it by adding the following line before importing Bootstrap into my Sass.
 
-<pre><code class="scss">// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
+```scss
+// src/Acme/Bundle/FrontendBundle/Resources/public/sass/master.scss
 
 $icon-font-path: '../fonts/';
-</code></pre>
+```
 
 Running `gulp fonts sass` will execute both the `fonts` and the `sass` task and now everything should work fine.
 
@@ -215,7 +235,8 @@ I use RequireJS as module and file loader for my project to load only those scri
 
 The `app.js` also needs to configure jQuery and the jQuery plugins provided by Bootstrap, because these don't have RequireJS modules defined.
 
-<pre><code class="javascript">// src/Acme/Bundle/FrontendBundle/Resources/public/js/app.js
+```javascript
+// src/Acme/Bundle/FrontendBundle/Resources/public/js/app.js
 
 require.config({
     paths: {
@@ -238,21 +259,25 @@ require.config({
     }
 });
 
-require(['main']);</code></pre>
+require(['main']);
+```
 
 The interesting part in the above code is the last line: it tells RequireJS to load the `main.js` file in the same directory. Currently I don't have a lot of JavaScript code in my project, but the following code from `main.js` enabled Bootstrap alert messages.
 
-<pre><code class="javascript">// src/Acme/Bundle/FrontendBundle/Resources/public/js/main.js
+```javascript
+// src/Acme/Bundle/FrontendBundle/Resources/public/js/main.js
 
 define(function (require) {
     require(['jquery', 'bootstrap/alert'], function() {
         $('.alert').alert();
     });
-});</code></pre>
+});
+```
 
 But what about JavaScript code from other bundles you might ask? I added an entry to the `paths` option in `app.js` and then require it at the bottom of the file.
 
-<pre><code class="javascript">// src/Acme/Bundle/FrontendBundle/Resources/public/js/app.js
+```javascript
+// src/Acme/Bundle/FrontendBundle/Resources/public/js/app.js
 
 require.config({
     paths: {
@@ -264,17 +289,20 @@ require.config({
     }
 });
 
-require(['main', 'acmeuser/main']);</code></pre>
+require(['main', 'acmeuser/main']);
+```
 
 The `main.js` of the *AcmeUserBundle* can now require other modules.
 
-<pre><code class="javascript">// src/Acme/Bundle/UserBundle/Resources/public/js/main.js
+```javascript
+// src/Acme/Bundle/UserBundle/Resources/public/js/main.js
 
 define(function (require) {
     require(['jquery'], function() {
         $('.alert').addClass('hello-world');
     });
-});</code></pre>
+});
+```
 
 <a name="building-javascript"></a>
 
@@ -282,7 +310,8 @@ define(function (require) {
 
 Actually, in my current setup I don't really build JavaScript files. Because I use RequireJS I don't have to concatenate them; I just copy them into `web/js/`.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 gulp.task('js', function() {
     gulp.src([
@@ -292,7 +321,8 @@ gulp.task('js', function() {
             './web/components/requirejs/require.js'
         ])
         .pipe(gulp.dest('./web/js'));
-});</code></pre>
+});
+```
 
 <a name="watching-reloading"></a>
 
@@ -306,7 +336,8 @@ It can become tedious to execute the `sass` and `js` tasks everytime the code of
 
 Gulp includes the `watch()` function by default. I use a glob pattern to watch Sass and JavaScript files separately. Of course it would be possible to use only one watcher for both, but then the JavaScript task would run even if only a stylesheets was changed.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 gulp.task('watch', function () {
     var onChange = function (event) {
@@ -316,7 +347,8 @@ gulp.task('watch', function () {
         .on('change', onChange);
     gulp.watch('./src/Acme/Bundle/*/Resources/public/js/**/*.js', ['js'])
         .on('change', onChange);
-});</code></pre>
+});
+```
 
 <a name="reloading"></a>
 
@@ -324,7 +356,8 @@ gulp.task('watch', function () {
 
 LiveReload is a great tool to reload the browser window when a file changes. First I install the [gulp-livereload](https://github.com/vohof/gulp-livereload) plugin and then I include a snippet in my layout. It's also possible to use a browser extension, but I prefer having everything I need in the repository. After installing the plugin I need to adapt the code of the `watch` task to inform LiveReload about the changed files.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 var livereload = require('gulp-livereload');
 
@@ -340,15 +373,18 @@ gulp.task('watch', function () {
         .on('change', onChange);
     gulp.watch('./src/Tvst/Bundle/*/Resources/public/js/**/*.js', ['js'])
         .on('change', onChange);
-});</code></pre>
+});
+```
 
 In the layout I test if the environment is `dev` and then include the LiveReload snippet.
 
-<pre><code class="twig">// src/Acme/Bundle/FrontendBundle/Resources/views/layout.html.twig
+```twig
+// src/Acme/Bundle/FrontendBundle/Resources/views/layout.html.twig
 
 {{ "{% if app.environment == 'dev' %}" }}
     &lt;script&gt;document.write('&lt;script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"&gt;&lt;/' + 'script&gt;')&lt;/script&gt;
-{{ "{% endif %}" }}</code></pre>
+{{ "{% endif %}" }}
+```
 
 
 <a name="running-php-commands"></a>
@@ -363,11 +399,14 @@ I use Gulp also to run PHP-specific tasks and PHPUnit and PHP_CodeSniffer are ju
 
 I use the [gulp-phpunit](https://github.com/mikeerickson/gulp-phpunit) plugin by Mike Erickson to run PHPUnit using Gulp.
 
-<pre><code class="shell">$ npm install --save-dev gulp-phpunit</code></pre>
+```shel
+$ npm install --save-dev gulp-phpunit
+```
 
 I use the `task()` function to create a new task with the name `test`. The `src()` function allows me to use a glob pattern to select the files I want to test. *If you use another directory structure you need to adapt this pattern.*
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 var phpunit = phpunit = require('gulp-phpunit');
 
@@ -375,11 +414,12 @@ gulp.task('test', function () {
     return gulp.src('./src/Acme/Bundle/*/Tests/**/*.php')
         .pipe(phpunit('./bin/phpunit', {debug: false, configurationFile: './app/phpunit.xml'}));
 });
-</code></pre>
+```
 
 I can execute the task using `gulp test`. The `gulp-phpunit` plugin provides a wide range of options. I also create a code coverage report.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 gulp.task('coverage', function () {
     return gulp.src('./src/Tvst/Bundle/*/Tests/**/*.php')
@@ -387,7 +427,8 @@ gulp.task('coverage', function () {
             './bin/phpunit',
             {debug: false, configurationFile: './app/phpunit.xml', coverageHtml: './build/coverage'}
         ));
-});</code></pre>
+});
+```
 
 <a name="php-codesniffer"></a>
 
@@ -395,7 +436,8 @@ gulp.task('coverage', function () {
 
 To run PHP_CodeSniffer I use the [gulp-phpcs](https://github.com/JustBlackBird/gulp-phpcs) plugin by Dmitriy S. Simushev.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 var phpcs = require('gulp-phpcs');
 
@@ -403,13 +445,16 @@ gulp.task('checkstyle', function () {
     return gulp.src(['src/Tvst/Bundle/**/*.php'])
         .pipe(phpcs({bin: './bin/phpcs', standard: 'PSR2', warningSeverity: 0}))
         .pipe(phpcs.reporter('log'));
-});</code></pre>
+});
+```
 
 I also created a shortcut to execute both `coverage` and `checkstyle`.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
-gulp.task('verify', ['coverage', 'checkstyle']);</code></pre>
+gulp.task('verify', ['coverage', 'checkstyle']);
+```
 
 <a name="symfony2-commands"></a>
 
@@ -417,7 +462,8 @@ gulp.task('verify', ['coverage', 'checkstyle']);</code></pre>
 
 During my build process I also need to run Symfony2 commands. Instead of using a plugin I use the `child_process` module that comes with Node.js to execute Shell commands. Because the Gulpfile consists of plain JavaScript code there exists no need to use a specific plugin.
 
-<pre><code class="javascript">// Gulpfile.js
+```javascript
+// Gulpfile.js
 
 var exec = require('child_process').exec;
 
@@ -428,7 +474,8 @@ gulp.task('installAssets', function () {
 // Without this function exec() will not show any output
 var logStdOutAndErr = function (err, stdout, stderr) {
     console.log(stdout + stderr);
-};</code></pre>
+};
+```
 
 You can see that I created a Gulp task to run the install assets commands. I can integrate this task into other tasks and thus I will not forget to run it when building my assets. In my Gulpfile I also have tasks to load fixtures and update the database schema.
 
@@ -456,5 +503,3 @@ The system is opiniated and it works well in my setup and with my project struct
 
 - *3 November 2014:* Since the end of October I use [NPM intead of Bower to manage frontend dependencies](/articles/frontend-dependencies-npm/).
 - *25 November 2014:* I updated the article to reflect the directory structure changes in [bootstrap-sass v3.2.0](https://github.com/twbs/bootstrap-sass/releases/tag/v3.2.0).
-
-{% endblock %}
