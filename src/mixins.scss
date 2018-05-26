@@ -5,8 +5,13 @@
   line-height: 1.5;
 
   h2,
+  h3,
+  h4,
+  h5,
+  h6,
   ol,
   p,
+  table,
   ul {
     margin-left: $page-margin;
     margin-right: $page-margin;
@@ -20,6 +25,31 @@
   h2 {
     margin-bottom: 1rem;
     margin-top: 2rem;
+  }
+
+  table {
+    border: 1px solid $border-color;
+    border-spacing: 0;
+  }
+
+  td, th {
+    padding: 2px 4px;
+  }
+
+  thead {
+    th {
+      background: $border-color;
+      color: $border-constrast-color;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  tbody {
+    tr:nth-child(2n+1) {
+      td {
+        background: darken(#fff, 5);
+      }
+    }
   }
 
   video {

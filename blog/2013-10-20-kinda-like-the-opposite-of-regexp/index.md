@@ -1,15 +1,13 @@
 ---
 title: Kinda like the opposite of regular expressions
+date: 2013-10-20T00:00:00.000Z
+category: Development
 tags: [ library, php, regular expressions ]
+path: /kinda-like-the-opposite-of-regexp/
+published: true
 ---
 
-{% block summary %}
-
 Regular expressions can match a pattern in a text and return the matches. However, what if we want find all texts that would match a given pattern. I created ExpExp, a PHP library, that allows you to do this.
-
-{% endblock %}
-
-{% block content %}
 
 Two years ago I have written a library for a project to generate strings based on a given pattern called ExpExp. ExpExp takes a pattern (a subset of regular expressions) and returns all strings that would match the pattern. For example, the pattern `foo(bar|baz)` would expand to `foobar` and `foobaz`.
 
@@ -17,7 +15,7 @@ Last week I found the library again and I decided, mostly for fun and pleasure, 
 
 While my goal is to support as many patterns supported by regular expressions as possible, it will ever be only a subset. For example, the star operator in regular expressions matches an infinite amount of infinite long strings. ExpExp can never support such things. Let's stop talking about what's not possible, but about the features that work right now.
 
-### Features
+## Features
 
 ExpExp currently supports the following operators:
 
@@ -31,9 +29,9 @@ ExpExp currently supports the following operators:
 
 I am now going to discuss these operators in more detail.
 
-#### Parentheses
+### Parentheses
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -48,9 +46,9 @@ I am now going to discuss these operators in more detail.
     </tbody>
 </table>
 
-#### Disjunction
+### Disjunction
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -65,9 +63,9 @@ I am now going to discuss these operators in more detail.
     </tbody>
 </table>
 
-#### Repetition
+### Repetition
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -99,9 +97,9 @@ I am now going to discuss these operators in more detail.
     </tbody>
 </table>
 
-#### Alternation
+### Alternation
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -120,9 +118,9 @@ I am now going to discuss these operators in more detail.
     </tbody>
 </table>
 
-#### Character classes
+### Character classes
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -143,7 +141,7 @@ I am now going to discuss these operators in more detail.
 
 Other character classes are
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Character class</th>
@@ -197,7 +195,7 @@ Other character classes are
 
 There are also multiple shortcuts available:
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Shortcut</th>
@@ -228,11 +226,11 @@ There are also multiple shortcuts available:
     </tbody>
 </table>
 
-#### Dot operator
+### Dot operator
 
 The dot operator is replaced by all characters from the `word` character class.
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -247,11 +245,11 @@ The dot operator is replaced by all characters from the `word` character class.
     </tbody>
 </table>
 
-#### Optional operator
+### Optional operator
 
 The optional operator allows you to make a character or the content inside a parentheses optional.
 
-<table class="border">
+<table>
     <thead>
         <tr>
             <th>Pattern</th>
@@ -270,11 +268,13 @@ The optional operator allows you to make a character or the content inside a par
     </tbody>
 </table>
 
-#### Combination
+### Combination
 
 Of course you can combine all of these operators. For example,
 
-<pre><code>ab(cde|[xyz])</code></pre>
+```
+ab(cde|[xyz])
+```
 
 will expand to
 
@@ -283,31 +283,33 @@ will expand to
 - `aby`
 - `abz`
 
-### Use Cases
+## Use Cases
 
 I don't think there are many use cases in real life for this library, but it was fun and challenging project.
 
-### Installation
+## Installation
 
 If you want to play around with ExpExp or find a use cases in one of your project you can use [Composer](http://getcomposer.org) to install it:
 
-<pre><code class="json">{
+```json
+{
     "require": {
         "braincrafted/expexp": "dev-master"
     }
-}</code></pre>
+}
+```
 
 I already have tagged some versions, so you can use, for example, `0.2.*` to get a (relative) stable release.
 
-### Usage
+## Usage
 
 Pass the pattern to the `expand()` method and ExpExp will return an array with all expansions:
 
-<pre><code class="php">use Bc\ExpExp\ExpExp;
+```php
+use Bc\ExpExp\ExpExp;
 
 $e = new ExpExp();
-$result = $e->expand('abc|xyz');</code></pre>
+$result = $e->expand('abc|xyz');
+```
 
 That's it.
-
-{% endblock %}
