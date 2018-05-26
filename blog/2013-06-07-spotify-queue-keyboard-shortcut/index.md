@@ -1,15 +1,13 @@
 ---
 title: Create a keyboard shortcut to queue songs in Spotify on OS X
+date: 2013-06-07T00:00:00.000Z
+category: Automation
 tags: [ bettertouchtool, osx, spotify ]
+path: /spotify-queue-keyboard-shortcut/
+published: true
 ---
 
-{% block summary %}
-
 Sadly Spotify misses a lot of useful keyboard shortcuts, but fortunately we can use AppleScript and BetterTouchTool to create a shortcut to add a song to the queue.
-
-{% endblock %}
-
-{% block content %}
 
 I spent the last hour trying to set the easiest and most reliable way to create a keyboard shortcut for Spotifys *Add to Queue* functionality on OS X. Since I found no solution for this I decided to post it here.
 
@@ -17,7 +15,7 @@ I spent the last hour trying to set the easiest and most reliable way to create 
 
 There is no menu bar entry for this functionality in Spotify and therefore no way to use an ApplyScript. I had to simulate mouse clicks to get this done. There exists a range of different tools to set keyboard shortcuts, but I personally prefer [BetterTouchToul](http://www.bettertouchtool.net) from Andreas Hegenberg.
 
-[{{ picture('/img/articles/spotify-queue-keyboard-shortcut/bettertouchtool.png', 'BetterTouchTool') }}](/img/articles/spotify-queue-keyboard-shortcut/bettertouchtool.png)
+![BetterTouchTool](bettertouchtool.png)
 
 In the main BetterTouchTool window you first need to add *Spotify* to the list of applications. Just press the small plus button in the bottom of the list. I created two shortcuts. One for adding all tracks in the current view to the queue and another one for adding all currently selected tracks to the queue.
 
@@ -27,6 +25,4 @@ The shortcut to add only the selected songs to the queue is very similar, just s
 
 *Please note that the mouse has to be hovered over the selected songs when triggered the shortcut.*
 
-[A useful Caps Lock key - BrettTerpstra.com](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)
-
-{% endblock %}
+- [A useful Caps Lock key - BrettTerpstra.com](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)
