@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import React from 'react';
-import queryString from 'query-string';
 
 import PageHeader from '../components/PageHeader/PageHeader';
 import ConcertGrid from '../components/ConcertGrid/ConcertGrid';
@@ -36,24 +35,11 @@ class ConcertsPage extends React.PureComponent {
     };
   }
 
-  componentWillMount() {
-    const { history } = this.context.router;
-    this.parseDisplayFromQuery(window.location);
-    history.listen(location => {
-      this.parseDisplayFromQuery(location);
-    });
-  }
-
   componentWillReceiveProps(nextProps) {
     if (this.props.data !== nextProps.data) {
       const concerts = buildConcertsObject(concertData, nextProps.data);
       this.setState({ concerts });
     }
-  }
-
-  parseDisplayFromQuery(location) {
-    const query = queryString.parse(location.search);
-    this.setState({ display: query.display || DEFAULT_DISPLAY });
   }
 
   isActiveDisplay(display) {
@@ -75,13 +61,6 @@ class ConcertsPage extends React.PureComponent {
         <Helmet title="Concerts" />
         <div>
           <PageHeader title="Concerts" />
-          <header className="page-bar">
-            <h1>Concerts</h1>
-            <div className="page-bar__links">
-              {this.renderDisplayLink('Grid', 'grid')}
-              {this.renderDisplayLink('List', 'list')}
-            </div>
-          </header>
           {this.isActiveDisplay('grid') ? (
             <ConcertGrid concerts={this.state.concerts} />
           ) : (
