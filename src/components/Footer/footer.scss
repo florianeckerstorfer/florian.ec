@@ -11,4 +11,9 @@
     padding-left: $page-margin-lg;
     padding-right: $page-margin-lg;
   }
+
+  a {
+    color: $primary-contrast-color;
+    margin-left: .5rem;
+  }
 }
