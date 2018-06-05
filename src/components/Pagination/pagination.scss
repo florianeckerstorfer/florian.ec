@@ -1,0 +1,56 @@
+@import '../../variables';
+
+.pagination {
+  align-items: center;
+  background: $grey-color;
+  color: $grey-contrast-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: $content-width-lg) {
+    margin-left: $page-margin-lg;
+    margin-right: $page-margin-lg;
+  }
+
+  @media (min-width: $content-width) {
+    border-radius: $border-radius;
+  }
+
+  [role="img"] {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__link {
+    display: block;
+    padding: .5rem;
+
+    &:first-child {
+      @media (min-width: $content-width) {
+        border-bottom-left-radius: $border-radius;
+        border-top-left-radius: $border-radius;
+      }
+
+      [role="img"] {
+        margin-right: .5rem;
+      }
+    }
+
+    &:last-child {
+      @media (min-width: $content-width) {
+        border-bottom-right-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      [role="img"] {
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  a.pagination__link {
+    background: $primary-color;
+    color: $primary-contrast-color;
+  }
+}

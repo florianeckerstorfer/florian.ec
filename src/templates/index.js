@@ -6,15 +6,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Post from '../components/Post/Post';
+import Pagination from '../components/Pagination/Pagination';
 
-const BlogIndex = ({ data }) => {
+const BlogIndex = ({ data, pathContext }) => {
+  const { group, index, first, last, pageCount } = pathContext;
+  const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
+  const nextUrl = (index + 1).toString();
   const siteTitle = get(data, 'site.siteMetadata.title');
-  const posts = get(data, 'allMarkdownRemark.edges');
 
   return (
     <div>
       <Helmet title={siteTitle} />
-      {posts.map(post => {
+      {group.map(post => {
         if (post.node.path !== '/404/') {
           return (
             <Post
@@ -26,6 +29,14 @@ const BlogIndex = ({ data }) => {
         }
         return null;
       })}
+      <Pagination
+        first={first}
+        index={index}
+        last={last}
+        nextUrl={nextUrl}
+        pageCount={pageCount}
+        previousUrl={previousUrl}
+      />
     </div>
   );
 };
@@ -54,12 +65,26 @@ BlogIndex.propTypes = {
       ),
     }),
   }),
+  pathContext: PropTypes.shape({
+    group: PropTypes.shape(),
+    index: PropTypes.number,
+    first: PropTypes.number,
+    last: PropTypes.number,
+    pageCount: PropTypes.number,
+  }),
 };
 
 BlogIndex.defaultProps = {
   data: {
     site: { siteMetadata: { title: null } },
     allMarkdownRemark: { edges: [] },
+  },
+  pathContext: {
+    group: {},
+    index: 0,
+    first: 0,
+    last: 0,
+    pageCount: 0,
   },
 };
 
