@@ -37,8 +37,6 @@ exports.default = (graphql, createPage) =>
 
         const posts = result.data.allMarkdownRemark.edges;
 
-        console.log('posts', posts);
-
         createPaginatedPages({
           edges: posts,
           createPage,

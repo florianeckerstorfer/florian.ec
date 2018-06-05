@@ -5,8 +5,6 @@ const generateContentPages = require('./src/node/generateContentPages').default;
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
-  console.log('createPages');
-
   return Promise.all([
     generateBlogPages(graphql, createPage),
     generateContentPages(graphql, createPage),
