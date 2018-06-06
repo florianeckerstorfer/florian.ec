@@ -1,0 +1,19 @@
+@import '../variables';
+
+.cv-list {
+    list-style: none;
+    padding-left: 0;
+
+    &__item {
+        border-left: .25rem solid $primary-color;
+        margin: .5rem 0 .5rem -.75rem;
+        padding-left: .5rem;
+
+        &__position {
+            background: $grey-color;
+            border-radius: $border-radius;
+            color: $grey-contrast-color;
+            padding: 2px 4px;
+        }
+    }
+}
