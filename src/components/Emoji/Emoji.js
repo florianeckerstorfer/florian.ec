@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './emoji.scss';
+
 const Emoji = ({ emoji, label }) => (
-  <span role="img" aria-labelledby={label}>
+  <span className="emoji" role="img" aria-labelledby={label}>
     {emoji}
   </span>
 );

@@ -14,5 +14,13 @@
 
   a {
     color: $primary-contrast-color;
+
+    .emoji {
+      margin-right: .25rem;
+    }
+  }
+
+  &__nav-link {
+    margin-left: .5rem;
   }
 }
