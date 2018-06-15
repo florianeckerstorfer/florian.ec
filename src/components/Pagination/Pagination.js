@@ -14,13 +14,17 @@ const Pagination = ({
 }) => (
   <div className="pagination">
     <PaginationLink test={first} url={previousUrl}>
-      <span role="img">☜</span>Previous Page
+      <span>
+        <span role="img">☜</span>Previous Page
+      </span>
     </PaginationLink>
     <div>
       {index} / {pageCount}
     </div>
     <PaginationLink test={last} url={nextUrl}>
-      Next Page<span role="img">☞</span>
+      <span>
+        Next Page<span role="img">☞</span>
+      </span>
     </PaginationLink>
   </div>
 );

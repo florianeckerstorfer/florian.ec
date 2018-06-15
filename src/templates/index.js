@@ -66,10 +66,10 @@ BlogIndex.propTypes = {
     }),
   }),
   pathContext: PropTypes.shape({
-    group: PropTypes.shape(),
+    group: PropTypes.array,
     index: PropTypes.number,
-    first: PropTypes.number,
-    last: PropTypes.number,
+    first: PropTypes.bool,
+    last: PropTypes.bool,
     pageCount: PropTypes.number,
   }),
 };
@@ -82,8 +82,8 @@ BlogIndex.defaultProps = {
   pathContext: {
     group: {},
     index: 0,
-    first: 0,
-    last: 0,
+    first: false,
+    last: false,
     pageCount: 0,
   },
 };
