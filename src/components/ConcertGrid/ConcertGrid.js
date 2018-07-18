@@ -9,6 +9,10 @@ const ConcertGrid = ({ concerts }) => (
   <div>
     {Object.keys(concerts)
       .reverse()
+      .filter(
+        year =>
+          concerts[year].filter(concert => concert.sizes !== null).length > 0
+      )
       .map(year => (
         <div key={`concert-${year}`} className="concert-grid">
           <div className="concert-grid__year">
