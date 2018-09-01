@@ -2,7 +2,6 @@
 /* global graphql */
 
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -14,7 +13,6 @@ import concertData from '../data/concerts';
 import './concerts.scss';
 import '../components/PageBar/pageBar.scss';
 import buildConcertsObject from '../util/buildConcertsObject';
-import ConcertList from '../components/ConcertList/ConcertList';
 
 const sizesPropType = PropTypes.shape({
   aspectRatio: PropTypes.number.isRequired,
@@ -24,14 +22,11 @@ const sizesPropType = PropTypes.shape({
   srcSet: PropTypes.string.isRequired,
 });
 
-const DEFAULT_DISPLAY = 'grid';
-
 class ConcertsPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       concerts: buildConcertsObject(concertData, props.data),
-      display: DEFAULT_DISPLAY,
     };
   }
 
@@ -42,30 +37,13 @@ class ConcertsPage extends React.PureComponent {
     }
   }
 
-  isActiveDisplay(display) {
-    return this.state.display === display;
-  }
-
-  renderDisplayLink(name, display) {
-    const className = this.isActiveDisplay(display) ? 'active' : '';
-    return (
-      <Link to={`/concerts?display=${display}`} className={className}>
-        {name}
-      </Link>
-    );
-  }
-
   render() {
     return (
       <div>
         <Helmet title="Concerts" />
         <div>
           <PageHeader title="Concerts" />
-          {this.isActiveDisplay('grid') ? (
-            <ConcertGrid concerts={this.state.concerts} />
-          ) : (
-            <ConcertList concerts={this.state.concerts} />
-          )}
+          <ConcertGrid concerts={this.state.concerts} />
         </div>
       </div>
     );
