@@ -12,7 +12,7 @@ const ImprintPage = () => (
       <PageHeader title="Privacy Policy" />
       <PageContent>
         <p>
-          This privacy policy applies to all my websites:
+          This privacy policy applies to all my websites:{' '}
           <a href="https://florian.ec">florian.ec</a>,{' '}
           <a href="http://👏🏻.ws">
             <Emoji emoji="👏🏻" label="clap" />.ws
