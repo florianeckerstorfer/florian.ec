@@ -1,12 +1,13 @@
-import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import React from 'react';
-
+import Helmet from 'react-helmet';
+import Emoji from '../components/Emoji/Emoji';
+import Layout from '../components/Layout/Layout';
 import PageContent from '../components/PageContent/PageContent';
 import PageHeader from '../components/PageHeader/PageHeader';
-import Emoji from '../components/Emoji/Emoji';
 
-const ImprintPage = () => (
-  <div>
+const ImprintPage = ({ location }) => (
+  <Layout location={location}>
     <Helmet title="Privacy Policy" />
     <div>
       <PageHeader title="Privacy Policy" />
@@ -15,29 +16,41 @@ const ImprintPage = () => (
           This privacy policy applies to all my websites:{' '}
           <a href="https://florian.ec">florian.ec</a>,{' '}
           <a href="http://👏🏻.ws">
-            <Emoji emoji="👏🏻" label="clap" />.ws
-          </a>,{' '}
+            <Emoji emoji="👏🏻" label="clap" />
+            .ws
+          </a>
+          ,{' '}
           <a href="http://👋🏻.ws">
-            <Emoji emoji="👋🏻" label="wave" />.ws
-          </a>, <a href="https://webadventures.at">webadventures.at</a>.
+            <Emoji emoji="👋🏻" label="wave" />
+            .ws
+          </a>
+          , <a href="https://webadventures.at">webadventures.at</a>.
         </p>
 
         <p>
           <Emoji emoji="❌" label="x" />
           <Emoji emoji="🕳" label="hole" /> This website does not embed content
-          from other websites.<br />
+          from other websites.
+          <br />
           <Emoji emoji="❌" label="x" />
           <Emoji emoji="🍪" label="cookie" /> This website does not store
-          cookies in your browser.<br />
+          cookies in your browser.
+          <br />
           <Emoji emoji="🌍" label="earth" /> This website is hosted on Netlify.
           You can read more about their{' '}
-          <a href="https://www.netlify.com/gdpr/">GDPR</a> policy.<br />
+          <a href="https://www.netlify.com/gdpr/">GDPR</a> policy.
+          <br />
           <Emoji emoji="️️️️🗃️" label="card file box" /> This website stores
-          access logs, including your IP address, for up to 30 days.<br />
+          access logs, including your IP address, for up to 30 days.
+          <br />
         </p>
       </PageContent>
     </div>
-  </div>
+  </Layout>
 );
+
+ImprintPage.propTypes = {
+  location: PropTypes.shape().isRequired,
+};
 
 export default ImprintPage;

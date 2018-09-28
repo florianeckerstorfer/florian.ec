@@ -1,8 +1,8 @@
 const Promise = require('bluebird');
 const createPaginatedPages = require('gatsby-paginate');
-const createTagPages = require('./createTagPages').default;
-const createCategoryPages = require('./createCategoryPages').default;
 const createBlogPostPages = require('./createBlogPostPages').default;
+const createCategoryPages = require('./createCategoryPages').default;
+const createTagPages = require('./createTagPages').default;
 
 exports.default = (graphql, createPage) =>
   new Promise((resolve, reject) => {

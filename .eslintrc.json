@@ -9,9 +9,9 @@
   ],
   "parserOptions": {
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
       "jsx": true
     },
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
@@ -23,6 +23,7 @@
     "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "react/jsx-one-expression-per-line": "off"
   }
 }

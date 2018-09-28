@@ -15,7 +15,8 @@ const Pagination = ({
   <div className="pagination">
     <PaginationLink test={first} url={previousUrl}>
       <span>
-        <span role="img">☜</span>Previous Page
+        <span role="img">☜</span>
+        Previous Page
       </span>
     </PaginationLink>
     <div>
@@ -23,7 +24,8 @@ const Pagination = ({
     </div>
     <PaginationLink test={last} url={nextUrl}>
       <span>
-        Next Page<span role="img">☞</span>
+        Next Page
+        <span role="img">☞</span>
       </span>
     </PaginationLink>
   </div>

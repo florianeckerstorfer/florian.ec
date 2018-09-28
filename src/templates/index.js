@@ -1,12 +1,11 @@
-/* global graphql */
-
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import Post from '../components/Post/Post';
+import Helmet from 'react-helmet';
 import Pagination from '../components/Pagination/Pagination';
+import Post from '../components/Post/Post';
+import Layout from '../components/Layout/Layout';
 
 const BlogIndex = ({ data, pathContext }) => {
   const { group, index, first, last, pageCount } = pathContext;
@@ -15,29 +14,31 @@ const BlogIndex = ({ data, pathContext }) => {
   const siteTitle = get(data, 'site.siteMetadata.title');
 
   return (
-    <div>
-      <Helmet title={siteTitle} />
-      {group.map(post => {
-        if (post.node.path !== '/404/') {
-          return (
-            <Post
-              key={post.node.frontmatter.path}
-              frontmatter={post.node.frontmatter}
-              html={post.node.html}
-            />
-          );
-        }
-        return null;
-      })}
-      <Pagination
-        first={first}
-        index={index}
-        last={last}
-        nextUrl={nextUrl}
-        pageCount={pageCount}
-        previousUrl={previousUrl}
-      />
-    </div>
+    <Layout>
+      <div>
+        <Helmet title={siteTitle} />
+        {group.map(post => {
+          if (post.node.path !== '/404/') {
+            return (
+              <Post
+                key={post.node.frontmatter.path}
+                frontmatter={post.node.frontmatter}
+                html={post.node.html}
+              />
+            );
+          }
+          return null;
+        })}
+        <Pagination
+          first={first}
+          index={index}
+          last={last}
+          nextUrl={nextUrl}
+          pageCount={pageCount}
+          previousUrl={previousUrl}
+        />
+      </div>
+    </Layout>
   );
 };
 

@@ -1,12 +1,9 @@
-/* global graphql */
-
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
-
 import '../components/PageBar/pageBar.scss';
+import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
+import Layout from '../components/Layout/Layout';
 
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;
@@ -14,18 +11,20 @@ const Tags = ({ pathContext, data }) => {
   const postsString = `post${totalCount === 1 ? '' : 's'}`;
 
   return (
-    <div className="tag-page">
-      <header className="page-bar">
-        <h1>
-          {`${tag} `}
-          <em>
-            ({totalCount} {postsString})
-          </em>
-        </h1>
-        <Link to="/tags">All tags</Link>
-      </header>
-      <PostHeaderList posts={edges} />
-    </div>
+    <Layout>
+      <div className="tag-page">
+        <header className="page-bar">
+          <h1>
+            {`${tag} `}
+            <em>
+              ({totalCount} {postsString})
+            </em>
+          </h1>
+          <Link to="/tags">All tags</Link>
+        </header>
+        <PostHeaderList posts={edges} />
+      </div>
+    </Layout>
   );
 };
 

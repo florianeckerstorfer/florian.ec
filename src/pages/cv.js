@@ -1,13 +1,13 @@
-import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import React from 'react';
-
+import Helmet from 'react-helmet';
 import PageContent from '../components/PageContent/PageContent';
 import PageHeader from '../components/PageHeader/PageHeader';
-
+import Layout from '../components/Layout/Layout';
 import './cv.scss';
 
-const CvPage = () => (
-  <div>
+const CvPage = ({ location }) => (
+  <Layout location={location}>
     <Helmet title="Curriculum vitae" />
     <div>
       <PageHeader title="Curriculum vitae" />
@@ -23,8 +23,8 @@ const CvPage = () => (
               Vienna University of Technology, Vienna, January 2018
             </li>
             <li className="cv-list__item">
-              <em className="cv-list__item__position">Curriculum Supplement</em>,{' '}
-              <strong>Innovation</strong>
+              <em className="cv-list__item__position">Curriculum Supplement</em>
+              , <strong>Innovation</strong>
               <br />
               Vienna University of Technlogy, Vienna, December 2013
             </li>
@@ -39,7 +39,8 @@ const CvPage = () => (
               <strong>
                 <em>HLW f&uuml;r Kommunikations- und Mediendesign</em>
               </strong>{' '}
-              (specialization in communications- and media design)<br />
+              (specialization in communications- and media design)
+              <br />
               Schulzentrum der Kreuzschwestern, Linz, June 2006
             </li>
           </ul>
@@ -51,10 +52,12 @@ const CvPage = () => (
             <li className="cv-list__item">
               <em className="cv-list__item__position">
                 Frontend &amp; Mobile App Developer
-              </em>,{' '}
+              </em>
+              ,{' '}
               <a href="https://www.swell.wtf">
                 <strong>Swell</strong>
-              </a>, Vienna, since January 2017
+              </a>
+              , Vienna, since January 2017
               <ul>
                 <li>
                   Developing web views for chatbots with React and InfernoJS
@@ -70,7 +73,8 @@ const CvPage = () => (
               <em className="cv-list__item__position">Frontend Developer</em>,{' '}
               <a href="https://kiweno.com">
                 <strong>Kiweno GmbH</strong>
-              </a>, Vienna, April - November 2016
+              </a>
+              , Vienna, April - November 2016
               <ul>
                 <li>
                   Developing a responsive web app with HTML, CSS, JavaScript and
@@ -177,21 +181,26 @@ const CvPage = () => (
             <li className="cv-list__item">
               <a href="http://similar.fm">
                 <strong>Similar.fm</strong>
-              </a>, March 2012<br />
+              </a>
+              , March 2012
+              <br />
               Web Service to easily open music related to the music a user is
               currently listening to in Spotify.
             </li>
             <li className="cv-list__item">
-              <strong>Tryp</strong>, August 2011<br />
+              <strong>Tryp</strong>, August 2011
+              <br />
               Web Service to visualize the previous whereabouts of a Twitter
               user on a map. No longer online.
             </li>
             <li className="cv-list__item">
-              <strong>RegExp Tester</strong>, July 2010<br />
+              <strong>RegExp Tester</strong>, July 2010
+              <br />
               Web Service to easily test regular expressions. No longer online.
             </li>
             <li className="cv-list__item">
-              <strong>Ninjawhois</strong>, April 2009<br />
+              <strong>Ninjawhois</strong>, April 2009
+              <br />
               Web Service to check the availability of multiple domains. No
               longer online.
             </li>
@@ -209,7 +218,8 @@ const CvPage = () => (
           <ul className="cv-list">
             <li className="cv-list__item">
               <strong>German</strong>
-              <br />mother tongue
+              <br />
+              mother tongue
             </li>
             <li className="cv-list__item">
               <strong>English</strong>
@@ -234,11 +244,16 @@ const CvPage = () => (
           A PDF version of my CV is also available:{' '}
           <a href="/cv.pdf" title="CV Florian Eckerstorfer (PDF format)">
             cv.pdf
-          </a>.
+          </a>
+          .
         </p>
       </PageContent>
     </div>
-  </div>
+  </Layout>
 );
+
+CvPage.propTypes = {
+  location: PropTypes.shape().isRequired,
+};
 
 export default CvPage;

@@ -69,7 +69,7 @@ module.exports = (
     }
 
     // Calculate the paddingBottom %
-    const ratio = `${1 / responsiveSizesResult.aspectRatio * 100}%`;
+    const ratio = `${(1 / responsiveSizesResult.aspectRatio) * 100}%`;
 
     const { originalImg, presentationWidth, srcSet } = responsiveSizesResult;
     const fallbackSrc = responsiveSizesResult.src;

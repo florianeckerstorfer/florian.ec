@@ -1,11 +1,12 @@
-import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import React from 'react';
-
+import Helmet from 'react-helmet';
+import Layout from '../components/Layout/Layout';
 import PageContent from '../components/PageContent/PageContent';
 import PageHeader from '../components/PageHeader/PageHeader';
 
-const ProjectsPage = () => (
-  <div>
+const ProjectsPage = ({ location }) => (
+  <Layout location={location}>
     <Helmet title="Projects Florian Eckerstorfer" />
     <div>
       <PageHeader title="Projects" />
@@ -16,7 +17,11 @@ const ProjectsPage = () => (
         </p>
       </PageContent>
     </div>
-  </div>
+  </Layout>
 );
+
+ProjectsPage.propTypes = {
+  location: PropTypes.shape().isRequired,
+};
 
 export default ProjectsPage;

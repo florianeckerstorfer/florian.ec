@@ -1,22 +1,24 @@
-/* global graphql */
-
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
-import React from 'react';
 import PropTypes from 'prop-types';
-
+import React from 'react';
+import Helmet from 'react-helmet';
 import Post from '../components/Post/Post';
+import Layout from '../components/Layout/Layout';
 
 class BlogPostTemplate extends React.PureComponent {
   render() {
-    const post = this.props.data.markdownRemark;
+    const { data } = this.props;
+    const post = data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
 
     return (
-      <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <Post frontmatter={post.frontmatter} html={post.html} detail />
-      </div>
+      <Layout>
+        <div>
+          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          <Post frontmatter={post.frontmatter} html={post.html} detail />
+        </div>
+      </Layout>
     );
   }
 }

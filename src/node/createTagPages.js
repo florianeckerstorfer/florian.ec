@@ -1,5 +1,5 @@
-const path = require('path');
 const _ = require('lodash');
+const path = require('path');
 
 exports.default = (createPage, posts) => {
   const tagTemplate = path.resolve('./src/templates/tags.js');

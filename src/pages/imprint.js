@@ -1,11 +1,12 @@
-import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 import React from 'react';
-
+import Helmet from 'react-helmet';
 import PageContent from '../components/PageContent/PageContent';
 import PageHeader from '../components/PageHeader/PageHeader';
+import Layout from '../components/Layout/Layout';
 
-const ImprintPage = () => (
-  <div>
+const ImprintPage = ({ location }) => (
+  <Layout location={location}>
     <Helmet title="Imprint" />
     <div>
       <PageHeader title="Imprint" />
@@ -28,7 +29,11 @@ const ImprintPage = () => (
         </div>
       </PageContent>
     </div>
-  </div>
+  </Layout>
 );
+
+ImprintPage.propTypes = {
+  location: PropTypes.shape().isRequired,
+};
 
 export default ImprintPage;

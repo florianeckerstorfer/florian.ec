@@ -1,10 +1,9 @@
-/* global graphql */
-
-import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
-import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../components/Layout/Layout';
 
 const TagsPage = ({
   data: {
@@ -13,8 +12,9 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
+  location,
 }) => (
-  <div>
+  <Layout location={location}>
     <Helmet title={title} />
     <div>
       <h1>Tags</h1>
@@ -28,7 +28,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
 );
 
 TagsPage.propTypes = {
@@ -47,6 +47,7 @@ TagsPage.propTypes = {
       }),
     }),
   }),
+  location: PropTypes.shape().isRequired,
 };
 
 TagsPage.defaultProps = {

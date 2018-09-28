@@ -1,18 +1,16 @@
 /* eslint-disable class-methods-use-this */
-/* global graphql */
 
-import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import PageHeader from '../components/PageHeader/PageHeader';
+import Helmet from 'react-helmet';
 import ConcertGrid from '../components/ConcertGrid/ConcertGrid';
-
-import concertData from '../data/concerts';
-
-import './concerts.scss';
 import '../components/PageBar/pageBar.scss';
+import PageHeader from '../components/PageHeader/PageHeader';
+import concertData from '../data/concerts';
+import Layout from '../components/Layout/Layout';
 import buildConcertsObject from '../util/buildConcertsObject';
+import './concerts.scss';
 
 const sizesPropType = PropTypes.shape({
   aspectRatio: PropTypes.number.isRequired,
@@ -31,21 +29,24 @@ class ConcertsPage extends React.PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.data !== nextProps.data) {
+    const { data } = this.props;
+    if (data !== nextProps.data) {
       const concerts = buildConcertsObject(concertData, nextProps.data);
       this.setState({ concerts });
     }
   }
 
   render() {
+    const { location } = this.props;
+    const { concerts } = this.state;
     return (
-      <div>
+      <Layout location={location}>
         <Helmet title="Concerts" />
         <div>
           <PageHeader title="Concerts" />
-          <ConcertGrid concerts={this.state.concerts} />
+          <ConcertGrid concerts={concerts} />
         </div>
-      </div>
+      </Layout>
     );
   }
 }
@@ -59,6 +60,7 @@ ConcertsPage.defaultProps = {
 };
 
 ConcertsPage.propTypes = {
+  location: PropTypes.shape().isRequired,
   data: PropTypes.shape({
     allFile: PropTypes.shape({
       edges: PropTypes.arrayOf(
@@ -76,7 +78,7 @@ ConcertsPage.propTypes = {
 };
 
 ConcertsPage.contextTypes = {
-  router: PropTypes.object,
+  router: PropTypes.shape(),
 };
 
 export const query = graphql`

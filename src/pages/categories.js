@@ -1,12 +1,12 @@
-/* global graphql */
-
-import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
-import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../components/Layout/Layout';
 
 const CategoriesPage = ({
+  location,
   data: {
     allMarkdownRemark: { group },
     site: {
@@ -14,7 +14,7 @@ const CategoriesPage = ({
     },
   },
 }) => (
-  <div>
+  <Layout location={location}>
     <Helmet title={title} />
     <div>
       <h1>Categories</h1>
@@ -28,10 +28,11 @@ const CategoriesPage = ({
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
 );
 
 CategoriesPage.propTypes = {
+  location: PropTypes.shape().isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       group: PropTypes.arrayOf(

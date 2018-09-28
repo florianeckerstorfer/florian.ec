@@ -1,27 +1,30 @@
-/* global graphql */
 /* eslint-disable react/no-danger */
 
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import Helmet from 'react-helmet';
+import Layout from '../components/Layout/Layout';
 import PageContent from '../components/PageContent/PageContent';
 import PageTitle from '../components/PageTitle/PageTitle';
 
 class ContentTemplate extends React.PureComponent {
   render() {
-    const post = this.props.data.markdownRemark;
+    const { data } = this.props;
+    const post = data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
 
     return (
-      <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <PageTitle title={post.frontmatter.title} />
-        <PageContent>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </PageContent>
-      </div>
+      <Layout>
+        <div>
+          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          <PageTitle title={post.frontmatter.title} />
+          <PageContent>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </PageContent>
+        </div>
+      </Layout>
     );
   }
 }
