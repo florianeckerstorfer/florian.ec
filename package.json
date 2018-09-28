@@ -74,7 +74,9 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run build-plugins && npm run develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx .",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx ./src",
+    "jest": "jest",
+    "coverage": "npm run lint && jest --coverage",
     "test": "npm run lint && jest",
     "develop": "gatsby develop --port 8040",
     "build": "npm run build-plugins && gatsby build",

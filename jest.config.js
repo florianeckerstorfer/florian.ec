@@ -5,4 +5,6 @@ module.exports = {
     '\\.(css|less|scss)$': 'identity-obj-proxy',
   },
   setupFiles: ['<rootDir>/tests/setup.js'],
+  collectCoverage: false,
+  collectCoverageFrom: ['<rootDir>/src/**/*.js'],
 };
