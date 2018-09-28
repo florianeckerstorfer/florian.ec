@@ -2,11 +2,9 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import PostContent from '../PostContent/PostContent';
 import PostFooter from '../PostFooter/PostFooter';
 import PostHeader from '../PostHeader/PostHeader';
-
 import './post.scss';
 
 const Post = ({ detail, frontmatter, html }) => (
@@ -22,6 +20,8 @@ const Post = ({ detail, frontmatter, html }) => (
 Post.propTypes = {
   detail: PropTypes.bool,
   frontmatter: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
     layout: PropTypes.string,
     path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

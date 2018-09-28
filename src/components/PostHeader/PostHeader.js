@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import PostMeta from '../PostMeta/PostMeta';
 import PostTitle from '../PostTitle/PostTitle';
-
 import './postHeader.scss';
 
 const PostHeader = ({ detail, frontmatter }) => (

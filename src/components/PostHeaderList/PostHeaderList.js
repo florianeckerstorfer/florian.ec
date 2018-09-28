@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import PostHeader from '../PostHeader/PostHeader';
-
 import './postHeaderList.scss';
 
 const PostHeaderList = ({ posts }) => (

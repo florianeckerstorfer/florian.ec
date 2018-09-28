@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import PostDate from '../PostDate/PostDate';
 import PostCategory from '../PostCategory/PostCategory';
-
+import PostDate from '../PostDate/PostDate';
 import './postMeta.scss';
 
 const PostMeta = ({ frontmatter }) => (

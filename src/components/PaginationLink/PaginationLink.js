@@ -16,7 +16,11 @@ const PaginationLink = ({ test, children, url }) => {
 PaginationLink.propTypes = {
   children: PropTypes.element.isRequired,
   test: PropTypes.bool.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
+};
+
+PaginationLink.defaultProps = {
+  url: null,
 };
 
 export default PaginationLink;

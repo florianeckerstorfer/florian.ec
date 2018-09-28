@@ -20,13 +20,7 @@ const PostFooter = ({ frontmatter }) => (
 PostFooter.propTypes = {
   frontmatter: PropTypes.shape({
     tags: PropTypes.arrayOf(PropTypes.string),
-  }),
-};
-
-PostFooter.defaultProps = {
-  frontmatter: {
-    tags: [],
-  },
+  }).isRequired,
 };
 
 export default PostFooter;
