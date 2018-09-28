@@ -45,6 +45,8 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -54,6 +56,8 @@
     "eslint-plugin-prettier": "^2.7.0",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.3",
     "prettier": "^1.14.3",
     "socket.io": "^2.1.1",
@@ -71,7 +75,7 @@
     "start": "npm run dev",
     "dev": "npm run build-plugins && npm run develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && jest",
     "develop": "gatsby develop --port 8040",
     "build": "npm run build-plugins && gatsby build",
     "cv-pdf": "cd cv-pdf && pdflatex cv.tex && cp cv.pdf florian-eckerstorfer-cv.pdf",
@@ -82,7 +86,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run lint"
+      "pre-push": "npm run test"
     }
   }
 }
