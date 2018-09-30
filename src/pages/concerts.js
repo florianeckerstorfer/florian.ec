@@ -41,10 +41,12 @@ class ConcertsPage extends React.PureComponent {
     const { concerts } = this.state;
     return (
       <Layout location={location}>
-        <Helmet title="Concerts" />
         <div>
-          <PageHeader title="Concerts" />
-          <ConcertGrid concerts={concerts} />
+          <Helmet title="Concerts" />
+          <div>
+            <PageHeader title="Concerts" />
+            <ConcertGrid concerts={concerts} />
+          </div>
         </div>
       </Layout>
     );

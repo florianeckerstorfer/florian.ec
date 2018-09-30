@@ -11,19 +11,19 @@ const ConcertGridItem = ({ concert }) => (
   </div>
 );
 
-ConcertGridItem.defaultProps = {
-  concert: {
-    sizes: {},
-    title: null,
-  },
-};
+// ConcertGridItem.defaultProps = {
+//   concert: {
+//     sizes: {},
+//     title: null,
+//   },
+// };
 
 ConcertGridItem.propTypes = {
   concert: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    layout: PropTypes.string.isRequired,
     sizes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
 
 export default ConcertGridItem;
