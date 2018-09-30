@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './Layout.scss';
 
-const Template = ({ children, location }) => (
+const Layout = ({ children, location }) => (
   <div>
     <Helmet>
       <link rel="icon" href="/favicon.png" />
@@ -19,11 +19,15 @@ const Template = ({ children, location }) => (
   </div>
 );
 
-Template.propTypes = {
+Layout.propTypes = {
   children: PropTypes.element.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
 };
 
-export default Template;
+Layout.defaultProps = {
+  location: { pathname: '/' },
+};
+
+export default Layout;
