@@ -20,14 +20,10 @@ const Template = ({ children, location }) => (
 );
 
 Template.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
-  }),
-};
-
-Template.defaultProps = {
-  location: { pathname: null },
+  }).isRequired,
 };
 
 export default Template;
