@@ -1,5 +1,61 @@
 const concerts = [
   {
+    date: '2018-09-29',
+    location: 'Waves Festival, WUK, Vienna',
+    bands: [
+      {
+        name: 'Kids N Cats',
+        image: '2018-09-29-waves-kids-n-cats',
+        layout: 'portrait',
+      },
+      { name: 'Mascha', image: '2018-09-29-waves-mascha', layout: 'portrait' },
+      { name: 'Nabihah Iqbal' },
+      {
+        name: 'Pom Poko',
+        image: '2018-09-29-waves-pom-poko',
+        layout: 'landscape',
+      },
+    ],
+  },
+  {
+    date: '2018-09-28',
+    location: 'Waves Festival, WUK, Vienna',
+    bands: [
+      {
+        name: 'False Advertising',
+        image: '2018-09-28-waves-false-advertising',
+        layout: 'portrait',
+      },
+      {
+        name: 'WWWater',
+        image: '2018-09-28-waves-wwwater',
+        layout: 'portrait',
+      },
+      { name: 'Kovacs', image: '2018-09-28-waves-kovacs', layout: 'landscape' },
+    ],
+  },
+  {
+    date: '2018-09-27',
+    location: 'Waves Festival, WUK, Vienna',
+    bands: [
+      {
+        name: 'Pauls Jets',
+        image: '2018-09-27-waves-pauls-jets',
+        layout: 'landscape',
+      },
+      {
+        name: 'Cléa Vincent',
+        image: '2018-09-27-waves-clea-vincent',
+        layout: 'landscape',
+      },
+      {
+        name: 'The Blind Suns',
+        image: '2018-09-27-waves-the-blind-suns',
+        layout: 'portrait',
+      },
+    ],
+  },
+  {
     date: '2018-04-27',
     location: 'Fluc, Vienna',
     bands: [
