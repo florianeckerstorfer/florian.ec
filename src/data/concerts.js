@@ -538,6 +538,7 @@ const concerts = [
       {
         name: 'Eleanor Friedberger',
         image: '2016-05-26-eleanor-friedberger',
+        layout: 'portrait',
       },
       { name: 'Mass Gothic' },
     ],
@@ -611,6 +612,7 @@ const concerts = [
       {
         name: 'Dolores Haze',
         image: '2016-03-03-bylarm-dolores-haze',
+        layout: 'landscape',
       },
       {
         name: 'Abra',

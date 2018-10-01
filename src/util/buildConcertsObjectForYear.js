@@ -11,6 +11,7 @@ const buildConcertsObjectForYear = (concerts, year, data) => {
       flatConcerts.push(concert);
     }
   });
+
   return flatConcerts
     .filter(concert => new Date(concert.date).getFullYear() === year)
     .map(concert => {
