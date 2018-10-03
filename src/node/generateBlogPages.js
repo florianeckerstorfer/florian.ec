@@ -33,6 +33,7 @@ exports.default = (graphql, createPage) =>
       `).then(result => {
         if (result.errors) {
           reject(result.errors);
+          return;
         }
 
         const posts = result.data.allMarkdownRemark.edges;
