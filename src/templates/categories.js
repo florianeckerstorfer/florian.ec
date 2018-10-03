@@ -1,12 +1,12 @@
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Layout from '../components/Layout/Layout';
 import '../components/PageBar/pageBar.scss';
 import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
-import Layout from '../components/Layout/Layout';
 
-const Categories = ({ pathContext, data }) => {
-  const { category } = pathContext;
+const Categories = ({ pageContext, data }) => {
+  const { category } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const postString = `post${totalCount === 1 ? '' : 's'}`;
 
@@ -29,7 +29,7 @@ const Categories = ({ pathContext, data }) => {
 };
 
 Categories.propTypes = {
-  pathContext: PropTypes.shape({
+  pageContext: PropTypes.shape({
     category: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
@@ -50,7 +50,7 @@ Categories.propTypes = {
 };
 
 Categories.defaultProps = {
-  pathContext: { categories: null },
+  pageContext: { categories: null },
   data: {
     allMarkdownRemark: {
       totalCount: null,

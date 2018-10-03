@@ -7,8 +7,8 @@ import Pagination from '../components/Pagination/Pagination';
 import Post from '../components/Post/Post';
 import Layout from '../components/Layout/Layout';
 
-const BlogIndex = ({ data, pathContext }) => {
-  const { group, index, first, last, pageCount } = pathContext;
+const BlogIndex = ({ data, pageContext }) => {
+  const { group, index, first, last, pageCount } = pageContext;
   const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
   const nextUrl = (index + 1).toString();
   const siteTitle = get(data, 'site.siteMetadata.title');
@@ -66,7 +66,7 @@ BlogIndex.propTypes = {
       ),
     }),
   }),
-  pathContext: PropTypes.shape({
+  pageContext: PropTypes.shape({
     group: PropTypes.array,
     index: PropTypes.number,
     first: PropTypes.bool,
@@ -80,7 +80,7 @@ BlogIndex.defaultProps = {
     site: { siteMetadata: { title: null } },
     allMarkdownRemark: { edges: [] },
   },
-  pathContext: {
+  pageContext: {
     group: {},
     index: 0,
     first: false,

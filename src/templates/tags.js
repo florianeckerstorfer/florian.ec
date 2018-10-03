@@ -5,8 +5,8 @@ import '../components/PageBar/pageBar.scss';
 import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
 import Layout from '../components/Layout/Layout';
 
-const Tags = ({ pathContext, data }) => {
-  const { tag } = pathContext;
+const Tags = ({ pageContext, data }) => {
+  const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const postsString = `post${totalCount === 1 ? '' : 's'}`;
 
@@ -29,7 +29,7 @@ const Tags = ({ pathContext, data }) => {
 };
 
 Tags.propTypes = {
-  pathContext: PropTypes.shape({
+  pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
@@ -50,7 +50,7 @@ Tags.propTypes = {
 };
 
 Tags.defaultProps = {
-  pathContext: { tag: null },
+  pageContext: { tag: null },
   data: {
     allMarkdownRemark: {
       totalCount: null,
