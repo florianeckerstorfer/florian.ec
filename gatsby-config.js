@@ -10,42 +10,59 @@ const siteUrl = (() => {
 })();
 
 const feedGeneratorPlugin = {
-  resolve: 'gatsby-plugin-feed',
+  resolve: `gatsby-plugin-feed`,
   options: {
-    generator: `GatsbyJS`,
-    rss: true,
-    json: true,
-    siteQuery: `
+    query: `
       {
         site {
           siteMetadata {
             title
             description
             siteUrl
-            author
+            site_url: siteUrl
           }
         }
       }
     `,
-    feedQuery: `
+    feeds: [
       {
-        allMarkdownRemark(
-          sort: {order: DESC, fields: [frontmatter___date]}, 
-          limit: 100,
-        ) {
-          edges {
-            node {
-              html
-              frontmatter {
-                date
-                path
-                title
+        serialize: ({ query: { site, allMarkdownRemark } }) => {
+          return allMarkdownRemark.edges.map(edge => {
+            return Object.assign({}, edge.node.frontmatter, {
+              description: edge.node.excerpt,
+              url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+              guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+              custom_elements: [{ 'content:encoded': edge.node.html }],
+            });
+          });
+        },
+        query: `
+          {
+            allMarkdownRemark(
+              limit: 1000,
+              sort: { order: DESC, fields: [frontmatter___date] },
+              filter: {
+                frontmatter: { published: { ne: false } },
+                fileAbsolutePath: { regex: "/blog/" }
+              }
+            ) {
+              edges {
+                node {
+                  excerpt
+                  html
+                  frontmatter {
+                    title
+                    date
+                    path
+                  }
+                }
               }
             }
           }
-        }
-      }
-    `,
+        `,
+        output: '/rss.xml',
+      },
+    ],
   },
 };
 

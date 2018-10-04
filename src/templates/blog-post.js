@@ -8,12 +8,12 @@ import Layout from '../components/Layout/Layout';
 
 class BlogPostTemplate extends React.PureComponent {
   render() {
-    const { data } = this.props;
+    const { data, location } = this.props;
     const post = data.markdownRemark;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
 
     return (
-      <Layout>
+      <Layout location={location}>
         <div>
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
           <Post frontmatter={post.frontmatter} html={post.html} detail />
@@ -24,6 +24,7 @@ class BlogPostTemplate extends React.PureComponent {
 }
 
 BlogPostTemplate.propTypes = {
+  location: PropTypes.shape().isRequired,
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       id: PropTypes.string.isRequired,

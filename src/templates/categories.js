@@ -5,13 +5,13 @@ import Layout from '../components/Layout/Layout';
 import '../components/PageBar/pageBar.scss';
 import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
 
-const Categories = ({ pageContext, data }) => {
+const Categories = ({ pageContext, data, location }) => {
   const { category } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const postString = `post${totalCount === 1 ? '' : 's'}`;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className="tag-page">
         <header className="page-bar">
           <h1>
@@ -29,6 +29,7 @@ const Categories = ({ pageContext, data }) => {
 };
 
 Categories.propTypes = {
+  location: PropTypes.shape().isRequired,
   pageContext: PropTypes.shape({
     category: PropTypes.string.isRequired,
   }),

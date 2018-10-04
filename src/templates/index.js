@@ -7,14 +7,14 @@ import Pagination from '../components/Pagination/Pagination';
 import Post from '../components/Post/Post';
 import Layout from '../components/Layout/Layout';
 
-const BlogIndex = ({ data, pageContext }) => {
+const BlogIndex = ({ data, pageContext, location }) => {
   const { group, index, first, last, pageCount } = pageContext;
   const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
   const nextUrl = (index + 1).toString();
   const siteTitle = get(data, 'site.siteMetadata.title');
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div>
         <Helmet title={siteTitle} />
         {group.map(post => {
@@ -43,6 +43,7 @@ const BlogIndex = ({ data, pageContext }) => {
 };
 
 BlogIndex.propTypes = {
+  location: PropTypes.shape().isRequired,
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
