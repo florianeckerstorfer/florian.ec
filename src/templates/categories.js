@@ -4,14 +4,16 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import '../components/PageBar/pageBar.scss';
 import PostHeaderList from '../components/PostHeaderList/PostHeaderList';
+import LocationPropType from '../propTypes/LocationPropType';
+import BlogPostNodeType from '../propTypes/BlogPostNodePropType';
 
-const Categories = ({ pageContext, data }) => {
+const Categories = ({ pageContext, data, location }) => {
   const { category } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const postString = `post${totalCount === 1 ? '' : 's'}`;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className="tag-page">
         <header className="page-bar">
           <h1>
@@ -29,35 +31,23 @@ const Categories = ({ pageContext, data }) => {
 };
 
 Categories.propTypes = {
+  location: LocationPropType.isRequired,
   pageContext: PropTypes.shape({
     category: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              path: PropTypes.string.isRequired,
-              title: PropTypes.string.isRequired,
-            }),
-          }),
+          node: BlogPostNodeType({ detail: false }).isRequired,
         }).isRequired
-      ),
-    }),
-  }),
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
-Categories.defaultProps = {
-  pageContext: { categories: null },
-  data: {
-    allMarkdownRemark: {
-      totalCount: null,
-      edges: [],
-    },
-  },
-};
+Categories.defaultProps = {};
 
 export default Categories;
 
@@ -71,6 +61,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           frontmatter {
             category
             date(formatString: "MMMM DD, YYYY")

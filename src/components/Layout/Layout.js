@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './Layout.scss';
+import LocationPropType from '../../propTypes/LocationPropType';
 
 const Layout = ({ children, location }) => (
   <div>
@@ -21,13 +22,7 @@ const Layout = ({ children, location }) => (
 
 Layout.propTypes = {
   children: PropTypes.element.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
-  }),
-};
-
-Layout.defaultProps = {
-  location: { pathname: '/' },
+  location: LocationPropType.isRequired,
 };
 
 export default Layout;

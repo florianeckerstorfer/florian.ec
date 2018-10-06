@@ -1,55 +1,36 @@
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 import Post from '../components/Post/Post';
 import Layout from '../components/Layout/Layout';
+import BlogPostPropNodeType from '../propTypes/BlogPostNodePropType';
+import SitePropType from '../propTypes/SitePropType';
+import LocationPropType from '../propTypes/LocationPropType';
 
-class BlogPostTemplate extends React.PureComponent {
-  render() {
-    const { data } = this.props;
-    const post = data.markdownRemark;
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+const BlogPostTemplate = ({ data, location }) => {
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
 
-    return (
-      <Layout>
-        <div>
-          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-          <Post frontmatter={post.frontmatter} html={post.html} detail />
-        </div>
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout location={location}>
+      <div>
+        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <Post frontmatter={post.frontmatter} html={post.html} detail />
+      </div>
+    </Layout>
+  );
+};
 
 BlogPostTemplate.propTypes = {
+  location: LocationPropType.isRequired,
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      html: PropTypes.string.isRequired,
-      frontmatter: PropTypes.shape({
-        category: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        tags: PropTypes.arrayOf(PropTypes.string),
-      }),
-    }),
-  }),
+    markdownRemark: BlogPostPropNodeType.isRequired,
+    site: SitePropType.isRequired,
+  }).isRequired,
 };
 
-BlogPostTemplate.defaultProps = {
-  data: {
-    markdownRemark: {
-      id: null,
-      html: null,
-      frontmatter: {
-        category: null,
-        date: null,
-        tags: [],
-      },
-    },
-  },
-};
+BlogPostTemplate.defaultProps = {};
 
 export default BlogPostTemplate;
 

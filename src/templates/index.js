@@ -6,15 +6,18 @@ import Helmet from 'react-helmet';
 import Pagination from '../components/Pagination/Pagination';
 import Post from '../components/Post/Post';
 import Layout from '../components/Layout/Layout';
+import SitePropType from '../propTypes/SitePropType';
+import BlogPostListPropType from '../propTypes/BlogPostListPropType';
+import LocationPropType from '../propTypes/LocationPropType';
 
-const BlogIndex = ({ data, pageContext }) => {
+const BlogIndex = ({ data, pageContext, location }) => {
   const { group, index, first, last, pageCount } = pageContext;
   const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
   const nextUrl = (index + 1).toString();
   const siteTitle = get(data, 'site.siteMetadata.title');
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div>
         <Helmet title={siteTitle} />
         {group.map(post => {
@@ -43,29 +46,11 @@ const BlogIndex = ({ data, pageContext }) => {
 };
 
 BlogIndex.propTypes = {
+  location: LocationPropType.isRequired,
   data: PropTypes.shape({
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            html: PropTypes.string.isRequired,
-            frontmatter: PropTypes.shape({
-              category: PropTypes.string.isRequired,
-              date: PropTypes.string.isRequired,
-              path: PropTypes.string.isRequired,
-              tags: PropTypes.arrayOf(PropTypes.string),
-              title: PropTypes.string.isRequired,
-            }),
-          }),
-        })
-      ),
-    }),
-  }),
+    site: SitePropType.isRequired,
+    allMarkdownRemark: BlogPostListPropType.isRequired,
+  }).isRequired,
   pageContext: PropTypes.shape({
     group: PropTypes.array,
     index: PropTypes.number,
@@ -76,10 +61,6 @@ BlogIndex.propTypes = {
 };
 
 BlogIndex.defaultProps = {
-  data: {
-    site: { siteMetadata: { title: null } },
-    allMarkdownRemark: { edges: [] },
-  },
   pageContext: {
     group: {},
     index: 0,
@@ -104,6 +85,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          id
           html
           frontmatter {
             category
