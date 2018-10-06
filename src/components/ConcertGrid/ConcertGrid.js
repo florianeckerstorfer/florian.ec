@@ -19,7 +19,10 @@ const ConcertGrid = ({ concerts }) => (
           {concerts[year]
             .filter(concert => concert.sizes !== null)
             .map(concert => (
-              <ConcertGridItem key={concert.name} concert={concert} />
+              <ConcertGridItem
+                key={`${concert.name}-${concert.date}`}
+                concert={concert}
+              />
             ))}
         </div>
       ))}
