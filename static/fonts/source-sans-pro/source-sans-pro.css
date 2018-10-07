@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./SourceSansPro-Regular.eot');
+  src: url('./SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./SourceSansPro-Regular.otf.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./SourceSansPro-Regular.otf.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./SourceSansPro-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./SourceSansPro-Bold.eot');
+  src: url('./SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('./SourceSansPro-Bold.otf.woff2') format('woff2'), /* Super Modern Browsers */
+      url('./SourceSansPro-Bold.otf.woff') format('woff'), /* Pretty Modern Browsers */
+      url('./SourceSansPro-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: normal;
+    src: url('./SourceSansPro-It.eot');
+    src: url('./SourceSansPro-It.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./SourceSansPro-It.otf.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./SourceSansPro-It.otf.woff') format('woff'), /* Pretty Modern Browsers */
+        url('./SourceSansPro-It.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }

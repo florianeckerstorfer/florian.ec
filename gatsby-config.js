@@ -127,5 +127,14 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     feedGeneratorPlugin,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Source Sans Pro'],
+          urls: ['/fonts/source-sans-pro/source-sans-pro.css'],
+        },
+      },
+    },
   ],
 };
