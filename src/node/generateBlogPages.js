@@ -42,7 +42,7 @@ exports.default = (graphql, createPage) =>
           edges: posts,
           createPage,
           pageTemplate: 'src/templates/index.js',
-          pageLength: 5,
+          pageLength: 30,
         });
 
         createBlogPostPages(createPage, posts);

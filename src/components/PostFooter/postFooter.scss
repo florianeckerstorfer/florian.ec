@@ -8,34 +8,4 @@
     margin-left: $page-margin-lg;
     margin-right: $page-margin-lg;
   }
-
-  .tags {
-    color: #505050;
-    display: flex;
-    flex-direction: row;
-
-    a {
-      display: inline-block;
-      font-weight: bold;
-      margin-right: .5rem;
-      text-decoration: none;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    .tag {
-      color: #505050;
-      font-weight: normal;
-      text-decoration: underline;
-
-    }
-
-    a:hover {
-      .tag {
-        text-decoration: none;
-      }
-    }
-  }
 }

@@ -1,19 +1,11 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import PostTags from '../PostTags/PostTags';
 import './postFooter.scss';
 
 const PostFooter = ({ frontmatter }) => (
   <div className="post-footer">
-    {frontmatter.tags && (
-      <div className="tags">
-        {frontmatter.tags.map(tag => (
-          <Link to={`/tags/${tag.toLowerCase()}`} key={tag}>
-            #<span className="tag">{tag}</span>
-          </Link>
-        ))}
-      </div>
-    )}
+    {frontmatter.tags && <PostTags tags={frontmatter.tags} />}
   </div>
 );
 

@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.post-tags {
+    color: $primary-color;
+    display: flex;
+    flex-direction: row;
+
+    a {
+      display: inline-block;
+      font-weight: bold;
+      margin-right: .5rem;
+      text-decoration: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .tag {
+      color: $grey-link-color;
+      font-weight: normal;
+      text-decoration: underline;
+
+    }
+
+    a:hover {
+      .tag {
+        text-decoration: none;
+      }
+    }
+  }

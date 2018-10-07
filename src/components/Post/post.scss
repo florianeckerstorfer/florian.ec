@@ -1,3 +1,20 @@
+@import '../../variables.scss';
+
 .post {
-  margin: 1rem 0 3rem;
+  padding: 1rem 0;
+
+  &--list {
+    &:hover {
+      position: relative;      
+
+      &:before {
+        border-left: 5px solid $primary-color;
+        content: ' ';
+        height: 100%;
+        left: 16px;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
 }
