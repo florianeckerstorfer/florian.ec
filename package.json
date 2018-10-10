@@ -82,9 +82,8 @@
     "url": "git+https://github.com/florianeckerstorfer/florian.ec.git"
   },
   "scripts": {
-    "start": "npm run dev",
-    "dev": "npm run build-plugins && npm run develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx ./src",
+    "start": "npm run develop",
+    "lint": "eslint --ext .js,.jsx ./src",
     "jest": "jest",
     "coverage": "npm run lint && jest --coverage",
     "test": "npm run lint && jest",
@@ -92,9 +91,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "cv-pdf": "cd cv-pdf && pdflatex cv.tex && cp cv.pdf florian-eckerstorfer-cv.pdf",
-    "clean": "rm -rf .cache/",
-    "build-plugins": "npm run build-plugin-feed-fec",
-    "build-plugin-feed-fec": "babel plugins/gatsby-plugin-feed-fec/src --out-dir plugins/gatsby-plugin-feed-fec"
+    "clean": "rm -rf .cache/"
   },
   "husky": {
     "hooks": {
