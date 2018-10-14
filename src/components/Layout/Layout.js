@@ -11,6 +11,7 @@ const Layout = ({ children, location }) => (
   <div>
     <Helmet>
       <link rel="icon" href="/favicon.png" />
+      <html lang="en" />
     </Helmet>
     <div className="container">
       <Header isIndex={location.pathname === '/'} />
