@@ -4,6 +4,8 @@ const SitePropType = PropTypes.shape({
   siteMetadata: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string,
+    siteUrl: PropTypes.string,
+    description: PropTypes.string,
   }).isRequired,
 });
 

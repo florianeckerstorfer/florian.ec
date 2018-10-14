@@ -7,12 +7,11 @@ import Layout from '../components/Layout/Layout';
 import BlogPostPropNodeType from '../propTypes/BlogPostNodePropType';
 import SitePropType from '../propTypes/SitePropType';
 import LocationPropType from '../propTypes/LocationPropType';
-import getSiteUrl from '../util/getSiteUrl';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
-  const postUrl = `${getSiteUrl()}${post.frontmatter.path}`;
+  const { siteTitle, siteUrl } = data.site.siteMetadata;
+  const postUrl = `${siteUrl}${post.frontmatter.path}`;
 
   return (
     <Layout location={location}>
@@ -48,6 +47,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
         author
       }
     }
