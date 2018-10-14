@@ -4,6 +4,7 @@ date: 2017-12-29T17:00:00.000Z
 category: Music
 tags: [ music ]
 path: /favourite-albums-2017/
+description: List of my favourite albums of 2017.
 published: true
 ---
 

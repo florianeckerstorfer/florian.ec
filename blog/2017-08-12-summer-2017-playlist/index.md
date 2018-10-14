@@ -4,6 +4,7 @@ date: 2017-08-02T00:00:00.000Z
 category: Music
 tags: [ playlist ]
 path: /summer-2017-playlist/
+description: I made a playlist for the summer of 2017.
 published: true
 ---
 

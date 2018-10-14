@@ -3,6 +3,7 @@ title: Streams in Gulp.js
 date: 2015-10-13T00:00:00.000Z
 category: Development
 tags: [ gulp, nodejs ]
+description: I gave a talk at Vienna.js about Streams in Gulp.js
 path: /video-streams-in-gulpjs/
 published: true
 ---

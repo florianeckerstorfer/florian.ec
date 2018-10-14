@@ -3,6 +3,7 @@ title: "Chain: Better Arrays in PHP"
 date: 2015-09-28T00:00:00.000Z
 category: Development
 tags: [ php ]
+description: I made a library to better work with arrays in PHP and I am going to explain how it works in this article.
 path: /chain-better-arrays-in-php/
 published: true
 ---

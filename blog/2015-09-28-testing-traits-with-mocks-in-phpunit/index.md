@@ -3,6 +3,7 @@ title: "Testing Traits with Mocks in PHPUnit"
 date: 2015-09-28T00:00:00.000Z
 category: Development
 tags: [ php, phpunit ]
+description: In this article I am going to explain how you can test traits in PHPUnit.
 path: /testing-traits-with-mocks-in-phpunit/
 published: true
 ---

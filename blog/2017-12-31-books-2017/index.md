@@ -3,6 +3,7 @@ title: Books I Have Read in 2017
 date: 2017-12-31T17:00:00.000Z
 category: Private
 tags: [ books ]
+description: The list of books I have read in 2017.
 path: /books-2017/
 published: true
 ---

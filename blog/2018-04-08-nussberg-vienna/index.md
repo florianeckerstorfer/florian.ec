@@ -3,6 +3,7 @@ title: Nussberg, Vienna
 date: 2018-04-08T22:00:00.000Z
 category: Photography
 tags: [ photo, vienna ]
+description: Photos from a hike to Nussberg, Vienna.
 path: /nussberg-vienna/
 layout: photo-story
 published: true

@@ -3,6 +3,7 @@ title: New Albums on April 6, 2018
 date: 2018-04-06T18:00:00.000Z
 category: Music
 tags: [ music ]
+description: New albums that came out on April 6, 2018 that I like.
 path: /new-albums-2018-04-06/
 published: true
 ---

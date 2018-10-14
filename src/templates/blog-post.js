@@ -15,7 +15,12 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
+          {post.frontmatter.description && (
+            <meta name="description" content={post.frontmatter.description} />
+          )}
+          <meta property="og:type" content="article" />
+        </Helmet>
         <Post frontmatter={post.frontmatter} html={post.html} detail />
       </div>
     </Layout>
@@ -48,6 +53,7 @@ export const pageQuery = graphql`
       frontmatter {
         category
         date(formatString: "MMMM DD, YYYY")
+        description
         layout
         path
         tags

@@ -3,6 +3,7 @@ title: Night Owl for iTerm2 🌃
 date: 2018-05-22T23:00:00.000Z
 category: Development
 tags: [ iterm2, themes ]
+description: I made a theme based on Night Owl for iTerm2.
 path: /night-owl-itermcolors/
 published: true
 ---

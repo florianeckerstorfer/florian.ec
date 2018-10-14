@@ -3,7 +3,9 @@ title: The Pixar Movie Situation
 date: 2014-06-05T00:00:00.000Z
 category: Private
 tags: [ book, pixar, creativity, movies ]
+description: I have read the book Creativity, Inc. by Ed Catmull and watched a bunch of Pixar movies.
 path: /pixar-movie-situation/
+published: true
 ---
 
 Last Saturday I finished reading [Creativity, Inc.](http://www.amazon.de/gp/product/0593070100/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0593070100&linkCode=as2&tag=fecom-21) by Ed Catmull, the president of Pixar Animation and Disney Animation. He writes about how to build and run a creative company and how Pixar's management fosters creativity and innovation.

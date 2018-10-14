@@ -2,8 +2,10 @@
 title: United Kingdom, August 
 date: 2015-11-03T00:00:00.000Z
 tags: [ photos, united kingdom, scotland, england, wales ]
+description: Photos from my trip to England, Scotland and Wales in August 2015.
 path: /united-kingdom-august-2015/
 category: Photos
+published: true
 ---
 
 For the last couple days the weather in Vienna was cold, wet, and windy. This reminded me of my trip to Scotland in the summer and the fact that I still have not posted any pictures here. Many of these I have already put on [Instagram](https://www.instagram.com/florian_/) or [Tumblr](http://42reasons.com), but I wanted to all have them here on my on server.
