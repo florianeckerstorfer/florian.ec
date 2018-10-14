@@ -136,5 +136,17 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Florian Eckerstorfer',
+        short_name: 'Florian.ec',
+        start_url: '/',
+        background_color: '#a8a3b9',
+        theme_color: '#7b00fd',
+        display: 'minimal-ui',
+        icon: 'static/logo-square.png', // This path is relative to the root of the site.
+      },
+    },
   ],
 };
