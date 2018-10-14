@@ -7,10 +7,12 @@ import Layout from '../components/Layout/Layout';
 import BlogPostPropNodeType from '../propTypes/BlogPostNodePropType';
 import SitePropType from '../propTypes/SitePropType';
 import LocationPropType from '../propTypes/LocationPropType';
+import getSiteUrl from '../util/getSiteUrl';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
+  const postUrl = `${getSiteUrl()}${post.frontmatter.path}`;
 
   return (
     <Layout location={location}>
@@ -19,7 +21,9 @@ const BlogPostTemplate = ({ data, location }) => {
           {post.frontmatter.description && (
             <meta name="description" content={post.frontmatter.description} />
           )}
+          <meta property="og:title" content={post.frontmatter.title} />
           <meta property="og:type" content="article" />
+          <meta property="og:url" content={postUrl} />
         </Helmet>
         <Post frontmatter={post.frontmatter} html={post.html} detail />
       </div>
