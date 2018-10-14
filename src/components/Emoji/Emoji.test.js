@@ -9,6 +9,6 @@ test('Emoji should render emoji with a11y', () => {
   expect(component.exists()).toBe(true);
   expect(component.hasClass('emoji')).toBe(true);
   expect(component.prop('role')).toBe('img');
-  expect(component.prop('aria-labelledby')).toBe('heart');
+  expect(component.prop('aria-label')).toBe('heart');
   expect(component.text()).toBe('❤️');
 });
