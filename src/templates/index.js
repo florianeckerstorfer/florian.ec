@@ -15,11 +15,18 @@ const BlogIndex = ({ data, pageContext, location }) => {
   const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
   const nextUrl = (index + 1).toString();
   const siteTitle = get(data, 'site.siteMetadata.title');
+  const siteDescription = get(data, 'site.siteMetadata.description');
+  const siteUrl = get(data, 'site.siteMetadata.siteUrl');
 
   return (
     <Layout location={location}>
       <div>
-        <Helmet title={siteTitle} />
+        <Helmet title={siteTitle}>
+          <meta name="description" content={siteDescription} />
+          <meta property="og:title" content={siteTitle} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={siteUrl} />
+        </Helmet>
         {group.map(post => {
           if (post.node.path !== '/404/') {
             return (
@@ -77,6 +84,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
     allMarkdownRemark(
