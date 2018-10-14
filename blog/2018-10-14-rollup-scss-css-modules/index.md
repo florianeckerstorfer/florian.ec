@@ -1,5 +1,5 @@
 ---
-title: Bundle Libraries with SCSS and CSS Modules using Rollup
+title: Bundle Libraries With SCSS and CSS Modules Using Rollup
 date: 2018-10-14T18:00:00.000Z
 category: Development
 tags: [ javascript, react, sass, css modules, rollup ]
