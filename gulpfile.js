@@ -10,7 +10,6 @@ const imagemin    = require('gulp-imagemin');
 const sourcemaps  = require('gulp-sourcemaps');
 const uncss       = require('gulp-uncss');
 const size        = require('gulp-size');
-const zopfli      = require('gulp-zopfli');
 const gulpif      = require('gulp-if');
 const gutil       = require('gulp-util');
 const rimraf      = require('rimraf');
