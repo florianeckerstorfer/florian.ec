@@ -11,8 +11,13 @@ import '../fonts/source-sans.css';
 import '../fonts/source-serif.css';
 import Footer from '../components/Footer/Footer';
 import styles from './Layout.module.css';
+import MainNav from '../components/MainNav/MainNav';
 
-const Layout = ({ children }) => (
+interface IProps {
+  children: React.ReactChildren;
+}
+
+const Layout = ({ children }: IProps) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,6 +31,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <MainNav />
         <main className={styles.main}>{children}</main>
         <Footer />
       </>

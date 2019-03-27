@@ -1,0 +1,22 @@
+.nav {
+  font-family: var(--headlineFont);
+  margin: 0 auto;
+  max-width: var(--maxPageWidth);
+  padding: 0 var(--pageSpacing);
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  margin: 0;
+}
+
+.item {
+  margin: 0;
+}
+
+.item::after {
+  content: '.';
+  margin-right: 1rem;
+}
