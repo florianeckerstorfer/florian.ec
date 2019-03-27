@@ -1,0 +1,32 @@
+.header {
+  align-items: center;
+  display: flex;
+  font: bold 1.5rem/1 var(--headlineFont);
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: var(--maxPageWidth);
+  padding: 1rem var(--pageSpacing);
+}
+
+.logo:link,
+.logo:active,
+.logo:visited {
+  color: var(--violet);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo:link::after,
+.logo:active::after,
+.logo:visited::after {
+  background: var(--black);
+  content: '';
+  display: block;
+  height: 2px;
+  transition: width 250ms;
+  width: 0px;
+}
+
+.logo:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+:root {
+  --violet: #7b00fd;
+  --red: #fd0004;
+  --white: #fff;
+  --black: #000;
+
+  --headlineFont: 'League Spartan', Helvetica, Arial, sans-serif;
+  --bodyFont: 'Source Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --smallText: 0.85rem;
+
+  --pageSpacing: 0.5rem;
+  --maxPageWidth: 800px;
+
+  --easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

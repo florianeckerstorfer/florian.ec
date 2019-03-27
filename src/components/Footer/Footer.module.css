@@ -1,0 +1,30 @@
+.footer {
+  border-top: 2px solid var(--violet);
+  font-size: var(--smallText);
+  padding: 0.5rem var(--pageSpacing);
+  position: relative;
+}
+
+.footer::before {
+  border-top: 1px solid var(--violet);
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  top: -4px;
+  transition: top 600ms var(--easeInOutBack);
+  width: 100%;
+}
+
+.footer:hover::before {
+  top: -16px;
+}
+
+.footer p {
+  margin: 0 auto;
+  max-width: var(--maxPageWidth);
+}
+
+.heart {
+  color: var(--red);
+}
