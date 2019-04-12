@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import 'prism-theme-night-owl';
 import { StaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import Header from '../components/Header/Header';
 import './layout.css';
