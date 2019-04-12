@@ -4,13 +4,37 @@
   --white: #fff;
   --black: #000;
 
-  --headlineFont: 'League Spartan', Helvetica, Arial, sans-serif;
-  --bodyFont: 'Source Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --headlineFont: 'Source Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  --bodyFont: 'Source Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --bodyFontSize: 1.125rem;
+
+  --logoFont: var(--headlineFont);
+  --logoWeight: bold;
+  --logoLineHeight: 1;
 
   --smallText: 0.85rem;
 
+  --contentLineHeight: 1.3;
+
   --pageSpacing: 0.5rem;
-  --maxPageWidth: 800px;
+  --maxPageWidth: 640px;
 
   --easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+html {
+  --headlineFontSize: 1.3rem;
+  --logoFontSize: 1.3rem;
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    --headlineFontSize: 1.5rem;
+    --logoFontSize: 1.5rem;
+  }
 }

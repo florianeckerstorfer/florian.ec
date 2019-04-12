@@ -1,0 +1,5 @@
+.h1 {
+  font-family: var(--headlineFont);
+  font-size: var(--headlineFontSize);
+  font-weight: bold;
+}

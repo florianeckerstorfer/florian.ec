@@ -1,5 +1,4 @@
 .nav {
-  font-family: var(--headlineFont);
   margin: 0 auto;
   max-width: var(--maxPageWidth);
   padding: 0 var(--pageSpacing);
@@ -10,6 +9,7 @@
   list-style: none;
   flex-direction: row;
   margin: 0;
+  padding: 0;
 }
 
 .item {
@@ -19,4 +19,10 @@
 .item::after {
   content: '.';
   margin-right: 1rem;
+}
+
+.link:link,
+.link:active,
+.link:visited {
+  color: var(--black);
 }

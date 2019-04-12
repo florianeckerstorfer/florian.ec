@@ -1,3 +1,8 @@
+.body {
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+}
+
 .main {
   padding: 0 var(--pageSpacing);
 }

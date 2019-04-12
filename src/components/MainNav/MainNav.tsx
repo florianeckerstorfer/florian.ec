@@ -7,13 +7,19 @@ function MainNav() {
     <nav className={styles.nav}>
       <ul className={styles.list}>
         <li className={styles.item}>
-          <Link to="/">Blog</Link>
+          <Link className={styles.link} to="/">
+            Blog
+          </Link>
         </li>
         <li className={styles.item}>
-          <Link to="/about">About</Link>
+          <Link className={styles.link} to="/about">
+            About
+          </Link>
         </li>
         <li className={styles.item}>
-          <Link to="/contact">Contact</Link>
+          <Link className={styles.link} to="/contact">
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>
