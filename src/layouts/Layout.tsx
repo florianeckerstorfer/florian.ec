@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Header from '../components/Header/Header';
 import './layout.css';
 import '../variables.css';
+import '../fonts/league-spartan.css';
 import '../fonts/source-sans.css';
 import '../fonts/source-serif.css';
 import Footer from '../components/Footer/Footer';

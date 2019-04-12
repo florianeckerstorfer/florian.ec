@@ -13,7 +13,7 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --bodyFontSize: 1.125rem;
 
-  --logoFont: var(--headlineFont);
+  --logoFont: 'League Spartan';
   --logoWeight: bold;
   --logoLineHeight: 1;
 
@@ -29,12 +29,11 @@
 
 html {
   --headlineFontSize: 1.3rem;
-  --logoFontSize: 1.3rem;
+  --logoFontSize: 3rem;
 }
 
 @media screen and (min-width: 375px) {
   html {
     --headlineFontSize: 1.5rem;
-    --logoFontSize: 1.5rem;
   }
 }

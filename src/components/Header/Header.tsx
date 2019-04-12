@@ -11,7 +11,7 @@ function Header({ siteTitle }: IProps) {
   return (
     <header className={styles.header}>
       <Link className={styles.logo} to="/">
-        {siteTitle}
+        FE
       </Link>
       .
     </header>

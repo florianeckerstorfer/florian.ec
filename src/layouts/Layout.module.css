@@ -1,8 +1,14 @@
 .body {
   font-family: var(--bodyFont);
   font-size: var(--bodyFontSize);
+  display: grid;
+  grid-template-areas:
+    'header mainnav'
+    'main main'
+    'footer footer';
+  grid-template-columns: auto 1fr;
 }
 
 .main {
-  padding: 0 var(--pageSpacing);
+  grid-area: main;
 }
