@@ -23,7 +23,7 @@
 
 .footer p {
   margin: 0 auto;
-  max-width: var(--maxPageWidth);
+  max-width: var(--maxContentWidth);
 }
 
 .heart {

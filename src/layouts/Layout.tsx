@@ -33,7 +33,9 @@ const Layout = ({ children }: IProps) => (
       <div className={styles.body}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <MainNav />
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main} role="main">
+          {children}
+        </main>
         <Footer />
       </div>
     )}

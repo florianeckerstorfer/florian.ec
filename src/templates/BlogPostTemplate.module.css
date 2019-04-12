@@ -1,9 +1,22 @@
 .article {
+}
+
+.header {
   margin: 0 auto;
   max-width: var(--maxPageWidth);
   padding: 0 var(--pageSpacing);
 }
 
+.meta {
+  font: italic 1rem var(--headlineFont);
+  margin: 1rem auto 3rem;
+  max-width: var(--maxContentWidth);
+  text-align: center;
+}
+
 .content {
+  margin: 0 auto;
+  max-width: var(--maxContentWidth);
+  padding: 0 var(--pageSpacing);
   line-height: var(--contentLineHeight);
 }

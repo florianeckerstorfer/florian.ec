@@ -36,8 +36,10 @@ class BlogPostTemplate extends React.PureComponent<IProps> {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
-          <H1>{post.frontmatter.title}</H1>
-          <p>{post.frontmatter.date}</p>
+          <header className={styles.header}>
+            <H1>{post.frontmatter.title}</H1>
+          </header>
+          <div className={styles.meta}>{post.frontmatter.date}</div>
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: post.html }}

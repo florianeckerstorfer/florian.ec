@@ -4,7 +4,7 @@
   --white: #fff;
   --black: #000;
 
-  --headlineFont: 'Source Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  --headlineFont: 'Source Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
@@ -22,18 +22,19 @@
   --contentLineHeight: 1.3;
 
   --pageSpacing: 0.5rem;
-  --maxPageWidth: 640px;
+  --maxContentWidth: 640px;
+  --maxPageWidth: 960px;
 
   --easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 html {
-  --headlineFontSize: 1.3rem;
+  --headlineFontSize: 1.5rem;
   --logoFontSize: 3rem;
 }
 
 @media screen and (min-width: 375px) {
   html {
-    --headlineFontSize: 1.5rem;
+    --headlineFontSize: 2.5rem;
   }
 }
