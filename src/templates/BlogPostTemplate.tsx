@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
@@ -8,6 +8,7 @@ import IBlogFrontmatter from '../types/IBlogFrontmatter';
 import IPageContext from '../types/IPageContext';
 import styles from './BlogPostTemplate.module.css';
 import H1 from '../components/H1/H1';
+import ArticleNavigation from '../components/ArticleNavigation/ArticleNavigation';
 
 interface IProps {
   location: Location;
@@ -39,29 +40,13 @@ class BlogPostTemplate extends React.PureComponent<IProps> {
           <header className={styles.header}>
             <H1>{post.frontmatter.title}</H1>
           </header>
-          <div className={styles.meta}>{post.frontmatter.date}</div>
+          <aside className={styles.meta}>{post.frontmatter.date}</aside>
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <hr />
 
-          <ul>
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
+          <ArticleNavigation previous={previous} next={next} />
         </article>
       </Layout>
     );

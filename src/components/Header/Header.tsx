@@ -10,7 +10,7 @@ interface IProps {
 function Header({ siteTitle }: IProps) {
   return (
     <header className={styles.header}>
-      <Link className={styles.logo} to="/">
+      <Link className={styles.logo} title={siteTitle} to="/">
         FE
       </Link>
       .
