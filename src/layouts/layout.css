@@ -11,3 +11,8 @@ body {
 pre[class*='language-'] {
   border-radius: 3px;
 }
+
+.gatsby-highlight {
+  max-width: calc(100vw - 2 * var(--pageSpacing));
+  overflow-x: scroll;
+}
