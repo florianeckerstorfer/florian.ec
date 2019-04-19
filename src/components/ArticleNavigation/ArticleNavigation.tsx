@@ -14,14 +14,18 @@ function ArticleNavigation({ previous, next }: IProps) {
       <ul className={styles.list}>
         <li className={styles.previous}>
           {previous && (
-            <Link className={styles.link} to={previous.fields.slug} rel="prev">
+            <Link
+              className={styles.link}
+              to={previous.frontmatter.slug}
+              rel="prev"
+            >
               ← {previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li className={styles.next}>
           {next && (
-            <Link className={styles.link} to={next.fields.slug} rel="next">
+            <Link className={styles.link} to={next.frontmatter.slug} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}
