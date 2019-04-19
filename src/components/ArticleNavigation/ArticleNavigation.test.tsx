@@ -5,8 +5,9 @@ import IBlogNode from '../../types/IBlogNode';
 
 const previous: IBlogNode = {
   frontmatter: {
-    title: 'Previous Article',
     date: '2019',
+    slug: 'prev',
+    title: 'Previous Article',
   },
   fields: { slug: '/previous' },
   excerpt: '',
@@ -14,8 +15,9 @@ const previous: IBlogNode = {
 
 const next: IBlogNode = {
   frontmatter: {
-    title: 'Next Article',
     date: '2019',
+    slug: 'next',
+    title: 'Next Article',
   },
   fields: { slug: '/next' },
   excerpt: '',

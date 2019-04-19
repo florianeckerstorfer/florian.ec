@@ -8,6 +8,7 @@ const pageContext: IPageContext = {
   previous: {
     fields: { slug: '/prev' },
     frontmatter: {
+      slug: 'prev',
       title: 'prev post',
       date: '2019',
     },
@@ -15,7 +16,7 @@ const pageContext: IPageContext = {
   },
   next: {
     fields: { slug: '/next' },
-    frontmatter: { title: 'next post', date: '2019' },
+    frontmatter: { slug: 'next', title: 'next post', date: '2019' },
     excerpt: '',
   },
 };
@@ -25,6 +26,7 @@ test('BlogPostTemplate should render', () => {
     site: { siteMetadata: { title: 'site title' } },
     markdownRemark: {
       frontmatter: {
+        slug: 'blog-title',
         title: 'blog title',
         date: '2019',
         description: 'blog description',
