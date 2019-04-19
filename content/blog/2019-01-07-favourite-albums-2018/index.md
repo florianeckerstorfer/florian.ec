@@ -1,6 +1,8 @@
 ---
-title: 'My Favourite Albums of 2018'
-date: '2019-01-07T18:00:00.000Z'
+slug: favourite-albums-2018
+title: My Favourite Albums of 2018
+date: 2019-01-07
+category: Personal
 tags: [music]
 ---
 

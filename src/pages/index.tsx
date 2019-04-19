@@ -31,9 +31,9 @@ function IndexPage({ data, location }: IProps) {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <div key={node.fields.slug}>
+          <div key={node.frontmatter.slug}>
             <h3>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
                 {title}
               </Link>
             </h3>
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            slug
             date(formatString: "MMMM DD, YYYY")
             title
             description

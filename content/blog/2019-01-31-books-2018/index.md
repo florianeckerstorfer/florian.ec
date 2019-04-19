@@ -1,6 +1,8 @@
 ---
-title: 'Books 2018'
-date: '2019-01-31T18:00:00.000Z'
+slug: books-2018
+title: Books 2018
+date: 2019-01-31T18:00:00.000Z
+category: Personal
 tags: [books, reading]
 ---
 

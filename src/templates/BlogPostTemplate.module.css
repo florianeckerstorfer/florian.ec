@@ -1,6 +1,3 @@
-.article {
-}
-
 .header {
   margin: 0 auto;
   max-width: var(--maxPageWidth);
@@ -19,6 +16,16 @@
   max-width: var(--maxContentWidth);
   padding: 0 var(--pageSpacing);
   line-height: var(--contentLineHeight);
+}
+
+.content a:link,
+.content a:active,
+.content a:visited {
+  color: var(--violet);
+}
+
+.content a:hover {
+  text-decoration: none;
 }
 
 :global h2 {

@@ -1,9 +1,10 @@
 ---
-title: "Mock Gatsby's useStaticQuery with Jest"
-date: '2019-04-04T16:31:00.284Z'
-description: 'Explanation how we can mock the useStaticQuery React hook provided by Gatsby in Jest'
-tags: [gatsby, react, jest, testing, mock]
+slug: mock-gatsby-usestaticquery-jest
+title: Mock Gatsby's useStaticQuery with Jest
+date: 2019-04-04T16:31:00.284Z
 category: Development
+tags: [gatsby, react, jest, testing, mock]
+description: Explanation how we can mock the useStaticQuery React hook provided by Gatsby in Jest
 ---
 
 When developing this blog I used a React hook for the very first time: `useStaticQuery()` from Gatsby. This hook executes a GraphQL query and returns the data to the component. In my case I use it to query the site metadata in a component and I want to mock the `useStaticQuery()` hook to verify that my components behaves correctly based on the result of the query.
