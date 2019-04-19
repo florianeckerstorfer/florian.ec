@@ -3,7 +3,7 @@ slug: php-asynchronous-message-queue
 title: Implementing an asynchronous message queue in PHP with React
 date: 2013-05-01
 category: Development
-tags: [php, react, message queue]
+tags: [php, react, 'message queue']
 ---
 
 A fun exercise in programming. Implementing a asynchronous, non-blocking message queue in PHP.
