@@ -44,10 +44,5 @@ test('BlogPostTemplate should render', () => {
   );
 
   expect(component.exists()).toBeTruthy();
-  expect(
-    component
-      .find('H1')
-      .dive()
-      .text()
-  ).toBe('blog title');
+  expect(component.find('Article').prop('post')).toBe(data.markdownRemark);
 });

@@ -4,23 +4,16 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import ISiteMetadata from '../types/ISiteMetadata';
-import IBlogFrontmatter from '../types/IBlogFrontmatter';
 import IPageContext from '../types/IPageContext';
-import styles from './BlogPostTemplate.module.css';
-import H1 from '../components/H1/H1';
-import ArticleNavigation from '../components/ArticleNavigation/ArticleNavigation';
+import Article from '../components/Article/Article';
+import IBlogPost from '../types/IBlogPost';
 
 interface IProps {
   location: Location;
   pageContext: IPageContext;
   data: {
     site: { siteMetadata: ISiteMetadata };
-
-    markdownRemark: {
-      frontmatter: IBlogFrontmatter;
-      excerpt?: string;
-      html: string;
-    };
+    markdownRemark: IBlogPost;
   };
 }
 
@@ -28,26 +21,15 @@ class BlogPostTemplate extends React.PureComponent<IProps> {
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const { previous, next } = this.props.pageContext;
+    const pageContext = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <article className={styles.article}>
-          <SEO
-            title={post.frontmatter.title}
-            description={post.frontmatter.description || post.excerpt}
-          />
-          <header className={styles.header}>
-            <H1>{post.frontmatter.title}</H1>
-          </header>
-          <aside className={styles.meta}>{post.frontmatter.date}</aside>
-          <div
-            className={styles.content}
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-
-          <ArticleNavigation previous={previous} next={next} />
-        </article>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
+        <Article post={post} context={pageContext} />
       </Layout>
     );
   }

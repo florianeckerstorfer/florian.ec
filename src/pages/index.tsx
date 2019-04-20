@@ -31,7 +31,7 @@ function IndexPage({ data, location }: IProps) {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
-          <div key={node.frontmatter.slug}>
+          <article key={node.frontmatter.slug}>
             <h3>
               <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
                 {title}
@@ -43,7 +43,7 @@ function IndexPage({ data, location }: IProps) {
                 __html: node.frontmatter.description || node.excerpt,
               }}
             />
-          </div>
+          </article>
         );
       })}
     </Layout>
