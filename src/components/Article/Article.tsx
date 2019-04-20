@@ -22,8 +22,8 @@ function Article({ post, context }: IProps) {
     <article className={styles.article}>
       <header className={styles.header}>
         <H1>{post.frontmatter.title}</H1>
+        <div className={styles.meta}>{post.frontmatter.date}</div>
       </header>
-      <aside className={styles.meta}>{post.frontmatter.date}</aside>
       <ArticleContent post={post} />
       <ArticleNavigation previous={previous} next={next} />
     </article>

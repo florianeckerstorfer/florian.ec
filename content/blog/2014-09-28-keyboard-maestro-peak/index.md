@@ -2,7 +2,7 @@
 slug: keyboard-maestro-peak
 title: 'Keyboard Maestro Nerdery: Peak'
 date: 2014-09-28
-category: Productivity
+category: Automation
 tags: [keyboard maestro, shortcut, osx, productivity]
 ---
 

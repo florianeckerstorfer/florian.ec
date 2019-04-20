@@ -1,6 +1,8 @@
 export default interface IBlogFrontmatter {
-  slug: string;
-  title: string;
-  description?: string;
+  category: string;
   date: string;
+  description?: string;
+  slug: string;
+  tags?: string[];
+  title: string;
 }

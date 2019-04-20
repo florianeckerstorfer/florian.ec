@@ -4,6 +4,8 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import IBlogEdge from '../types/IBlogEdge';
 import ISiteMetadata from '../types/ISiteMetadata';
+import ArticleList from '../components/ArticleList/ArticleList';
+import H2 from '../components/H2/H2';
 
 interface IProps {
   location: Location;
@@ -17,7 +19,7 @@ interface IProps {
 
 function IndexPage({ data, location }: IProps) {
   const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+  const articles = data.allMarkdownRemark.edges;
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -28,24 +30,8 @@ function IndexPage({ data, location }: IProps) {
           'software developer',
         ]}
       />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <article key={node.frontmatter.slug}>
-            <h3>
-              <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
-                {title}
-              </Link>
-            </h3>
-            <small>{node.frontmatter.date}</small>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </article>
-        );
-      })}
+      <H2>Articles</H2>
+      <ArticleList articles={articles} />
     </Layout>
   );
 }
@@ -71,6 +57,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            category
           }
         }
       }

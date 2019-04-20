@@ -1,6 +1,6 @@
 .footer {
   border-top: 2px solid var(--violet);
-  font-size: var(--smallText);
+  font-size: var(--smallFontSize);
   grid-area: footer;
   padding: 0.5rem var(--pageSpacing);
   position: relative;

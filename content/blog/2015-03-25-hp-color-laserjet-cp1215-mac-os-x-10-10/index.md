@@ -2,7 +2,8 @@
 slug: hp-color-laserjet-cp1215-mac-os-x-10-10
 title: 'Installing HP Color LaserJet CP1215 on Mac OS X 10.10 Yosemite'
 date: 2015-03-25
-tags: [mac, os x, hp color laserjet cp1215, printer]
+category: Mac OS
+tags: [mac os, hp color laserjet cp1215, printer]
 ---
 
 In 2009 I got a HP Color LaserJet CP1215. Unfortunately this printer is not compatible with OS X. Six years ago I managed to install the printer by using open source tools and drivers. In 2012 I got a new MacBook Pro and needed to install the printer again and I [wrote about the process on my old blog](http://webadventures.at/2012/06/10/hp-cp1215-osx/). Now three more years have passed and when OS X 10.10 Yosemite came out I decided to do a clean install, but I didn't install the printer because I didn't need it. A few month have passed since then and now I needed to use the printer again and thus I had to install it again.
