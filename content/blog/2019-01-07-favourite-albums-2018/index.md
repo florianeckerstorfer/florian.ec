@@ -1,5 +1,5 @@
 ---
-slug: favourite-albums-2018
+slug: /favourite-albums-2018
 title: My Favourite Albums of 2018
 date: 2019-01-07
 category: Personal

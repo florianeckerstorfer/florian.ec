@@ -1,5 +1,5 @@
 ---
-slug: php-asynchronous-message-queue
+slug: /php-asynchronous-message-queue
 title: Implementing an asynchronous message queue in PHP with React
 date: 2013-05-01
 category: Development

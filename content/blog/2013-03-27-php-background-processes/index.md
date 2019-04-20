@@ -1,5 +1,5 @@
 ---
-slug: php-background-processes
+slug: /php-background-processes
 title: Running background processes in PHP
 date: 2013-03-27
 category: Development

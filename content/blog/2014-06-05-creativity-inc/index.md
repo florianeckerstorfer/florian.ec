@@ -1,5 +1,5 @@
 ---
-slug: pixar-movie-situation
+slug: /pixar-movie-situation
 title: The Pixar Movie Situation
 date: 2014-06-05T18:00:00.000Z
 category: Personal

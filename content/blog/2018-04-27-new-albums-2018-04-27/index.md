@@ -1,5 +1,5 @@
 ---
-slug: new-albums-2018-04-27
+slug: /new-albums-2018-04-27
 title: New Albums on April 27, 2018
 date: 2017-04-27
 category: Music

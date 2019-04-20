@@ -1,5 +1,5 @@
 ---
-slug: alfred-iterm2-tabs
+slug: /alfred-iterm2-tabs
 title: 'Alfred Workflow to Search and Switch iTerm2 Tabs'
 date: 2015-07-23
 category: Automation

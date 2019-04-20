@@ -1,5 +1,5 @@
 ---
-slug: testing-traits-with-mocks-in-phpunit
+slug: /testing-traits-with-mocks-in-phpunit
 title: 'Testing Traits with Mocks in PHPUnit'
 date: 2015-09-28
 category: Development

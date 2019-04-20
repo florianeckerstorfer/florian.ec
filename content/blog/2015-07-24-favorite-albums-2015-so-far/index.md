@@ -1,5 +1,5 @@
 ---
-slug: favourite-albums-2015-so-far
+slug: /favourite-albums-2015-so-far
 title: 'My Favourite Albums of 2015 (so far)'
 date: 2015-07-24
 category: Music

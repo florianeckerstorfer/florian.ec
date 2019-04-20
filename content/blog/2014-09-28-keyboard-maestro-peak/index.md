@@ -1,5 +1,5 @@
 ---
-slug: keyboard-maestro-peak
+slug: /keyboard-maestro-peak
 title: 'Keyboard Maestro Nerdery: Peak'
 date: 2014-09-28
 category: Automation

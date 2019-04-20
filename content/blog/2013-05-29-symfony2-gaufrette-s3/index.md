@@ -1,5 +1,5 @@
 ---
-slug: symfony2-gaufrette-s3
+slug: /symfony2-gaufrette-s3
 title: Upload files to Amazon S3 with Symfony2 and Gaufrette
 date: 2013-05-29
 category: Development

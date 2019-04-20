@@ -1,5 +1,5 @@
 ---
-slug: books-2016
+slug: /books-2016
 title: 'Books I Have Read in 2016'
 date: 2017-01-08
 category: Personal

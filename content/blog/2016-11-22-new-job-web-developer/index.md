@@ -1,5 +1,5 @@
 ---
-slug: new-job-web-developer
+slug: /new-job-web-developer
 title: "I'm Looking For a New Job As Full Time Web Developer"
 date: 2016-11-22
 category: Personal

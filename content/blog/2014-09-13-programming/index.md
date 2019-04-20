@@ -1,5 +1,5 @@
 ---
-slug: programming
+slug: /programming
 title: What Does it Mean to be a Programmer
 date: 2014-09-13
 category: Programming

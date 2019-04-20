@@ -1,5 +1,5 @@
 ---
-slug: favourite-albums-2017
+slug: /favourite-albums-2017
 title: 'My Favourite Albums of 2017'
 date: 2017-12-29
 category: Music

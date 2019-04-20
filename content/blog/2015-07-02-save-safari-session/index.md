@@ -1,5 +1,5 @@
 ---
-slug: save-safari-session
+slug: /save-safari-session
 title: 'Save Current Safari Session with AppleScript'
 date: 2015-07-02
 category: Automation
