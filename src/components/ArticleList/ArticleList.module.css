@@ -1,25 +1,6 @@
 .list {
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 0;
   list-style: none;
   max-width: var(--maxContentWidth);
-}
-
-.listItem {
-  margin-bottom: 2rem;
-}
-
-.link {
-  color: var(--violet);
-  display: block;
-  font: bold 1.5rem var(--headlineFont);
-}
-
-.link:hover {
-  text-decoration: none;
-}
-
-.meta {
-  font-size: var(--smallFontSize);
-  line-height: 1.5;
 }

@@ -19,6 +19,25 @@ interface IProps {
   title?: string;
 }
 
+interface Data {
+  site: {
+    siteMetadata: {
+      title: string;
+    };
+  };
+}
+
+export const renderLayout = (children: React.ReactNode) => (data: Data) => (
+  <div className={styles.body}>
+    <Header siteTitle={data.site.siteMetadata.title} />
+    <MainNav />
+    <main className={styles.main} role="main">
+      {children}
+    </main>
+    <Footer />
+  </div>
+);
+
 const Layout = ({ children }: IProps) => (
   <StaticQuery
     query={graphql`
@@ -30,16 +49,7 @@ const Layout = ({ children }: IProps) => (
         }
       }
     `}
-    render={data => (
-      <div className={styles.body}>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <MainNav />
-        <main className={styles.main} role="main">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    )}
+    render={renderLayout(children)}
   />
 );
 
