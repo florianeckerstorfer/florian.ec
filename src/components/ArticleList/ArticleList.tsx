@@ -2,6 +2,8 @@ import React, { ReactElement } from 'react';
 import IBlogEdge from '../../types/IBlogEdge';
 import { Link } from 'gatsby';
 import styles from './ArticleList.module.css';
+import Label from '../Label/Label';
+import ArticleDate from '../ArticleDate/ArticleDate';
 
 interface IProps {
   articles: IBlogEdge[];
@@ -19,10 +21,8 @@ function ArticleList({ articles }: IProps): ReactElement {
                 {title}
               </Link>
               <div className={styles.meta}>
-                <span className={styles.category}>
-                  {node.frontmatter.category}
-                </span>
-                <span className={styles.date}>{node.frontmatter.date}</span>
+                <Label>{node.frontmatter.category}</Label>
+                <ArticleDate date={node.frontmatter.date} />
               </div>
             </article>
           </li>

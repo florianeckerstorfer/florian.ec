@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import IBlogEdge from '../types/IBlogEdge';
 import ISiteMetadata from '../types/ISiteMetadata';
 import ArticleList from '../components/ArticleList/ArticleList';
-import H2 from '../components/H2/H2';
 
 interface IProps {
   location: Location;
@@ -30,7 +29,6 @@ function IndexPage({ data, location }: IProps) {
           'software developer',
         ]}
       />
-      <H2>Articles</H2>
       <ArticleList articles={articles} />
     </Layout>
   );
@@ -54,7 +52,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             slug
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY-MM-DD")
             title
             description
             category

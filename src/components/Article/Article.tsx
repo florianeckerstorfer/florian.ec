@@ -5,6 +5,7 @@ import ArticleNavigation from '../ArticleNavigation/ArticleNavigation';
 import IBlogFrontmatter from '../../types/IBlogFrontmatter';
 import IPageContext from '../../types/IPageContext';
 import ArticleContent from '../ArticleContent/ArticleContent';
+import ArticleDate from '../ArticleDate/ArticleDate';
 
 interface IProps {
   post: {
@@ -22,7 +23,9 @@ function Article({ post, context }: IProps) {
     <article className={styles.article}>
       <header className={styles.header}>
         <H1>{post.frontmatter.title}</H1>
-        <div className={styles.meta}>{post.frontmatter.date}</div>
+        <div className={styles.meta}>
+          <ArticleDate date={post.frontmatter.date} />
+        </div>
       </header>
       <ArticleContent post={post} />
       <ArticleNavigation previous={previous} next={next} />

@@ -12,7 +12,7 @@
 .link {
   color: var(--violet);
   display: block;
-  font: 1.5rem var(--headlineFont);
+  font: bold 1.5rem var(--headlineFont);
 }
 
 .link:hover {
@@ -21,16 +21,5 @@
 
 .meta {
   font-size: var(--smallFontSize);
-}
-
-.category {
-  background: var(--violet);
-  border-radius: 3px;
-  color: var(--white);
-  margin-right: 0.5rem;
-  padding: 0 0.25rem;
-}
-
-.date {
-  font-style: italic;
+  line-height: 1.5;
 }

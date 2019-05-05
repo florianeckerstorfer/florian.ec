@@ -5,7 +5,8 @@ import IBlogNode from '../../types/IBlogNode';
 
 const previous: IBlogNode = {
   frontmatter: {
-    date: '2019',
+    category: 'FB',
+    date: '2019-04-15',
     slug: 'prev',
     title: 'Previous Article',
   },
@@ -15,7 +16,8 @@ const previous: IBlogNode = {
 
 const next: IBlogNode = {
   frontmatter: {
-    date: '2019',
+    category: 'FB',
+    date: '2019-04-25',
     slug: 'next',
     title: 'Next Article',
   },
@@ -23,28 +25,30 @@ const next: IBlogNode = {
   excerpt: '',
 };
 
-test('ArticleNavigation should render previous and next links', () => {
-  const component = shallow(
-    <ArticleNavigation previous={previous} next={next} />
-  );
+describe('ArticleNavigation', () => {
+  it('should render previous and next links', () => {
+    const component = shallow(
+      <ArticleNavigation previous={previous} next={next} />
+    );
 
-  expect(component.exists()).toBe(true);
-  expect(component.find('.previous .link').exists()).toBe(true);
-  expect(component.find('.next .link').exists()).toBe(true);
-});
+    expect(component.exists()).toBe(true);
+    expect(component.find('.previous .link').exists()).toBe(true);
+    expect(component.find('.next .link').exists()).toBe(true);
+  });
 
-test('ArticleNavigation should render only previous link', () => {
-  const component = shallow(<ArticleNavigation previous={previous} />);
+  it('should render only previous link', () => {
+    const component = shallow(<ArticleNavigation previous={previous} />);
 
-  expect(component.exists()).toBe(true);
-  expect(component.find('.previous .link').exists()).toBe(true);
-  expect(component.find('.next .link').exists()).toBe(false);
-});
+    expect(component.exists()).toBe(true);
+    expect(component.find('.previous .link').exists()).toBe(true);
+    expect(component.find('.next .link').exists()).toBe(false);
+  });
 
-test('ArticleNavigation should render only next link', () => {
-  const component = shallow(<ArticleNavigation next={next} />);
+  it('should render only next link', () => {
+    const component = shallow(<ArticleNavigation next={next} />);
 
-  expect(component.exists()).toBe(true);
-  expect(component.find('.previous .link').exists()).toBe(false);
-  expect(component.find('.next .link').exists()).toBe(true);
+    expect(component.exists()).toBe(true);
+    expect(component.find('.previous .link').exists()).toBe(false);
+    expect(component.find('.next .link').exists()).toBe(true);
+  });
 });
