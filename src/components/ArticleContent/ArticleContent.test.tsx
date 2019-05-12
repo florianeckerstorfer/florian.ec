@@ -16,9 +16,11 @@ const post: IBlogPost = {
 describe('ArticleContent', () => {
   it('should render', () => {
     const component = shallow(<ArticleContent post={post} />);
+    const content = component.find('div');
 
-    expect(component.exists()).toBe(true);
-    expect(component.hasClass('content')).toBe(true);
-    expect(component.prop('dangerouslySetInnerHTML').__html).toBe(post.html);
+    expect(content.exists()).toBe(true);
+    expect((content.prop('dangerouslySetInnerHTML') as any).__html).toBe(
+      post.html
+    );
   });
 });

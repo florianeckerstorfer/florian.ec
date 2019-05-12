@@ -1,18 +1,15 @@
 import React from 'react';
 import IBlogPost from '../../types/IBlogPost';
-import styles from './ArticleContent.module.css';
+import Content from '../Content/Content';
 
-interface IProps {
+interface Props {
   post: IBlogPost;
 }
 
-function ArticleContent({ post }: IProps) {
-  return (
-    <div
-      className={styles.content}
-      dangerouslySetInnerHTML={{ __html: post.html }}
-    />
-  );
-}
+const ArticleContent: React.FC<Props> = ({ post }: Props) => (
+  <Content>
+    <div dangerouslySetInnerHTML={{ __html: post.html }} />
+  </Content>
+);
 
 export default ArticleContent;
