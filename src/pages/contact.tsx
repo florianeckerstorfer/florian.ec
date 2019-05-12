@@ -5,15 +5,13 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import H1 from '../components/H1/H1';
 
-function ContactPage() {
-  return (
-    <Layout>
-      <SEO title="Page two" />
-      <H1>Contact</H1>
-      <p>Welcome to page 2</p>
-      <Link to="/">Go back to the homepage</Link>
-    </Layout>
-  );
-}
+const ContactPage: React.FC = () => (
+  <Layout>
+    <SEO title="Page two" />
+    <H1>Contact</H1>
+    <p>Welcome to page 2</p>
+    <Link to="/">Go back to the homepage</Link>
+  </Layout>
+);
 
 export default ContactPage;

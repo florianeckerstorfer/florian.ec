@@ -7,10 +7,7 @@ import Content from '../components/Content/Content';
 
 const AboutPage = () => (
   <Layout>
-    <SEO
-      title="About"
-      keywords={['florian eckerstorfer', 'web developer', 'software developer']}
-    />
+    <SEO title="About" />
     <H1>About</H1>
 
     <Content>

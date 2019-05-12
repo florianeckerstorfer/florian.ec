@@ -16,7 +16,7 @@ interface IProps {
   };
 }
 
-function IndexPage({ data, location }: IProps) {
+const IndexPage: React.FC<IProps> = ({ data, location }: IProps) => {
   const siteTitle = data.site.siteMetadata.title;
   const articles = data.allMarkdownRemark.edges;
   return (
@@ -32,7 +32,7 @@ function IndexPage({ data, location }: IProps) {
       <ArticleList articles={articles} />
     </Layout>
   );
-}
+};
 
 export default IndexPage;
 
