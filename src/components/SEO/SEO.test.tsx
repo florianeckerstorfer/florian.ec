@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import SEO from './seo';
+import SEO from './SEO';
 import * as Gatsby from 'gatsby';
 
 beforeEach(() => {

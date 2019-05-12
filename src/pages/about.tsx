@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import H1 from '../components/H1/H1';
 import Content from '../components/Content/Content';
+import { Link } from 'gatsby';
 
 const AboutPage = () => (
   <Layout>
@@ -58,7 +59,11 @@ const AboutPage = () => (
         I never stopped creating websites and applications about stuff I am
         passionate about. For multiple years I ran a weblog called{' '}
         <a href="http://webadventures.at">Web Adventures</a> and over the years
-        I created a number of fun side-<a href="/projects">projects</a>.
+        I created a number of fun side-<Link to="/projects">projects</Link>.
+      </p>
+
+      <p>
+        I also have a <Link to="/cv">CV</Link>.
       </p>
 
       <h2>Contact</h2>
