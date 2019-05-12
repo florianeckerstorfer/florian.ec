@@ -3,8 +3,13 @@ import { shallow } from 'enzyme';
 import Footer from './Footer';
 
 describe('Footer', () => {
+  const component = shallow(<Footer />);
+
   it('should render', () => {
-    const component = shallow(<Footer />);
     expect(component.hasClass('footer')).toBeTruthy();
+  });
+
+  it('should contain link to imprint', () => {
+    expect(component.find('[to="/imprint"]').length).toBeGreaterThanOrEqual(1);
   });
 });

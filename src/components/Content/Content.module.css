@@ -1,5 +1,5 @@
 .content {
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   max-width: var(--maxContentWidth);
   padding: 0 var(--pageSpacing);
   line-height: var(--contentLineHeight);
