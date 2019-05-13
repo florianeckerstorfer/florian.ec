@@ -12,4 +12,8 @@ describe('Footer', () => {
   it('should contain link to imprint', () => {
     expect(component.find('[to="/imprint"]').length).toBeGreaterThanOrEqual(1);
   });
+
+  it('should contain link to privacy policy', () => {
+    expect(component.find('[to="/privacy"]').length).toBeGreaterThanOrEqual(1);
+  });
 });

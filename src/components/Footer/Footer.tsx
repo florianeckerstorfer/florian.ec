@@ -8,7 +8,8 @@ function Footer() {
       <p>
         Made with <span className={styles.heart}>♥</span> by Florian
         Eckerstorfer in Vienna, Europe. {new Date().getFullYear()}.{' '}
-        <Link to="/imprint">Imprint</Link>.
+        <Link to="/imprint">Imprint</Link>.{' '}
+        <Link to="/privacy">Privacy Policy</Link>
       </p>
     </footer>
   );
