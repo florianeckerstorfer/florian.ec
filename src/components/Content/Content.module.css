@@ -25,6 +25,20 @@
   margin: 2rem 0 1rem 0;
 }
 
+:global pre[class*='language-'] {
+  border-radius: 3px;
+}
+
+:global .gatsby-highlight {
+  margin: 0 calc(var(--pageSpacing) * -1);
+  max-width: 100vw;
+  overflow-x: scroll;
+}
+
+:global .gatsby-highlight pre[class*='language-'] {
+  border-radius: 0;
+}
+
 :global .gatsby-resp-image-link {
   margin: 0 calc(-1 * var(--pageSpacing));
   max-width: 100vw;
@@ -33,6 +47,10 @@
 @media screen and (min-width: 640px) {
   :global .gatsby-resp-image-link {
     margin: 0 calc((640px - 100vw) / 2 - var(--pageSpacing));
+  }
+
+  :global .gatsby-highlight pre[class*='language-'] {
+    border-radius: 3px;
   }
 
   .content video {
