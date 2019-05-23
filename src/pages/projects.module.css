@@ -1,0 +1,30 @@
+.list {
+  list-style: none;
+  margin: 0 auto;
+  max-width: var(--maxContentWidth);
+  padding: 0;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.projectLink:link,
+.projectLink:active,
+.projectLink:visited {
+  color: var(--violet);
+  display: block;
+  font: bold 1.5rem var(--headlineFont);
+}
+
+.projectLink:hover {
+  text-decoration: none;
+}
+
+.projectDescription {
+  line-height: var(--contentLineHeight);
+}

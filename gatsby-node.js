@@ -12,14 +12,13 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
-
+function createBlogPages({ graphql, createPage }) {
   const blogPost = path.resolve(`./src/templates/BlogPostTemplate.tsx`);
   return graphql(
     `
       {
         allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/blog/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -64,6 +63,62 @@ exports.createPages = ({ graphql, actions }) => {
 
     return null;
   });
+}
+
+function createProjectPages({ graphql, createPage }) {
+  const blogPost = path.resolve(`./src/templates/ProjectTemplate.tsx`);
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/project/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                slug
+                title
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors;
+    }
+
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges;
+
+    posts.forEach((post, index) => {
+      const slug = post.node.frontmatter.slug;
+
+      createPage({
+        path: `/projects/${slug}`,
+        component: blogPost,
+        context: {
+          slug,
+        },
+      });
+    });
+
+    return null;
+  });
+}
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  return createBlogPages({ createPage, graphql }).then(() =>
+    createProjectPages({ createPage, graphql })
+  );
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

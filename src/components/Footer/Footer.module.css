@@ -2,6 +2,7 @@
   border-top: 2px solid var(--violet);
   font-size: var(--smallFontSize);
   grid-area: footer;
+  margin-top: 3rem;
   padding: 0.5rem var(--pageSpacing);
   position: relative;
 }

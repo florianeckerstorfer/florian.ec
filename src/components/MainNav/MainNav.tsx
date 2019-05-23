@@ -12,6 +12,11 @@ function MainNav() {
           </Link>
         </li>
         <li className={styles.item}>
+          <Link className={styles.link} to="/projects">
+            Projects
+          </Link>
+        </li>
+        <li className={styles.item}>
           <Link className={styles.link} to="/about">
             About
           </Link>
