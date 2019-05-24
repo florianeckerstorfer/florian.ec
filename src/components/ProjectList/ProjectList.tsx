@@ -3,11 +3,11 @@ import styles from './ProjectList.module.css';
 import IProjectList from '../../types/IProjectList';
 import ProjectListItem from './ProjectListItem';
 
-interface Props {
+export interface IProps {
   projects: IProjectList;
 }
 
-const ProjectList: React.FC<Props> = ({ projects }: Props) => {
+const ProjectList: React.FC<IProps> = ({ projects }: IProps) => {
   if (projects.length === 0) {
     return null;
   }
