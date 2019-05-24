@@ -5,6 +5,7 @@ description: Previous portfolio of my projects.
 date: 2011-11-01
 category: Blog
 tags: [html, jekyll, sass]
+active: false
 ---
 
 My previous portfolio.

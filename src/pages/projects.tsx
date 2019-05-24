@@ -8,6 +8,7 @@ import H1 from '../components/H1/H1';
 import styles from './projects.module.css';
 import Label from '../components/Label/Label';
 import IProjectEdge from '../types/IProjectEdge';
+import ProjectList from '../components/ProjectList/ProjectList';
 
 interface IProps {
   location: Location;
@@ -21,15 +22,7 @@ interface IProps {
 
 const ProjectsPage: React.FC<IProps> = ({ data, location }: IProps) => {
   const siteTitle = data.site.siteMetadata.title;
-  const projects = data.allMarkdownRemark.edges.sort((a, b) => {
-    if (a.node.frontmatter.active && !b.node.frontmatter.active) {
-      return -1;
-    }
-    if (!a.node.frontmatter.active && b.node.frontmatter.active) {
-      return 1;
-    }
-    return 0;
-  });
+  const projects = data.allMarkdownRemark.edges;
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -41,25 +34,7 @@ const ProjectsPage: React.FC<IProps> = ({ data, location }: IProps) => {
         ]}
       />
       <H1>Projects</H1>
-      <ul className={styles.list}>
-        {projects.map(project => (
-          <li className={styles.project}>
-            <Link
-              to={`/projects/${project.node.frontmatter.slug}`}
-              className={styles.projectLink}
-            >
-              {project.node.frontmatter.title}
-            </Link>
-            {project.node.frontmatter.description && (
-              <div className={styles.projectDescription}>
-                {project.node.frontmatter.description}
-              </div>
-            )}
-            {project.node.frontmatter.tags &&
-              project.node.frontmatter.tags.map(tag => <Label>{tag}</Label>)}
-          </li>
-        ))}
-      </ul>
+      <ProjectList projects={projects} />
     </Layout>
   );
 };
@@ -75,7 +50,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/projects/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___active, frontmatter___date], order: DESC }
     ) {
       edges {
         node {
