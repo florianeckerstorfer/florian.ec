@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import styles from './ProjectListItem.module.css';
 import Label from '../Label/Label';
 
-interface IProps {
+export interface IProps {
   project: IProjectNode;
 }
 
@@ -12,10 +12,7 @@ const ProjectListItem: React.FC<IProps> = ({ project }: IProps) => {
   return (
     <li className={styles.project}>
       <div className={styles.title}>
-        <Link
-          to={`/projects/${project.frontmatter.slug}`}
-          className={styles.link}
-        >
+        <Link to={`/projects/${project.fields.slug}`} className={styles.link}>
           {project.frontmatter.title}
         </Link>
         {!project.frontmatter.active && <Label inverse>Inactive</Label>}

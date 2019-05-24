@@ -5,7 +5,6 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import ISiteMetadata from '../types/ISiteMetadata';
 import IPageContext from '../types/IPageContext';
-import Article from '../components/Article/Article';
 import IBlogPost from '../types/IBlogPost';
 import Project from '../components/Project/Project';
 
@@ -22,7 +21,6 @@ class ProjectTemplate extends React.PureComponent<IProps> {
   render() {
     const project = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const pageContext = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -30,7 +28,7 @@ class ProjectTemplate extends React.PureComponent<IProps> {
           title={project.frontmatter.title}
           description={project.frontmatter.description || project.excerpt}
         />
-        <Project post={project} context={pageContext} />
+        <Project post={project} />
       </Layout>
     );
   }

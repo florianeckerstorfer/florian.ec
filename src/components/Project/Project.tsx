@@ -2,19 +2,17 @@ import styles from './Project.module.css';
 import React from 'react';
 import H1 from '../H1/H1';
 import IBlogFrontmatter from '../../types/IBlogFrontmatter';
-import IPageContext from '../../types/IPageContext';
 import ArticleContent from '../ArticleContent/ArticleContent';
 
-interface IProps {
+export interface IProps {
   post: {
     frontmatter: IBlogFrontmatter;
     excerpt?: string;
     html: string;
   };
-  context: IPageContext;
 }
 
-function Project({ post, context }: IProps) {
+function Project({ post }: IProps) {
   return (
     <article className={styles.article}>
       <header className={styles.header}>

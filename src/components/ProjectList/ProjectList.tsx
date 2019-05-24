@@ -7,12 +7,20 @@ interface Props {
   projects: IProjectList;
 }
 
-const ProjectList: React.FC<Props> = ({ projects }: Props) => (
-  <ul className={styles.list}>
-    {projects.map(project => (
-      <ProjectListItem key={project.node.fields.slug} project={project.node} />
-    ))}
-  </ul>
-);
+const ProjectList: React.FC<Props> = ({ projects }: Props) => {
+  if (projects.length === 0) {
+    return null;
+  }
+  return (
+    <ul className={styles.list}>
+      {projects.map(project => (
+        <ProjectListItem
+          key={project.node.fields.slug}
+          project={project.node}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default ProjectList;

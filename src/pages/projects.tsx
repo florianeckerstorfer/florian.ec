@@ -1,16 +1,13 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
-import IBlogEdge from '../types/IBlogEdge';
 import ISiteMetadata from '../types/ISiteMetadata';
 import H1 from '../components/H1/H1';
-import styles from './projects.module.css';
-import Label from '../components/Label/Label';
 import IProjectEdge from '../types/IProjectEdge';
 import ProjectList from '../components/ProjectList/ProjectList';
 
-interface IProps {
+export interface IProps {
   location: Location;
   data: {
     site: { siteMetadata: ISiteMetadata };

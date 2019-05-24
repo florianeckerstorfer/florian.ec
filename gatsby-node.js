@@ -99,9 +99,10 @@ function createProjectPages({ graphql, createPage }) {
 
     posts.forEach((post, index) => {
       const slug = post.node.frontmatter.slug;
+      const path = `/projects/${slug}`;
 
       createPage({
-        path: `/projects/${slug}`,
+        path,
         component: blogPost,
         context: {
           slug,

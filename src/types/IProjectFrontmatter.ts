@@ -1,5 +1,5 @@
 export default interface IProjectFrontmatter {
-  active?: boolean;
+  active: boolean;
   category: string;
   date: string;
   description?: string;
