@@ -1,17 +1,25 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ProjectsPage, { IProps } from './projects';
+import ProjectsPage from './projects';
+import projectsPagePropsFixture from '../tests/fixtures/projectsPagePropsFixture';
 
-const defaultProps: IProps = {
-  location: {} as any,
-  data: {
-    site: { siteMetadata: { title: 'my site' } },
-    allMarkdownRemark: { edges: [] },
-  },
-};
+describe('ProjectsPage empty projects', () => {
+  const props = projectsPagePropsFixture.projectsPropsEmptyProjects;
+  const page = shallow(<ProjectsPage {...props} />);
 
-describe('ProjectsPage', () => {
-  const page = shallow(<ProjectsPage {...defaultProps} />);
+  it('should render', () => {
+    expect(page.exists()).toBe(true);
+  });
+
+  it('should render headline', () => {
+    const headline = page.find('H1');
+    expect(headline.exists()).toBe(true);
+  });
+});
+
+describe('ProjectsPage with projects', () => {
+  const props = projectsPagePropsFixture.projectsProps;
+  const page = shallow(<ProjectsPage {...props} />);
 
   it('should render', () => {
     expect(page.exists()).toBe(true);
