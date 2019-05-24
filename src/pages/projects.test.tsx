@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import ProjectsPage from './projects';
 import projectsPagePropsFixture from '../tests/fixtures/projectsPagePropsFixture';
 
-describe('ProjectsPage empty projects', () => {
+describe('ProjectsPage with no projects', () => {
   const props = projectsPagePropsFixture.projectsPropsEmptyProjects;
   const page = shallow(<ProjectsPage {...props} />);
 
