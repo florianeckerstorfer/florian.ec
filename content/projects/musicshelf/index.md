@@ -2,9 +2,10 @@
 slug: musicshelf
 title: Musicshelf
 description: A graphical display of all albums a user has listened to.
-since: November 2010
-tags: [php, html, sass, lastfm-api]
+date: 2010-11-01
 category: Web App
+tags: [php, html, sass, lastfm-api]
+active: false
 ---
 
 A graphical display of all albums a user has listened to.

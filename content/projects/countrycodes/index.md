@@ -1,10 +1,11 @@
 ---
 slug: countrycodes
 title: Country Codes
+date: 2011-11-01
 description: Convert country codes, country names, telephone codes, TLDs and currency codes.
-# since: November 2011
-tags: [php, html, sass]
 category: Web App
+tags: [php, html, sass]
+active: false
 ---
 
 Convert country codes, country names, telephone codes, TLDs and currency codes.

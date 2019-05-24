@@ -2,9 +2,10 @@
 slug: regexptester
 title: RegExp Tester
 description: A online service to test and visualize regular expressions.
-# since: July 2010
-tags: [php, html, css]
+date: 2010-07-01
 category: Web App
+tags: [php, html, css]
+active: false
 ---
 
 A online service to test and visualize regular expressions.

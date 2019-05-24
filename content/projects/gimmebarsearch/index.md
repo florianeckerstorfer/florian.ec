@@ -2,9 +2,10 @@
 slug: gimmebarsearch
 title: Gimme Bar Search
 description: Extension for Safari to search your Gimme Bar account.
-since: November 2011
-tags: [safari, extension, javascript]
+date: 2011-11-01
 category: Extensions and Plugins
+tags: [safari, extension, javascript]
+active: false
 ---
 
 Extension for Safari to search your Gimme Bar account.

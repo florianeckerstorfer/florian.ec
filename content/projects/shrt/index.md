@@ -2,9 +2,10 @@
 slug: shrt
 title: Shrt.at
 description: A short URL service.
-# since: 2007
-tags: [php, html, javascript, smarty, tomo]
+date: 2007-01-01
 category: Web App
+tags: [php, html, javascript, smarty, tomo]
+active: false
 ---
 
 Just another short URL service.

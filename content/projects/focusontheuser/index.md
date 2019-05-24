@@ -2,9 +2,10 @@
 slug: focusontheuser
 title: Focus on the User for Safari
 description: Extension for Safari to replace Google+ Profiles in Google search results with the most relevant social profiles
-# since: January 2012
-tags: [safari, extension, javascript]
+date: 2012-01-01
 category: Extensions and Plugins
+tags: [safari, extension, javascript]
+active: false
 ---
 
 Extension for Safari to replace Google+ Profiles in Google search results with the most relevant social profiles.

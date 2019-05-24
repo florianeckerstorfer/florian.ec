@@ -7,20 +7,29 @@ import ISiteMetadata from '../types/ISiteMetadata';
 import H1 from '../components/H1/H1';
 import styles from './projects.module.css';
 import Label from '../components/Label/Label';
+import IProjectEdge from '../types/IProjectEdge';
 
 interface IProps {
   location: Location;
   data: {
     site: { siteMetadata: ISiteMetadata };
     allMarkdownRemark: {
-      edges: IBlogEdge[];
+      edges: IProjectEdge[];
     };
   };
 }
 
 const ProjectsPage: React.FC<IProps> = ({ data, location }: IProps) => {
   const siteTitle = data.site.siteMetadata.title;
-  const projects = data.allMarkdownRemark.edges;
+  const projects = data.allMarkdownRemark.edges.sort((a, b) => {
+    if (a.node.frontmatter.active && !b.node.frontmatter.active) {
+      return -1;
+    }
+    if (!a.node.frontmatter.active && b.node.frontmatter.active) {
+      return 1;
+    }
+    return 0;
+  });
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -75,12 +84,13 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            slug
-            date(formatString: "YYYY-MM-DD")
-            title
-            description
+            active
             category
+            date(formatString: "YYYY-MM-DD")
+            description
+            slug
             tags
+            title
           }
         }
       }

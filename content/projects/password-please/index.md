@@ -2,8 +2,9 @@
 slug: password-please
 title: Password, Please!
 description: Secure password generator.
-# since: October 2014
-tags: [password, security, alfred, cli]
+date: 2014-10-01
 category: Extensions and Plugins
+tags: [password, security, alfred, cli]
+active: false
 # direct_url: /password-please
 ---

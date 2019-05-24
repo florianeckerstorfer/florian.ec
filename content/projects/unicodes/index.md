@@ -2,9 +2,10 @@
 slug: unicodes
 title: Unicod.es
 description: Grouped list of all Unicode characters.
-# since: November 2011
+date: 2011-11-01
 tags: [php, javascript, html, sass, mongodb, twig, backbone]
 category: Web App
+active: false
 ---
 
 Grouped list of all Unicode characters.

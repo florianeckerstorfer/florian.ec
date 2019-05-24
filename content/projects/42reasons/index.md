@@ -2,8 +2,9 @@
 slug: 42reasons
 title: 42reasons
 description: Tumblr with pictures I take.
-# since: December 2009
-tags: [blog, photography, tumblr]
+date: 2009-12-01
 category: Blog
+tags: [blog, photography, tumblr]
+active: false
 # direct_url: http://42reasons.com
 ---

@@ -2,9 +2,10 @@
 slug: urlencoder
 title: URL Encoder/Decoder
 description: This small tool let's you URL-encode and decode text.
-# since: November 2011
-tags: [javascript, sass, jquery]
+date: 2011-11-01
 category: Web App
+tags: [javascript, sass, jquery]
+active: false
 ---
 
 This small tool lets you URL-encode and decode text.

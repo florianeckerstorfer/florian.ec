@@ -2,9 +2,10 @@
 slug: tumblr-gifstream
 title: Tumblr GifStreams
 description: Create streams of GIFs based on Tumblr tags for the Gifstream for iOS app.
-# since: November 2013
-tags: [php, silex, twig, tumblr-api]
+date: 2013-11-01
 category: Web App
+tags: [php, silex, twig, tumblr-api]
+active: false
 ---
 
 Create streams of GIFs based on Tumblr tags for the [>Gifstream for iOS](http://gifstream.in) app.

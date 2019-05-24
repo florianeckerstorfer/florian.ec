@@ -2,9 +2,10 @@
 slug: ijustfoundthem
 title: I JUST FOUND THEM
 description: Generates a list of artists you recently listened to for the first time.
-since: July 2010
-tags: [php, html, sass, jquery, lastfm-api, javascript]
+date: 2010-07-01
 category: Web App
+tags: [php, html, sass, jquery, lastfm-api, javascript]
+active: false
 ---
 
 Generates a list of artists you recently listened to for the first time.

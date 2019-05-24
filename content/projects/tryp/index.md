@@ -2,9 +2,10 @@
 slug: tryp
 title: Tryp
 description: Displays a map with all the places where a Twitter user has been.
-# since: August 2011
-tags: [php, javascript, html, sass, twig, jquery, google-maps-api, twitter-api]
+date: 2011-08-01
 category: Web App
+tags: [php, javascript, html, sass, twig, jquery, google-maps-api, twitter-api]
+active: false
 ---
 
 Displays a map with all the places where a Twitter user has been.

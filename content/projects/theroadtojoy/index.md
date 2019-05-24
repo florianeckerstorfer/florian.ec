@@ -2,7 +2,8 @@
 slug: theroadtojoy
 title: TRTJ
 description: Previous portfolio of my projects.
-# since: November 2011
+date: 2011-11-01
+category: Blog
 tags: [html, jekyll, sass]
 ---
 

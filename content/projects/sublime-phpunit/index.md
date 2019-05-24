@@ -2,9 +2,10 @@
 slug: sublime-phpunit
 title: PHPUnit Package for Sublime Text 2 and 3
 description: A package with snippets for writing tests using PHPUnit for Sublime Text 2 and 3.
-# since: January 2012
-tags: [sublime-text, phpunit, extension, plugin]
+date: 2012-01-01
 category: Extensions and Plugins
+tags: [sublime-text, phpunit, extension, plugin]
+active: false
 ---
 
 A package with snippets for writing tests using PHPUnit for Sublime Text 2 and 3.

@@ -2,9 +2,10 @@
 slug: raptorize-safari
 title: Raptorize for Safari
 description: Extension for Safari to raptorize any website.
-# since: October 2011
-tags: [extension, safari, javascript, jquery]
+date: 2011-10-01
 category: Extensions and Plugins
+tags: [extension, safari, javascript, jquery]
+active: false
 ---
 
 Extension for Safari to raptorize any website.

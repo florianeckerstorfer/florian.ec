@@ -2,9 +2,10 @@
 slug: ninjawhois
 title: Ninjawhois
 description: A powerful WHOIS service.
-# since: April 2009
-tags: [php, javascript, html, css, zend-framework, joyphp, jquery]
+date: 2009-04-01
 category: Web App
+tags: [php, javascript, html, css, zend-framework, joyphp, jquery]
+active: false
 ---
 
 A powerful WHOIS service.

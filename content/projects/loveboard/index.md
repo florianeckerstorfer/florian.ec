@@ -2,9 +2,10 @@
 slug: loveboard
 title: Loveboard
 description: A experimental real time dashboard for likes and +1s.
-since: July 2011
-tags: [php, javascript, html, css, jquery, pusher]
+date: 2011-07-01
 category: Web App
+tags: [php, javascript, html, css, jquery, pusher]
+active: false
 ---
 
 A experimental real time dashboard for likes and +1s. The source code is available on [GitHub](http://github.com/florianeckerstorfer/loveboard).
