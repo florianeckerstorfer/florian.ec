@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Project, { IProps } from './Project';
 
 const defaultProps: IProps = {
-  post: {
+  project: {
     frontmatter: {
       category: 'Web App',
       date: '2019-05-24',
@@ -16,8 +16,9 @@ const defaultProps: IProps = {
 };
 
 describe('Project', () => {
+  const component = shallow(<Project {...defaultProps} />);
+
   it('should render', () => {
-    const component = shallow(<Project {...defaultProps} />);
     expect(component.exists()).toBe(true);
   });
 });

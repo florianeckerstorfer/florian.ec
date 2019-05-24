@@ -5,34 +5,32 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import ISiteMetadata from '../types/ISiteMetadata';
 import IPageContext from '../types/IPageContext';
-import IBlogPost from '../types/IBlogPost';
 import Project from '../components/Project/Project';
+import IProject from '../types/IProject';
 
 interface IProps {
   location: Location;
   pageContext: IPageContext;
   data: {
     site: { siteMetadata: ISiteMetadata };
-    markdownRemark: IBlogPost;
+    markdownRemark: IProject;
   };
 }
 
-class ProjectTemplate extends React.PureComponent<IProps> {
-  render() {
-    const project = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
+const ProjectTemplate: React.FC<IProps> = ({ data, location }: IProps) => {
+  const project = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={project.frontmatter.title}
-          description={project.frontmatter.description || project.excerpt}
-        />
-        <Project post={project} />
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={project.frontmatter.title}
+        description={project.frontmatter.description || project.excerpt}
+      />
+      <Project project={project} />
+    </Layout>
+  );
+};
 
 export default ProjectTemplate;
 

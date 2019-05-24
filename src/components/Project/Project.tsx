@@ -5,20 +5,20 @@ import IBlogFrontmatter from '../../types/IBlogFrontmatter';
 import ArticleContent from '../ArticleContent/ArticleContent';
 
 export interface IProps {
-  post: {
+  project: {
     frontmatter: IBlogFrontmatter;
     excerpt?: string;
     html: string;
   };
 }
 
-function Project({ post }: IProps) {
+function Project({ project }: IProps) {
   return (
     <article className={styles.article}>
       <header className={styles.header}>
-        <H1>{post.frontmatter.title}</H1>
+        <H1>{project.frontmatter.title}</H1>
         <div className={styles.meta} />
-        <ArticleContent post={post} />
+        <ArticleContent post={project} />
       </header>
     </article>
   );
