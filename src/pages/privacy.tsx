@@ -6,7 +6,15 @@ import Content from '../components/Content/Content';
 
 const PrivacyPage: React.FC = () => (
   <Layout>
-    <SEO title="Privacy Policy" />
+    <SEO
+      title="Privacy Policy"
+      keywords={[
+        'florian eckerstorfer',
+        'web developer',
+        'software developer',
+        'privacy policy',
+      ]}
+    />
     <H1>Privay Policy </H1>
 
     <Content>

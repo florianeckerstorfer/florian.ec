@@ -28,6 +28,7 @@ const ProjectsPage: React.FC<IProps> = ({ data, location }: IProps) => {
           'florian eckerstorfer',
           'web developer',
           'software developer',
+          'projects',
         ]}
       />
       <H1>Projects</H1>

@@ -7,7 +7,10 @@ import Content from '../components/Content/Content';
 
 const ConcertsPage = () => (
   <Layout>
-    <SEO title="Concerts" />
+    <SEO
+      title="Concerts"
+      keywords={['florian eckerstorfer', 'music', 'concerts', 'live music']}
+    />
     <H1>Concerts</H1>
 
     <Content>
