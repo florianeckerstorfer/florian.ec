@@ -21,11 +21,6 @@ function MainNav() {
             About
           </Link>
         </li>
-        <li className={styles.item}>
-          <Link className={styles.link} to="/contact">
-            Contact
-          </Link>
-        </li>
       </ul>
     </nav>
   );

@@ -30,6 +30,11 @@ const AboutPage = ({ data }: Props) => (
         University of Vienna.
       </p>
 
+      <p>
+        I like reading, music, going to <Link to="/concerts">concerts</Link> and
+        going on walks.
+      </p>
+
       <Img
         fluid={data.file.childImageSharp.fluid}
         alt="Gatsby Docs are awesome"
@@ -85,8 +90,8 @@ const AboutPage = ({ data }: Props) => (
       <h2>Contact</h2>
 
       <p>
-        You can contact me via{' '}
-        <a href="mailto:florian@eckerstorfer.net">email</a>.
+        If you want to get in touch with me you can find all the information on
+        the <a href="/contact">contact page</a>.
       </p>
     </Content>
   </Layout>
