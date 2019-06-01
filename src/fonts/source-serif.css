@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: 'Source Serif';
   font-stretch: normal;
   font-style: normal;
@@ -9,6 +10,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Source Serif';
   font-stretch: normal;
   font-style: italic;

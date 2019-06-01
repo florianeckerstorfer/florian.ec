@@ -1,6 +1,13 @@
 .list {
   list-style: none;
-  margin: 0 auto;
+  margin: 2rem var(--pageSpacing);
   max-width: var(--maxContentWidth);
   padding: 0;
+}
+
+@media screen and (min-width: var(--pageSpacing)) {
+  .list {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
