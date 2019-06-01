@@ -1,12 +1,23 @@
 import React from 'react';
-
+import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import H1 from '../components/H1/H1';
 import Content from '../components/Content/Content';
 import { Link } from 'gatsby';
+import Img, { FluidObject } from 'gatsby-image';
 
-const AboutPage = () => (
+export interface Props {
+  data: {
+    file: {
+      childImageSharp: {
+        fluid: FluidObject;
+      };
+    };
+  };
+}
+
+const AboutPage = ({ data }: Props) => (
   <Layout>
     <SEO title="About" />
     <H1>About</H1>
@@ -19,6 +30,11 @@ const AboutPage = () => (
         University of Vienna.
       </p>
 
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="Gatsby Docs are awesome"
+      />
+
       <h2>Biography</h2>
 
       <p>
@@ -28,10 +44,10 @@ const AboutPage = () => (
         After school I moved to Vienna to study{' '}
         <em>Software & Information Engineering</em> at the Vienna University of
         Technology. In July 2011 I received my bachelors degree and started my
-        Masters in Software Engineering & Internet Computing_. In March 2012 I
-        also began working on a supplement curriculum in <em>Innovation</em>,
-        which I received in March 2014. I finsished my Masters studies in
-        January 2018 by writing my thesis on{' '}
+        Masters in <em>Software Engineering & Internet Computing</em>. In March
+        2012 I also began working on a supplement curriculum in{' '}
+        <em>Innovation</em>, which I received in March 2014. I finsished my
+        Masters studies in January 2018 by writing my thesis on{' '}
         <em>
           Machine Learning Approach for Web Ranking Identification based on
           Visual Features
@@ -70,10 +86,22 @@ const AboutPage = () => (
 
       <p>
         You can contact me via{' '}
-        <a href="mailto:florian@eckerstorfer.co">email</a>.
+        <a href="mailto:florian@eckerstorfer.net">email</a>.
       </p>
     </Content>
   </Layout>
 );
 
 export default AboutPage;
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "florian-with-notebook.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

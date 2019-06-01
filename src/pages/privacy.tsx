@@ -12,7 +12,7 @@ const PrivacyPage: React.FC = () => (
     <Content>
       <ul>
         <li>
-          This privacy policy applies to all my websites:
+          This privacy policy applies to all my websites:{' '}
           <a href="https://florian.ec">florian.ec</a>,{' '}
           <a href="http://👏🏻.ws">👏🏻.ws</a>, <a href="http://👋🏻.ws">👋🏻.ws</a>,{' '}
           <a href="https://webadventures.at">webadventures.at</a>
