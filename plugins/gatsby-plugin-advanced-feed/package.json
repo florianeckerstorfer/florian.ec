@@ -1,0 +1,7 @@
+{
+  "name": "gatsby-plugin-advanced-feed",
+  "version": "1.0",
+  "dependencies": {
+    "feed": "^3.0.0"
+  }
+}
