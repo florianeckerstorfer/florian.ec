@@ -5,7 +5,8 @@
 }
 
 .meta {
-  font: italic 1rem var(--headlineFont);
+  font-family: var(--headlineFont);
+  font-size: 1rem;
   margin: 1rem auto 3rem;
   max-width: var(--maxContentWidth);
   text-align: center;

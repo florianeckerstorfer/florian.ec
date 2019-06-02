@@ -5,6 +5,8 @@ import SEO from '../components/SEO/SEO';
 import IBlogEdge from '../types/IBlogEdge';
 import ISiteMetadata from '../types/ISiteMetadata';
 import ArticleList from '../components/ArticleList/ArticleList';
+import H1 from '../components/H1/H1';
+import utilCss from '../components/util.module.css';
 
 interface IProps {
   location: Location;
@@ -29,6 +31,7 @@ const IndexPage: React.FC<IProps> = ({ data, location }: IProps) => {
           'software developer',
         ]}
       />
+      <H1 className={utilCss.visuallyHidden}>Blog Posts</H1>
       <ArticleList articles={articles} />
     </Layout>
   );

@@ -1,12 +1,14 @@
 import * as React from 'react';
 import styles from './H1.module.css';
+import classnames from 'classnames';
 
-interface IProps {
+interface Props {
   children: React.ReactNode;
+  className?: string;
 }
 
-function H1({ children }: IProps) {
-  return <h1 className={styles.h1}>{children}</h1>;
+function H1({ children, className }: Props) {
+  return <h1 className={classnames(styles.h1, className)}>{children}</h1>;
 }
 
 export default H1;

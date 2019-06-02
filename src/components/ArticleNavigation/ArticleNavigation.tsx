@@ -12,8 +12,8 @@ function ArticleNavigation({ previous, next }: IProps) {
   return (
     <nav className={styles.container}>
       <ul className={styles.list}>
-        <li className={styles.previous}>
-          {previous && (
+        {previous && (
+          <li className={styles.previous}>
             <Link
               className={styles.link}
               to={previous.frontmatter.slug}
@@ -21,15 +21,15 @@ function ArticleNavigation({ previous, next }: IProps) {
             >
               ← {previous.frontmatter.title}
             </Link>
-          )}
-        </li>
-        <li className={styles.next}>
-          {next && (
+          </li>
+        )}
+        {next && (
+          <li className={styles.next}>
             <Link className={styles.link} to={next.frontmatter.slug} rel="next">
               {next.frontmatter.title} →
             </Link>
-          )}
-        </li>
+          </li>
+        )}
       </ul>
     </nav>
   );

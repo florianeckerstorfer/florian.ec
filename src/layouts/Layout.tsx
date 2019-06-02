@@ -1,17 +1,17 @@
-import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import '../fonts/league-spartan.css';
 import '../fonts/source-sans.css';
 import '../fonts/source-serif.css';
 import '../variables.css';
 import './layout.css';
 import './prism-night-owl.css';
+import { StaticQuery, graphql } from 'gatsby';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import MainNav from '../components/MainNav/MainNav';
+import PropTypes from 'prop-types';
+import React from 'react';
 import styles from './Layout.module.css';
+import utilCss from '../components/util.module.css';
 
 interface IProps {
   children: React.ReactNode;
@@ -29,9 +29,12 @@ interface Data {
 
 export const renderLayout = (children: React.ReactNode) => (data: Data) => (
   <div className={styles.body}>
+    <a href="#main" className={utilCss.visuallyHidden}>
+      Go to content
+    </a>
     <Header siteTitle={data.site.siteMetadata.title} />
     <MainNav />
-    <main className={styles.main} role="main">
+    <main id="main" className={styles.main} tabIndex={-1} role="main">
       {children}
     </main>
     <Footer />
