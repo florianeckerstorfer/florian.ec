@@ -1,5 +1,7 @@
 .h1 {
-  font: bold var(--headlineFontSize) var(--headlineFont);
+  font-weight: bold;
+  font-size: var(--headlineFontSize);
+  font-family: var(--headlineFont);
   line-height: 1.1;
   margin: 3rem 0 1rem;
   text-align: center;

@@ -1,107 +1,84 @@
-const fs = require('fs');
-const { Feed } = require('feed');
-const dayjs = require('dayjs');
+"use strict";
 
-const buildFeed = (pages, siteMetadata) => {
-  const feed = new Feed({
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _fs = _interopRequireDefault(require("fs"));
+
+var _feed = require("feed");
+
+var _dayjs = _interopRequireDefault(require("dayjs"));
+
+var _internals = require("./internals");
+
+var buildFeed = function buildFeed(pages, siteMetadata, output) {
+  var feed = new _feed.Feed({
     title: siteMetadata.title,
     description: siteMetadata.description,
     link: siteMetadata.siteUrl,
     id: siteMetadata.siteUrl,
-    copyright: `All rights reserved ${new Date().getUTCFullYear()}, ${
-      siteMetadata.author
-    }`,
+    copyright: "All rights reserved " + new Date().getUTCFullYear() + ", " + siteMetadata.author,
     feedLinks: {
-      atom: `${siteMetadata.siteUrl}/atom.xml`,
-      json: `${siteMetadata.siteUrl}/feed.json`,
+      atom: siteMetadata.siteUrl + "/" + output.atom,
+      json: siteMetadata.siteUrl + "/" + output.json
     },
     author: {
       name: siteMetadata.author,
-      email: siteMetadata.email,
-    },
+      email: siteMetadata.email
+    }
   });
-
-  pages
-    .map(page => page.node)
-    .sort((a, b) =>
-      dayjs(a.frontmatter.date).isBefore(dayjs(b.frontmatter.date)) ? -1 : 1
-    )
-    .reverse()
-    .slice(0, 10)
-    .forEach(page => {
-      feed.addItem({
-        title: page.frontmatter.title,
-        id: siteMetadata.siteUrl + page.fields.slug,
-        link: siteMetadata.siteUrl + page.fields.slug,
-        date: dayjs(page.frontmatter.date).toDate(),
-        content: page.html,
-        author: [
-          {
-            name: siteMetadata.author,
-            email: siteMetadata.email,
-            link: siteMetadata.siteUrl,
-          },
-        ],
-      });
+  pages.map(function (page) {
+    return page.node;
+  }).sort(function (a, b) {
+    return (0, _dayjs.default)(a.frontmatter.date).isBefore((0, _dayjs.default)(b.frontmatter.date)) ? -1 : 1;
+  }).reverse().slice(0, 10).forEach(function (page) {
+    feed.addItem({
+      title: page.frontmatter.title,
+      id: "" + siteMetadata.siteUrl + page.fields.slug,
+      link: "" + siteMetadata.siteUrl + page.fields.slug,
+      date: (0, _dayjs.default)(page.frontmatter.date).toDate(),
+      content: page.html,
+      author: [{
+        name: siteMetadata.author,
+        email: siteMetadata.email,
+        link: siteMetadata.siteUrl
+      }]
     });
-
+  });
   feed.addContributor({
     name: siteMetadata.author,
     email: siteMetadata.email,
-    link: siteMetadata.siteUrl,
+    link: siteMetadata.siteUrl
   });
-
   return feed;
 };
 
-const generateAtomFeed = feed =>
-  fs.writeFileSync('./public/atom.xml', feed.atom1());
-const generateRSS = feed => fs.writeFileSync('./public/rss2.xml', feed.rss2());
-const generateJSONFeed = feed =>
-  fs.writeFileSync('./public/feed.json', feed.json1());
+var generateAtomFeed = function generateAtomFeed(feed, name) {
+  return _fs.default.writeFileSync("./public/" + name, feed.atom1());
+};
 
-exports.onPostBuild = ({ graphql }) => {
-  return graphql(`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-          email
-          siteUrl
-        }
-      }
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/blog/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              slug
-              title
-              date
-            }
-            html
-          }
-        }
-      }
-    }
-  `).then(result => {
+var generateRSS = function generateRSS(feed, name) {
+  return _fs.default.writeFileSync("./public/" + name, feed.rss2());
+};
+
+var generateJSONFeed = function generateJSONFeed(feed, name) {
+  return _fs.default.writeFileSync("./public/" + name, feed.json1());
+};
+
+exports.onPostBuild = function (_ref, pluginOptions) {
+  var graphql = _ref.graphql;
+  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, pluginOptions.output);
+  graphql("\n    {\n      site {\n        siteMetadata {\n          title\n          description\n          author\n          email\n          siteUrl\n        }\n      }\n      allMarkdownRemark(\n        filter: { fileAbsolutePath: { regex: \"/blog/\" } }\n        sort: { fields: [frontmatter___date], order: DESC }\n        limit: 1000\n      ) {\n        edges {\n          node {\n            fields {\n              slug\n            }\n            frontmatter {\n              slug\n              title\n              date\n            }\n            html\n          }\n        }\n      }\n    }\n  ").then(function (result) {
     if (result.errors) {
       throw result.errors;
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
-    const siteMetadata = result.data.site.siteMetadata;
-    const feed = buildFeed(posts, siteMetadata);
-    generateAtomFeed(feed);
-    generateRSS(feed);
-    generateJSONFeed(feed);
+    var posts = result.data.allMarkdownRemark.edges;
+    var siteMetadata = result.data.site.siteMetadata;
+    var feed = buildFeed(posts, siteMetadata, output);
+    generateAtomFeed(feed, output.atom);
+    generateRSS(feed, output.rss2);
+    generateJSONFeed(feed, output.json);
   });
 };
