@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import H1 from '../components/H1/H1';
 import Content from '../components/Content/Content';
+import Label from '../components/Label/Label';
 
 const ConcertsPage = () => (
   <Layout>
@@ -22,7 +23,6 @@ const ConcertsPage = () => (
       <h2>Plans</h2>
 
       <ul>
-        <li>Jul 7 Lucy Dacus (Flex, Vienna)</li>
         <li>Aug 13 Mitski (Flex, Vienna)</li>
         <li>Sep 14 Amanda Palmer (Wiener Konzerthaus, Vienna)</li>
         <li>Oct 14 Chromatics (Arena, Vienna)</li>
@@ -31,6 +31,9 @@ const ConcertsPage = () => (
       <h2>2019</h2>
 
       <ul>
+        <li>
+          <del>Jul 7 Lucy Dacus (Flex, Vienna)</del> <Label>Cancelled</Label>
+        </li>
         <li>
           Mar 23{' '}
           <a href="https://micro.florian.ec/2019/03/12/screaming-females-at.html">
