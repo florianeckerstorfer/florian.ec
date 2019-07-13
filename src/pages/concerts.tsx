@@ -25,7 +25,9 @@ const ConcertsPage = () => (
       <ul>
         <li>Aug 13 Mitski (Flex, Vienna)</li>
         <li>Sep 14 Amanda Palmer (Wiener Konzerthaus, Vienna)</li>
+        <li>Sep 26-28 Waves Vienna Festival (Wuk, Vienna)</li>
         <li>Oct 14 Chromatics (Arena, Vienna)</li>
+        <li>Jun 4-6, 2020 Primavera Festival (Barcelona, Spain)</li>
       </ul>
 
       <h2>2019</h2>
