@@ -1,5 +1,5 @@
 ---
-slug: /hiking-looesbuehelalm-draugstein
+slug: hiking-looesbuehelalm-draugstein
 title: 'Hiking at Loosbühelalm and Draugstein'
 date: 2015-07-25
 category: Photos

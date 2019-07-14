@@ -1,5 +1,5 @@
 ---
-slug: /symfony-bower-bootstrap
+slug: symfony-bower-bootstrap
 title: Using Bower with Symfony2 and Bootstrap
 date: 2014-05-29T18:00:00.000Z
 category: Development

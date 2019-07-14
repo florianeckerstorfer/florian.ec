@@ -1,5 +1,5 @@
 ---
-slug: /thoughts-on-apple-music
+slug: thoughts-on-apple-music
 title: 'Thoughts on Apple Music'
 date: 2015-07-09
 category: Apple

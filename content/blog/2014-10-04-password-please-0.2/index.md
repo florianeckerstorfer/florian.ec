@@ -1,5 +1,5 @@
 ---
-slug: /password-please-0.2
+slug: password-please-0.2
 title: 'Password, Please!'
 date: 2014-10-04
 category: Development

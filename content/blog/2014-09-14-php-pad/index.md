@@ -1,5 +1,5 @@
 ---
-slug: /php-pad
+slug: php-pad
 title: PHP Pad
 date: 2014-09-14
 category: Development

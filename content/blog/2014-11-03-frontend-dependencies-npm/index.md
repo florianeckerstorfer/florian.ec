@@ -1,5 +1,5 @@
 ---
-slug: /frontend-dependencies-npm
+slug: frontend-dependencies-npm
 title: 'Manage Frontend Dependencies with NPM'
 date: 2014-11-03
 category: Development

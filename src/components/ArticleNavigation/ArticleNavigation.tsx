@@ -16,7 +16,7 @@ function ArticleNavigation({ previous, next }: IProps) {
           <li className={styles.previous}>
             <Link
               className={styles.link}
-              to={previous.frontmatter.slug}
+              to={`/blog/${previous.frontmatter.slug}`}
               rel="prev"
             >
               ← {previous.frontmatter.title}
@@ -25,7 +25,11 @@ function ArticleNavigation({ previous, next }: IProps) {
         )}
         {next && (
           <li className={styles.next}>
-            <Link className={styles.link} to={next.frontmatter.slug} rel="next">
+            <Link
+              className={styles.link}
+              to={`/blog/${next.frontmatter.slug}`}
+              rel="next"
+            >
               {next.frontmatter.title} →
             </Link>
           </li>

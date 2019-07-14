@@ -1,5 +1,5 @@
 ---
-slug: /inspirational-andy-dwyer-cli
+slug: inspirational-andy-dwyer-cli
 title: Inspirational Andy Dwyer Quotes For My Command Line
 date: 2014-09-07
 category: Development

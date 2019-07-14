@@ -1,5 +1,5 @@
 ---
-slug: /graphicsmagick-resize
+slug: graphicsmagick-resize
 title: Resize images with GraphicsMagick
 date: 2014-06-06
 category: Automation

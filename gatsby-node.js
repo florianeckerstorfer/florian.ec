@@ -49,9 +49,10 @@ function createBlogPages({ graphql, createPage }) {
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
       const slug = post.node.frontmatter.slug;
+      const path = `/blog/${slug}`;
 
       createPage({
-        path: slug,
+        path,
         component: blogPost,
         context: {
           slug,

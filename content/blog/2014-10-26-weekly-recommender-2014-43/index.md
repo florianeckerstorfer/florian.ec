@@ -1,5 +1,5 @@
 ---
-slug: /weekly-recommender-2014-43
+slug: weekly-recommender-2014-43
 title: 'The Weekly Recommender, 2014/43'
 date: 2014-10-26
 category: Weekly Recommender

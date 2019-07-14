@@ -1,5 +1,5 @@
 ---
-slug: /summer-2017-playlist
+slug: summer-2017-playlist
 title: Summer 2017 Playlist
 date: 2017-07-12
 category: Music

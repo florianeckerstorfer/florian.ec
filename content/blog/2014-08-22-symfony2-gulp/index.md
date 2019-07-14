@@ -1,5 +1,5 @@
 ---
-slug: /buliding-symfony2-with-gulp
+slug: buliding-symfony2-with-gulp
 title: Building Symfony2 Applications with Gulp
 date: 2014-08-22
 category: Development

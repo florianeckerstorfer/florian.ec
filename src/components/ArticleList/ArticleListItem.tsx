@@ -12,7 +12,7 @@ interface Props {
 const ArticleListItem: React.FC<Props> = ({ article }: Props) => (
   <li className={styles.listItem}>
     <article>
-      <Link className={styles.link} to={article.frontmatter.slug}>
+      <Link className={styles.link} to={`/blog/${article.frontmatter.slug}`}>
         {article.frontmatter.title}
       </Link>
       <div className={styles.meta}>
