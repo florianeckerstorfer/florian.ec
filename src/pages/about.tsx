@@ -18,7 +18,6 @@ export interface Props {
 }
 
 const AboutPage = ({ data }: Props) => {
-  console.log(data.file);
   return (
     <Layout>
       <SEO title="About" />
