@@ -1,6 +1,6 @@
 ---
 title: "Password, Please!"
-tags: [ password, security, alfred ]
+tags: [password, security, alfred]
 slug: password-please-0.2
 ---
 
@@ -9,7 +9,7 @@ Since a few years I generate a new password for every service I sign up and I us
 
 Therefore I created a small PHP library and CLI script as well as a Alfred workflow to invoke it. I am using it for a few weeks now and it works great for my purposes.
 
-![Password, Please! Alfred Workflow](/img/password-please/password-please-alfred.gif)
+![Password, Please! Alfred Workflow](./password-please-alfred.gif)
 
 I have set up a page with more information, [passwordplea.se](http://passwordplea.se) (pretty sweet, right?), and the source code of both the [Alfred workflow](https://github.com/florianeckerstorfer/passwordplease-alfred) and the [PHP library and CLI](https://github.com/florianeckerstorfer/passwordplease-php) are on Github.
 
