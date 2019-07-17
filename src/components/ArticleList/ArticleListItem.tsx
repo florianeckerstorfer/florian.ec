@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import IBlogNode from '../../types/IBlogNode';
 import styles from './ArticleListItem.module.css';
 import Label from '../Label/Label';
@@ -9,7 +9,7 @@ interface Props {
   article: IBlogNode;
 }
 
-const ArticleListItem: React.FC<Props> = ({ article }: Props) => (
+const ArticleListItem: React.FC<Props> = ({ article }: Props): ReactElement => (
   <li className={styles.listItem}>
     <article>
       <Link className={styles.link} to={`/blog/${article.frontmatter.slug}`}>

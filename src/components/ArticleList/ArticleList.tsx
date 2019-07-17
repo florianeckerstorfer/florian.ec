@@ -3,18 +3,16 @@ import IBlogEdge from '../../types/IBlogEdge';
 import styles from './ArticleList.module.css';
 import ArticleListItem from './ArticleListItem';
 
-interface IProps {
+interface Props {
   articles: IBlogEdge[];
 }
 
-function ArticleList({ articles }: IProps): ReactElement {
-  return (
-    <ul className={styles.list}>
-      {articles.map(({ node }) => (
-        <ArticleListItem key={node.frontmatter.slug} article={node} />
-      ))}
-    </ul>
-  );
-}
+const ArticleList: React.FC<Props> = ({ articles }: Props): ReactElement => (
+  <ul className={styles.list}>
+    {articles.map(({ node }) => (
+      <ArticleListItem key={node.frontmatter.slug} article={node} />
+    ))}
+  </ul>
+);
 
 export default ArticleList;

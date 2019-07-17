@@ -1,13 +1,13 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, ReactElement } from 'react';
 import styles from './Label.module.css';
 import classnames from 'classnames';
 
-interface IProps {
+interface Props {
   children?: ReactNode;
   inverse?: boolean;
 }
 
-const Label: React.FC<IProps> = ({ children, inverse }: IProps) => (
+const Label: React.FC<Props> = ({ children, inverse }: Props): ReactElement => (
   <span className={classnames(styles.label, { [styles.inverse]: inverse })}>
     {children}
   </span>

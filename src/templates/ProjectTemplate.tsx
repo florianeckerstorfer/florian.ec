@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../layouts/Layout';
@@ -8,7 +8,7 @@ import IPageContext from '../types/IPageContext';
 import Project from '../components/Project/Project';
 import IProject from '../types/IProject';
 
-interface IProps {
+interface Props {
   location: Location;
   pageContext: IPageContext;
   data: {
@@ -17,7 +17,10 @@ interface IProps {
   };
 }
 
-const ProjectTemplate: React.FC<IProps> = ({ data, location }: IProps) => {
+const ProjectTemplate: React.FC<Props> = ({
+  data,
+  location,
+}: Props): ReactElement => {
   const project = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
 

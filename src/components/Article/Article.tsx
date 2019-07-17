@@ -1,5 +1,5 @@
 import styles from './Article.module.css';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import H1 from '../H1/H1';
 import ArticleNavigation from '../ArticleNavigation/ArticleNavigation';
 import IBlogFrontmatter from '../../types/IBlogFrontmatter';
@@ -7,16 +7,16 @@ import IPageContext from '../../types/IPageContext';
 import ArticleContent from '../ArticleContent/ArticleContent';
 import ArticleDate from '../ArticleDate/ArticleDate';
 
-interface IProps {
+interface Props {
   post: {
-    frontmatter: IBlogFrontmatter;
     excerpt?: string;
+    frontmatter: IBlogFrontmatter;
     html: string;
   };
   context: IPageContext;
 }
 
-function Article({ post, context }: IProps) {
+const Article: React.FC<Props> = ({ post, context }: Props): ReactElement => {
   const { previous, next } = context;
 
   return (
@@ -31,6 +31,6 @@ function Article({ post, context }: IProps) {
       <ArticleNavigation previous={previous} next={next} />
     </article>
   );
-}
+};
 
 export default Article;

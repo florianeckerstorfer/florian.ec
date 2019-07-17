@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styles from './ProjectList.module.css';
 import IProjectList from '../../types/IProjectList';
 import ProjectListItem from './ProjectListItem';
 
-export interface IProps {
+export interface Props {
   projects: IProjectList;
 }
 
-const ProjectList: React.FC<IProps> = ({ projects }: IProps) => {
+const ProjectList: React.FC<Props> = ({
+  projects,
+}: Props): ReactElement | null => {
   if (projects.length === 0) {
     return null;
   }

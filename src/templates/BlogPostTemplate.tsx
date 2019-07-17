@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../layouts/Layout';
@@ -8,7 +8,7 @@ import IPageContext from '../types/IPageContext';
 import Article from '../components/Article/Article';
 import IBlogPost from '../types/IBlogPost';
 
-interface IProps {
+interface Props {
   location: Location;
   pageContext: IPageContext;
   data: {
@@ -17,23 +17,24 @@ interface IProps {
   };
 }
 
-class BlogPostTemplate extends React.PureComponent<IProps> {
-  render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
-    const pageContext = this.props.pageContext;
+const BlogPostTemplate: React.FC<Props> = ({
+  data,
+  pageContext,
+  location,
+}: Props): ReactElement => {
+  const post = data.markdownRemark;
+  const siteTitle = data.site.siteMetadata.title;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <Article post={post} context={pageContext} />
-      </Layout>
-    );
-  }
-}
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <Article post={post} context={pageContext} />
+    </Layout>
+  );
+};
 
 export default BlogPostTemplate;
 

@@ -9,11 +9,11 @@ import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import MainNav from '../components/MainNav/MainNav';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styles from './Layout.module.css';
 import utilCss from '../components/util.module.css';
 
-interface IProps {
+interface Props {
   children: React.ReactNode;
   location?: Location;
   title?: string;
@@ -41,7 +41,7 @@ export const renderLayout = (children: React.ReactNode) => (data: Data) => (
   </div>
 );
 
-const Layout = ({ children }: IProps) => (
+const Layout: React.FC<Props> = ({ children }: Props): ReactElement => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

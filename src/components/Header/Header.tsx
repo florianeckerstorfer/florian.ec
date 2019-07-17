@@ -1,12 +1,12 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styles from './Header.module.css';
 
 interface Props {
   siteTitle: string;
 }
 
-const Header = ({  }: Props) => (
+const Header: React.FC<Props> = ({  }: Props): ReactElement => (
   <header className={styles.header}>
     <Link className={styles.logo} to="/">
       FE
