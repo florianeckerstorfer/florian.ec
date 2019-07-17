@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Project, { IProps } from './Project';
+import Project, { Props } from './Project';
 
-const defaultProps: IProps = {
+const defaultProps: Props = {
   project: {
     frontmatter: {
       category: 'Web App',
