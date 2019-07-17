@@ -7,11 +7,11 @@ const article: IBlogNode = {
   frontmatter: {
     category: 'Foo',
     date: '2019-05-05',
-    slug: '/foo',
+    slug: 'foo',
     title: 'Foo',
   },
   fields: {
-    slug: '/foo',
+    slug: 'foo',
   },
   excerpt: 'foobar',
 };
@@ -25,7 +25,7 @@ describe('ArticleListItem', () => {
   });
 
   it('should contain link to article', () => {
-    expect(link.prop('to')).toBe(article.frontmatter.slug);
+    expect(link.prop('to')).toBe(`/blog/${article.frontmatter.slug}`);
   });
 
   it('should render title', () => {
