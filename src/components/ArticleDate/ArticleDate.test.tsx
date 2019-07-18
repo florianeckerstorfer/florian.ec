@@ -1,6 +1,6 @@
+import ArticleDate from './ArticleDate';
 import React from 'react';
 import { shallow } from 'enzyme';
-import ArticleDate from './ArticleDate';
 
 describe('ArticleDate', () => {
   it('should render', () => {

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import styles from './MainNav.module.css';
+
 import { Link } from 'gatsby';
+import styles from './MainNav.module.css';
 
 const MainNav: React.FC = (): ReactElement => (
   <nav className={styles.nav}>

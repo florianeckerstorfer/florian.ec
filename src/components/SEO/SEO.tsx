@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
 interface Props {
   description?: string;

@@ -1,6 +1,6 @@
+import MainNav from './MainNav';
 import React from 'react';
 import { shallow } from 'enzyme';
-import MainNav from './MainNav';
 
 describe('MainNav', () => {
   it('should render', () => {

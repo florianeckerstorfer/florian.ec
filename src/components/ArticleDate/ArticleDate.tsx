@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import styles from './ArticleDate.module.css';
+
 import dayjs from 'dayjs';
+import styles from './ArticleDate.module.css';
 
 interface Props {
   date: string;

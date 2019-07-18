@@ -1,5 +1,6 @@
-import IBlogNode from '../../types/IBlogNode';
 import React, { ReactElement } from 'react';
+
+import IBlogNode from '../../types/IBlogNode';
 import { Link } from 'gatsby';
 import styles from './ArticleNavigation.module.css';
 

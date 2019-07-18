@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import styles from './Footer.module.css';
+
 import { Link } from 'gatsby';
+import styles from './Footer.module.css';
 
 const Footer: React.FC = (): ReactElement => (
   <footer className={styles.footer}>

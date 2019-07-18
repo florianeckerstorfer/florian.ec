@@ -1,9 +1,9 @@
-import { IProps } from '../../pages/projects';
+import { Props } from '../../pages/projects';
 import locationFixture from './locationFixture';
-import siteMetadataFixture from './siteMetadataFixture';
 import projectListFixture from './projectListFixture';
+import siteMetadataFixture from './siteMetadataFixture';
 
-const projectsProps: IProps = {
+const projectsProps: Props = {
   location: locationFixture.location,
   data: {
     site: { siteMetadata: siteMetadataFixture.siteMetadata },
@@ -11,7 +11,7 @@ const projectsProps: IProps = {
   },
 };
 
-const projectsPropsEmptyProjects: IProps = {
+const projectsPropsEmptyProjects: Props = {
   location: locationFixture.location,
   data: {
     site: { siteMetadata: siteMetadataFixture.siteMetadata },

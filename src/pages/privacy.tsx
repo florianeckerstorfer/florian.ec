@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
+import Content from '../components/Content/Content';
+import H1 from '../components/H1/H1';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
-import H1 from '../components/H1/H1';
-import Content from '../components/Content/Content';
 
-const PrivacyPage: React.FC = () => (
+const PrivacyPage: React.FC = (): ReactElement => (
   <Layout>
     <SEO
       title="Privacy Policy"

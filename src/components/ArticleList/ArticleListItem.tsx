@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
-import IBlogNode from '../../types/IBlogNode';
-import styles from './ArticleListItem.module.css';
-import Label from '../Label/Label';
+
 import ArticleDate from '../ArticleDate/ArticleDate';
+import IBlogNode from '../../types/IBlogNode';
+import Label from '../Label/Label';
 import { Link } from 'gatsby';
+import styles from './ArticleListItem.module.css';
 
 interface Props {
   article: IBlogNode;

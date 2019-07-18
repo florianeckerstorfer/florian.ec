@@ -1,5 +1,6 @@
-import { Link } from 'gatsby';
 import React, { ReactElement } from 'react';
+
+import { Link } from 'gatsby';
 import styles from './Header.module.css';
 
 interface Props {

@@ -1,8 +1,9 @@
-import styles from './Project.module.css';
 import React, { ReactElement } from 'react';
+
+import ArticleContent from '../ArticleContent/ArticleContent';
 import H1 from '../H1/H1';
 import IBlogFrontmatter from '../../types/IBlogFrontmatter';
-import ArticleContent from '../ArticleContent/ArticleContent';
+import styles from './Project.module.css';
 
 export interface Props {
   project: {

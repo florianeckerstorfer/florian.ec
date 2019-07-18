@@ -1,7 +1,7 @@
-import React from 'react';
 import ProjectList from './ProjectList';
-import { shallow } from 'enzyme';
+import React from 'react';
 import projectListFixture from '../../tests/fixtures/projectListFixture';
+import { shallow } from 'enzyme';
 
 describe('ProjectList with no projects', () => {
   const projects = projectListFixture.emptyProjects;

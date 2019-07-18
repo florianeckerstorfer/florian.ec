@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react';
+
+import ArticleListItem from './ArticleListItem';
 import IBlogEdge from '../../types/IBlogEdge';
 import styles from './ArticleList.module.css';
-import ArticleListItem from './ArticleListItem';
 
 interface Props {
   articles: IBlogEdge[];

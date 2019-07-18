@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import ArticleListItem from './ArticleListItem';
 import IBlogNode from '../../types/IBlogNode';
+import React from 'react';
+import { shallow } from 'enzyme';
 
 const article: IBlogNode = {
   frontmatter: {

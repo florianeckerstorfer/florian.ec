@@ -1,8 +1,9 @@
 import React, { ReactElement } from 'react';
+
 import IProjectNode from '../../types/IProjectNode';
+import Label from '../Label/Label';
 import { Link } from 'gatsby';
 import styles from './ProjectListItem.module.css';
-import Label from '../Label/Label';
 
 export interface Props {
   project: IProjectNode;

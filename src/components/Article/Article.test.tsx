@@ -1,8 +1,8 @@
+import Article from './Article';
+import IBlogPost from '../../types/IBlogPost';
+import IPageContext from '../../types/IPageContext';
 import React from 'react';
 import { shallow } from 'enzyme';
-import Article from './Article';
-import IPageContext from '../../types/IPageContext';
-import IBlogPost from '../../types/IBlogPost';
 
 const post: IBlogPost = {
   frontmatter: {

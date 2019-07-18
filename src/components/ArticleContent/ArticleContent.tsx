@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import IBlogPost from '../../types/IBlogPost';
+
 import Content from '../Content/Content';
+import IBlogPost from '../../types/IBlogPost';
 
 interface Props {
   post: IBlogPost;

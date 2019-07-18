@@ -1,13 +1,14 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../layouts/Layout';
-import SEO from '../components/SEO/SEO';
-import ISiteMetadata from '../types/ISiteMetadata';
+import React, { ReactElement } from 'react';
+
 import H1 from '../components/H1/H1';
 import IProjectEdge from '../types/IProjectEdge';
+import ISiteMetadata from '../types/ISiteMetadata';
+import Layout from '../layouts/Layout';
 import ProjectList from '../components/ProjectList/ProjectList';
+import SEO from '../components/SEO/SEO';
+import { graphql } from 'gatsby';
 
-export interface IProps {
+export interface Props {
   location: Location;
   data: {
     site: { siteMetadata: ISiteMetadata };
@@ -17,7 +18,10 @@ export interface IProps {
   };
 }
 
-const ProjectsPage: React.FC<IProps> = ({ data, location }: IProps) => {
+const ProjectsPage: React.FC<Props> = ({
+  data,
+  location,
+}: Props): ReactElement => {
   const siteTitle = data.site.siteMetadata.title;
   const projects = data.allMarkdownRemark.edges;
   return (

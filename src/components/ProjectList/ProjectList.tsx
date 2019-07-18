@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react';
-import styles from './ProjectList.module.css';
+
 import IProjectList from '../../types/IProjectList';
 import ProjectListItem from './ProjectListItem';
+import styles from './ProjectList.module.css';
 
 export interface Props {
   projects: IProjectList;

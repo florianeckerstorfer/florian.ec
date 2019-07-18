@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import styles from './H1.module.css';
+
 import classnames from 'classnames';
+import styles from './H1.module.css';
 
 interface Props {
   children: React.ReactNode;

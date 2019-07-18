@@ -1,7 +1,8 @@
-import * as React from 'react';
-import { shallow } from 'enzyme';
-import SEO from './SEO';
 import * as Gatsby from 'gatsby';
+
+import React from 'react';
+import SEO from './SEO';
+import { shallow } from 'enzyme';
 
 beforeEach(() => {
   jest.clearAllMocks();

@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+
 import styles from './H2.module.css';
 
 interface Props {

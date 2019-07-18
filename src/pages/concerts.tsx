@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
@@ -6,7 +6,7 @@ import H1 from '../components/H1/H1';
 import Content from '../components/Content/Content';
 import Label from '../components/Label/Label';
 
-const ConcertsPage = () => (
+const ConcertsPage: React.FC = (): ReactElement => (
   <Layout>
     <SEO
       title="Concerts"

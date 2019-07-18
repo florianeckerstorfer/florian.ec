@@ -1,6 +1,7 @@
-import React, { ReactNode, ReactElement } from 'react';
-import styles from './Label.module.css';
+import React, { ReactElement, ReactNode } from 'react';
+
 import classnames from 'classnames';
+import styles from './Label.module.css';
 
 interface Props {
   children?: ReactNode;

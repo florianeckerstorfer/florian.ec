@@ -1,14 +1,15 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../layouts/Layout';
-import SEO from '../components/SEO/SEO';
-import IBlogEdge from '../types/IBlogEdge';
-import ISiteMetadata from '../types/ISiteMetadata';
+import React, { ReactElement } from 'react';
+
 import ArticleList from '../components/ArticleList/ArticleList';
 import H1 from '../components/H1/H1';
+import IBlogEdge from '../types/IBlogEdge';
+import ISiteMetadata from '../types/ISiteMetadata';
+import Layout from '../layouts/Layout';
+import SEO from '../components/SEO/SEO';
+import { graphql } from 'gatsby';
 import utilCss from '../components/util.module.css';
 
-interface IProps {
+interface Props {
   location: Location;
   data: {
     site: { siteMetadata: ISiteMetadata };
@@ -18,7 +19,10 @@ interface IProps {
   };
 }
 
-const IndexPage: React.FC<IProps> = ({ data, location }: IProps) => {
+const IndexPage: React.FC<Props> = ({
+  data,
+  location,
+}: Props): ReactElement => {
   const siteTitle = data.site.siteMetadata.title;
   const articles = data.allMarkdownRemark.edges;
   return (

@@ -1,6 +1,7 @@
+import Project, { Props } from './Project';
+
 import React from 'react';
 import { shallow } from 'enzyme';
-import Project, { Props } from './Project';
 
 const defaultProps: Props = {
   project: {

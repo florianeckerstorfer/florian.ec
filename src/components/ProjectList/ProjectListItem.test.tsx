@@ -1,7 +1,7 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import ProjectListItem from './ProjectListItem';
+import React from 'react';
 import projectNodeFixture from '../../tests/fixtures/projectNodeFixture';
+import { shallow } from 'enzyme';
 
 describe('ProjectListItem', () => {
   const project = projectNodeFixture.project;

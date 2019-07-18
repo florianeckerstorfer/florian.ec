@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
+import Content from '../components/Content/Content';
+import H1 from '../components/H1/H1';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
-import H1 from '../components/H1/H1';
-import Content from '../components/Content/Content';
-import styles from './contact.module.css';
 import classnames from 'classnames';
+import styles from './contact.module.css';
 
-const ContactPage: React.FC = () => (
+const ContactPage: React.FC = (): ReactElement => (
   <Layout>
     <SEO title="Contact" />
     <H1>Contact</H1>

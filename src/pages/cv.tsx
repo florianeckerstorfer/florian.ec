@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
+import Content from '../components/Content/Content';
+import H1 from '../components/H1/H1';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
-import H1 from '../components/H1/H1';
-import Content from '../components/Content/Content';
 import styles from './cv.module.css';
 
-const CvPage: React.FC = () => (
+const CvPage: React.FC = (): ReactElement => (
   <Layout>
     <SEO
       title="Curriculum vitae"
