@@ -30,9 +30,23 @@
 }
 
 :global .gatsby-resp-image-link,
-:global .gatsby-image-wrapper {
+:global .gatsby-image-wrapper,
+:global .gatsby-resp-image-figure {
   margin: 0 calc(-1 * var(--pageSpacing));
   max-width: 100vw;
+}
+
+:global .gatsby-resp-image-figure {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+:global .gatsby-resp-image-figure :global .gatsby-resp-image-link {
+  margin: 0;
+}
+
+:global .gatsby-resp-image-figcaption {
+  margin: 0 var(--pageSpacing);
 }
 
 @media screen and (min-width: 640px) {
