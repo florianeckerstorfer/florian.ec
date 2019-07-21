@@ -27,10 +27,10 @@ In June Marina and I took a trip to Windhoek in Namibia and then made our way so
 ![Lion in Etosha National Park, Namibia](./015-lion.jpg)
 ![Road between Etosha National Park and Swakopmund, Namibia](./016-etosha-swakopmund.jpg)
 
-## Swakopmund
+## Swakopmund and Skeleton Coast
 
-![Waterfront in Swakopmund, Namibia](./017-swakopmund.jpg)
-![Shipwreck on the Skeleton Coast north of Swakopmund, Namibia](./018-skeleton-coast.jpg)
+![Waterfront in Swakopmund, Namibia](./017-swakopmund.jpg 'Waterfront in Swakopmund.')
+![Shipwreck on the Skeleton Coast north of Swakopmund, Namibia](./018-skeleton-coast.jpg 'Shipwreck on the Skeleton Coast north of Swakopmund.')
 ![Bus on the Skeleton Coast north of Swakopmund, Namibia](./019-bus.jpg)
 ![Skeleton Coast north of Swakopmund, Namibia](./020-beach-skeleton-coast.jpg)
 ![Seals at Cape Cross, Namibia](./021-seals.jpg)
@@ -76,7 +76,7 @@ In June Marina and I took a trip to Windhoek in Namibia and then made our way so
 ![Bird in a tree near Cape Town, South Africa](./046-bird.jpg)
 ![Table Mountain in Cape Town, South Africa](./047-table-mountain.jpg)
 ![Cable Car going up Table Mountain, South Africa](./048-table-mountain-cable-car.jpg)
-![Flower on Table Mountain, South Africa](./049-table-mountain-flowers.jpg)
+![Flower on Table Mountain, South Africa](./049-table-mountain-flower.jpg)
 ![View from Table Mountain, South Africa](./050-table-mountain-view.jpg)
 ![Dassie on Table Mountain, South Africa](./051-dassie.jpg)
 ![Colorful houses in the Bo Kaap neighborhood in Cape Town, South Africa](./069-bo-kaap.jpg)
