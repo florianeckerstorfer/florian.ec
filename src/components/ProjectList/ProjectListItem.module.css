@@ -1,0 +1,23 @@
+.project {
+  margin-bottom: 2rem;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.link:link,
+.link:active,
+.link:visited {
+  color: var(--violet);
+  font: bold 1.5rem var(--headlineFont);
+  margin-right: 0.5rem;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.description {
+  line-height: var(--contentLineHeight);
+}

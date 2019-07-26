@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: var(--violet);
+}
+
+a:hover {
+  text-decoration: none;
+}

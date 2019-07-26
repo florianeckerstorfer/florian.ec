@@ -1,0 +1,13 @@
+.label {
+  background: var(--black);
+  border-radius: 3px;
+  color: var(--white);
+  font-size: var(--smallFontSize);
+  margin-right: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.inverse {
+  background: var(--grey-1);
+  color: var(--black);
+}

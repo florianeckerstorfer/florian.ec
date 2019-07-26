@@ -1,0 +1,21 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Source Sans';
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 200 900;
+  src: url('./source-sans/source-sans-roman.ttf.woff2') format('woff2'),
+    url('./source-sans/source-sans-roman.ttf.woff') format('woff'),
+    url('./source-sans/source-sans-roman.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Source Sans';
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: 200 900;
+  src: url('./source-sans/source-sans-italic.ttf.woff2') format('woff2'),
+    url('./source-sans/source-sans-italic.ttf.woff') format('woff'),
+    url('./source-sans/source-sans-italic.ttf') format('truetype');
+}

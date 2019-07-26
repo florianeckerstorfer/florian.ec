@@ -1,0 +1,5 @@
+.h2 {
+  font: bold var(--h2FontSize) var(--headlineFont);
+  margin: 2rem auto;
+  max-width: var(--maxContentWidth);
+}

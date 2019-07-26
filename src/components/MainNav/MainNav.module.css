@@ -1,0 +1,51 @@
+.nav {
+  grid-area: mainnav;
+  line-height: 1.3;
+  margin-top: calc(1rem - 1.3rem);
+  padding: 1rem var(--pageSpacing) 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  font-weight: bold;
+  margin: 0;
+}
+
+.item::after {
+  content: '';
+  margin-right: 0.5rem;
+}
+
+.link:link,
+.link:active,
+.link:visited {
+  border-radius: 3px;
+  color: var(--violet);
+  display: inline-block;
+  padding: 2px;
+  text-decoration: none;
+}
+
+.link:link::after,
+.link:active::after,
+.link:visited::after {
+  background: var(--black);
+  content: '';
+  display: block;
+  height: 2px;
+  transition: width 250ms var(--easeInOutBack);
+  width: 0px;
+}
+
+.link:hover::after {
+  width: 100%;
+}

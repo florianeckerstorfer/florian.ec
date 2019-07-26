@@ -1,0 +1,35 @@
+.header {
+  align-items: center;
+  display: flex;
+  font: var(--logoWeight) var(--logoFontSize) / var(--logoLineHeight)
+    var(--logoFont);
+  grid-area: header;
+  justify-content: flex-start;
+  padding: 1rem var(--pageSpacing) 0;
+  text-transform: uppercase;
+}
+
+.logo:link,
+.logo:active,
+.logo:visited {
+  color: var(--violet);
+  display: inline-block;
+  margin-top: 3px;
+  text-decoration: none;
+}
+
+.logo:link::after,
+.logo:active::after,
+.logo:visited::after {
+  background: var(--black);
+  content: '';
+  display: block;
+  height: 6px;
+  margin-top: -6px;
+  transition: width 250ms var(--easeInOutBack);
+  width: 0px;
+}
+
+.logo:hover::after {
+  width: 100%;
+}

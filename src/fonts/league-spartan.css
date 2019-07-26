@@ -1,0 +1,10 @@
+@font-face {
+  font-display: swap;
+  font-family: 'League Spartan';
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  src: url('./league-spartan/league-spartan.woff2') format('woff2'),
+    url('./league-spartan/league-spartan.woff') format('woff'),
+    url('./league-spartan/league-spartan.ttf') format('truetype');
+}
