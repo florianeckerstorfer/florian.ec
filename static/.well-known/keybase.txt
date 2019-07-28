@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/florianec
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://florian.ec
+  * I am florianec (https://keybase.io/florianec) on keybase.
+  * I have a public key with fingerprint AD41 E3CA 8312 BBAD D457  663B DBAE B611 6742 F61F
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101336f53d36f0143b62e91e8c8f69d0d43597648e7569703cd9d75878409e86ec30a",
+      "fingerprint": "ad41e3ca8312bbadd457663bdbaeb6116742f61f",
+      "host": "keybase.io",
+      "key_id": "dbaeb6116742f61f",
+      "kid": "0101336f53d36f0143b62e91e8c8f69d0d43597648e7569703cd9d75878409e86ec30a",
+      "uid": "2beb547711cd0007e57436090288d800",
+      "username": "florianec"
+    },
+    "merkle_root": {
+      "ctime": 1564323010,
+      "hash_meta": "c8d81005d15d84d1b0064be33dfc5470493316ff47d0af06c09d7703a9e8a20b",
+      "seqno": 5870290
+    },
+    "revoke": {
+      "sig_ids": [
+        "05ebf8399a2f6cff2b3e40cdcd5f2b347f9d5400c497aa0feb1d34716d14680c0f"
+      ]
+    },
+    "service": {
+      "hostname": "florian.ec",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1564323023,
+  "expire_in": 157680000,
+  "prev": "bae8407eada12f23e39ca98310feced1844398eb91a33f22e950cf8900618446",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMK4AnicrZNtaBxFGMcvrRUNVlMlvkRFWEkrNsaZndnZncOK9oWSD+ZLhEZjOef1
+slxye9ndOxPrIdYPViyo9ay1SEyrH4pN0ULxagK2JopioMW3i4K1qGgVrFZBv4jo
+s0ERxY9+2d2Z/T//+c9vnnlz5fJce9vUbKu49sVdR9sW5qrV3NZ10ye3OTLSE05+
+m1MySy8zok2SFkqhdvIOwggTwqxHNDwRpkQy13BsAhVYxjXSlHjcZzQwvse4j4jS
+XPte4AcUcRMwowgSTo9jw3LRxJU4LKdgKzTFhigREOxKKbSmns8YkVoKIxnGzKeu
+ZdhC4XCUZBUQTorE9IYRzMGgsBTvP/T/c+7qkp0rjfSo72OsNELIN55PCUMcuUGg
+A4QyYWLishg1oLYjURyKslFOvccZNXFpxBTiKEozuioNMw32GCUugZiwQ5EMF0ZN
+KqBUgR1GyNPY0wHVWCLEqDSEaKsgAKKcEMyspb5GwiKmEKSG9AIyCxdJCJKYsXLk
+5GEryOUIEsSmFpVMtngSFoFb4uSHHOQZaQPCuQBwylpXEkOR0kp72Tf1LdceRUhR
+7guBrJFYwyxmGlMWIIWss7WeLRbXQrVknh3UPwH0AoEepxJHaaSiEZgfTtNKks+o
+pBOVTHifkYU/LQoyLGtoEqiomTgJozJQAuW/gLmkxzHjlTA2hTBTQN8Af4SydUwN
+LKEj4Ah9I7TArnWJIVwJDo0Ge1BG44BSwgMjORaEWBeawkPKBhxAZ//Y3wSxBzlF
+ETyBW1mk1dg49bnj95yXa2vPnb9iWXZ7cu0Xdvx1pzpPXZA7fPVvfVc89euJSwev
+nHrv/W+n5hbveGUjv3/Xu5ONG36u88EN/u7GJ+Xp1Zs79uZuPjbT+cJVQftkd/rA
+2Z3Vl45/+fjqY+uOdu45MPAdfecL+/0Jdnm6/qLTtw41WtcNNp5dkKj1xPxlnafa
+lj/y04ad87PTn35wYKo5dMvu+nObf5jt7+r45cyOG/fctOPes8+f3rLlw/Fz60Xx
+4/FS35EmGfxIJ4vnZvTA6/WL7/r61SZvbXx01TVvNR5rvX3n4ZVdPw4su+2rzx7K
+3b53VWF/Tb58sm/7N08vTq7t3z8Wv3HJw5tm3TN3r+maf617RfNgbkA1r32ye1/v
+kcWFz/s2jR6cmTg0vj3f//uD1z8z9gfc6n/6
+=bkfA
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/florianec
+
+==================================================================
