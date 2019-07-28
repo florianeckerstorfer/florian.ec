@@ -5,7 +5,7 @@ module.exports = {
       'Florian Eckerstorfer is a web developer living and working in Vienna, Europe.',
     author: 'Florian Eckerstorfer',
     email: 'florian@eckerstorfer.net',
-    siteUrl: 'http://localhost:9000',
+    siteUrl: 'https://florian.ec',
   },
   plugins: [
     'gatsby-plugin-typescript',
