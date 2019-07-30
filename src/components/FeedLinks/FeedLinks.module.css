@@ -1,6 +1,6 @@
 .container {
   background: var(--grey-1);
-  padding: 1px 0;
+  padding: 1px var(--pageSpacing);
 }
 
 .feeds {
@@ -35,4 +35,11 @@
 
 .feed:last-child::after {
   display: none;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding-left: auto;
+    padding-right: auto;
+  }
 }
