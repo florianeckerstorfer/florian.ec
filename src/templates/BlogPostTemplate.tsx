@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react';
-import { graphql } from 'gatsby';
 
+import Article from '../components/Article/Article';
+import FeedLinks from '../components/FeedLinks/FeedLinks';
+import IBlogPost from '../types/IBlogPost';
+import IPageContext from '../types/IPageContext';
+import ISiteMetadata from '../types/ISiteMetadata';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
-import ISiteMetadata from '../types/ISiteMetadata';
-import IPageContext from '../types/IPageContext';
-import Article from '../components/Article/Article';
-import IBlogPost from '../types/IBlogPost';
+import { graphql } from 'gatsby';
 
 interface Props {
   location: Location;
@@ -32,6 +33,7 @@ const BlogPostTemplate: React.FC<Props> = ({
         description={post.frontmatter.description || post.excerpt}
       />
       <Article post={post} context={pageContext} />
+      <FeedLinks />
     </Layout>
   );
 };

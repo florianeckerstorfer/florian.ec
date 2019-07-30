@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { shallow } from 'enzyme';
+
 import BlogPostTemplate from './BlogPostTemplate';
 import IPageContext from '../types/IPageContext';
+import { shallow } from 'enzyme';
 
 const location = window.location;
 const pageContext: IPageContext = {
@@ -53,6 +54,7 @@ describe('BlogPostTemplate', () => {
 
     expect(component.exists()).toBeTruthy();
     expect(component.find('Article').prop('post')).toBe(data.markdownRemark);
+    expect(component.find('FeedLinks').exists()).toBe(true);
   });
 
   it('should render excerpt as SEO description of no description', () => {
