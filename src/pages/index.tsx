@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import ArticleList from '../components/ArticleList/ArticleList';
+import FeedLinks from '../components/FeedLinks/FeedLinks';
 import H1 from '../components/H1/H1';
 import IBlogEdge from '../types/IBlogEdge';
 import ISiteMetadata from '../types/ISiteMetadata';
@@ -37,6 +38,7 @@ const IndexPage: React.FC<Props> = ({
       />
       <H1 className={utilCss.visuallyHidden}>Blog Posts</H1>
       <ArticleList articles={articles} />
+      <FeedLinks />
     </Layout>
   );
 };
