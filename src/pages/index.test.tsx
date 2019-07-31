@@ -1,7 +1,7 @@
+import IBlogNode from '../types/IBlogNode';
+import IndexPage from '.';
 import React from 'react';
 import { shallow } from 'enzyme';
-import IndexPage from '.';
-import IBlogNode from '../types/IBlogNode';
 
 const location = {} as Location;
 
@@ -25,10 +25,14 @@ const data = {
   allMarkdownRemark: { edges: articles },
 };
 
-describe('IndexPage', () => {
+describe('IndexPage', (): void => {
   const page = shallow(<IndexPage location={location} data={data} />);
 
-  it('should render', () => {
+  it('should render', (): void => {
     expect(page.exists()).toBe(true);
+  });
+
+  it('should render links to feedis', (): void => {
+    expect(page.find('FeedLinks').exists()).toBe(true);
   });
 });

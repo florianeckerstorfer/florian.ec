@@ -1,1 +1,6 @@
 /articles/*  /blog/:splat
+/articles    /
+
+# Redirect aliases to main domain
+https://feed.florian.ec/* https://florian.ec/:splat 301!
+https://florianec.netlify.com/* https://florian.ec/:splat 301!

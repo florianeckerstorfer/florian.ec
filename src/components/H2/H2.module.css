@@ -1,5 +1,14 @@
 .h2 {
-  font: bold var(--h2FontSize) var(--headlineFont);
+  font-family: var(--headlineFont);
+  font-size: var(--h2FontSize);
+  font-weight: bold;
   margin: 2rem auto;
   max-width: var(--maxContentWidth);
+}
+
+.aside {
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
