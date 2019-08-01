@@ -66,6 +66,7 @@ export const pageQuery = graphql`
               lat
               lng
               name
+              icon
             }
           }
         }
