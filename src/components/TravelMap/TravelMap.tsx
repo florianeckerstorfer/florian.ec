@@ -15,10 +15,14 @@ interface Props {
 const iconSortMap: { [propName: string]: number } = {
   airport: 6,
   beach: 4,
+  campground: 2,
+  castle: 2,
   city: 1,
+  ferry: 6,
   mountain: 3,
   nationalpark: 2,
   rock: 5,
+  train: 6,
 };
 
 const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
@@ -81,6 +85,7 @@ const TravelMap: React.FC<Props> = ({ travels }: Props): ReactElement => {
       await mapbox.loadImage('ferry', '/icons/ferry.png');
       await mapbox.loadImage('castle', '/icons/castle.png');
       await mapbox.loadImage('train', '/icons/train.png');
+      await mapbox.loadImage('campground', '/icons/campground.png');
 
       let stops: TripStop[] = [];
       travels.forEach(trip => {

@@ -4,10 +4,6 @@ date_start: 2019-06-22
 date_end: 2019-07-10
 link: /blog/costa-rica-photos
 stops:
-  - name: Vienna Internal Airport, Austria
-    icon: airport
-    lat: 48.121781
-    lng: 16.563211
   - name: Charles de Gaulle Airport, France
     icon: airport
     lat: 49.463581
@@ -68,8 +64,4 @@ stops:
     icon: airport
     lat: 49.463581
     lng: 2.108030
-  - name: Vienna Internal Airport, Austria
-    icon: airport
-    lat: 48.121781
-    lng: 16.563211
 ---

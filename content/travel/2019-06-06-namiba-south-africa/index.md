@@ -4,10 +4,6 @@ date_start: 2019-06-06
 date_end: 2019-06-23
 link: /blog/namibia-south-africa-photos
 stops:
-  - name: Vienna Internal Airport, Austria
-    icon: airport
-    lat: 48.121781
-    lng: 16.563211
   - name: Addis Ababa Airport, Ethopia
     icon: airport
     lat: 8.983215
@@ -68,8 +64,4 @@ stops:
     icon: airport
     lat: 8.983215
     lng: 38.796018
-  - name: Vienna Internal Airport, Austria
-    icon: airport
-    lat: 48.121781
-    lng: 16.563211
 ---
