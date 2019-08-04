@@ -12,10 +12,16 @@ interface Props {
   travels: ITravelEdge[];
 }
 
+const iconSortMap: { [propName: string]: number } = {
+  airport: 6,
+  beach: 4,
+  city: 1,
+  mountain: 3,
+  nationalpark: 2,
+  rock: 5,
+};
+
 const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
-  await mapbox.loadImage('trees', '/icons/trees.png');
-  await mapbox.loadImage('plane', '/icons/plane.png');
-  await mapbox.loadImage('city', '/icons/city.png');
   mapbox.map.addLayer({
     id: 'places',
     type: 'symbol',
@@ -31,6 +37,7 @@ const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
               properties: {
                 description: stop.name,
                 icon: stop.icon,
+                key: stop.icon ? iconSortMap[stop.icon] : 0,
               },
               geometry: {
                 type: 'Point',
@@ -45,29 +52,8 @@ const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
       'icon-image': '{icon}',
       'icon-size': 0.5,
       'icon-allow-overlap': false,
+      'symbol-sort-key': ['get', 'key'],
     },
-  });
-
-  mapbox.map.on('click', 'places', (e: any) => {
-    var coordinates = e.features[0].geometry.coordinates.slice();
-    var description = e.features[0].properties.description;
-
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-    }
-
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(description)
-      .addTo(mapbox.map);
-  });
-
-  mapbox.map.on('mouseenter', 'places', () => {
-    mapbox.map.getCanvas().style.cursor = 'pointer';
-  });
-
-  mapbox.map.on('mouseleave', 'places', () => {
-    mapbox.map.getCanvas().style.cursor = '';
   });
 };
 
@@ -82,12 +68,45 @@ const TravelMap: React.FC<Props> = ({ travels }: Props): ReactElement => {
         center: [16.563211, 48.121781],
         // center: [-77.038659, 38.931567],
         zoom: 1,
+        pitchWithRotate: false,
       });
+      mapbox.map.resize();
       await mapbox.load();
+
+      await mapbox.loadImage('nationalpark', '/icons/nationalpark.png');
+      await mapbox.loadImage('airport', '/icons/airport.png');
+      await mapbox.loadImage('city', '/icons/city.png');
+      await mapbox.loadImage('mountain', '/icons/mountain.png');
+      await mapbox.loadImage('rock', '/icons/rock.png');
+
+      let stops: TripStop[] = [];
       travels.forEach(trip => {
         if (trip.node.frontmatter.stops) {
-          addStops(mapbox, trip.node.frontmatter.stops);
+          stops = stops.concat(trip.node.frontmatter.stops);
         }
+      });
+      addStops(mapbox, stops);
+
+      mapbox.map.on('click', 'places', (e: any) => {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.description;
+
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        new mapboxgl.Popup()
+          .setLngLat(coordinates)
+          .setHTML(description)
+          .addTo(mapbox.map);
+      });
+
+      mapbox.map.on('mouseenter', 'places', () => {
+        mapbox.map.getCanvas().style.cursor = 'pointer';
+      });
+
+      mapbox.map.on('mouseleave', 'places', () => {
+        mapbox.map.getCanvas().style.cursor = '';
       });
     }
   }, []);
