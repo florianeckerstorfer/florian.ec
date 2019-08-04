@@ -78,6 +78,9 @@ const TravelMap: React.FC<Props> = ({ travels }: Props): ReactElement => {
       await mapbox.loadImage('city', '/icons/city.png');
       await mapbox.loadImage('mountain', '/icons/mountain.png');
       await mapbox.loadImage('rock', '/icons/rock.png');
+      await mapbox.loadImage('ferry', '/icons/ferry.png');
+      await mapbox.loadImage('castle', '/icons/castle.png');
+      await mapbox.loadImage('train', '/icons/train.png');
 
       let stops: TripStop[] = [];
       travels.forEach(trip => {
