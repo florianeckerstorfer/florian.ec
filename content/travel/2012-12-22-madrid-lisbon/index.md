@@ -2,7 +2,7 @@
 title: Madrid, Spain and Lisbon, Portugal
 date_start: 2012-12-22
 date_end: 2013-01-02
-stops:
+locations:
   - name: Madrid, Spain
     icon: city
     lat: 40.416775

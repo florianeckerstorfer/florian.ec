@@ -2,7 +2,7 @@
 title: Stockholm, Sweden and North Germany
 date_start: 2014-07-10
 date_end: 2014-07-23
-stops:
+locations:
   - name: Stockholm, Sweden
     icon: city
     lat: 59.329323

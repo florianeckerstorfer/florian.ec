@@ -2,19 +2,20 @@ import React, { ReactElement, Suspense } from 'react';
 
 import H1 from '../components/H1/H1';
 import ISiteMetadata from '../types/ISiteMetadata';
-import ITravelEdge from '../types/ITravelEdge';
+import TravelEdge from '../types/ITravelEdge';
 import Layout from '../layouts/Layout';
+import Loadable from '@loadable/component';
 import SEO from '../components/SEO/SEO';
 import { graphql } from 'gatsby';
 
-const TravelMap = React.lazy(() => import('../components/TravelMap/TravelMap'));
+const TravelMap = Loadable(() => import('../components/TravelMap/TravelMap'));
 
 export interface Props {
   location: Location;
   data: {
     site: { siteMetadata: ISiteMetadata };
     allMarkdownRemark: {
-      edges: ITravelEdge[];
+      edges: TravelEdge[];
     };
   };
 }
@@ -30,16 +31,14 @@ const TravelPage: React.FC<Props> = ({
   location,
 }: Props): ReactElement => {
   const siteTitle = data.site.siteMetadata.title;
-  const travels = data.allMarkdownRemark.edges;
+  const trips = data.allMarkdownRemark.edges;
   return (
     <Layout location={location} title={siteTitle} pageTitle={renderPageTitle}>
       <SEO
         title="Travel"
         keywords={['florian eckerstorfer', 'travel', 'vacations', 'road trips']}
       />
-      <Suspense fallback={<div>Error loading</div>}>
-        <TravelMap travels={travels} />
-      </Suspense>
+      <TravelMap trips={trips.map(trip => trip.node.frontmatter)} />
     </Layout>
   );
 };
@@ -67,7 +66,7 @@ export const pageQuery = graphql`
             date_start(formatString: "YYYY-MM-DD")
             link
             title
-            stops {
+            locations {
               lat
               lng
               name

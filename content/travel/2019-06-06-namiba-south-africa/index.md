@@ -3,7 +3,7 @@ title: Namibia and Cape Town
 date_start: 2019-06-06
 date_end: 2019-06-23
 link: /blog/namibia-south-africa-photos
-stops:
+locations:
   - name: Addis Ababa Airport, Ethopia
     country: Ethopia
     icon: airport

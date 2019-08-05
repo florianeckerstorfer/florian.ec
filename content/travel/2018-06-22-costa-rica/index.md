@@ -3,7 +3,7 @@ title: Costa Rica
 date_start: 2019-06-22
 date_end: 2019-07-10
 link: /blog/costa-rica-photos
-stops:
+locations:
   - name: Charles de Gaulle Airport, France
     icon: airport
     lat: 49.463581

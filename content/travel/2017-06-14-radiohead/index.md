@@ -2,7 +2,7 @@
 title: Radiohead in Milan and Italy Roadtrip
 date_start: 2017-06-14
 date_end: 2017-06-17
-stops:
+locations:
   - name: Achensee, Tyrol, Austira
     icon: beach
     lat: 47.430501

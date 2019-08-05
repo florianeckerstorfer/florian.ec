@@ -1,15 +1,17 @@
 import React, { useCallback } from 'react';
 
 import Helmet from 'react-helmet';
-import ITravelEdge from '../../types/ITravelEdge';
 import Mapbox from '../../lib/Mapbox';
 import { ReactElement } from 'react';
-import { TripStop } from '../../types/ITravelFrontmatter';
+import TravelFrontmatter, {
+  TripLocation,
+} from '../../types/ITravelFrontmatter';
 import mapboxgl from 'mapbox-gl';
 import style from './TravelMap.module.css';
+import { async } from 'q';
 
 interface Props {
-  travels: ITravelEdge[];
+  trips: TravelFrontmatter[];
 }
 
 const iconSortMap: { [propName: string]: number } = {
@@ -25,7 +27,10 @@ const iconSortMap: { [propName: string]: number } = {
   train: 6,
 };
 
-const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
+const addLocationsToMap = async (
+  mapbox: Mapbox,
+  locations: TripLocation[]
+): Promise<void> => {
   mapbox.map.addLayer({
     id: 'places',
     type: 'symbol',
@@ -33,9 +38,8 @@ const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
       type: 'geojson',
       data: {
         type: 'FeatureCollection',
-        features: stops.map(
-          (stop: TripStop): GeoJSON.Feature<GeoJSON.Geometry> => {
-            console.log('stop.icon', stop.icon);
+        features: locations.map(
+          (stop: TripLocation): GeoJSON.Feature<GeoJSON.Geometry> => {
             return {
               type: 'Feature',
               properties: {
@@ -53,47 +57,49 @@ const addStops = async (mapbox: Mapbox, stops: TripStop[]): Promise<void> => {
       },
     },
     layout: {
-      'icon-image': '{icon}',
-      'icon-size': 0.5,
       'icon-allow-overlap': false,
+      'icon-image': 'fe-{icon}',
+      'icon-size': 0.5,
       'symbol-sort-key': ['get', 'key'],
     },
   });
 };
 
-const TravelMap: React.FC<Props> = ({ travels }: Props): ReactElement => {
+const getLocationsFromTrips = (trips: TravelFrontmatter[]): TripLocation[] =>
+  trips.flatMap(trip => trip.locations);
+
+const getIconsFromLocations = (locations: TripLocation[]) =>
+  locations
+    .map(location => location.icon)
+    .filter((value, index, self) => self.indexOf(value) === index);
+
+const loadIcons = async (mapbox: Mapbox, icons: string[]): Promise<void> => {
+  for (const icon of icons) {
+    if (!mapbox.hasImage(icon)) {
+      await mapbox.loadImage(`fe-${icon}`, `/icons/${icon}.png`);
+    }
+  }
+};
+
+const TravelMap: React.FC<Props> = ({ trips }: Props): ReactElement => {
   const mapRef = useCallback(async node => {
     if (node) {
-      const accessToken =
-        'pk.eyJ1IjoiZmxvcmlhbmVja2Vyc3RvcmZlciIsImEiOiJjaWxqdTNiM3QwMGFwdmptNDZjZHF2NjY1In0.AWaTE9ymrzzkEq0JNIg_ZQ';
+      const accessToken: string = process.env.MAPBOX_TOKEN!;
       const mapbox = new Mapbox(accessToken, {
         container: node,
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [16.563211, 48.121781],
-        // center: [-77.038659, 38.931567],
         zoom: 1,
         pitchWithRotate: false,
       });
       mapbox.map.resize();
+
       await mapbox.load();
 
-      await mapbox.loadImage('nationalpark', '/icons/nationalpark.png');
-      await mapbox.loadImage('airport', '/icons/airport.png');
-      await mapbox.loadImage('city', '/icons/city.png');
-      await mapbox.loadImage('mountain', '/icons/mountain.png');
-      await mapbox.loadImage('rock', '/icons/rock.png');
-      await mapbox.loadImage('ferry', '/icons/ferry.png');
-      await mapbox.loadImage('castle', '/icons/castle.png');
-      await mapbox.loadImage('train', '/icons/train.png');
-      await mapbox.loadImage('campground', '/icons/campground.png');
+      const locations = getLocationsFromTrips(trips);
+      await loadIcons(mapbox, getIconsFromLocations(locations));
 
-      let stops: TripStop[] = [];
-      travels.forEach(trip => {
-        if (trip.node.frontmatter.stops) {
-          stops = stops.concat(trip.node.frontmatter.stops);
-        }
-      });
-      addStops(mapbox, stops);
+      addLocationsToMap(mapbox, locations);
 
       mapbox.map.on('click', 'places', (e: any) => {
         var coordinates = e.features[0].geometry.coordinates.slice();
@@ -126,7 +132,7 @@ const TravelMap: React.FC<Props> = ({ travels }: Props): ReactElement => {
           rel="stylesheet"
         />
       </Helmet>
-      <div className={style.map} ref={mapRef}></div>
+      <div className={style.map} ref={mapRef} />
     </>
   );
 };

@@ -1,14 +1,14 @@
-export interface TripStop {
+export interface TripLocation {
+  icon: string;
   lat: number;
   lng: number;
   name: string;
-  icon?: string;
 }
 
-export default interface ITravelFrontmatter {
-  date_start: string;
+export default interface TravelFrontmatter {
   date_end: string;
-  title: string;
+  date_start: string;
   link?: string;
-  stops?: TripStop[];
+  locations: TripLocation[];
+  title: string;
 }

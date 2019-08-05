@@ -3,7 +3,7 @@ title: Belfast, Northern Ireland and Dublin, Ireland
 date_start: 2017-11-02
 date_end: 2017-11-09
 link: /blog/ireland-photos
-stops:
+locations:
   - name: Belfast, Northern Ireland
     icon: city
     lat: 54.597271

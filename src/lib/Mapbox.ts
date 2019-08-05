@@ -12,6 +12,10 @@ class Mapbox {
     return new Promise(resolve => this.map.on('load', () => resolve()));
   }
 
+  public hasImage(name: string): boolean {
+    return this.map.hasImage(name);
+  }
+
   public loadImage(name: string, url: string) {
     return new Promise((resolve, reject) => {
       this.map.loadImage(url, (error: any, image: any) => {
@@ -20,6 +24,7 @@ class Mapbox {
           reject(error);
           return;
         }
+        console.log(name);
         this.map.addImage(name, image);
         resolve({ name, image });
       });

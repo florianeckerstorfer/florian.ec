@@ -2,7 +2,7 @@
 title: Interrail 2011
 date_start: 2011-08-05
 date_end: 2011-08-30
-stops:
+locations:
   - name: Milan, Italy
     icon: city
     lat: 45.464203

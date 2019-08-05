@@ -2,7 +2,7 @@
 title: Kapfenberg, Austria
 date_start: 2019-07-27
 date_end: 2019-07-28
-stops:
+locations:
   - name: Kapfenberg, Austria
     country: Austria
     icon: city

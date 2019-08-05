@@ -2,7 +2,7 @@
 title: Primavera Festival, Barcelona Spain
 date_start: 2018-05-30
 date_end: 2018-06-04
-stops:
+locations:
   - name: Barcelona, Spain
     icon: city
     lat: 41.385063

@@ -2,7 +2,7 @@
 title: United States of America
 date_start: 2013-07-23
 date_end: 2013-08-29
-stops:
+locations:
   - name: New York City, New York
     icon: city
     lat: 40.713051

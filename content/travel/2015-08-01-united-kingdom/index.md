@@ -3,17 +3,17 @@ title: England, Scotland and Wales
 date_start: 2015-08-01
 date_end: 2015-08-14
 link: /blog/united-kingdom-august-2015
-stops:
+locations:
   - name: Köln, Germany
     icon: city
     lat: 50.940529
     lng: 6.959900
   - name: Rotterdam, Netherlands
-    icon: ferry
+    icon: boat
     lat: 51.922909
     lng: 4.470590
   - name: Harwich, England
-    icon: ferry
+    icon: boat
     lat: 51.937641
     lng: 1.281620
   - name: London, England

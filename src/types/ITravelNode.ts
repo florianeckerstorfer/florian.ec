@@ -1,5 +1,5 @@
-import ITravelFrontmatter from './ITravelFrontmatter';
+import TravelFrontmatter from './ITravelFrontmatter';
 
-export default interface ITravelNode {
-  frontmatter: ITravelFrontmatter;
+export default interface TravelNode {
+  frontmatter: TravelFrontmatter;
 }

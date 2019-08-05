@@ -6,6 +6,7 @@
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "@loadable/component": "^5.10.2",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.15",
     "gatsby": "^2.13.41",
@@ -39,6 +40,7 @@
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^24.0.15",
+    "@types/loadable__component": "^5.10.0",
     "@types/mapbox-gl": "^0.54.0",
     "@types/react-helmet": "^5.0.8",
     "@types/react-leaflet": "^2.2.1",

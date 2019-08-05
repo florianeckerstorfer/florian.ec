@@ -1,5 +1,5 @@
-import ITravelNode from './ITravelNode';
+import TravelNode from './ITravelNode';
 
-export default interface ITravelEdge {
-  node: ITravelNode;
+export default interface TravelEdge {
+  node: TravelNode;
 }
