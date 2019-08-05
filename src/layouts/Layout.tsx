@@ -4,12 +4,15 @@ import '../fonts/source-serif.css';
 import '../variables.css';
 import './layout.css';
 import './prism-night-owl.css';
+
+import React, { ReactElement } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import MainNav from '../components/MainNav/MainNav';
 import PropTypes from 'prop-types';
-import React, { ReactElement } from 'react';
+import classnames from 'classnames';
 import styles from './Layout.module.css';
 import utilCss from '../components/util.module.css';
 
@@ -17,6 +20,7 @@ interface Props {
   children: React.ReactNode;
   location?: Location;
   title?: string;
+  pageTitle?: (props: { className?: string }) => React.ReactElement;
 }
 
 interface Data {
@@ -27,12 +31,19 @@ interface Data {
   };
 }
 
-export const renderLayout = (children: React.ReactNode) => (data: Data) => (
-  <div className={styles.body}>
+export const renderLayout = ({ children, pageTitle }: Props) => (
+  data: Data
+) => (
+  <div
+    className={classnames(styles.body, {
+      [styles.hasPageTitle]: Boolean(pageTitle),
+    })}
+  >
     <a href="#main" className={utilCss.visuallyHidden}>
       Go to content
     </a>
     <Header siteTitle={data.site.siteMetadata.title} />
+    {pageTitle && pageTitle({ className: styles.pageTitle })}
     <MainNav />
     <main id="main" className={styles.main} tabIndex={-1} role="main">
       {children}
@@ -41,7 +52,10 @@ export const renderLayout = (children: React.ReactNode) => (data: Data) => (
   </div>
 );
 
-const Layout: React.FC<Props> = ({ children }: Props): ReactElement => (
+const Layout: React.FC<Props> = ({
+  children,
+  pageTitle,
+}: Props): ReactElement => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -52,7 +66,7 @@ const Layout: React.FC<Props> = ({ children }: Props): ReactElement => (
         }
       }
     `}
-    render={renderLayout(children)}
+    render={renderLayout({ children, pageTitle })}
   />
 );
 

@@ -6,3 +6,17 @@
   margin: 3rem 0 1rem;
   text-align: center;
 }
+
+.h1.inHeader {
+  align-self: center;
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+  margin: 0.5rem 1rem 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .h1.inHeader {
+    margin: 0 1rem;
+    text-align: left;
+  }
+}

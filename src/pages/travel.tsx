@@ -19,6 +19,12 @@ export interface Props {
   };
 }
 
+const renderPageTitle = (props: { className?: string }) => (
+  <H1 className={props.className} inHeader={true}>
+    Travel Map
+  </H1>
+);
+
 const TravelPage: React.FC<Props> = ({
   data,
   location,
@@ -26,12 +32,11 @@ const TravelPage: React.FC<Props> = ({
   const siteTitle = data.site.siteMetadata.title;
   const travels = data.allMarkdownRemark.edges;
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} pageTitle={renderPageTitle}>
       <SEO
         title="Travel"
         keywords={['florian eckerstorfer', 'travel', 'vacations', 'road trips']}
       />
-      <H1>Travel</H1>
       <Suspense fallback={<div>Error loading</div>}>
         <TravelMap travels={travels} />
       </Suspense>
