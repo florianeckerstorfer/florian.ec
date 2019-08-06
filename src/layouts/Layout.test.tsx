@@ -12,7 +12,7 @@ describe('Layout', () => {
 
 describe('renderLayout()', () => {
   const data = { site: { siteMetadata: { title: 'my site' } } };
-  const component = shallow(renderLayout(<span>foo</span>)(data));
+  const component = shallow(renderLayout({ children: <span>foo</span> })(data));
 
   it('should render layout', () => {
     expect(component.exists()).toBe(true);
@@ -36,5 +36,18 @@ describe('renderLayout()', () => {
 
   it('should render Footer', () => {
     expect(component.find('Footer').exists()).toBe(true);
+  });
+});
+
+describe('renderLayout() with pageTitle', () => {
+  const data = { site: { siteMetadata: { title: 'my site' } } };
+  const pageTitle = jest.fn(() => <h1>page title</h1>);
+  const component = shallow(
+    renderLayout({ children: <span>foo</span>, pageTitle })(data)
+  );
+
+  it('should render layout with page header', () => {
+    expect(pageTitle).toHaveBeenCalledTimes(1);
+    expect(component.find('h1').text()).toContain('page title');
   });
 });

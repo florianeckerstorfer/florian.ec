@@ -1,14 +1,14 @@
 import React, { useCallback } from 'react';
 
 import Helmet from 'react-helmet';
-import Mapbox from '../../lib/Mapbox';
 import { ReactElement } from 'react';
 import TravelFrontmatter, {
   TripLocation,
 } from '../../types/ITravelFrontmatter';
 import mapboxgl from 'mapbox-gl';
 import style from './TravelMap.module.css';
-import { async } from 'q';
+import { createMap, loadMap, loadImage, hasImage } from '../../lib/Mapbox';
+import MapboxGl from 'mapbox-gl';
 
 interface Props {
   trips: TravelFrontmatter[];
@@ -28,10 +28,10 @@ const iconSortMap: { [propName: string]: number } = {
 };
 
 const addLocationsToMap = async (
-  mapbox: Mapbox,
+  map: MapboxGl.Map,
   locations: TripLocation[]
 ): Promise<void> => {
-  mapbox.map.addLayer({
+  map.addLayer({
     id: 'places',
     type: 'symbol',
     source: {
@@ -73,23 +73,23 @@ const getIconsFromLocations = (locations: TripLocation[]) =>
     .map(location => location.icon)
     .filter((value, index, self) => self.indexOf(value) === index);
 
-const loadIcons = async (mapbox: Mapbox, icons: string[]): Promise<void> => {
+const loadIcons = async (map: MapboxGl.Map, icons: string[]): Promise<void> => {
   for (const icon of icons) {
-    if (!mapbox.hasImage(icon)) {
-      await mapbox.loadImage(`fe-${icon}`, `/icons/${icon}.png`);
+    if (!hasImage(map, icon)) {
+      await loadImage(map, { name: `fe-${icon}`, url: `/icons/${icon}.png` });
     }
   }
 };
 
-const handleMapMouseEnter = (mapbox: Mapbox) => (): void => {
-  mapbox.map.getCanvas().style.cursor = 'pointer';
+const handleMapMouseEnter = (map: MapboxGl.Map) => (): void => {
+  map.getCanvas().style.cursor = 'pointer';
 };
 
-const handleMapMouseLeave = (mapbox: Mapbox) => (): void => {
-  mapbox.map.getCanvas().style.cursor = '';
+const handleMapMouseLeave = (map: MapboxGl.Map) => (): void => {
+  map.getCanvas().style.cursor = '';
 };
 
-const handleMapClick = (mapbox: Mapbox) => (e: any) => {
+const handleMapClick = (map: MapboxGl.Map) => (e: any) => {
   const coordinates = e.features[0].geometry.coordinates.slice();
   const description = e.features[0].properties.description;
 
@@ -100,32 +100,32 @@ const handleMapClick = (mapbox: Mapbox) => (e: any) => {
   new mapboxgl.Popup()
     .setLngLat(coordinates)
     .setHTML(description)
-    .addTo(mapbox.map);
+    .addTo(map);
 };
 
 const TravelMap: React.FC<Props> = ({ trips }: Props): ReactElement => {
   const mapRef = useCallback(async node => {
     if (node) {
       const accessToken: string = process.env.MAPBOX_TOKEN!;
-      const mapbox = new Mapbox(accessToken, {
+      const map = createMap(accessToken, {
         container: node,
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [16.563211, 48.121781],
         zoom: 1,
         pitchWithRotate: false,
       });
-      mapbox.map.resize();
+      map.resize();
 
-      await mapbox.load();
+      await loadMap(map);
 
       const locations = getLocationsFromTrips(trips);
-      await loadIcons(mapbox, getIconsFromLocations(locations));
+      await loadIcons(map, getIconsFromLocations(locations));
 
-      addLocationsToMap(mapbox, locations);
+      addLocationsToMap(map, locations);
 
-      mapbox.map.on('click', 'places', handleMapClick(mapbox));
-      mapbox.map.on('mouseenter', 'places', handleMapMouseEnter(mapbox));
-      mapbox.map.on('mouseleave', 'places', handleMapMouseLeave(mapbox));
+      map.on('click', 'places', handleMapClick(map));
+      map.on('mouseenter', 'places', handleMapMouseEnter(map));
+      map.on('mouseleave', 'places', handleMapMouseLeave(map));
     }
   }, []);
 
