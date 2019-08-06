@@ -1,4 +1,4 @@
-import MapboxGl, { MapboxOptions, accessToken } from 'mapbox-gl';
+import MapboxGl, { MapboxOptions } from 'mapbox-gl';
 
 export const createMap = (
   accessToken: string,
@@ -29,34 +29,3 @@ export const loadImage = (
       resolve({ name, image });
     });
   });
-
-class Mapbox {
-  public map: MapboxGl.Map;
-
-  public constructor(accessToken: string, options?: MapboxOptions) {}
-
-  public load() {
-    return;
-  }
-
-  public hasImage(name: string): boolean {
-    return this.map.hasImage(name);
-  }
-
-  public loadImage(name: string, url: string) {
-    return new Promise((resolve, reject) => {
-      this.map.loadImage(url, (error: any, image: any) => {
-        if (error) {
-          console.error(error);
-          reject(error);
-          return;
-        }
-        console.log(name);
-        this.map.addImage(name, image);
-        resolve({ name, image });
-      });
-    });
-  }
-}
-
-export default Mapbox;

@@ -112,7 +112,6 @@ const TravelMap: React.FC<Props> = ({ trips }: Props): ReactElement => {
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [16.563211, 48.121781],
         zoom: 1,
-        pitchWithRotate: false,
       });
       map.resize();
 
