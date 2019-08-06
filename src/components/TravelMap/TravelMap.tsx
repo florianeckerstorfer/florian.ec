@@ -81,6 +81,28 @@ const loadIcons = async (mapbox: Mapbox, icons: string[]): Promise<void> => {
   }
 };
 
+const handleMapMouseEnter = (mapbox: Mapbox) => (): void => {
+  mapbox.map.getCanvas().style.cursor = 'pointer';
+};
+
+const handleMapMouseLeave = (mapbox: Mapbox) => (): void => {
+  mapbox.map.getCanvas().style.cursor = '';
+};
+
+const handleMapClick = (mapbox: Mapbox) => (e: any) => {
+  const coordinates = e.features[0].geometry.coordinates.slice();
+  const description = e.features[0].properties.description;
+
+  while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+  }
+
+  new mapboxgl.Popup()
+    .setLngLat(coordinates)
+    .setHTML(description)
+    .addTo(mapbox.map);
+};
+
 const TravelMap: React.FC<Props> = ({ trips }: Props): ReactElement => {
   const mapRef = useCallback(async node => {
     if (node) {
@@ -101,29 +123,12 @@ const TravelMap: React.FC<Props> = ({ trips }: Props): ReactElement => {
 
       addLocationsToMap(mapbox, locations);
 
-      mapbox.map.on('click', 'places', (e: any) => {
-        var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = e.features[0].properties.description;
-
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        new mapboxgl.Popup()
-          .setLngLat(coordinates)
-          .setHTML(description)
-          .addTo(mapbox.map);
-      });
-
-      mapbox.map.on('mouseenter', 'places', () => {
-        mapbox.map.getCanvas().style.cursor = 'pointer';
-      });
-
-      mapbox.map.on('mouseleave', 'places', () => {
-        mapbox.map.getCanvas().style.cursor = '';
-      });
+      mapbox.map.on('click', 'places', handleMapClick(mapbox));
+      mapbox.map.on('mouseenter', 'places', handleMapMouseEnter(mapbox));
+      mapbox.map.on('mouseleave', 'places', handleMapMouseLeave(mapbox));
     }
   }, []);
+
   return (
     <>
       <Helmet>
