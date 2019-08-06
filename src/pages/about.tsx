@@ -32,8 +32,8 @@ const AboutPage: React.FC<Props> = ({ data }: Props): ReactElement => (
       </p>
 
       <p>
-        I like reading, music, going to <Link to="/concerts">concerts</Link> and
-        going on walks.
+        I like reading, music, going to <Link to="/concerts">concerts</Link>,{' '}
+        <Link to="/travel">travelling</Link> and going on walks.
       </p>
 
       <Img

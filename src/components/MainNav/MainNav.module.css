@@ -8,9 +8,10 @@
 }
 
 .list {
+  align-items: center;
   display: flex;
-  list-style: none;
   flex-direction: row;
+  list-style: none;
   margin: 0;
   padding: 0;
 }

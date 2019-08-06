@@ -6,6 +6,7 @@
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "@loadable/component": "^5.10.2",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.15",
     "gatsby": "^2.13.41",
@@ -26,17 +27,23 @@
     "gatsby-source-filesystem": "^2.1.6",
     "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.2.4",
+    "leaflet": "^1.5.1",
+    "mapbox-gl": "^1.1.1",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-leaflet": "^2.4.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^24.0.15",
+    "@types/loadable__component": "^5.10.0",
+    "@types/mapbox-gl": "^0.54.0",
     "@types/react-helmet": "^5.0.8",
+    "@types/react-leaflet": "^2.2.1",
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.2.8",
     "enzyme": "^3.10.0",
