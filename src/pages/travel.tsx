@@ -1,4 +1,4 @@
-import React, { ReactElement, Suspense } from 'react';
+import React, { ReactElement } from 'react';
 
 import H1 from '../components/H1/H1';
 import ISiteMetadata from '../types/ISiteMetadata';
