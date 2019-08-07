@@ -7,7 +7,7 @@ import TravelFrontmatter, {
 } from '../../types/ITravelFrontmatter';
 import mapboxgl from 'mapbox-gl';
 import style from './TravelMap.module.css';
-import { createMap, loadMap, loadImage, hasImage } from '../../lib/Mapbox';
+import { createMap, loadMap, loadImage, hasImage } from '../../lib/mapbox';
 import MapboxGl from 'mapbox-gl';
 
 interface Props {

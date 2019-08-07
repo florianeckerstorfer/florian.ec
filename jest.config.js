@@ -17,4 +17,12 @@ module.exports = {
   testURL: `http://localhost`,
   setupFiles: [`<rootDir>/loadershim.js`],
   collectCoverageFrom: ['src/**/*.{tsx,ts,jsx,js}'],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
 };

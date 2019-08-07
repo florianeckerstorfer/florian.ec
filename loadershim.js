@@ -6,3 +6,7 @@ Enzyme.configure({ adapter: new Adapter() });
 global.___loader = {
   enqueue: jest.fn(),
 };
+
+global.URL = {
+  createObjectURL: jest.fn(),
+};

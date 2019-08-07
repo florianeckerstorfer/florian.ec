@@ -17,9 +17,9 @@ export const hasImage = (map: MapboxGl.Map, name: string): boolean =>
 export const loadImage = (
   map: MapboxGl.Map,
   { name, url }: { name: string; url: string }
-) =>
+): Promise<{ name: string; image: any }> =>
   new Promise((resolve, reject) => {
-    map.loadImage(url, (error: any, image: any) => {
+    map.loadImage(url, (error: any, image: any): void => {
       if (error) {
         console.error(error);
         reject(error);
