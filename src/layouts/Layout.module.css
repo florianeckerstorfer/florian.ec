@@ -22,8 +22,11 @@
   grid-area: pageTitle;
 }
 
-.main {
+.mainWrapper {
   grid-area: main;
+}
+
+.main {
   outline: 0;
 }
 

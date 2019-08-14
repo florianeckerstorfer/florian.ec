@@ -46,7 +46,7 @@ export const renderLayout = ({ asides, children, pageTitle }: Props) => (
     <Header siteTitle={data.site.siteMetadata.title} />
     {pageTitle && pageTitle({ className: styles.pageTitle })}
     <MainNav />
-    <div className={styles.main}>
+    <div className={styles.mainWrapper}>
       <main id="main" className={styles.main} tabIndex={-1} role="main">
         {children}
       </main>
