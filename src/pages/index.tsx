@@ -20,6 +20,8 @@ interface Props {
   };
 }
 
+const renderAsides = () => <FeedLinks />;
+
 const IndexPage: React.FC<Props> = ({
   data,
   location,
@@ -27,7 +29,7 @@ const IndexPage: React.FC<Props> = ({
   const siteTitle = data.site.siteMetadata.title;
   const articles = data.allMarkdownRemark.edges;
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} asides={[renderAsides]}>
       <SEO
         title="Home"
         keywords={[
@@ -38,7 +40,6 @@ const IndexPage: React.FC<Props> = ({
       />
       <H1 className={utilCss.visuallyHidden}>Blog Posts</H1>
       <ArticleList articles={articles} />
-      <FeedLinks />
     </Layout>
   );
 };

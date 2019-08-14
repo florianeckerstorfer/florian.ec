@@ -22,8 +22,12 @@
   grid-area: pageTitle;
 }
 
-.main {
+.mainWrapper {
   grid-area: main;
+}
+
+.main {
+  outline: 0;
 }
 
 @media screen and (min-width: 640px) {

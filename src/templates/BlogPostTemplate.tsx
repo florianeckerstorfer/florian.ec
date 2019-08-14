@@ -18,6 +18,8 @@ interface Props {
   };
 }
 
+const renderFeedLinks = () => <FeedLinks />;
+
 const BlogPostTemplate: React.FC<Props> = ({
   data,
   pageContext,
@@ -27,13 +29,12 @@ const BlogPostTemplate: React.FC<Props> = ({
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} asides={[renderFeedLinks]}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <Article post={post} context={pageContext} />
-      <FeedLinks />
     </Layout>
   );
 };

@@ -55,9 +55,9 @@ const PrivacyPage: React.FC = (): ReactElement => (
 
       <ul>
         <li>Florian Eckerstorfer</li>
-        <li>Sobieskigasse 12</li>
-        <li>1090 Wien, Österreich</li>
-        <li>E-Mailadresse: florian@eckerstorfer.co</li>
+        <li>Tigergasse 4</li>
+        <li>1080 Wien, Österreich</li>
+        <li>E-Mailadresse: florian@eckerstorfer.net</li>
       </ul>
 
       <h3>Arten der verarbeiteten Daten:</h3>

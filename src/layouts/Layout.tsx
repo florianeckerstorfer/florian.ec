@@ -21,6 +21,7 @@ interface Props {
   location?: Location;
   title?: string;
   pageTitle?: (props: { className?: string }) => React.ReactElement;
+  asides?: [() => React.ReactElement];
 }
 
 interface Data {
@@ -31,7 +32,7 @@ interface Data {
   };
 }
 
-export const renderLayout = ({ children, pageTitle }: Props) => (
+export const renderLayout = ({ asides, children, pageTitle }: Props) => (
   data: Data
 ) => (
   <div
@@ -45,14 +46,18 @@ export const renderLayout = ({ children, pageTitle }: Props) => (
     <Header siteTitle={data.site.siteMetadata.title} />
     {pageTitle && pageTitle({ className: styles.pageTitle })}
     <MainNav />
-    <main id="main" className={styles.main} tabIndex={-1} role="main">
-      {children}
-    </main>
+    <div className={styles.mainWrapper}>
+      <main id="main" className={styles.main} tabIndex={-1} role="main">
+        {children}
+      </main>
+      {asides && asides.map(aside => aside())}
+    </div>
     <Footer />
   </div>
 );
 
 const Layout: React.FC<Props> = ({
+  asides,
   children,
   pageTitle,
 }: Props): ReactElement => (
@@ -66,7 +71,7 @@ const Layout: React.FC<Props> = ({
         }
       }
     `}
-    render={renderLayout({ children, pageTitle })}
+    render={renderLayout({ asides, children, pageTitle })}
   />
 );
 
