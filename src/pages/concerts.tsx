@@ -23,7 +23,6 @@ const ConcertsPage: React.FC = (): ReactElement => (
       <h2>Plans</h2>
 
       <ul>
-        <li>Aug 13 Mitski (Flex, Vienna)</li>
         <li>Sep 4 Courtney Barnett (Flex, Vienna)</li>
         <li>Sep 14 Amanda Palmer (Wiener Konzerthaus, Vienna)</li>
         <li>Sep 26-28 Waves Vienna Festival (Wuk, Vienna)</li>
@@ -35,6 +34,17 @@ const ConcertsPage: React.FC = (): ReactElement => (
       <h2>2019</h2>
 
       <ul>
+        <li>
+          Aug 13{' '}
+          <a href="https://micro.florian.ec/2019/08/13/mitski-at-flex.html">
+            Mitski
+          </a>{' '}
+          with{' '}
+          <a href="https://micro.florian.ec/2019/08/13/sakura-at-flex.html">
+            Sakura
+          </a>{' '}
+          (Flex, Vienna)
+        </li>
         <li>
           <del>Jul 7 Lucy Dacus (Flex, Vienna)</del> <Label>Cancelled</Label>
         </li>
