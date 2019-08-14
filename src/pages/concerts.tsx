@@ -68,6 +68,42 @@ const ConcertsPage: React.FC = (): ReactElement => (
 
       <ul>
         <li>
+          Nov 11{' '}
+          <a href="http://micro.florian.ec/2018/11/11/chvrches-at-gasometer.html">
+            Chvrches
+          </a>{' '}
+          with{' '}
+          <a href="http://micro.florian.ec/2018/11/11/anger-at-gasometer.html">
+            Anger
+          </a>{' '}
+          (Gasometer, Vienna)
+        </li>
+        <li>
+          Nov 7{' '}
+          <a href="http://micro.florian.ec/2018/11/08/mourn-at-fluc.html">
+            Mourn
+          </a>{' '}
+          (Fluc, Vienna)
+        </li>
+        <li>
+          Nov 4{' '}
+          <a href="http://micro.florian.ec/2018/11/05/metric-at-wuk.html">
+            Metric
+          </a>{' '}
+          (Wuk, Vienna)
+        </li>
+        <li>
+          Oct 28{' '}
+          <a href="http://micro.florian.ec/2018/10/29/laurel-at-b.html">
+            Laurel
+          </a>{' '}
+          with{' '}
+          <a href="http://micro.florian.ec/2018/10/29/polly-money-at.html">
+            Polly Money
+          </a>{' '}
+          (B72, Vienna)
+        </li>
+        <li>
           Sep 29 Waves Festival (Vienna): Kids N Cats, Mascha, Nabihah Iqbal,
           Pom Poko
         </li>
