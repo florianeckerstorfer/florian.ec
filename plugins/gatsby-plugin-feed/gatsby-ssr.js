@@ -10,17 +10,17 @@ var _gatsby = require("gatsby");
 
 var _internals = require("./internals");
 
-var _jsxFileName = "/Users/florian/Projects/florian/next.florian.ec/plugins/gatsby-plugin-advanced-feed/src/gatsby-ssr.js";
+var _jsxFileName = "/Users/florian/Projects/florian/florian.ec/plugins/gatsby-plugin-feed/src/gatsby-ssr.js";
 // TODO: remove for v3
 var withPrefix = _gatsby.withAssetPrefix || _gatsby.withPrefix;
 
 exports.onRenderBody = function (_ref, pluginOptions) {
   var setHeadComponents = _ref.setHeadComponents;
 
-  var _defaultOptions$plugi = (0, _extends2.default)({}, _internals.defaultOptions, pluginOptions),
+  var _defaultOptions$plugi = (0, _extends2.default)({}, _internals.defaultOptions, {}, pluginOptions),
       createLinkInHead = _defaultOptions$plugi.createLinkInHead;
 
-  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, pluginOptions.output);
+  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, {}, pluginOptions.output);
 
   if (!createLinkInHead) {
     return;

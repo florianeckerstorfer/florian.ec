@@ -68,7 +68,7 @@ var generateJSONFeed = function generateJSONFeed(feed, name) {
 
 exports.onPostBuild = function (_ref, pluginOptions) {
   var graphql = _ref.graphql;
-  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, pluginOptions.output);
+  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, {}, pluginOptions.output);
   graphql("\n    {\n      site {\n        siteMetadata {\n          title\n          description\n          author\n          email\n          siteUrl\n        }\n      }\n      allMarkdownRemark(\n        filter: { fileAbsolutePath: { regex: \"/blog/\" } }\n        sort: { fields: [frontmatter___date], order: DESC }\n        limit: 1000\n      ) {\n        edges {\n          node {\n            fields {\n              slug\n            }\n            frontmatter {\n              slug\n              title\n              date\n            }\n            html\n          }\n        }\n      }\n    }\n  ").then(function (result) {
     if (result.errors) {
       throw result.errors;

@@ -70,7 +70,7 @@ module.exports = {
         path: `${__dirname}/content/assets/`,
       },
     },
-    'gatsby-plugin-advanced-feed',
+    'gatsby-plugin-feed',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {

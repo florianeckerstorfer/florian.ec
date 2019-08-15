@@ -1,13 +1,13 @@
 {
-  "name": "gatsby-plugin-advanced-feed",
+  "name": "@fec/gatsby-plugin-feed",
   "version": "1.0.0",
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "watch": "babel -w src --out-dir . --ignore **/__tests__"
   },
   "dependencies": {
-    "feed": "^4.0.0",
-    "@babel/runtime": "7.5.5"
+    "@babel/runtime": "7.5.5",
+    "feed": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
