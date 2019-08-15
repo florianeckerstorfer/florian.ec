@@ -18,7 +18,7 @@ interface Props {
   };
 }
 
-const renderFeedLinks = () => <FeedLinks />;
+export const renderFeedLinks = () => <FeedLinks />;
 
 const BlogPostTemplate: React.FC<Props> = ({
   data,

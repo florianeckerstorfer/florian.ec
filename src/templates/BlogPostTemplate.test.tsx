@@ -3,6 +3,7 @@ import * as React from 'react';
 import BlogPostTemplate from './BlogPostTemplate';
 import IPageContext from '../types/IPageContext';
 import { shallow } from 'enzyme';
+import { renderAsides } from '../pages/index';
 
 const location = window.location;
 const pageContext: IPageContext = {
@@ -54,7 +55,6 @@ describe('BlogPostTemplate', () => {
 
     expect(component.exists()).toBeTruthy();
     expect(component.find('Article').prop('post')).toBe(data.markdownRemark);
-    expect(component.find('FeedLinks').exists()).toBe(true);
   });
 
   it('should render excerpt as SEO description of no description', () => {
@@ -82,5 +82,12 @@ describe('BlogPostTemplate', () => {
     const seo = component.find('SEO');
 
     expect(seo.prop('description')).toBe(data.markdownRemark.excerpt);
+  });
+});
+
+describe('renderFeedLinks', () => {
+  const asides = shallow(renderAsides());
+  it('should render feed links', () => {
+    expect(asides.find('.feeds').exists()).toBe(true);
   });
 });

@@ -12,7 +12,7 @@ describe('Layout', () => {
 
 describe('renderLayout()', () => {
   const data = { site: { siteMetadata: { title: 'my site' } } };
-  const component = shallow(renderLayout(<span>foo</span>)(data));
+  const component = shallow(renderLayout({ children: <span>foo</span> })(data));
 
   it('should render layout', () => {
     expect(component.exists()).toBe(true);

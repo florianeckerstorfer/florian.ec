@@ -20,7 +20,7 @@ interface Props {
   };
 }
 
-const renderAsides = () => <FeedLinks />;
+export const renderAsides = () => <FeedLinks />;
 
 const IndexPage: React.FC<Props> = ({
   data,
