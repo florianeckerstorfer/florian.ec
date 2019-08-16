@@ -1,5 +1,9 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const sharp = require('sharp');
+
+sharp.cache(false);
+sharp.simd(false);
 
 // See https://github.com/gatsbyjs/gatsby/issues/11934#issuecomment-469046186
 exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
