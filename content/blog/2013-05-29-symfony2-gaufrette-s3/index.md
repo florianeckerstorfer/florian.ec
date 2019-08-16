@@ -69,7 +69,7 @@ We also need to activate _Static Website Hosting_. To activate this we select _E
 
 You can test if your bucket works by using the AWS Console to upload an file to your bucket. The public URL of your bucket can also be found in the _Static Website Hosting_ section of the _Properties_ tab. It should look like this:
 
-```
+```text
 http://BUCKET_NAME.s3-website-us-east-1.amazonaws.com
 ```
 
