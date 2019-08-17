@@ -16,6 +16,6 @@ A experimental real time dashboard for likes and +1s. The source code is availab
 
 PHP, JavaScript, HTML, CSS, HTML5 Boilerplate, jQuery, Pusher
 
-![Screenshot of the watched site](./loveboard-1.png)
+![Screenshot of the watched site](/content/projects/loveboard/loveboard-1.png)
 
-![Screenshot of the dashboard](./loveboard-2.png)
+![Screenshot of the dashboard](/content/projects/loveboard/loveboard-2.png)

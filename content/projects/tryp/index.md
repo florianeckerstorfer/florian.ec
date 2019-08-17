@@ -16,4 +16,4 @@ Displays a map with all the places where a Twitter user has been.
 
 PHP, JavaScript, HTML, Sass, HTML5 Boilerplate, Cocur Dispatcher, Twig, jQuery, Google Maps API, Twitter API
 
-![Screenshot of the map showing a users locations](./tryp-1.png)
+![Screenshot of the map showing a users locations](/content/projects/tryp/tryp-1.png)

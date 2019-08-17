@@ -18,10 +18,10 @@ Extension for Safari to search your Gimme Bar account.
 
 JavaScript, jQuery, OAuth, Gimme Bar API
 
-![Screenshot of the main window](./gimmebarsearch-1.png)
+![Screenshot of the main window](/content/projects/gimmebarsearch/gimmebarsearch-1.png)
 
-![Screenshot of the search](./gimmebarsearch-2.png)
+![Screenshot of the search](/content/projects/gimmebarsearch/gimmebarsearch-2.png)
 
-![Screenshot of the hovering over an image](./gimmebarsearch-3.png)
+![Screenshot of the hovering over an image](/content/projects/gimmebarsearch/gimmebarsearch-3.png)
 
-![Screenshot of the showing an image URL](./gimmebarsearch-4.png)
+![Screenshot of the showing an image URL](/content/projects/gimmebarsearch/gimmebarsearch-4.png)

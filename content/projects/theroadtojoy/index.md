@@ -14,6 +14,6 @@ My previous portfolio.
 
 HTML, Jekyll, Sass, HTML5 Boilerplate
 
-![Screenshot of the homepage](./theroadtojoy-1.png)
+![Screenshot of the homepage](/content/projects/theroadtojoy/theroadtojoy-1.png)
 
-![Screenshot of the detail view](./theroadtojoy-2.png)
+![Screenshot of the detail view](/content/projects/theroadtojoy/theroadtojoy-2.png)

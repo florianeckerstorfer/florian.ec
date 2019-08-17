@@ -16,4 +16,4 @@ This small tool lets you URL-encode and decode text.
 
 HTML, JavaScript, Sass, HTML5 Boilerplate, jQuery
 
-![Screenshot of the homepage](./urlencoder-1.png)
+![Screenshot of the homepage](/content/projects/urlencoder/urlencoder-1.png)

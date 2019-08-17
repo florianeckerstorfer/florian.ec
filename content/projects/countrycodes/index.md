@@ -16,8 +16,8 @@ Convert country codes, country names, telephone codes, TLDs and currency codes.
 
 PHP, HTML, Sass, HTML5 Boilerplate
 
-![Screenshot of the homepage](./countrycodes-1.png)
+![Screenshot of the homepage](/content/projects/countrycodes/countrycodes-1.png)
 
-![Screenshot of the detail view for a currency](./countrycodes-2.png)
+![Screenshot of the detail view for a currency](/content/projects/countrycodes/countrycodes-2.png)
 
-![Screenshot of the detail view for a country](./countrycodes-3.png)
+![Screenshot of the detail view for a country](/content/projects/countrycodes/countrycodes-3.png)

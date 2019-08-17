@@ -29,6 +29,10 @@
   border-radius: 0;
 }
 
+:global .gatsby-resp-image-image {
+  width: 100%;
+}
+
 :global .gatsby-resp-image-link,
 :global .gatsby-image-wrapper,
 :global .gatsby-resp-image-figure {
