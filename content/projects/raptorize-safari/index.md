@@ -19,4 +19,4 @@ Extension for Safari to raptorize any website.
 
 JavaScript, jQuery, Raptorize Kit, Raptorize PSD
 
-![Screenshot of the extension in action](./raptorize-safari-1.png)
+![Screenshot of the extension in action](/content/projects/raptorize-safari/raptorize-safari-1.png)

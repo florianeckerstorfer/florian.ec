@@ -1,7 +1,8 @@
-const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require(`path`);
 const sharp = require('sharp');
 
+// See https://github.com/gatsbyjs/gatsby/issues/6291#issuecomment-505097465
 sharp.cache(false);
 sharp.simd(false);
 

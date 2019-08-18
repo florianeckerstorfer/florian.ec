@@ -16,6 +16,6 @@ The project is no longer online and I no longer own the domain name _ijustfoundt
 
 PHP, JavaScript, HTML, Sass, jQuery, last.fm API
 
-![Screenshot of the homepage](./ijustfoundthem-1.png)
+![Screenshot of the homepage](/content/projects/ijustfoundthem/ijustfoundthem-1.png)
 
-![Screenshot of the detail view](./ijustfoundthem-2.png)
+![Screenshot of the detail view](/content/projects/ijustfoundthem/ijustfoundthem-2.png)

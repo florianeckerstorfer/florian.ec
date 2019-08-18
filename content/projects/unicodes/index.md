@@ -19,14 +19,14 @@ _The project is no longer online and I no longer own the domain name unicod.es._
 
 ## Version 2
 
-![Screenshot of the list](./unicodes2-1.png)
+![Screenshot of the list](/content/projects/unicodes/unicodes2-1.png)
 
-![Screenshot of the detail view](./unicodes2-2.png)
+![Screenshot of the detail view](/content/projects/unicodes/unicodes2-2.png)
 
 ## Version 1
 
-![Screenshot of the list](./unicodes1-1.png)
+![Screenshot of the list](/content/projects/unicodes/unicodes1-1.png)
 
-![Screenshot of the list view](./unicodes1-2.png)
+![Screenshot of the list view](/content/projects/unicodes/unicodes1-2.png)
 
-![Screenshot of the detail view](./unicodes1-3.png)
+![Screenshot of the detail view](/content/projects/unicodes/unicodes1-3.png)

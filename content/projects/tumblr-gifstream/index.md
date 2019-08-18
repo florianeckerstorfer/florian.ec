@@ -16,4 +16,4 @@ Create streams of GIFs based on Tumblr tags for the [>Gifstream for iOS](http://
 
 PHP, Silex, Twig, Tumblr API
 
-![Screenshot of a generated GifStream](./tumblr-gifstreams-1.png)
+![Screenshot of a generated GifStream](/content/projects/tumblr-gifstream/tumblr-gifstreams-1.png)

@@ -36,7 +36,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: 'gatsby-remark-netlify-images',
             options: {
               maxWidth: 960,
               showCaptions: true,

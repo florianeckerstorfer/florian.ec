@@ -11,8 +11,8 @@ When I saw [Sarah Drasners](https://twitter.com/sarah_edo) [Night Owl theme for 
 
 Here is a quick preview:
 
-<video src="https://embed.florian.ec/nightowl-itermcolors.mp4" autoplay loop>
-Sorry, your browser doesn't support embedded videos. However, you can <a href="https://embed.florian.ec/nightowl-itermcolors.mp4">download the video</a>.
+<video src="/content/blog/2018-05-22-night-owl-itermcolors/nightowl-itermcolors.mp4" autoplay loop>
+Sorry, your browser doesn't support embedded videos. However, you can <a href="/content/blog/2018-05-22-night-owl-itermcolors/nightowl-itermcolors.mp4">download the video</a>.
 </video>
 
 You can download [Night Owl for iTerm2](https://files.florian.ec/night-owl.itermcolors) and it is also on [Github](https://github.com/florianeckerstorfer/night-owl-itermcolors).

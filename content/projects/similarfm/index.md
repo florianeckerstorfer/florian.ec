@@ -16,6 +16,6 @@ Open artists that are similar to the one your are listening to in Spotify with y
 
 PHP, HTML, Bootstrap, LESS, Silex, Twig, Last.fm API, Spotify API
 
-![Screenshot of the homepage](./similarfm-1.png)
+![Screenshot of the homepage](/content/similarfm/similarfm-1.png)
 
-![Screenshot of the detail view](./similarfm-2.png)
+![Screenshot of the detail view](/content/similarfm/similarfm-2.png)
