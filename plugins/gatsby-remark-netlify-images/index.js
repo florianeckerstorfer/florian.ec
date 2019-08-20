@@ -6,68 +6,46 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
-var _require = require("./constants"),
-    DEFAULT_OPTIONS = _require.DEFAULT_OPTIONS,
-    imageClass = _require.imageClass,
-    imageBackgroundClass = _require.imageBackgroundClass,
-    imageWrapperClass = _require.imageWrapperClass;
+var _constants = require("./constants");
 
-var visitWithParents = require("unist-util-visit-parents");
+var _unistUtilVisitParents = _interopRequireDefault(require("unist-util-visit-parents"));
 
-var getDefinitions = require("mdast-util-definitions");
+var _mdastUtilDefinitions = _interopRequireDefault(require("mdast-util-definitions"));
 
-var path = require("path");
+var _path = _interopRequireDefault(require("path"));
 
-var queryString = require("query-string");
+var _queryString = _interopRequireDefault(require("query-string"));
 
-var isRelativeUrl = require("is-relative-url");
+var _isRelativeUrl = _interopRequireDefault(require("is-relative-url"));
 
-var _ = require("lodash");
+var _lodash = _interopRequireDefault(require("lodash"));
 
-var Promise = require("bluebird");
+var _bluebird = _interopRequireDefault(require("bluebird"));
 
-var cheerio = require("cheerio");
+var _cheerio = _interopRequireDefault(require("cheerio"));
 
-var slash = require("slash");
-
-var chalk = require("chalk");
-
-var _require2 = require('./fluid'),
-    fluid = _require2.fluid; // If the image is relative (not hosted elsewhere)
-// 1. Find the image file
-// 2. Find the image's size
-// 3. Filter out any responsive image fluid sizes that are greater than the image's width
-// 4. Create the responsive images.
-// 5. Set the html w/ aspect ratio helper.
-
+var _chalk = _interopRequireDefault(require("chalk"));
 
 module.exports = function (_ref, pluginOptions) {
-  var files = _ref.files,
-      markdownNode = _ref.markdownNode,
-      markdownAST = _ref.markdownAST,
-      pathPrefix = _ref.pathPrefix,
-      getNode = _ref.getNode,
+  var markdownAST = _ref.markdownAST,
       reporter = _ref.reporter,
-      cache = _ref.cache,
       compiler = _ref.compiler;
 
-  var options = _.defaults(pluginOptions, {
-    pathPrefix: pathPrefix
-  }, DEFAULT_OPTIONS);
+  var options = _lodash.default.defaults(pluginOptions, _constants.DEFAULT_OPTIONS);
 
   var findParentLinks = function findParentLinks(_ref2) {
     var children = _ref2.children;
     return children.some(function (node) {
-      return node.type === "html" && !!node.value.match(/<a /) || node.type === "link";
+      return node.type === 'html' && !!node.value.match(/<a /) || node.type === 'link';
     });
   }; // Get all the available definitions in the markdown tree
 
 
-  var definitions = getDefinitions(markdownAST); // This will allow the use of html image tags
+  var definitions = (0, _mdastUtilDefinitions.default)(markdownAST); // This will allow the use of html image tags
   // const rawHtmlNodes = select(markdownAST, `html`)
 
   var rawHtmlNodes = [];
-  visitWithParents(markdownAST, ["html", "jsx"], function (node, ancestors) {
+  (0, _unistUtilVisitParents.default)(markdownAST, ["html", "jsx"], function (node, ancestors) {
     var inLink = ancestors.some(findParentLinks);
     rawHtmlNodes.push({
       node: node,
@@ -76,7 +54,7 @@ module.exports = function (_ref, pluginOptions) {
   }); // This will only work for markdown syntax image tags
 
   var markdownImageNodes = [];
-  visitWithParents(markdownAST, ["image", "imageReference"], function (node, ancestors) {
+  (0, _unistUtilVisitParents.default)(markdownAST, ["image", "imageReference"], function (node, ancestors) {
     var inLink = ancestors.some(findParentLinks);
     markdownImageNodes.push({
       node: node,
@@ -85,12 +63,12 @@ module.exports = function (_ref, pluginOptions) {
   });
 
   var getImageInfo = function getImageInfo(uri) {
-    var _queryString$parseUrl = queryString.parseUrl(uri),
+    var _queryString$parseUrl = _queryString.default.parseUrl(uri),
         url = _queryString$parseUrl.url,
         query = _queryString$parseUrl.query;
 
     return {
-      ext: path.extname(url).split(".").pop(),
+      ext: _path.default.extname(url).split(".").pop(),
       url: url,
       query: query
     };
@@ -143,7 +121,7 @@ module.exports = function (_ref, pluginOptions) {
     var captionString = getCaptionString();
 
     if (!options.markdownCaptions || !compiler) {
-      return _.escape(captionString);
+      return _lodash.default.escape(captionString);
     }
 
     return compiler.generateHTML(compiler.parseString(captionString));
@@ -185,26 +163,26 @@ module.exports = function (_ref, pluginOptions) {
                 return Math.round(size);
               }).map(function (size) {
                 return imagePath + "?nf_resize=fit&w=" + size + " " + size + "w";
-              }).join(",\n");
+              }).join(',\n');
               originalImg = imagePath;
               fallbackSrc = imagePath;
               presentationWidth = options.maxWidth; // Generate default alt tag
 
-              srcSplit = getImageInfo(node.url).url.split("/");
+              srcSplit = getImageInfo(node.url).url.split('/');
               fileName = srcSplit[srcSplit.length - 1];
-              fileNameNoExt = fileName.replace(/\.[^/.]+$/, "");
-              defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, " ");
+              fileNameNoExt = fileName.replace(/\.[^/.]+$/, '');
+              defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, ' ');
               sizes = "(max-width: " + presentationWidth + "px) 100vw, " + presentationWidth + "px";
-              alt = _.escape(overWrites.alt ? overWrites.alt : node.alt ? node.alt : defaultAlt);
-              title = node.title ? _.escape(node.title) : alt;
+              alt = _lodash.default.escape(overWrites.alt ? overWrites.alt : node.alt ? node.alt : defaultAlt);
+              title = node.title ? _lodash.default.escape(node.title) : alt;
               loading = options.loading;
 
-              if (!["lazy", "eager", "auto"].includes(loading)) {
-                reporter.warn(reporter.stripIndent("\n          " + chalk.bold(loading) + " is an invalid value for the " + chalk.bold("loading") + " option. Please pass one of \"lazy\", \"eager\" or \"auto\".\n        "));
+              if (!['lazy', 'eager', 'auto'].includes(loading)) {
+                reporter.warn(reporter.stripIndent("\n          " + _chalk.default.bold(loading) + " is an invalid value for the " + _chalk.default.bold('loading') + " option. Please pass one of \"lazy\", \"eager\" or \"auto\".\n        "));
               } // Create our base image tag
 
 
-              imageTag = ("\n        <img\n          class=\"" + imageClass + "\"\n          alt=\"" + alt + "\"\n          title=\"" + title + "\"\n          src=\"" + fallbackSrc + "\"\n          srcset=\"" + srcSet + "\"\n          sizes=\"" + sizes + "\"\n          loading=\"" + loading + "\"\n        />\n      ").trim(); // Construct new image node w/ aspect ratio placeholder
+              imageTag = ("\n        <img\n          class=\"" + _constants.imageClass + "\"\n          alt=\"" + alt + "\"\n          title=\"" + title + "\"\n          src=\"" + fallbackSrc + "\"\n          srcset=\"" + srcSet + "\"\n          sizes=\"" + sizes + "\"\n          loading=\"" + loading + "\"\n        />\n      ").trim(); // Construct new image node w/ aspect ratio placeholder
 
               imageCaption = options.showCaptions && getImageCaption(node, overWrites);
               rawHTML = ("" + imageTag).trim(); // Make linking to original image optional.
@@ -213,7 +191,7 @@ module.exports = function (_ref, pluginOptions) {
                 rawHTML = ("\n    <a\n      class=\"gatsby-resp-image-link\"\n      href=\"" + originalImg + "\"\n      style=\"display: block\"\n      target=\"_blank\"\n      rel=\"noopener\"\n    >\n      " + rawHTML + "\n    </a>\n      ").trim();
               }
 
-              rawHTML = ("\n      <span\n        class=\"" + imageWrapperClass + "\"\n        style=\"position: relative; display: block; margin-left: auto; margin-right: auto; max-width: " + presentationWidth + "px;\"\n      >\n        " + rawHTML + "\n      </span>\n      ").trim(); // Wrap in figure and use title as caption
+              rawHTML = ("\n      <span\n        class=\"" + _constants.imageWrapperClass + "\"\n        style=\"position: relative; display: block; margin-left: auto; margin-right: auto; max-width: " + presentationWidth + "px;\"\n      >\n        " + rawHTML + "\n      </span>\n      ").trim(); // Wrap in figure and use title as caption
 
               if (imageCaption) {
                 rawHTML = ("\n    <figure class=\"gatsby-resp-image-figure\">\n      " + rawHTML + "\n      <figcaption class=\"gatsby-resp-image-figcaption\">" + imageCaption + "</figcaption>\n    </figure>\n        ").trim();
@@ -234,11 +212,11 @@ module.exports = function (_ref, pluginOptions) {
     };
   }();
 
-  return Promise.all( // Simple because there is no nesting in markdown
+  return _bluebird.default.all( // Simple because there is no nesting in markdown
   markdownImageNodes.map(function (_ref5) {
     var node = _ref5.node,
         inLink = _ref5.inLink;
-    return new Promise(
+    return new _bluebird.default(
     /*#__PURE__*/
     function () {
       var _ref6 = (0, _asyncToGenerator2.default)(
@@ -273,7 +251,7 @@ module.exports = function (_ref, pluginOptions) {
                 fileType = getImageInfo(node.url).ext; // Ignore gifs as we can't process them,
                 // svgs as they are already responsive by definition
 
-                if (!(isRelativeUrl(node.url) && fileType !== "gif" && fileType !== "svg")) {
+                if (!((0, _isRelativeUrl.default)(node.url) && fileType !== "gif" && fileType !== "svg")) {
                   _context2.next = 16;
                   break;
                 }
@@ -313,11 +291,11 @@ module.exports = function (_ref, pluginOptions) {
     }());
   })).then(function (markdownImageNodes) {
     return (// HTML image node stuff
-      Promise.all( // Complex because HTML nodes can contain multiple images
+      _bluebird.default.all( // Complex because HTML nodes can contain multiple images
       rawHtmlNodes.map(function (_ref7) {
         var node = _ref7.node,
             inLink = _ref7.inLink;
-        return new Promise(
+        return new _bluebird.default(
         /*#__PURE__*/
         function () {
           var _ref8 = (0, _asyncToGenerator2.default)(
@@ -337,7 +315,7 @@ module.exports = function (_ref, pluginOptions) {
                     return _context3.abrupt("return", resolve());
 
                   case 2:
-                    $ = cheerio.load(node.value);
+                    $ = _cheerio.default.load(node.value);
 
                     if (!($("img").length === 0)) {
                       _context3.next = 5;
@@ -377,7 +355,7 @@ module.exports = function (_ref, pluginOptions) {
                     fileType = getImageInfo(formattedImgTag.url).ext; // Ignore gifs as we can't process them,
                     // svgs as they are already responsive by definition
 
-                    if (!(isRelativeUrl(formattedImgTag.url) && fileType !== "gif" && fileType !== "svg")) {
+                    if (!((0, _isRelativeUrl.default)(formattedImgTag.url) && fileType !== "gif" && fileType !== "svg")) {
                       _context3.next = 26;
                       break;
                     }

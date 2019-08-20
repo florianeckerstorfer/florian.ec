@@ -75,7 +75,8 @@
     "coverage": "jest --coverage",
     "deploy": "npm run build && netlify deploy -d public --prod",
     "build-gatsby-plugin-feed": "cd plugins/gatsby-plugin-feed && npm install && npm run build && cd ../..",
-    "build-plugins": "npm run build-gatsby-plugin-feed"
+    "build-gatsby-remark-netlify-images": "cd plugins/gatsby-remark-netlify-images && npm install && npm run build && cd ../..",
+    "build-plugins": "npm run build-gatsby-plugin-feed && npm run build-gatsby-remark-netlify-images"
   },
   "repository": {
     "type": "git",

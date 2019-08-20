@@ -1,34 +1,17 @@
 "use strict";
 
-var _ = require("lodash"); /// Plugin options are loaded onPreBootstrap in gatsby-node
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var pluginDefaults = {
-  forceBase64Format: false,
-  useMozJpeg: process.env.GATSBY_JPEG_ENCODER === "MOZJPEG",
-  stripMetadata: true,
-  lazyImageGeneration: true,
-  defaultQuality: 50
-};
-var generalArgs = {
-  quality: 50,
-  jpegProgressive: true,
-  pngCompressionLevel: 9,
-  // default is 4 (https://github.com/kornelski/pngquant/blob/4219956d5e080be7905b5581314d913d20896934/rust/bin.rs#L61)
-  pngCompressionSpeed: 4,
-  base64: true,
-  grayscale: false,
-  duotone: false,
-  pathPrefix: "",
-  toFormat: "",
-  toFormatBase64: "",
-  sizeByPixelDensity: false
-};
-var pluginOptions = Object.assign({}, pluginDefaults);
+var _readOnlyError2 = _interopRequireDefault(require("@babel/runtime/helpers/readOnlyError"));
+
+var _lodash = _interopRequireDefault(require("lodash"));
+
+var pluginOptions = (0, _extends2.default)({}, pluginOptions);
 
 exports.setPluginOptions = function (opts) {
-  pluginOptions = Object.assign({}, pluginOptions, opts);
-  generalArgs.quality = pluginOptions.defaultQuality;
+  pluginOptions = ((0, _readOnlyError2.default)("pluginOptions"), Object.assign({}, pluginOptions, opts));
   return pluginOptions;
 };
 
@@ -36,30 +19,14 @@ exports.getPluginOptions = function () {
   return pluginOptions;
 };
 
-var healOptions = function healOptions(_ref, args, fileExtension, defaultArgs) {
-  var quality = _ref.defaultQuality;
-
+var healOptions = function healOptions(args, defaultArgs) {
   if (defaultArgs === void 0) {
     defaultArgs = {};
   }
 
-  var options = _.defaults({}, args, {
+  var options = _lodash.default.defaults({}, args, {
     quality: quality
-  }, defaultArgs, generalArgs);
-
-  options.quality = parseInt(options.quality, 10);
-  options.pngCompressionLevel = parseInt(options.pngCompressionLevel, 10);
-  options.pngCompressionSpeed = parseInt(options.pngCompressionSpeed, 10);
-  options.toFormat = options.toFormat.toLowerCase();
-  options.toFormatBase64 = options.toFormatBase64.toLowerCase(); // when toFormat is not set we set it based on fileExtension
-
-  if (options.toFormat === "") {
-    options.toFormat = fileExtension.toLowerCase();
-
-    if (fileExtension === "jpeg") {
-      options.toFormat = "jpg";
-    }
-  } // only set width to 400 if neither width nor height is passed
+  }, defaultArgs); // only set width to 400 if neither width nor height is passed
 
 
   if (options.width === undefined && options.height === undefined) {

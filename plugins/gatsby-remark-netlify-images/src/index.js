@@ -1,47 +1,22 @@
-const {
-  DEFAULT_OPTIONS,
-  imageClass,
-  imageBackgroundClass,
-  imageWrapperClass,
-} = require(`./constants`);
-const visitWithParents = require(`unist-util-visit-parents`);
-const getDefinitions = require(`mdast-util-definitions`);
-const path = require(`path`);
-const queryString = require(`query-string`);
-const isRelativeUrl = require(`is-relative-url`);
-const _ = require(`lodash`);
-const Promise = require(`bluebird`);
-const cheerio = require(`cheerio`);
-const slash = require(`slash`);
-const chalk = require(`chalk`);
-const { fluid } = require('./fluid');
+import { DEFAULT_OPTIONS, imageClass, imageWrapperClass } from './constants';
+import visitWithParents from 'unist-util-visit-parents';
+import getDefinitions from 'mdast-util-definitions';
+import path from 'path';
+import queryString from 'query-string';
+import isRelativeUrl from 'is-relative-url';
+import _ from 'lodash';
+import Promise from 'bluebird';
+import cheerio from 'cheerio';
+import chalk from 'chalk';
 
-// If the image is relative (not hosted elsewhere)
-// 1. Find the image file
-// 2. Find the image's size
-// 3. Filter out any responsive image fluid sizes that are greater than the image's width
-// 4. Create the responsive images.
-// 5. Set the html w/ aspect ratio helper.
-module.exports = (
-  {
-    files,
-    markdownNode,
-    markdownAST,
-    pathPrefix,
-    getNode,
-    reporter,
-    cache,
-    compiler,
-  },
-  pluginOptions
-) => {
-  const options = _.defaults(pluginOptions, { pathPrefix }, DEFAULT_OPTIONS);
+module.exports = ({ markdownAST, reporter, compiler }, pluginOptions) => {
+  const options = _.defaults(pluginOptions, DEFAULT_OPTIONS);
 
   const findParentLinks = ({ children }) =>
     children.some(
       node =>
-        (node.type === `html` && !!node.value.match(/<a /)) ||
-        node.type === `link`
+        (node.type === 'html' && !!node.value.match(/<a /)) ||
+        node.type === 'link'
     );
 
   // Get all the available definitions in the markdown tree
@@ -146,17 +121,17 @@ module.exports = (
     const srcSet = fluidSizes
       .map(size => Math.round(size))
       .map(size => `${imagePath}?nf_resize=fit&w=${size} ${size}w`)
-      .join(`,\n`);
+      .join(',\n');
 
     const originalImg = imagePath;
     const fallbackSrc = imagePath;
     const presentationWidth = options.maxWidth;
 
     // Generate default alt tag
-    const srcSplit = getImageInfo(node.url).url.split(`/`);
+    const srcSplit = getImageInfo(node.url).url.split('/');
     const fileName = srcSplit[srcSplit.length - 1];
-    const fileNameNoExt = fileName.replace(/\.[^/.]+$/, ``);
-    const defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, ` `);
+    const fileNameNoExt = fileName.replace(/\.[^/.]+$/, '');
+    const defaultAlt = fileNameNoExt.replace(/[^A-Z0-9]/gi, ' ');
 
     const sizes = `(max-width: ${presentationWidth}px) 100vw, ${presentationWidth}px`;
 
@@ -168,11 +143,11 @@ module.exports = (
 
     const loading = options.loading;
 
-    if (![`lazy`, `eager`, `auto`].includes(loading)) {
+    if (!['lazy', 'eager', 'auto'].includes(loading)) {
       reporter.warn(
         reporter.stripIndent(`
           ${chalk.bold(loading)} is an invalid value for the ${chalk.bold(
-          `loading`
+          'loading'
         )} option. Please pass one of "lazy", "eager" or "auto".
         `)
       );
