@@ -99,8 +99,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Florian Eckerstorfer',
+        short_name: 'florian.ec',
         start_url: '/',
         background_color: '#7b00fd',
         theme_color: '#7b00fd',
