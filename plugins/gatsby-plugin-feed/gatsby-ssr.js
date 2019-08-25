@@ -14,15 +14,28 @@ var _jsxFileName = "/Users/florian/Projects/florian/florian.ec/plugins/gatsby-pl
 // TODO: remove for v3
 var withPrefix = _gatsby.withAssetPrefix || _gatsby.withPrefix;
 
-exports.onRenderBody = function (_ref, pluginOptions) {
-  var setHeadComponents = _ref.setHeadComponents;
+function shouldCreateLinkInHead(option, pathname) {
+  if (option === false) {
+    return false;
+  } else if (option === true) {
+    return true;
+  }
 
-  var _defaultOptions$plugi = (0, _extends2.default)({}, _internals.defaultOptions, {}, pluginOptions),
-      createLinkInHead = _defaultOptions$plugi.createLinkInHead;
+  console.log('match', new RegExp(option).test(pathname));
+  return new RegExp(option).test(pathname);
+}
 
-  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, {}, pluginOptions.output);
+function renderLinksInHead(_ref, feedOptions) {
+  var pathname = _ref.pathname,
+      setHeadComponents = _ref.setHeadComponents;
 
-  if (!createLinkInHead) {
+  var _defaultOptions$feedO = (0, _extends2.default)({}, _internals.defaultOptions, {}, feedOptions),
+      createLinkInHead = _defaultOptions$feedO.createLinkInHead;
+
+  var output = (0, _extends2.default)({}, _internals.defaultOptions.output, {}, feedOptions.output);
+  console.log('renderLinksInHead', pathname, createLinkInHead);
+
+  if (!shouldCreateLinkInHead(createLinkInHead, pathname)) {
     return;
   }
 
@@ -39,36 +52,56 @@ exports.onRenderBody = function (_ref, pluginOptions) {
   }
 
   setHeadComponents([_react.default.createElement("link", {
-    key: "gatsby-plugin-advanced-feed-rss2",
+    key: "@fec/gatsby-plugin-feed-rss2",
     rel: "alternate",
     type: "application/rss+xml",
     href: withPrefix(output.rss2),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 38
     },
     __self: this
   })]);
   setHeadComponents([_react.default.createElement("link", {
-    key: "gatsby-plugin-advanced-feed-atom",
+    key: "@fec/gatsby-plugin-feed-atom",
     rel: "alternate",
     type: "application/atom+xml",
     href: withPrefix(output.atom),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 46
     },
     __self: this
   })]);
   setHeadComponents([_react.default.createElement("link", {
-    key: "gatsby-plugin-advanced-feed-json",
+    key: "@fec/gatsby-plugin-feed-json",
     rel: "alternate",
     type: "application/json",
     href: withPrefix(output.json),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 54
     },
     __self: this
   })]);
+}
+
+exports.onRenderBody = function (_ref2, pluginOptions) {
+  var pathname = _ref2.pathname,
+      setHeadComponents = _ref2.setHeadComponents;
+
+  if (pluginOptions.feeds && !Array.isArray(pluginOptions.feeds)) {
+    throw new Error('@fec/gatsby-plugin-feed `feeds` option must be an array.');
+  } else if (!pluginOptions.feeds) {
+    generateFeed({
+      graphql: graphql
+    }, {});
+  }
+
+  pluginOptions.feeds.forEach(function (feedOptions) {
+    return renderLinksInHead({
+      pathname: pathname,
+      setHeadComponents: setHeadComponents
+    }, feedOptions);
+  });
 };

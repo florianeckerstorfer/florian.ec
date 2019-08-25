@@ -5,12 +5,22 @@ import { defaultOptions } from './internals';
 // TODO: remove for v3
 const withPrefix = withAssetPrefix || fallbackWithPrefix;
 
-exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
-  const { createLinkInHead } = { ...defaultOptions, ...pluginOptions };
+function shouldCreateLinkInHead(option, pathname) {
+  if (option === false) {
+    return false;
+  } else if (option === true) {
+    return true;
+  }
+  console.log('match', new RegExp(option).test(pathname));
+  return new RegExp(option).test(pathname);
+}
 
-  const output = { ...defaultOptions.output, ...pluginOptions.output };
+function renderLinksInHead({ pathname, setHeadComponents }, feedOptions) {
+  const { createLinkInHead } = { ...defaultOptions, ...feedOptions };
+  const output = { ...defaultOptions.output, ...feedOptions.output };
 
-  if (!createLinkInHead) {
+  console.log('renderLinksInHead', pathname, createLinkInHead);
+  if (!shouldCreateLinkInHead(createLinkInHead, pathname)) {
     return;
   }
 
@@ -26,7 +36,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
 
   setHeadComponents([
     <link
-      key={`gatsby-plugin-advanced-feed-rss2`}
+      key={`@fec/gatsby-plugin-feed-rss2`}
       rel="alternate"
       type="application/rss+xml"
       href={withPrefix(output.rss2)}
@@ -34,7 +44,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   ]);
   setHeadComponents([
     <link
-      key={`gatsby-plugin-advanced-feed-atom`}
+      key={`@fec/gatsby-plugin-feed-atom`}
       rel="alternate"
       type="application/atom+xml"
       href={withPrefix(output.atom)}
@@ -42,10 +52,21 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   ]);
   setHeadComponents([
     <link
-      key={`gatsby-plugin-advanced-feed-json`}
+      key={`@fec/gatsby-plugin-feed-json`}
       rel="alternate"
       type="application/json"
       href={withPrefix(output.json)}
     />,
   ]);
+}
+
+exports.onRenderBody = ({ pathname, setHeadComponents }, pluginOptions) => {
+  if (pluginOptions.feeds && !Array.isArray(pluginOptions.feeds)) {
+    throw new Error('@fec/gatsby-plugin-feed `feeds` option must be an array.');
+  } else if (!pluginOptions.feeds) {
+    generateFeed({ graphql }, {});
+  }
+  pluginOptions.feeds.forEach(feedOptions =>
+    renderLinksInHead({ pathname, setHeadComponents }, feedOptions)
+  );
 };

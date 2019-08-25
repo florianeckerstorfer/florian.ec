@@ -70,7 +70,26 @@ module.exports = {
         path: `${__dirname}/content/assets/`,
       },
     },
-    'gatsby-plugin-feed',
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        feeds: [
+          {
+            limit: 20,
+          },
+          {
+            createLinkInHead: /^\/projects/,
+            match: '^/projects/',
+            output: {
+              rss2: 'projects/rss.xml',
+              atom: 'projects/atom.xml',
+              json: 'projects/feed.json',
+            },
+            title: 'Projects by Florian Eckerstorfer',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
