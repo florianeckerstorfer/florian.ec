@@ -12,9 +12,9 @@ describe('ProjectListItem', () => {
   });
 
   it('should render link to project detail', () => {
-    const link = component.find('.link');
-    expect(link.prop('to')).toBe(`/projects/${project.fields.slug}`);
-    expect(link.dive().text()).toBe(project.frontmatter.title);
+    const titleLink = component.find('.titleLink');
+    expect(titleLink.prop('to')).toBe(`/projects/${project.fields.slug}`);
+    expect(titleLink.dive().text()).toBe(project.frontmatter.title);
   });
 
   it('should render "Inactive" label', () => {
@@ -56,4 +56,20 @@ describe('ProjectListItem for project with tags', () => {
     const tags = component.find('Label');
     expect(tags.length).toBe(project.frontmatter.tags!.length);
   });
+});
+
+describe('ProjectListItem for project with external link', () => {
+  const project = projectNodeFixture.projectWithLink;
+  const component = shallow(<ProjectListItem project={project} />);
+
+  it('should render title with link', () => {
+    const titleLink = component.find('.titleLink');
+    expect(titleLink.prop('href')).toBe(project.frontmatter.link);
+  });
+
+  it('should render URL of link', () => {
+    const urlLink = component.find('.urlLink');
+    expect(urlLink.text()).toBe('example.com');
+    expect(urlLink.prop('href')).toBe(project.frontmatter.link);
+  })
 });

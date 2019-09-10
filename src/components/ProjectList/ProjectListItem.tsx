@@ -12,11 +12,42 @@ export interface Props {
 const ProjectListItem: React.FC<Props> = ({ project }: Props): ReactElement => (
   <li className={styles.project}>
     <div className={styles.title}>
-      <Link to={`/projects/${project.fields.slug}`} className={styles.link}>
-        {project.frontmatter.title}
-      </Link>
+      {project.frontmatter.link ? (
+        <>
+          <span aria-role="img" aria-label="link">
+            🔗
+          </span>{' '}
+          <a
+            href={project.frontmatter.link}
+            className={styles.titleLink}
+            target="_blank"
+            rel="noopener"
+          >
+            {project.frontmatter.title}
+          </a>
+        </>
+      ) : (
+        <Link
+          to={`/projects/${project.fields.slug}`}
+          className={styles.titleLink}
+        >
+          {project.frontmatter.title}
+        </Link>
+      )}
       {!project.frontmatter.active && <Label inverse>Inactive</Label>}
     </div>
+    {project.frontmatter.link && (
+      <div className={styles.url}>
+        <a
+          href={project.frontmatter.link}
+          className={styles.urlLink}
+          target="_blank"
+          rel="noopener"
+        >
+          {project.frontmatter.link.replace(/^(https?:\/\/)/, '')}
+        </a>
+      </div>
+    )}
     {project.frontmatter.description && (
       <div className={styles.description}>
         {project.frontmatter.description}

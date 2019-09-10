@@ -65,6 +65,7 @@ export const pageQuery = graphql`
             category
             date(formatString: "YYYY-MM-DD")
             description
+            link
             slug
             tags
             title

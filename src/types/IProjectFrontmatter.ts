@@ -3,6 +3,7 @@ export default interface IProjectFrontmatter {
   category: string;
   date: string;
   description?: string;
+  link?: string;
   slug: string;
   tags?: string[];
   title: string;
