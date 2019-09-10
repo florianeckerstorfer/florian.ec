@@ -71,7 +71,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: '@fec/gatsby-plugin-advanced-feed',
       options: {
         feeds: [
           {
