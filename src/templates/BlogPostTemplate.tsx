@@ -18,7 +18,7 @@ interface Props {
   };
 }
 
-export const renderFeedLinks = () => <FeedLinks />;
+export const renderFeedLinks = () => <FeedLinks key="feedLinks" />;
 
 const BlogPostTemplate: React.FC<Props> = ({
   data,
@@ -27,6 +27,8 @@ const BlogPostTemplate: React.FC<Props> = ({
 }: Props): ReactElement => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
+
+  console.log('post', post);
 
   return (
     <Layout location={location} title={siteTitle} asides={[renderFeedLinks]}>
@@ -49,7 +51,10 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(
+      frontmatter: { slug: { eq: $slug } }
+      fileAbsolutePath: { regex: "/blog/" }
+    ) {
       id
       excerpt(pruneLength: 160)
       html

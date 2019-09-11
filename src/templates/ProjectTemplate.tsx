@@ -45,7 +45,10 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(
+      frontmatter: { slug: { eq: $slug } }
+      fileAbsolutePath: { regex: "/projects/" }
+    ) {
       id
       excerpt(pruneLength: 160)
       html

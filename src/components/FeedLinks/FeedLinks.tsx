@@ -14,7 +14,7 @@ const FeedLinks: React.FC = (): ReactElement => (
     <H2 style="aside">Subscribe to new posts</H2>
     <ul className={styles.feeds}>
       {feeds.map(feed => (
-        <li className={styles.feed} key={feed.href}>
+        <li key={feed.name.toLowerCase()} className={styles.feed}>
           <a href={feed.href}>{feed.name}</a>
         </li>
       ))}
