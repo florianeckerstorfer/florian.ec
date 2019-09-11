@@ -28,8 +28,6 @@ const BlogPostTemplate: React.FC<Props> = ({
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
 
-  console.log('post', post);
-
   return (
     <Layout location={location} title={siteTitle} asides={[renderFeedLinks]}>
       <SEO
