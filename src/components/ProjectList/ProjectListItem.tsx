@@ -14,7 +14,7 @@ const ProjectListItem: React.FC<Props> = ({ project }: Props): ReactElement => (
     <div className={styles.title}>
       {project.frontmatter.link ? (
         <>
-          <span aria-role="img" aria-label="link">
+          <span role="img" aria-label="link">
             🔗
           </span>{' '}
           <a
