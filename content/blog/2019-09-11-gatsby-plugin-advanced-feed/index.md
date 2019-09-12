@@ -3,7 +3,7 @@ slug: gatsby-plugin-advanced-feed-1.0.0
 title: "@fec/gatsby-plugin-advanced-feed v1.0.0 released"
 date: 2019-09-11
 category: Development
-tags: [gatsby, feed]
+tags: [gatsby, feed, javascript]
 description: I released v1.0.0 of Gatsby plugin to published RSS2, Atom and JSON feeds
 ---
 
