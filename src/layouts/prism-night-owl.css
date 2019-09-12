@@ -2,37 +2,31 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: #d6deeb;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: .85rem;
+  hyphens: none;
+  line-height: 1.5;
+  tab-size: 4;
   text-align: left;
   white-space: pre;
-  word-spacing: normal;
   word-break: normal;
+  word-spacing: normal;
   word-wrap: normal;
-  line-height: 1.5;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
 }
 
 pre[class*='language-']::-moz-selection,
 pre[class*='language-'] ::-moz-selection,
 code[class*='language-']::-moz-selection,
 code[class*='language-'] ::-moz-selection {
-  text-shadow: none;
   background: rgba(29, 59, 83, 0.99);
+  text-shadow: none;
 }
 
 pre[class*='language-']::selection,
 pre[class*='language-'] ::selection,
 code[class*='language-']::selection,
 code[class*='language-'] ::selection {
-  text-shadow: none;
   background: rgba(29, 59, 83, 0.99);
+  text-shadow: none;
 }
 
 @media print {
@@ -44,9 +38,9 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre {
-  padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
+  padding: 1em;
 }
 
 :not(pre) > code,
@@ -55,8 +49,8 @@ pre {
 }
 
 :not(pre) > code {
-  padding: 0.1em;
   border-radius: 0.3em;
+  padding: 0.1em 0.3rem;
   white-space: normal;
 }
 
