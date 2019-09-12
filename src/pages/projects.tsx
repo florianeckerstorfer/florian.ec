@@ -24,6 +24,7 @@ const ProjectsPage: React.FC<Props> = ({
 }: Props): ReactElement => {
   const siteTitle = data.site.siteMetadata.title;
   const projects = data.allMarkdownRemark.edges;
+  console.log(projects);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -52,7 +53,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/projects/" } }
-      sort: { fields: [frontmatter___active, frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___active, frontmatter___date], order: [DESC, DESC] }
     ) {
       edges {
         node {
