@@ -7,6 +7,7 @@ import H1 from '../H1/H1';
 import IBlogFrontmatter from '../../types/IBlogFrontmatter';
 import IPageContext from '../../types/IPageContext';
 import styles from './Article.module.css';
+import NpmPackage from '../NpmPackage/NpmPackage';
 
 interface Props {
   post: {
@@ -29,6 +30,7 @@ const Article: React.FC<Props> = ({ post, context }: Props): ReactElement => {
         </div>
       </div>
       <ArticleContent post={post} />
+      {post.frontmatter.npmPackage && <NpmPackage pckgName={post.frontmatter.npmPackage} />}
       <ArticleNavigation previous={previous} next={next} />
     </article>
   );

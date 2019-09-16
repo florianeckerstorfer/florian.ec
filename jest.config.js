@@ -15,6 +15,6 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/loadershim.js`],
+  setupFiles: [`<rootDir>/loadershim.ts`],
   collectCoverageFrom: ['src/**/*.{tsx,ts,jsx,js}'],
 };

@@ -5,4 +5,5 @@ export default interface IBlogFrontmatter {
   slug: string;
   tags?: string[];
   title: string;
+  npmPackage?: string;
 }

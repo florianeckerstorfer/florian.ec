@@ -5,6 +5,7 @@ date: 2018-05-03T23:00:00.000Z
 category: Development
 tags: [gatsby, a11y, emoji]
 description: I made a plugin for Gatsby to add A11y tags to Emojis in Markdown.
+npmPackage: gatsby-remark-a11y-emoji
 ---
 
 Everyone loves emoji 💯🎉🔥, but if you use [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) to check the accessibility of your JSX you probably know that emoji need special handling to become accessible. Instead of just writing the emoji, you need to wrap it in a `span` and add `role="img"` and `aria-labelledby` attributes.
