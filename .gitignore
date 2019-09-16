@@ -62,3 +62,6 @@ yarn-error.log
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Build target for Netlify functions
+/functions
