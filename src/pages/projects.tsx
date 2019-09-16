@@ -24,7 +24,6 @@ const ProjectsPage: React.FC<Props> = ({
 }: Props): ReactElement => {
   const siteTitle = data.site.siteMetadata.title;
   const projects = data.allMarkdownRemark.edges;
-  console.log(projects);
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
