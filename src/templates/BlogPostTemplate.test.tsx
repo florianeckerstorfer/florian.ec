@@ -3,7 +3,7 @@ import * as React from 'react';
 import BlogPostTemplate from './BlogPostTemplate';
 import IPageContext from '../types/IPageContext';
 import { shallow } from 'enzyme';
-import { renderAsides } from '../pages/index';
+import { renderFeedLinks } from '../pages/index';
 
 const location = window.location;
 const pageContext: IPageContext = {
@@ -86,7 +86,7 @@ describe('BlogPostTemplate', () => {
 });
 
 describe('renderFeedLinks', () => {
-  const asides = shallow(renderAsides());
+  const asides = shallow(renderFeedLinks());
   it('should render feed links', () => {
     expect(asides.find('.feeds').exists()).toBe(true);
   });

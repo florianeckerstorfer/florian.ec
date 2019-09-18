@@ -9,6 +9,7 @@ import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import { graphql } from 'gatsby';
 import utilCss from '../components/util.module.css';
+import SocialMediaAside from '../components/SocialMediaAside/SocialMediaAside';
 
 interface Props {
   location: Location;
@@ -20,7 +21,9 @@ interface Props {
   };
 }
 
-export const renderAsides = () => <FeedLinks key="feedLinks" />;
+export const renderFeedLinks = () => <FeedLinks key="feedLinks" />;
+
+export const renderSocialMedia = () => <SocialMediaAside key="socialMedia" />;
 
 const IndexPage: React.FC<Props> = ({
   data,
@@ -29,7 +32,11 @@ const IndexPage: React.FC<Props> = ({
   const siteTitle = data.site.siteMetadata.title;
   const articles = data.allMarkdownRemark.edges;
   return (
-    <Layout location={location} title={siteTitle} asides={[renderAsides]}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      asides={[renderFeedLinks, renderSocialMedia]}
+    >
       <SEO
         title="Home"
         keywords={[

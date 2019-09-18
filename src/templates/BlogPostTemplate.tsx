@@ -8,6 +8,7 @@ import ISiteMetadata from '../types/ISiteMetadata';
 import Layout from '../layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import { graphql } from 'gatsby';
+import SocialMediaAside from '../components/SocialMediaAside/SocialMediaAside';
 
 interface Props {
   location: Location;
@@ -20,6 +21,8 @@ interface Props {
 
 export const renderFeedLinks = () => <FeedLinks key="feedLinks" />;
 
+export const renderSocialMedia = () => <SocialMediaAside key="socialMedia" />;
+
 const BlogPostTemplate: React.FC<Props> = ({
   data,
   pageContext,
@@ -29,7 +32,11 @@ const BlogPostTemplate: React.FC<Props> = ({
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle} asides={[renderFeedLinks]}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      asides={[renderFeedLinks, renderSocialMedia]}
+    >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

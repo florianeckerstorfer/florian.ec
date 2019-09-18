@@ -1,5 +1,5 @@
 import IBlogNode from '../types/IBlogNode';
-import IndexPage, { renderAsides } from '.';
+import IndexPage, { renderFeedLinks } from '.';
 import React from 'react';
 import { shallow } from 'enzyme';
 
@@ -34,7 +34,7 @@ describe('IndexPage', (): void => {
 });
 
 describe('renderAsides()', () => {
-  const asides = shallow(renderAsides());
+  const asides = shallow(renderFeedLinks());
 
   it('should render links to feeds', (): void => {
     expect(asides.find('.feeds').exists()).toBe(true);

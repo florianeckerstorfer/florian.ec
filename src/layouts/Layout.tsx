@@ -16,12 +16,14 @@ import classnames from 'classnames';
 import styles from './Layout.module.css';
 import utilCss from '../components/util.module.css';
 
+type Aside = () => React.ReactElement;
+
 interface Props {
   children: React.ReactNode;
   location?: Location;
   title?: string;
   pageTitle?: (props: { className?: string }) => React.ReactElement;
-  asides?: [() => React.ReactElement];
+  asides?: Aside[];
 }
 
 interface Data {
