@@ -9,18 +9,18 @@
   text-transform: uppercase;
 }
 
-.logo:link,
-.logo:active,
-.logo:visited {
+.header__logo:link,
+.header__logo:active,
+.header__logo:visited {
   color: var(--violet);
   display: inline-block;
   margin-top: 3px;
   text-decoration: none;
 }
 
-.logo:link::after,
-.logo:active::after,
-.logo:visited::after {
+.header__logo:link::after,
+.header__logo:active::after,
+.header__logo:visited::after {
   background: var(--black);
   content: '';
   display: block;
@@ -30,6 +30,6 @@
   width: 0px;
 }
 
-.logo:hover::after {
+.header__logo:hover::after {
   width: 100%;
 }

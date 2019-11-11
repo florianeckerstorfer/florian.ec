@@ -102,5 +102,3 @@ Thanks Oslo for an amazing time. And the next time we will be going way up to th
 
 <video src="/video/oslo-bylarm-march-2016/IMG_4475.m4v" autoplay loop muted>
 </video>
-
-{% endblock %}

@@ -5,7 +5,7 @@ import FeedLinks from '../components/FeedLinks/FeedLinks';
 import IBlogPost from '../types/IBlogPost';
 import IPageContext from '../types/IPageContext';
 import ISiteMetadata from '../types/ISiteMetadata';
-import Layout from '../layouts/Layout';
+import Layout from '../includes/layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import { graphql } from 'gatsby';
 import SocialMediaAside from '../components/SocialMediaAside/SocialMediaAside';

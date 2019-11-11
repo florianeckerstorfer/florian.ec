@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../layouts/Layout';
+import Layout from '../includes/layouts/Layout';
 import SEO from '../components/SEO/SEO';
 import ISiteMetadata from '../types/ISiteMetadata';
 import IPageContext from '../types/IPageContext';

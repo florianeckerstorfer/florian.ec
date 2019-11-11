@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import H1 from '../components/H1/H1';
 import ISiteMetadata from '../types/ISiteMetadata';
 import TravelEdge from '../types/ITravelEdge';
-import Layout from '../layouts/Layout';
+import Layout from '../includes/layouts/Layout';
 import Loadable from '@loadable/component';
 import SEO from '../components/SEO/SEO';
 import { graphql } from 'gatsby';

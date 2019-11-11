@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: var(--headlineFontSize);
+  font-family: var(--headlineFont);
+  line-height: 1.1;
+  margin: 3rem 0 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--headlineFont);
+  font-size: var(--h2FontSize);
+  font-weight: bold;
+  margin: 2rem auto;
+  max-width: var(--maxContentWidth);
+}
+
+h2.aside {
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: var(--violet);
+}
+
+a:hover {
+  text-decoration: none;
+}
