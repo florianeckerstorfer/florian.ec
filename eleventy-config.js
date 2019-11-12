@@ -2,6 +2,7 @@ const dateFilter = require('./src/filters/dateFilter');
 
 module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
+  eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
 
   eleventyConfig.addCollection('blog', collection => {
     return collection

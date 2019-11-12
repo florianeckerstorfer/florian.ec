@@ -1,0 +1,18 @@
+---
+title: Florian Eckerstorfer
+---
+{% extends 'layouts/layout.njk' %}
+
+{% block main %}
+  <article class="blog">
+    <div class="blog__header">
+    <h1>{{ title }}</h1>
+    <div class="blog__meta">
+      {{date|date('MMMM D, YYYY')}}
+    </div>
+    </div>
+    <div class="content">
+    {{ content | safe }}
+    </div>
+  </article>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="body">
+    <a href="#main" class="visually-hidden">
+      Go to content
+    </a>
+    {% include 'header.njk' %}
+    {% include 'main-nav.njk' %}
+    <div class="main-wrapper">
+      <main id="main" class="main" tabIndex={-1} role="main">
+        {% block main %}
+        {% endblock %}
+      </main>
+    </div>
+    <Footer />
+  </div>
+</body>
+</grml>

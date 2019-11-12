@@ -15,4 +15,4 @@ For this release I have updated the tooling and depedencies to more recent versi
 
 - [#40](https://github.com/cocur/chain/pull/40) Update tooling and dependencies, set minimum PHP version to 7.2
 - [#37](https://github.com/cocur/chain/pull/37) Add missing traits `\Cocur\Chain\Chain` (by [nreynis](https://github.com/nreynis))
-- [#41](https://github.com/cocur/chain/pull/41) Add `➞ flatMap()` (by [nreynis](https://github.com/nreynis))
+- [#41](https://github.com/cocur/chain/pull/41) Add `➞flatMap()` (by [nreynis](https://github.com/nreynis))

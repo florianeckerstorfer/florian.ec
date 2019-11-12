@@ -1,5 +1,5 @@
 module.exports = () => {
   return {
-    layout: 'base',
+    layout: 'blog',
   };
 };

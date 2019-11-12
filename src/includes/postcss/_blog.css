@@ -1,0 +1,13 @@
+.blog__header {
+  margin: 0 auto;
+  max-width: var(--maxPageWidth);
+  padding: 0 var(--pageSpacing);
+}
+
+.blog__meta {
+  font-family: var(--headlineFont);
+  font-size: 1rem;
+  margin: 1rem auto 3rem;
+  max-width: var(--maxContentWidth);
+  text-align: center;
+}
