@@ -11,11 +11,17 @@ In June Marina and I took a trip to Windhoek in Namibia and then made our way so
 ## Etosha National Park, Namibia
 
 ![On the road from Windhoek to Etosha National Park.](/content/blog/2019-07-11-namibia-south-africa-photos/001-windhoek-etosha.jpg)
+
 ![Black Rhino resting under the shade of a tree during the afternoon sun in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/002-black-rhino.jpg 'Black Rhino resting under the shade of a tree during the afternoon sun.')
+
 ![Springbok eating leaves from a bush in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/003-springbok.jpg 'Springbok eating leaves from a bush.')
+
 ![Jackal looking into the distance on our way to Okaukuejo Camp in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/004-jackal.jpg 'Jackal looking into the distance on our way to Okaukuejo Camp.')
+
 ![Elephant preparing to drink at a waterhole in Okaukuejo Camp in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/005-elephant.jpg 'Elephant preparing to drink at a waterhole in Okaukuejo Camp.')
+
 ![Elephant drinking at the waterhole in Okaukuejo Camp in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/006-elephant.jpg 'Elephant drinking at the waterhole in Okaukuejo Camp.')
+
 ![Giraffes at the waterhole in Okaukuejo Camp in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/007-giraffes.jpg 'Giraffes at the waterhole in Okaukuejo Camp.')
 ![Hyenas in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/008-hyenas.jpg)
 ![Zebras in Etosha National Park, Namibia](/content/blog/2019-07-11-namibia-south-africa-photos/009-zebras.jpg)

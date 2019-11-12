@@ -19,6 +19,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addPassthroughCopy('src/fonts');
+  eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
 
   eleventyConfig.addFilter('date', dateFilter);
 
@@ -28,5 +29,7 @@ module.exports = eleventyConfig => {
       includes: 'includes',
       output: 'dist',
     },
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
   };
 };
