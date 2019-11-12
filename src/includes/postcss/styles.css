@@ -5,5 +5,6 @@
 @import './_header.css';
 @import './_main-nav.css';
 @import './_content.css';
-@import './_article-list.css';
+@import './_page-list.css';
+@import './_label.css';
 @import './_feed-links-aside.css';

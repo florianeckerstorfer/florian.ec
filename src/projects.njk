@@ -1,0 +1,37 @@
+---
+title: Projects
+layout: base
+---
+<div class="content">
+  <h1>Projects</h1>
+
+  <ul class="page-list">
+    {%- for project in collections.projects | reverse -%}
+      <li class="page-list__item">
+        <article>
+        {% if project.data.link %}
+          <span role="img" aria-label="external link">
+            🔗
+          </span>
+          <a
+            href={project.data.link}
+            class="page-list__item__link"
+            target="_blank"
+            rel="noopener"
+          >
+            {{project.data.title}}
+          </a>
+          {% else %}
+          <a class="page-list__item__link" href="{{ project.url }}">{{ project.data.title }}</a>
+          {% endif %}
+          <div class="page-list__item__meta">
+            <span class="label">
+              {{ project.data.category }}
+            </span>
+            {{ project.data.date|date('MMMM D, YYYY') }}
+          </div>
+        </article>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>
