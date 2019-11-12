@@ -17,6 +17,8 @@ module.exports = eleventyConfig => {
       .sort((a, b) => a.data.date - b.data.date);
   });
 
+  eleventyConfig.addPassthroughCopy('src/fonts');
+
   eleventyConfig.addFilter('date', dateFilter);
 
   return {
