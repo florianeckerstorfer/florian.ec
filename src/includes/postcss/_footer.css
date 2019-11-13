@@ -26,7 +26,3 @@
   margin: 0 auto;
   max-width: var(--maxContentWidth);
 }
-
-.heart {
-  color: var(--red);
-}

@@ -1,4 +1,5 @@
 const dateFilter = require('./src/filters/dateFilter');
+const currentYearShortcode = require('./src/shortcodes/currentYearShortcode');
 
 module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
@@ -22,6 +23,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
 
   eleventyConfig.addFilter('date', dateFilter);
+  eleventyConfig.addShortcode('currentYear', currentYearShortcode);
 
   return {
     dir: {
