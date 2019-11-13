@@ -1,0 +1,20 @@
+.cv-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cv-list__item {
+  border-left: 2px solid var(--violet);
+  margin-bottom: 1rem;
+  margin-left: -0.5rem;
+  padding: 0.5rem;
+}
+
+.cv-list__item:hover {
+  background: var(--grey-1);
+}
+
+.cv-list__item__description {
+  margin-bottom: 0;
+  padding: 0;
+}
