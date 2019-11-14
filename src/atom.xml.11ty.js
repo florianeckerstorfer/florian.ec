@@ -1,16 +1,16 @@
 const generateFeed = require('./lib/generateFeed');
 
-class FeedJson {
+class FeedAtom {
   data() {
     return {
-      permalink: '/feed.json',
+      permalink: '/atom.xml',
       eleventyExcludeFromCollections: true,
     };
   }
 
   render(data) {
-    return generateFeed(data.collections.blog).json1();
+    return generateFeed(data.collections.blog).atom1();
   }
 }
 
-module.exports = FeedJson;
+module.exports = FeedAtom;
