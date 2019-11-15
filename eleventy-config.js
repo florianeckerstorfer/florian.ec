@@ -1,6 +1,18 @@
 const dateFilter = require('./src/filters/dateFilter');
 const currentYearShortcode = require('./src/shortcodes/currentYearShortcode');
 
+function isBlogPage(page) {
+  return page.inputPath.match(/\.\/src\/blog\//);
+}
+
+function isProjectPage(page) {
+  return page.inputPath.match(/\.\/src\/projects\//);
+}
+
+function byDate(page1, page2) {
+  return page1.data.date - page2.data.date;
+}
+
 module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
@@ -8,15 +20,15 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('blog', collection => {
     return collection
       .getAll()
-      .filter(page => page.inputPath.match(/\.\/src\/blog\//))
-      .sort((a, b) => a.data.date - b.data.date);
+      .filter(isBlogPage)
+      .sort(byDate);
   });
 
   eleventyConfig.addCollection('projects', collection => {
     return collection
       .getAll()
-      .filter(page => page.inputPath.match(/\.\/src\/projects\//))
-      .sort((a, b) => a.data.date - b.data.date);
+      .filter(isProjectPage)
+      .sort(byDate);
   });
 
   eleventyConfig.addPassthroughCopy('src/fonts');
