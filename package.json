@@ -74,7 +74,8 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "eleventy --config eleventy-config.js --serve"
+    "start": "eleventy --config eleventy-config.js --serve",
+    "clean": "rimraf dist/"
   },
   "repository": {
     "type": "git",
