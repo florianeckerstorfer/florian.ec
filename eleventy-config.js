@@ -20,6 +20,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addPassthroughCopy('src/fonts');
+  eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
 
   eleventyConfig.addFilter('date', dateFilter);
