@@ -16,6 +16,7 @@ class AppleTouchIcon {
   }
 
   async render() {
+    // See https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
     const iconSizes = [120, 152, 167, 180];
     const originalIcon = await this.readOriginalIcon();
     await Promise.all(
