@@ -5,6 +5,7 @@
   "version": "3.0.0",
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "@fec/gatsby-plugin-advanced-feed": "^1.0.0",
     "@hot-loader/react-dom": "^16.9.0",
     "@loadable/component": "^5.10.2",
