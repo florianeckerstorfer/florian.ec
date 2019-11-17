@@ -14,20 +14,16 @@ Last Monday Apple released a new programming language for the iOS and Mac platfo
 
 ---
 
-<a name="table-of-contents"></a>
-
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
-2. [Constants & Variables](#constants-variables)
+2. [Constants & Variables](#constants-and-variables)
 3. [Arrays](#arrays)
 4. [Collections](#collections)
 5. [Loops](#loops)
 6. [Conditional Statements](#conditional-statements)
 7. [Optional Variables](#optional-variables)
 8. [Updates](#updates)
-
-<a name="getting-started"></a>
 
 ## Getting Started
 
@@ -40,8 +36,6 @@ Open Xcode and create a new file (File > New > File) and select the **Playground
 Next you need to select a folder where to save your playground file and enter a filename. If you have done that you should see a new window where you can start to write some Swift code.
 
 ![New Swift Playground in Xcode 6 Beta](/content/blog/2014-06-08-getting-started-with-swift/xcode-new-swift-file.png)
-
-<a name="constants-variables"></a>
 
 ## Constants & Variables
 
@@ -97,8 +91,6 @@ var aFloat: Float = 9.9
 
 In general variables also have to have a value. However, Swifts has the concept of <a href="#optional-variables">Optional Variables</a> that I will cover in a later chapter.
 
-<a name="arrays"></a>
-
 ## Arrays
 
 Array is a type that can contain multiple values of the same type. For example, if you want to create a list of the houses in Game of Thrones.
@@ -138,8 +130,6 @@ houses.count
 
 Arrays are ordered, therefore each element has an index (must be unique) and there are no gaps in the list of indeces. If you have an array with 5 elements and you remove the element with index 2, the element at index 3 will be moved to index 2 and the element at index 4 will be moved to index 3.
 
-<a name="collections"></a>
-
 ## Collections
 
 Collections are somewhat similar to arrays, but while arrays are ordered (each element has an index and the array is orderd by this index) collections are unordered. The index of an collection does not have to be an integer, but can be a string or a double.
@@ -154,8 +144,6 @@ Just like arrays you can access elements in a collections using their index.
 lords["stark"]
 // "ned"
 ```
-
-<a name="loops"></a>
 
 ## Loops
 
@@ -201,8 +189,6 @@ Swift also supports "normal" for loops, while and do while loops.
 **Note:** If you have already experience in another programming language you might be wondering if I forgot the parentheses in the `for` statement. I didn't. In Swift you don't use parenthesis when writing _Control Flow_ (`for`, `while`,`if`,`switch`, …) statements.
 
 ---
-
-<a name="conditional-statements"></a>
 
 ## Conditional Statements
 
@@ -282,8 +268,6 @@ if num == 5 {
 }
 // "You've found the answer"
 ```
-
-<a name="optional-variables"></a>
 
 ## Optional Variables
 
@@ -376,8 +360,6 @@ if foo {
 Please note that this article can be considered as a working draft. At this point it includes some of the basic concepts of the Swift programming language, but there exists a lot of stuff that is not covered. If you are eager to learn more please read [The Swift Programming Language](https://itunes.apple.com/at/book/swift-programming-language/id881256329?l=en&mt=11) (iBook Store) from Apple. You can read the book also [online](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/BasicOperators.html#//apple_ref/doc/uid/TP40014097-CH3-XID_0). If you want to try things out and don't want to type every example you can download the [Swift Tour](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1) as a playground file.
 
 ---
-
-<a name="updates"></a>
 
 ## Updates
 

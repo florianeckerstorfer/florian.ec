@@ -69,8 +69,13 @@
     "postcss-import": "^12.0.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0",
+    "remark": "^11.0.2",
+    "remark-html": "^10.0.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.3",
+    "unist-util-is": "^4.0.1",
+    "unist-util-visit": "^2.0.1",
+    "vfile-reporter": "^6.0.0"
   },
   "keywords": [],
   "license": "MIT",

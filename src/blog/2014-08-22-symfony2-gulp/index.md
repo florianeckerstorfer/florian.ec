@@ -24,7 +24,7 @@ I use Gulp not only for building my assets but also to run my tests, code covera
 - [JavaScript](#javascript)
   - [Load JavaScript using RequireJS](#load-javascript-using-requirejs)
   - [Building JavaScript](#building-javascript)
-- [Watching & Reloading](#watching-reloading)
+- [Watching & Reloading](#watching-and-reloading)
   - [Watching](#watching)
   - [Reloading](#reloading)
 - [Running PHP Commands](#running-php-commands)
@@ -34,8 +34,6 @@ I use Gulp not only for building my assets but also to run my tests, code covera
 - [Roadmap](#roadmap)
 - [Conclusion](#conclusion)
 - [Updates](#updates)
-
-<a name="dependencies"></a>
 
 ## Dependencies
 
@@ -51,8 +49,6 @@ First I need to talk about the software and libraries I am using in my project a
 - **[PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)** to check the style of my PHP code
 
 _**Please note** that this article has been updated to reflect the changes in the directory structure in [boostrap-sass v3.2](https://github.com/twbs/bootstrap-sass/releases/tag/v3.2.0)_
-
-<a name="project-structure"></a>
 
 ## Project Structure
 
@@ -92,8 +88,6 @@ If I run the `assets:install --symlink` command, Symfony will create symlinks fr
 
 I think it is obvious that the `web/css/` directory will hold the compiled CSS files, `web/fonts/` the font files and `web/js/` the JavaScript files. The `web/components/` directory stores the assets downloaded by Bower and I will take little bit more about it later.
 
-<a name="gulp"></a>
-
 ## Gulp
 
 If you have never worked with Gulp and need to know how to install it and learn more about the basic concepts you can either head to the [Getting Started guide](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started) or the [Building with Gulp](http://www.smashingmagazine.com/2014/06/11/building-with-gulp/) article on Smashing Magazine. In short, you can install Gulp using [NPM](https://www.npmjs.org).
@@ -113,13 +107,9 @@ var gulp = require('gulp');
 gulp.task('default', function() {});
 ```
 
-<a name="stylesheets"></a>
-
 ## Stylesheets
 
 First I want to talk about managing and building the stylesheets for my project.
-
-<a name="stylesheets-with-sass"></a>
 
 ### Stylesheets with Sass
 
@@ -131,8 +121,6 @@ Sass has great features that make it superiour to plain CSS and one of them is t
 @import '../../acmeuser/sass/master';
 @import '../../acmeother/sass/master';
 ```
-
-<a name="managing-assets-with-bower"></a>
 
 ### Managing Assets with Bower
 
@@ -146,8 +134,6 @@ Before I can talk about how I use Bootstrap I need to talk about Bower. The firs
 
 Then I downloaded `bootstrap-sass-official` (as the name says the official Sass port of Bootstrap) using `bower install --save bootstrap-sass-official`.
 
-<a name="using-bootstrap"></a>
-
 ### Using Bootstrap
 
 I use my [BraincraftedBootstrapBundle](http://bootstrap.braincrafted.com) to integrate Bootstrap into Symfony. However, I disabled the auto configuration feature for Assetic because I want to configure it myself using Bower and Gulp and therefore it's not relevant if you use the bundle or not. Bower downloads the Sass files into `components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/` and I just import it from my `master.scss` in _AcmeFrontendBundle_. Remember that the `assets:install` commands copies the files into `web/bundles/` and the compilation takes place there.
@@ -160,8 +146,6 @@ I use my [BraincraftedBootstrapBundle](http://bootstrap.braincrafted.com) to int
 @import '../../acmeuser/sass/master';
 @import '../../acmeother/sass/master';
 ```
-
-<a name="building-stylesheets"></a>
 
 ### Building Stylesheets
 
@@ -196,8 +180,6 @@ First I need to symlink the assets into `web/bundles/` by running `php app/conso
 
 Everything regarding stylesheets should work now; except the Glyphicons provided by Bootstrap.
 
-<a name="glyphicons"></a>
-
 ### Gylphicons
 
 Bootstrap includes Glyphicons, an icon font, in its stylesheets by referencing them with `bootstrap/`. However, the font files are located in `web/components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/` and the CSS code in `web/css/`. I could just change the path to point to `web/components`, but I am picky when it comes to path and how they look (what if somebody checks the source?) and therefore I copy them into the `web/fonts/` directory using a Gulp task. The [gulp-copy](https://github.com/klaascuvelier/gulp-copy) plugin provides exactly the functionality I require. It has a `prefix` option that removes the unwanted directories from the beginning of source path.
@@ -224,13 +206,9 @@ $icon-font-path: '../fonts/';
 
 Running `gulp fonts sass` will execute both the `fonts` and the `sass` task and now everything should work fine.
 
-<a name="javascript"></a>
-
 ## Javascript
 
 I use RequireJS as module and file loader for my project to load only those scripts dynamically that a specific page requires. The entry point of the JavaScript is `app.js` in _AcmeFrontendBundle_. Each bundle has it's own `main.js` that itself requires the files and modules it needs.
-
-<a name="load-javascript-using-requirejs"></a>
 
 ### Load JavaScript using RequireJS
 
@@ -305,8 +283,6 @@ define(function(require) {
 });
 ```
 
-<a name="building-javascript"></a>
-
 ### Building JavaScript
 
 Actually, in my current setup I don't really build JavaScript files. Because I use RequireJS I don't have to concatenate them; I just copy them into `web/js/`.
@@ -326,13 +302,9 @@ gulp.task('js', function() {
 });
 ```
 
-<a name="watching-reloading"></a>
-
-## Watching & Reloading
+## Watching and Reloading
 
 It can become tedious to execute the `sass` and `js` tasks everytime the code of the Sas or JavaScript code changes. Therefore Gulp includes, as most modern build tools do, a watch functionality. In addition I use LiveReload to automatically reload my browser window when the CSS or JavaScript changes.
-
-<a name="watching"></a>
 
 ### Watching
 
@@ -353,9 +325,6 @@ gulp.task('watch', function() {
     .on('change', onChange);
 });
 ```
-
-<a name="reloading"></a>
-
 ### Reloading
 
 LiveReload is a great tool to reload the browser window when a file changes. First I install the [gulp-livereload](https://github.com/vohof/gulp-livereload) plugin and then I include a snippet in my layout. It's also possible to use a browser extension, but I prefer having everything I need in the repository. After installing the plugin I need to adapt the code of the `watch` task to inform LiveReload about the changed files.
@@ -392,13 +361,9 @@ In the layout I test if the environment is `dev` and then include the LiveReload
 {% endif %}
 ```
 
-<a name="running-php-commands"></a>
-
 ## Running PHP Commands
 
 I use Gulp also to run PHP-specific tasks and PHPUnit and PHP_CodeSniffer are just two of them. Because a `Gulpfile.js` is just a JavaScript file runned using Node.js I can run arbitrary shell commands.
-
-<a name="phpunit"></a>
 
 ### PHPUnit
 
@@ -441,8 +406,6 @@ gulp.task('coverage', function() {
 });
 ```
 
-<a name="php-codesniffer"></a>
-
 ### PHP_CodeSniffer
 
 To run PHP_CodeSniffer I use the [gulp-phpcs](https://github.com/JustBlackBird/gulp-phpcs) plugin by Dmitriy S. Simushev.
@@ -468,8 +431,6 @@ I also created a shortcut to execute both `coverage` and `checkstyle`.
 gulp.task('verify', ['coverage', 'checkstyle']);
 ```
 
-<a name="symfony2-commands"></a>
-
 ### Symfony2 Commands
 
 During my build process I also need to run Symfony2 commands. Instead of using a plugin I use the `child_process` module that comes with Node.js to execute Shell commands. Because the Gulpfile consists of plain JavaScript code there exists no need to use a specific plugin.
@@ -491,8 +452,6 @@ var logStdOutAndErr = function(err, stdout, stderr) {
 
 You can see that I created a Gulp task to run the install assets commands. I can integrate this task into other tasks and thus I will not forget to run it when building my assets. In my Gulpfile I also have tasks to load fixtures and update the database schema.
 
-<a name="roadmap"></a>
-
 ## Roadmap
 
 The project I am using this build system for is not yet in production and therefore there are still some things missing. First of all I haven't added minification of CSS and JavaScript to the Gulpfile. Another problem I have with the current setup is that the `components/` and `bundles/` directories reside in `web/` and are accessible by users. Before going into production I want to move these two directories somewhere else.
@@ -501,15 +460,11 @@ Another problem that could become relevant when my stylesheets become bigger is 
 
 My Gulpfile still misses some other smaller things. For example, I want to use [CSSComb](http://csscomb.com) to sort the properties in the stylesheets and I want to integrate [Autoprefixer](https://github.com/postcss/autoprefixer) to automatically add vendor prefixes to CSS properties. Linting of Sass and JavaScript code is also missing.
 
-<a name="conclusion"></a>
-
 ## Conclusion
 
 I'm satisfied with my current Gulp setup. As mentioned above it lacks some features I need to add before going in to production. The build system is fast, flexible and (hopefully) will scale well. It's not fully automatic, I have to add a little bit of configuration when creating a new bundle, but that happens not often and I prefer control over automation in these cases.
 
 The system is opiniated and it works well in my setup and with my project structure. If you have made different decisions about structure or need some other features there might be problems. Still I am happy about feedback regarding my system. I am new to Gulp and havn't used it in a production project so suggestions are very welcome.
-
-<a name="updates"></a>
 
 ## Updates
 

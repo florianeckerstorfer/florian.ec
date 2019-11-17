@@ -1,10 +1,22 @@
-let markdownIt = require('markdown-it');
+const remark = require('remark');
+const html = require('remark-html');
+const prism = require('./remark-prism');
 
-function getMarkdownLib() {
-  let options = {
-    html: true,
+module.exports = () => {
+  const processor = remark()
+    .use(html)
+    .use(prism);
+  return {
+    set: () => {},
+    render: str =>
+      new Promise(resolve => {
+        processor.process(str, (err, file) => {
+          if (err) {
+            console.log(err);
+            return;
+          }
+          resolve(String(file));
+        });
+      }),
   };
-  return markdownIt(options).use(require('markdown-it-anchor'));
-}
-
-module.exports = getMarkdownLib;
+};
