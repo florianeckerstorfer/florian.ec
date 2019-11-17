@@ -10,7 +10,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## Tell Me How Your Really Feel by Courtney Barnett
 
-![Album cover of Tell Me How Your Really Feel by Courtney Barnett](/content/blog/2018-05-18-new-albums-2018-05-18/courtney-barnett-tell-me-how-you-really-feel.jpg)
+![Album cover of Tell Me How Your Really Feel by Courtney Barnett](courtney-barnett-tell-me-how-you-really-feel.jpg)
 
 - Music video for [Need A Little Time](https://www.youtube.com/watch?v=TISIPNpRuoY)
 - [Bandcamp](https://courtneybarnett.bandcamp.com/album/tell-me-how-you-really-feel)
@@ -19,7 +19,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## LoveLaws by TT
 
-![Album cover of LoveLaws by TT](/content/blog/2018-05-18-new-albums-2018-05-18/tt-lovelaws.jpg)
+![Album cover of LoveLaws by TT](tt-lovelaws.jpg)
 
 - Music video for [I've Been Fine](https://www.youtube.com/watch?v=q1Bs5CXlpkE)
 - [Apple Music](https://itunes.apple.com/at/album/lovelaws/1353124165?l=en)
@@ -27,7 +27,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## Saved by Now, Now
 
-![Saved by Now, Now](/content/blog/2018-05-18-new-albums-2018-05-18/now-now-saved.jpg)
+![Saved by Now, Now](now-now-saved.jpg)
 
 - Music video for [AZ](https://www.youtube.com/watch?v=ldg_HU4_3RU)
 - [Apple Music](https://itunes.apple.com/at/album/saved/1365088448?l=en)
@@ -35,7 +35,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## Everything Matters But No One Is Listening by Quiet Slang (Beach Slang)
 
-![Everything Matters But No One Is Listening by Quiet Slang (Beach Slang)](/content/blog/2018-05-18-new-albums-2018-05-18/quiet-slang-everything-matters.jpg)
+![Everything Matters But No One Is Listening by Quiet Slang (Beach Slang)](quiet-slang-everything-matters.jpg)
 
 - Music video for [Dirty Cigarettes](https://www.youtube.com/watch?v=YF7gvl6foB8)
 - [Bandcamp](https://beachslang.bandcamp.com/album/everything-matters-but-no-one-is-listening-quiet-slang)
@@ -44,7 +44,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## Bad Habits by Pema
 
-![Bad Habits by Pema](/content/blog/2018-05-18-new-albums-2018-05-18/pema-bad-habits.jpg)
+![Bad Habits by Pema](pema-bad-habits.jpg)
 
 - Music video for [Depend](https://www.youtube.com/watch?v=b4Cw2ARZnR0)
 - [Bandcamp](https://whoispema.bandcamp.com/album/bad-habits)
@@ -53,7 +53,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## Wide Awake! by Parquet Courts
 
-![Wide Awake! by Parquet Courts](/content/blog/2018-05-18-new-albums-2018-05-18/parquet-courts-wide-awake.jpg)
+![Wide Awake! by Parquet Courts](parquet-courts-wide-awake.jpg)
 
 - Music video for [Wide Awake](https://www.youtube.com/watch?v=eZXS8Jpkiac)
 - [Apple Music](https://itunes.apple.com/at/album/wide-awake/1342585603?l=en)
@@ -61,7 +61,7 @@ I missed last week because I was travelling again, sorry, but this week is a goo
 
 ## Happy Ending by Wax Idols
 
-![Happy Ending by Wax Idols](/content/blog/2018-05-18-new-albums-2018-05-18/wax-idols-happy-ending.jpg)
+![Happy Ending by Wax Idols](wax-idols-happy-ending.jpg)
 
 - Music video for [Mausoleum](https://www.youtube.com/watch?v=Ps0QOAiXY3M)
 - [Bandcamp](https://waxidols.bandcamp.com/album/happy-ending)

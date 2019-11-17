@@ -10,7 +10,7 @@ This one is a few days late, but here are three great albums that were released 
 
 ## Rebound by Eleanor Friedberger
 
-![Rebound by Eleanor Friedberger](/content/blog/2018-05-07-new-albums-2018-05-04/eleanor-friedberger-rebound.jpeg)
+![Rebound by Eleanor Friedberger](eleanor-friedberger-rebound.jpeg)
 
 You can listen to the music video for [Make Me a Song](https://www.youtube.com/watch?v=wmjcSz8aV1Y) on YouTube.
 
@@ -19,7 +19,7 @@ You can listen to the music video for [Make Me a Song](https://www.youtube.com/w
 
 ## Lost Friends by Middle Kids
 
-![Lost Friends by Middle Kids](/content/blog/2018-05-07-new-albums-2018-05-04/middle-kids-lost-friends.jpg)
+![Lost Friends by Middle Kids](middle-kids-lost-friends.jpg)
 
 The music video for [On My Knees](https://www.youtube.com/watch?v=yMuDiu1gzdE) is on YouTube.
 
@@ -29,7 +29,7 @@ The music video for [On My Knees](https://www.youtube.com/watch?v=yMuDiu1gzdE) i
 
 ## DOVE by Belly
 
-![Album cover of DOVE by Belly](/content/blog/2018-05-07-new-albums-2018-05-04/belly-dove.jpg)
+![Album cover of DOVE by Belly](belly-dove.jpg)
 
 Belly have a music video for [Shiny One](https://www.youtube.com/watch?v=prF1CdzjTZ4).
 

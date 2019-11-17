@@ -40,6 +40,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
+  eleventyConfig.addPassthroughCopy('src/blog/**/*.{jpg,png,gif,jpeg,mp4}');
 
   eleventyConfig.addFilter('date', dateFilter);
   eleventyConfig.addShortcode('currentYear', currentYearShortcode);

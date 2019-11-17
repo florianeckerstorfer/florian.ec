@@ -6,7 +6,7 @@ const highlightCode = require(`./highlight-code`);
 const addLineNumbers = require(`./add-line-numbers`);
 const commandLine = require(`./command-line`);
 
-function prism(options) {
+function prism(options = {}) {
   const classPrefix = options.classPrefix || `language-`;
   const inlineCodeMarker = options.inlineCodeMarker || null;
   const aliases = options.aliases || {};

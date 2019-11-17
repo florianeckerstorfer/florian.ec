@@ -8,7 +8,7 @@ tags: [ios, ionic, cordova, search, ux]
 
 In iOS there is a very specific interaction when using a search bar in a list view. When the user focuses the input field, the field moves into the header and the cancel button slides in from the right. The interaction looks like this in Contacts, but it is also used in Mail and apps like Tweetbot.
 
-![iOS Search Bar Interaction](/content/blog/2015-07-25-ios-search-bar-ionic/ios-search-bar-ionic)
+![iOS Search Bar Interaction](ios-search-bar-ionic)
 
 I wanted to replicate the functionality in [Ionic](http://ionicframework.com), a HTML5 framework to create mobile apps using [Cordova](http://cordova.apache.org).
 
@@ -159,6 +159,6 @@ This code works great in the browser (I tested it in Safari, Chrome and Firefox)
 
 In iOS simulator the interaction looks like this:
 
-![/content/blog/2015-07-25-ios-search-bar-ionic/ionic-search-bar.gif](iOS Search Bar Interaction)
+![ionic-search-bar.gif](iOS Search Bar Interaction)
 
 If you look closely at the animation and the one above with the original iOS behaviour you can see that I am not using a grey background for the search bar. Personally I like the white background better.
