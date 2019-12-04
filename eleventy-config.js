@@ -1,7 +1,7 @@
 const dateFilter = require('./src/filters/dateFilter');
 const currentYearShortcode = require('./src/shortcodes/currentYearShortcode');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const getMarkdownLib = require('./src/lib/getMarkdownLib');
+const eleventyRemark = require('@fec/eleventy-plugin-remark');
 
 function isBlogPage(page) {
   return page.inputPath.match(/\.\/src\/blog\//);
@@ -17,11 +17,12 @@ function byDate(page1, page2) {
 
 module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(eleventyRemark, {
+    plugins: [require('./src/lib/remark-prism')],
+  });
 
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
-
-  eleventyConfig.setLibrary('md', getMarkdownLib());
 
   eleventyConfig.addCollection('blog', collection => {
     return collection

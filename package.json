@@ -6,6 +6,7 @@
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "@fec/eleventy-plugin-remark": "file:../../eleventy-plugin/eleventy-plugin-remark",
     "@fec/gatsby-plugin-advanced-feed": "^1.0.0",
     "@hot-loader/react-dom": "^16.9.0",
     "@loadable/component": "^5.10.2",
@@ -13,7 +14,7 @@
     "cross-fetch": "^3.0.4",
     "dayjs": "^1.8.16",
     "feed": "^4.0.0",
-    "gatsby": "^2.15.14",
+    "gatsby": "^2.18.5",
     "gatsby-cli": "^2.7.47",
     "gatsby-image": "^2.2.18",
     "gatsby-plugin-feed": "^2.3.12",
