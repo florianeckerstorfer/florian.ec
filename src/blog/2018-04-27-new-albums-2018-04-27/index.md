@@ -12,7 +12,7 @@ You know the drill by now: another Friday, another list of great new albums.
 
 After the brilliant _Form/a_ EP from last year Half Waif have released their second album Lavender today. This is the finest synth pop.
 
-![Album cover of Lavender by Half Waif](half-waif-lavender.jpg)
+{% responsiveImg '/blog/2018-04-27-new-albums-2018-04-27/half-waif-lavender.jpg', 'Album cover of Lavender by Half Waif' %}
 
 Check out the beautiful [Back in Brooklyn](https://www.youtube.com/watch?v=2bmoRHL4YFY).
 
@@ -22,7 +22,7 @@ Check out the beautiful [Back in Brooklyn](https://www.youtube.com/watch?v=2bmoR
 
 ## Dirty Computer by Janelle Monáe
 
-![Dirty Computer by Janelle Monáe](janelle-monae-dirty-computer.jpg)
+{% responsiveImg '/blog/2018-04-27-new-albums-2018-04-27/janelle-monae-dirty-computer.jpg', 'Dirty Computer by Janelle Monáe' %}
 
 Please watch the video for [PYNK](https://www.youtube.com/watch?v=PaYvlVR_BEc), which features Grimes.
 
@@ -34,7 +34,7 @@ Please watch the video for [PYNK](https://www.youtube.com/watch?v=PaYvlVR_BEc), 
 
 I love this kind of indie rock. 🎸
 
-![Album cover of Twerp Verse by Speedy Ortiz](speedy-ortiz-twerp-verse.jpg)
+{% responsiveImg '/blog/2018-04-27-new-albums-2018-04-27/speedy-ortiz-twerp-verse.jpg', 'Album cover of Twerp Verse by Speedy Ortiz' %}
 
 Watch the music video for [Lucky 88](https://www.youtube.com/watch?v=f76rghmg1jI).
 
@@ -46,7 +46,7 @@ Watch the music video for [Lucky 88](https://www.youtube.com/watch?v=f76rghmg1jI
 
 This is Okkervil River ninth official full length album since 2002. That's a lot of output and I still like their version of folk rock.
 
-![In the Rainbow Rain by Okkervil River](okkervil-river-in-the-rainbow-rain.jpg)
+{% responsiveImg '/blog/2018-04-27-new-albums-2018-04-27/okkervil-river-in-the-rainbow-rain.jpg', 'In the Rainbow Rain by Okkervil River' %}
 
 Listen to [Don't Move Back To LA](https://www.youtube.com/watch?v=YiOJBGjnV04).
 

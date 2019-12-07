@@ -8,100 +8,100 @@ tags: [photos, vacation, costa rica]
 
 ## Monteverde
 
-![Porch in Monteverde, Costa Rica](015.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/015.jpg', 'Porch in Monteverde, Costa Rica' %}
 
-![Banana tree in Monteverde, Costa Rica](016.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/016.jpg', 'Banana tree in Monteverde, Costa Rica' %}
 
-![Jungle in Bosque Eterno de los Niños near Monteverde, Costa Rica](022.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/022.jpg', 'Jungle in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
-![Jungle in Bosque Eterno de los Niños near Monteverde, Costa Rica](024.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/024.jpg', 'Jungle in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
-![Flower in Bosque Eterno de los Niños near Monteverde, Costa Rica](033.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/033.jpg', 'Flower in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
-![Jungle in Bosque Eterno de los Niños near Monteverde, Costa Rica](036.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/036.jpg', 'Jungle in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
-![Fallen tree in Bosque Eterno de los Niños near Monteverde, Costa Rica](037.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/037.jpg', 'Fallen tree in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
-![Leaf in Bosque Eterno de los Niños near Monteverde, Costa Rica](048.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/048.jpg', 'Leaf in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
-![Flower in Bosque Eterno de los Niños near Monteverde, Costa Rica](068.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/068.jpg', 'Flower in Bosque Eterno de los Niños near Monteverde, Costa Rica' %}
 
 ## La Fortuna
 
-![Arenal Volcano from La Fortuna, Costa Rica](074.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/074.jpg', 'Arenal Volcano from La Fortuna, Costa Rica' %}
 
-![Frog near La Fortuna, Costa Rica](079.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/079.jpg', 'Frog near La Fortuna, Costa Rica' %}
 
-![Frog near La Fortuna, Costa Rica](080.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/080.jpg', 'Frog near La Fortuna, Costa Rica' %}
 
-![Arenal Volcano in La Fortuna, Costa Rica](090.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/090.jpg', 'Arenal Volcano in La Fortuna, Costa Rica' %}
 
 ## Las Catalinas
 
-![Beach in Las Catalinas, Costa Rica](094.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/094.jpg', 'Beach in Las Catalinas, Costa Rica' %}
 
-![Beach in Las Catalinas, Costa Rica](102.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/102.jpg', 'Beach in Las Catalinas, Costa Rica' %}
 
-![Iguana on the beach in Las Catalinas, Costa Rica](103.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/103.jpg', 'Iguana on the beach in Las Catalinas, Costa Rica' %}
 
-![Sunset at Las Catalinas, Costa Rica](108.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/108.jpg', 'Sunset at Las Catalinas, Costa Rica' %}
 
-![Beach in Las Catalinas, Costa Rica](109.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/109.jpg', 'Beach in Las Catalinas, Costa Rica' %}
 
 ## Nosara
 
-![Beach in Nosara, Costa Rica](114.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/114.jpg', 'Beach in Nosara, Costa Rica' %}
 
-![Beach in Nosara, Costa Rica](115.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/115.jpg', 'Beach in Nosara, Costa Rica' %}
 
-![Beach in Nosara, Costa Rica](116.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/116.jpg', 'Beach in Nosara, Costa Rica' %}
 
-![Beach in Nosara, Costa Rica](119.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/119.jpg', 'Beach in Nosara, Costa Rica' %}
 
-![Beach in Nosara, Costa Rica](121.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/121.jpg', 'Beach in Nosara, Costa Rica' %}
 
-![Selfie on the beach in Nosara, Costa Rica](124.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/124.jpg', 'Selfie on the beach in Nosara, Costa Rica' %}
 
 ## Montezuma
 
-![Armadillo near Montezuma, Costa Rica](127.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/127.jpg', 'Armadillo near Montezuma, Costa Rica' %}
 
-![Montezuma, Costa Rica](129.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/129.jpg', 'Montezuma, Costa Rica' %}
 
-![Beach in Montezuma, Costa Rica](134.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/134.jpg', 'Beach in Montezuma, Costa Rica' %}
 
-![Drinking beer in Montezuma, Costa Rica](135.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/135.jpg', 'Drinking beer in Montezuma, Costa Rica' %}
 
-![Waterfall near Montezuma, Costa Rica](136.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/136.jpg', 'Waterfall near Montezuma, Costa Rica' %}
 
 ## Cabo Blanco Absolute Natural Reserve
 
-![Beach in Cabo Blanco Absolute Natural Reserve, Costa Rica](147.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/147.jpg', 'Beach in Cabo Blanco Absolute Natural Reserve, Costa Rica' %}
 
-![Leaf in Cabo Blanco Absolute Natural Reserve](158.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/158.jpg', 'Leaf in Cabo Blanco Absolute Natural Reserve' %}
 
-![Flowers in Cabo Blanco Absolute Natural Reserve](159.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/159.jpg', 'Flowers in Cabo Blanco Absolute Natural Reserve' %}
 
 ## Parque Nactional Manuel Antonio
 
-![Ferry to Punta Arenas, Costa Rica](161.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/161.jpg', 'Ferry to Punta Arenas, Costa Rica' %}
 
-![Coast in Parque Nactional Manuel Antonio, Costa Rica](167.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/167.jpg', 'Coast in Parque Nactional Manuel Antonio, Costa Rica' %}
 
-![Capuchin monkey in Parque Nactional Manuel Antonio, Costa Rica](170.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/170.jpg', 'Capuchin monkey in Parque Nactional Manuel Antonio, Costa Rica' %}
 
-![Capuchin monkey in Parque Nactional Manuel Antonio, Costa Rica](172.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/172.jpg', 'Capuchin monkey in Parque Nactional Manuel Antonio, Costa Rica' %}
 
-![Sloth in Parque Nactional Manuel Antonio, Costa Rica](175.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/175.jpg', 'Sloth in Parque Nactional Manuel Antonio, Costa Rica' %}
 
-![Waterfal in Parque Nactional Manuel Antonio, Costa Rica](176.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/176.jpg', 'Waterfal in Parque Nactional Manuel Antonio, Costa Rica' %}
 
 ## San Jose
 
-![Templo de la musica in San Jose, Costa Rica](178.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/178.jpg', 'Templo de la musica in San Jose, Costa Rica' %}
 
-![View from Museo Nacional de Costa Rica in San Jose, Costa Rica](179.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/179.jpg', 'View from Museo Nacional de Costa Rica in San Jose, Costa Rica' %}
 
-![Street in San Jose, Costa Rica](181.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/181.jpg', 'Street in San Jose, Costa Rica' %}
 
-![Clouds on the flight from San Jose, Costa Rica](185.jpg)
+{% responsiveImg '/blog/2018-11-20-costa-rica-photos/185.jpg', 'Clouds on the flight from San Jose, Costa Rica' %}

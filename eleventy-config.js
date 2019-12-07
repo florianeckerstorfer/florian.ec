@@ -1,7 +1,8 @@
-const dateFilter = require('./src/filters/dateFilter');
 const currentYearShortcode = require('./src/shortcodes/currentYearShortcode');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const dateFilter = require('./src/filters/dateFilter');
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
+const responsiveImg = require('./src/shortcodes/responsiveImg');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 function isBlogPage(page) {
   return page.inputPath.match(/\.\/src\/blog\//);
@@ -40,11 +41,12 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/blog/**/*.{png, gif,mp4}');
   eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
-  eleventyConfig.addPassthroughCopy('src/blog/**/*.{jpg,png,gif,jpeg,mp4}');
 
   eleventyConfig.addFilter('date', dateFilter);
   eleventyConfig.addShortcode('currentYear', currentYearShortcode);
+  eleventyConfig.addShortcode('responsiveImg', responsiveImg);
 
   return {
     dir: {
