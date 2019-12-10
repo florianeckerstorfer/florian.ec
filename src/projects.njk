@@ -8,9 +8,9 @@ layout: base
   <ul class="page-list">
     {%- for project in collections.projects | reverse -%}
       <li class="page-list__item">
-        <article>
+        <article class="page-list__item__article">
         {% if project.data.link %}
-          <span role="img" aria-label="external link">
+          <span class="page-list__item__icon" role="img" aria-label="external link">
             🔗
           </span>
           <a

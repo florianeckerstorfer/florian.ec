@@ -16,6 +16,16 @@
   margin-bottom: 2rem;
 }
 
+.page-list__item__article {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-list__item__icon {
+  margin-right: 0.5rem;
+}
+
 .page-list__item__link {
   color: var(--violet);
   display: block;
@@ -29,4 +39,5 @@
 .page-list__item__meta {
   font-size: var(--smallFontSize);
   line-height: 1.5;
+  width: 100%;
 }
