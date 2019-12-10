@@ -1,5 +1,5 @@
 ---
-slug: books-2017
+permalink: blog/books-2017/index.html
 title: 'Books 2017'
 date: 2017-12-31
 category: Personal

@@ -1,5 +1,5 @@
 ---
-slug: summer-2017-playlist
+permalink: blog/summer-2017-playlist/index.html
 title: Summer 2017 Playlist
 date: 2017-07-12
 category: Music

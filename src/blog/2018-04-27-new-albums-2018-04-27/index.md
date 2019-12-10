@@ -1,5 +1,5 @@
 ---
-slug: new-albums-2018-04-27
+permalink: blog/new-albums-2018-04-27/index.html
 title: New Albums on April 27, 2018
 date: 2017-04-27
 category: Music

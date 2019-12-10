@@ -1,5 +1,5 @@
 ---
-slug: doctrine-custom-hydration
+permalink: blog/doctrine-custom-hydration/index.html
 title: Improving Doctrine Performance with Custom Hydration
 date: 2014-10-01
 category: Development

@@ -1,10 +1,10 @@
-.blog__header {
+.page__header {
   margin: 0 auto;
   max-width: var(--maxPageWidth);
   padding: 0 var(--pageSpacing);
 }
 
-.blog__meta {
+.page__meta {
   font-family: var(--headlineFont);
   font-size: 1rem;
   margin: 1rem auto 3rem;

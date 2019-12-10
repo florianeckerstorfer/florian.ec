@@ -1,5 +1,5 @@
 ---
-slug: testing-traits-with-mocks-in-phpunit
+permalink: blog/testing-traits-with-mocks-in-phpunit/index.html
 title: 'Testing Traits with Mocks in PHPUnit'
 date: 2015-09-28
 category: Development

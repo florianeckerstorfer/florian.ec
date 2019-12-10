@@ -1,5 +1,5 @@
 ---
-slug: hp-color-laserjet-cp1215-mac-os-x-10-10
+permalink: blog/hp-color-laserjet-cp1215-mac-os-x-10-10/index.html
 title: 'Installing HP Color LaserJet CP1215 on Mac OS X 10.10 Yosemite'
 date: 2015-03-25
 category: Mac OS

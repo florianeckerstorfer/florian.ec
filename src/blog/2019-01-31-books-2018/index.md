@@ -1,5 +1,5 @@
 ---
-slug: books-2018
+permalink: blog/books-2018/index.html
 title: Books 2018
 date: 2019-01-31T18:00:00.000Z
 category: Personal

@@ -1,0 +1,7 @@
+/articles/*  /blog/:splat
+/articles    /
+/blog/2013-10-20-kinda-like-the-opposite-of-regexp  /blog/kinda-like-the-opposite-of-regexp
+
+# Redirect aliases to main domain
+https://feed.florian.ec/* https://florian.ec/:splat 301!
+https://florianec.netlify.com/* https://florian.ec/:splat 301!

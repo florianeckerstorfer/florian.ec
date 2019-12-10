@@ -1,5 +1,5 @@
 ---
-slug: frontend-dependencies-npm
+permalink: blog/frontend-dependencies-npm/index.html
 title: 'Manage Frontend Dependencies with NPM'
 date: 2014-11-03
 category: Development

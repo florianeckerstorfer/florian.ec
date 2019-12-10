@@ -1,5 +1,5 @@
 ---
-slug: gatsby-plugin-advanced-feed-1.0.0
+permalink: blog/gatsby-plugin-advanced-feed-1.0.0/index.html
 title: "@fec/gatsby-plugin-advanced-feed v1.0.0 released"
 date: 2019-09-11
 category: Development

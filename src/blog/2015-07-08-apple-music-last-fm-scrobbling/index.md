@@ -1,5 +1,5 @@
 ---
-slug: apple-music-last-fm-scrobbling
+permalink: blog/apple-music-last-fm-scrobbling/index.html
 title: 'Apple Music and Last.fm: Does it Scrobble?'
 date: 2015-07-08
 category: Apple

@@ -18,4 +18,4 @@ A new version is in development for some time now (with no release in sight). Th
 
 PHP, HTML, JavaScript, Smarty, Tomo
 
-![Screenshot of a shortened URL](/content/shrt/shrt-1.png)
+![Screenshot of a shortened URL](shrt-1.png)

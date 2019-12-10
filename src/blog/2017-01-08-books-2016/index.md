@@ -1,5 +1,5 @@
 ---
-slug: books-2016
+permalink: blog/books-2016/index.html
 title: 'Books I Have Read in 2016'
 date: 2017-01-08
 category: Personal

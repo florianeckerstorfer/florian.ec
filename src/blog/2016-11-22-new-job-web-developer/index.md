@@ -1,5 +1,5 @@
 ---
-slug: new-job-web-developer
+permalink: blog/new-job-web-developer/index.html
 title: "I'm Looking For a New Job As Full Time Web Developer"
 date: 2016-11-22
 category: Personal

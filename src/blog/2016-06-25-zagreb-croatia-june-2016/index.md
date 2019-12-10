@@ -1,5 +1,5 @@
 ---
-slug: zagreb-croatia-june-2016
+permalink: blog/zagreb-croatia-june-2016/index.html
 title: 'Zagreb, Crotia, June 2016'
 date: 2016-06-25
 category: Photos

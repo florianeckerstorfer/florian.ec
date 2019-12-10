@@ -1,5 +1,5 @@
 ---
-slug: gulp-js-streams
+permalink: blog/gulp-js-streams/index.html
 title: 'Streams in Gulp.js'
 date: 2015-06-24
 category: Development

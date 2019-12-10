@@ -1,5 +1,5 @@
 ---
-slug: gatsby-build-netlify-segmentation-fault
+permalink: blog/gatsby-build-netlify-segmentation-fault/index.html
 title: Segmentation fault when building Gatsby on Netlify
 date: 2019-08-16
 category: Development

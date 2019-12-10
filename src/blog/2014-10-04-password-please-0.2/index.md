@@ -1,5 +1,5 @@
 ---
-slug: password-please-0.2
+permalink: blog/password-please-0.2/index.html
 title: 'Password, Please!'
 date: 2014-10-04
 category: Development

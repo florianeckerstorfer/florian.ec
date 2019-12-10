@@ -1,5 +1,5 @@
 ---
-slug: mysql-doctrine-utf8
+permalink: blog/mysql-doctrine-utf8/index.html
 title: 'MySQL, Doctrine and UTF-8'
 date: 2014-10-25
 category: Development

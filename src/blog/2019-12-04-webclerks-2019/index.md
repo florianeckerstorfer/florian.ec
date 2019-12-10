@@ -1,5 +1,5 @@
 ---
-slug: webclerks-2019
+permalink: blog/webclerks-2019/index.html
 title: Recap of Webclerks Community Conference 2019
 date: 2019-12-04
 tags: [webclerks, conference]
@@ -38,7 +38,7 @@ Heydons talk was a lot of fun. He also wants you to underline your links and I a
 
 ## Che Harvey - Stakeholder-Centric Design
 
-Che talked about how to navigate corporate politics as a designer when joining a new company and how to make a name for yourself in a new workplace. This talk was not super interesting for me since I have over ten years of experience navigating office politics, but Che was a first time speaker and did a great job to get his ideas over. 
+Che talked about how to navigate corporate politics as a designer when joining a new company and how to make a name for yourself in a new workplace. This talk was not super interesting for me since I have over ten years of experience navigating office politics, but Che was a first time speaker and did a great job to get his ideas over.
 
 ## Rachel Andrew - Does It Work? Using The New CSS Layout
 

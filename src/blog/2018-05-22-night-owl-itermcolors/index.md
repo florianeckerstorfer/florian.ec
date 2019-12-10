@@ -1,5 +1,5 @@
 ---
-slug: night-owl-itermcolors
+permalink: blog/night-owl-itermcolors/index.html
 title: Night Owl for iTerm2 🌃
 date: 2018-05-22T23:00:00.000Z
 category: Development

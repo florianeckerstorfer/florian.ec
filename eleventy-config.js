@@ -24,6 +24,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
+  eleventyConfig.addLayoutAlias('project', 'layouts/project.njk');
 
   eleventyConfig.addCollection('blog', collection => {
     return collection
@@ -39,9 +40,11 @@ module.exports = eleventyConfig => {
       .sort(byDate);
   });
 
+  eleventyConfig.addPassthroughCopy('src/_redirects');
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/images');
-  eleventyConfig.addPassthroughCopy('src/blog/**/*.{png, gif,mp4}');
+  eleventyConfig.addPassthroughCopy('src/blog/**/*.{png,gif,mp4}');
+  eleventyConfig.addPassthroughCopy('src/projects/**/*.{png,gif,mp4}');
   eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
 
   eleventyConfig.addFilter('date', dateFilter);

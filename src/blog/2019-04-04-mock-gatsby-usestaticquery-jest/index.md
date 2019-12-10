@@ -1,5 +1,5 @@
 ---
-slug: mock-gatsby-usestaticquery-jest
+permalink: blog/mock-gatsby-usestaticquery-jest/index.html
 title: Mock Gatsby's useStaticQuery with Jest
 date: 2019-04-04T16:31:00.284Z
 category: Development

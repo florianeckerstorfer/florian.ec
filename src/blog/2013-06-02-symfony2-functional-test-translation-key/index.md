@@ -1,5 +1,5 @@
 ---
-slug: symfony2-functional-test-translation-key
+permalink: blog/symfony2-functional-test-translation-key/index.html
 title: Use translation keys in Symfony2 functional tests
 date: 2013-06-02
 category: Development

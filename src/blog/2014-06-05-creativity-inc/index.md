@@ -1,5 +1,5 @@
 ---
-slug: pixar-movie-situation
+permalink: blog/pixar-movie-situation/index.html
 title: The Pixar Movie Situation
 date: 2014-06-05T18:00:00.000Z
 category: Personal

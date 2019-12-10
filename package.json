@@ -48,6 +48,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "eleventy --config eleventy-config.js --serve",
     "build": "eleventy --config eleventy-config.js ",
+    "build-images": "gulp",
     "clean": "rimraf dist/"
   },
   "repository": {

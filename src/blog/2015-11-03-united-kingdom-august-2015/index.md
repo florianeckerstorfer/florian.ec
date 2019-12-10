@@ -1,5 +1,5 @@
 ---
-slug: united-kingdom-august-2015
+permalink: blog/united-kingdom-august-2015/index.html
 title: 'United Kingdom, August 2015'
 date: 2015-11-03
 category: Photos

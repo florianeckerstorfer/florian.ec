@@ -1,5 +1,5 @@
 ---
-slug: swift-getting-started
+permalink: blog/swift-getting-started/index.html
 title: Getting Started with Swift
 date: 2014-06-08
 category: Development

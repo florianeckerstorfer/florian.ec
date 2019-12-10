@@ -1,5 +1,5 @@
 ---
-slug: namibia-south-africa-photos
+permalink: blog/namibia-south-africa-photos/index.html
 title: Namibia And South Africa In June 2019
 date: 2019-07-11T21:29:00.000Z
 category: Photos

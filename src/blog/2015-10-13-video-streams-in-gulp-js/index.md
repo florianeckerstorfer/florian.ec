@@ -1,5 +1,5 @@
 ---
-slug: video-streams-in-gulpjs
+permalink: blog/video-streams-in-gulpjs/index.html
 title: 'Streams in Gulp.js'
 date: 2015-10-13
 category: Development

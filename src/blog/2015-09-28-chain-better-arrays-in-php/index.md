@@ -1,5 +1,5 @@
 ---
-slug: chain-better-arrays-in-php
+permalink: blog/chain-better-arrays-in-php/index.html
 title: 'Chain: Better Arrays in PHP'
 date: 2015-09-28
 category: Development
