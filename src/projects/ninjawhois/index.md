@@ -16,6 +16,6 @@ The project is no longer online and I no longer own the domain names _ninjawhois
 
 PHP, JavaScript, HTML, CSS, Zend Framework, JoyPHP, jQuery
 
-![Screenshot of the homepage](/content/ninjawhois/ninjawhois-1.png)
+![Screenshot of the homepage](ninjawhois-1.png)
 
-![Screenshot of the search result view](/content/ninjawhois/ninjawhois-2.png)
+![Screenshot of the search result view](ninjawhois-2.png)
