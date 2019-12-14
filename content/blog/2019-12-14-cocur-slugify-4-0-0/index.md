@@ -7,9 +7,15 @@ category: Development
 description: Announcing a new major version of my library `cocur/slugify`.
 ---
 
-Today I finally released Version 4.0.0 of [cocur/slugify](https://github.com/cocur/slugify) it does not introduce new major features, but adds support for Symfony 4 and 5, Twig 3 and, most importantly, PHP 7.3 and 7.4. Support for PHP 5, Twig 1 and Silex is dropped.
+Today we finally released [Version 4.0.0](https://github.com/cocur/slugify/releases/tag/v4.0.0) of [cocur/slugify](https://github.com/cocur/slugify) it does not introduce new major features, but adds support for Symfony 4 and 5, Twig 3 and, most importantly, PHP 7.3 and 7.4. Support for PHP 5, Twig 1 and Silex is dropped.
 
-Thanks to everyone who contributed to this release: [bartko-s](https://github.com/bartko-s), [mhujer](https://github.com/mhujer), [kubawerlos](https://github.com/kubawerlos), [FabienPapet](https://github.com/FabienPapet), [snapshotpl](https://github.com/snapshotpl) and [franmomu](https://github.com/franmomu)
+Thanks to everyone who contributed to this release: [bartko-s](https://github.com/bartko-s), [mhujer](https://github.com/mhujer), [kubawerlos](https://github.com/kubawerlos), [FabienPapet](https://github.com/FabienPapet), [snapshotpl](https://github.com/snapshotpl) and [franmomu](https://github.com/franmomu).
+
+As usual, you can install cocur/slugify using Composer:
+
+```bash
+composer require cocur/slugify
+```
 
 Here are the full release notes:
 
