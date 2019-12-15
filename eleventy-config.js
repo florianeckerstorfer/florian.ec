@@ -23,7 +23,10 @@ function byDate(page1, page2) {
 module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyRemark, {
-    plugins: [require('./src/lib/remark-prism')],
+    plugins: [
+      require('./src/lib/remark-prism'),
+      require('./src/lib/remark-a11y-emoji'),
+    ],
   });
 
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
