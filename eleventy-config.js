@@ -12,6 +12,10 @@ function isProjectPage(page) {
   return page.inputPath.match(/\.\/src\/projects\//);
 }
 
+function isTravelPage(page) {
+  return page.inputPath.match(/\.\/src\/travels/);
+}
+
 function byDate(page1, page2) {
   return page1.data.date - page2.data.date;
 }
@@ -39,6 +43,13 @@ module.exports = eleventyConfig => {
       .filter(isProjectPage)
       .sort(byDate);
   });
+
+  eleventyConfig.addCollection('travels', collection =>
+    collection
+      .getAll()
+      .filter(isTravelPage)
+      .sort(byDate)
+  );
 
   eleventyConfig.addPassthroughCopy('src/_redirects');
   eleventyConfig.addPassthroughCopy('src/fonts');
