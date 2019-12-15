@@ -3,7 +3,7 @@ const responsive = require('gulp-responsive');
 
 function build() {
   return gulp
-    .src('src/blog/**/*.{jpg,jpeg}')
+    .src('src/**/*.{jpg,jpeg}')
     .pipe(
       responsive(
         {
@@ -24,7 +24,7 @@ function build() {
         }
       )
     )
-    .pipe(gulp.dest('dist/blog'));
+    .pipe(gulp.dest('dist'));
 }
 
 exports.default = build;
