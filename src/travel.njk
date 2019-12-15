@@ -7,27 +7,27 @@ layout: base
   <h1>Travel</h1>
 
   <ul class="page-list">
-    {%- for project in collections.travels | reverse -%}
+    {%- for travel in collections.travels | reverse -%}
       <li class="page-list__item">
         <article class="page-list__item__article">
-        {% if project.data.link %}
+        {% if travel.data.link %}
           <span class="page-list__item__icon" role="img">
             🔗
           </span>
           <a
-            href="{{project.data.link}}"
+            href="{{travel.data.link}}"
             class="page-list__item__link"
             target="_blank"
             rel="noopener"
           >
-            {{project.data.title}}
+            {{travel.data.title}}
           </a>
           {% else %}
-          {{ project.data.title }}
+          {{ travel.data.title }}
           {% endif %}
           <div class="page-list__item__meta">
-            {{ project.data.date_start|date('MMMM D, YYYY') }} -
-            {{ project.data.date_end|date('MMMM D, YYYY') }}
+            {{ travel.data.date_start|date('MMMM D, YYYY') }} -
+            {{ travel.data.date_end|date('MMMM D, YYYY') }}
           </div>
         </article>
       </li>
