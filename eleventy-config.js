@@ -25,7 +25,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(eleventyRemark, {
     plugins: [
       require('./src/lib/remark-prism'),
-      require('./src/lib/remark-a11y-emoji'),
+      require('@fec/remark-a11y-emoji'),
     ],
   });
 
