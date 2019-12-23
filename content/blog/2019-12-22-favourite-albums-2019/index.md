@@ -8,6 +8,8 @@ tags: [music]
 
 It is the end of the year and therefore time for looking back at my favourite albums of the year. These are all albums that came out in 2019, [the album is have listened most][last-albums-2019] was Mitskis [Be The Cowboy][mitski-bandcamp].
 
+I have created an Apple Music playlist, [Florians Favourite Albums 2019][am-playlist], if you want to listen to all 15 albums from this list.
+
 ## Angel Olsen - All Mirrors
 
 ![Album cover of All Mirrors by Angel Olsen](/content/blog/2019-12-22-favourite-albums-2019/angel-olsen-all-mirrors.jpg)
@@ -99,6 +101,7 @@ Listen to *The Practice of Love* on [Bandcamp][hval-bandcamp], [Apple Music][hva
 Listen to *Emily Alone* on [Bandcamp][florist-bandcamp], [Apple Music][florist-am] or [Spotify][florist-spotify].
 
 [last-albums-2019]: https://www.last.fm/user/feredir/library/tracks?from=2019-01-01&rangetype=year
+[am-playlist]: https://music.apple.com/at/playlist/florians-favourite-albums-2019/pl.u-NpG5GsmL2XgG?l=en
 
 [mitski-bandcamp]: https://mitski.bandcamp.com/album/be-the-cowboy
 
