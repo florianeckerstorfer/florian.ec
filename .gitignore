@@ -66,3 +66,5 @@ yarn-error.log
 
 # Build target for Netlify functions
 /functions
+
+cv-pdf/cv.log
