@@ -46,7 +46,7 @@
   "scripts": {
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "eleventy --config eleventy-config.js --serve",
-    "build": "npm run build-images && eleventy --config eleventy-config.js ",
+    "build": "npm run build-images --verbose && eleventy --config eleventy-config.js ",
     "build-images": "gulp",
     "clean": "rimraf dist/"
   },
