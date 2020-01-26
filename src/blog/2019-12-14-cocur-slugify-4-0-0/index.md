@@ -1,5 +1,5 @@
 ---
-slug: cocur-slugify-4-0-0
+permalink: blog/cocur-slugify-4-0-0/index.html
 title: cocur/slugify v4.0.0 released
 date: 2019-12-14
 tags: [cocur, php]

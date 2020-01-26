@@ -1,5 +1,5 @@
 ---
-slug: favourite-albums-2019
+permalink: blog/favourite-albums-2019/index.html
 title: My Favourite Albums of 2019
 date: 2019-12-23
 category: Personal

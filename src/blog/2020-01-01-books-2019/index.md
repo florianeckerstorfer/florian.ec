@@ -1,5 +1,5 @@
 ---
-slug: books-2019
+permalink: blog/books-2019/index.html
 title: Books I Have Read in 2019
 date: 2020-01-01
 category: Personal
