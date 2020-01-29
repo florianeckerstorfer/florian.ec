@@ -61,6 +61,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('src/projects/**/*.{png,gif,mp4}');
   eleventyConfig.addPassthroughCopy({ 'cv-pdf/cv.pdf': 'cv.pdf' });
   eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
+  eleventyConfig.addPassthroughCopy({ 'static/.well-known': '.well-known' });
 
   eleventyConfig.addFilter('date', dateFilter);
   eleventyConfig.addShortcode('currentYear', currentYearShortcode);
