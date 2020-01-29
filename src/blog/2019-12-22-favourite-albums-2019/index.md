@@ -4,6 +4,7 @@ title: My Favourite Albums of 2019
 date: 2019-12-23
 category: Personal
 tags: [music]
+description: At the end of the year Florian collects his favourite albums of 2019.
 ---
 
 It is the end of the year and therefore time for looking back at my favourite albums of the year. These are all albums that came out in 2019, [the album is have listened most][last-albums-2019] was Mitskis [Be The Cowboy][mitski-bandcamp].

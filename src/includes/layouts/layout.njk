@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{{ renderData.title or title or metadata.title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png">
     <link rel="apple-touch-icon" sizes="167x167" href="/images/apple-touch-icon-167.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120.png">
+
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+
+    <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="/rss.xml" type="application/rss+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="/feed.json" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
     <div class="body">

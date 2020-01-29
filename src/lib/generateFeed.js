@@ -15,7 +15,7 @@ function generateFeed(posts) {
     language: 'en',
     image: 'https://florian.ec/image.png',
     favicon: 'https://florian.ec/favicon.ico',
-    copyright: `All rights reserved 2019, Florian Eckerstorfer`,
+    copyright: `All rights reserved 2013-2020, Florian Eckerstorfer`,
     updated: new Date(),
     feedLinks: {
       json: 'https://florian.ec/feed.json',

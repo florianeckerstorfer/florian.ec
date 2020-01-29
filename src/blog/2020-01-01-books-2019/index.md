@@ -4,6 +4,7 @@ title: Books I Have Read in 2019
 date: 2020-01-01
 category: Personal
 tags: [books]
+description: The list of books Florian Eckerstorfer has read in 2019.
 ---
 
 - [Gödel, Escher, Bach: An Eternal Golden Braid](http://prelectur.stanford.edu/lecturers/hofstadter/excerpts.html#gebxx) by _Douglas R. Hofstadter_ ★★★☆☆

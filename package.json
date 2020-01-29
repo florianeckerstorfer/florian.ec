@@ -53,7 +53,7 @@
     "build:site": "eleventy --config eleventy-config.js",
     "build:images": "gulp",
     "deploy": "netlify deploy --dir=dist",
-    "deploy:prod": "npm run deploy -- --prod",
+    "deploy:prod": "npm run build && npm run deploy -- --prod",
     "clean": "rimraf dist/"
   },
   "repository": {
