@@ -1,11 +1,19 @@
 const gulp = require('gulp');
-const responsive = require('gulp-responsive');
+const $ = require('gulp-load-plugins')();
 
 function build() {
   return gulp
     .src('src/**/*.{jpg,jpeg}')
+    .pipe($.rename({ suffix: '-320' }))
+    .pipe($.newer('dist'))
     .pipe(
-      responsive(
+      $.rename(options => {
+        options.basename = options.basename.replace('-320', '');
+        return options;
+      })
+    )
+    .pipe(
+      $.responsive(
         {
           '**/*.{jpg,jpeg}': [
             { width: 1920, rename: { suffix: '-1920' } },

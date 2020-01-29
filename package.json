@@ -25,6 +25,9 @@
     "enzyme": "^3.10.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-responsive": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
@@ -46,8 +49,9 @@
   "scripts": {
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "eleventy --config eleventy-config.js --serve",
-    "build": "npm run build-images --verbose && eleventy --config eleventy-config.js ",
-    "build-images": "gulp",
+    "build": "npm run build:images && npm run build:site",
+    "build:site": "eleventy --config eleventy-config.js",
+    "build:images": "gulp",
     "clean": "rimraf dist/"
   },
   "repository": {
