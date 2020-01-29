@@ -34,10 +34,12 @@ function responsiveImg(img, alt, caption) {
     <img
       srcset="${generateSrcSet(base, extension, 320)}"
       alt="${alt}"
+      loading="lazy"
     >
   </picture>`;
 
-  const figCaption = `<figcaption class="figure__caption">${caption || alt}</figcaption>`;
+  const figCaption = `<figcaption class="figure__caption">${caption ||
+    alt}</figcaption>`;
 
   return `<figure class="figure">
     ${picture}
