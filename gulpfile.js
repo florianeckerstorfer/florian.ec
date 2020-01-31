@@ -3,7 +3,7 @@ const $ = require('gulp-load-plugins')();
 
 function build() {
   return gulp
-    .src('src/**/*.{jpg,jpeg}')
+    .src('src/**/*.{jpg,jpeg,png}')
     .pipe($.rename({ suffix: '-320' }))
     .pipe($.newer('dist'))
     .pipe(
@@ -15,7 +15,7 @@ function build() {
     .pipe(
       $.responsive(
         {
-          '**/*.{jpg,jpeg}': [
+          '**/*.{jpg,jpeg,png}': [
             { width: 1920, rename: { suffix: '-1920' } },
             { width: 1280, rename: { suffix: '-1280' } },
             { width: 960, rename: { suffix: '-960' } },
