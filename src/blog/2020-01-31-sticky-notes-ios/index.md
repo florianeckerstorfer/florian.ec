@@ -7,7 +7,9 @@ category: Productivity
 description: Using Pushcut I wrote a script to put notes from Drafts on the iOS lockscreen.
 ---
 
-<video src="/blog/2020-01-31-sticky-notes-ios/drafts-pushcut-notification.mp4" loop autoplay muted></video>
+<video src="/blog/2020-01-31-sticky-notes-ios/drafts-pushcut-notification.mp4" loop autoplay muted>
+{% responsiveImg '/blog/2020-01-31-sticky-notes-ios/drafts-notification.png', 'Pushcut notification is appearing on the lock screen saying Create Sticky Notes in iOS Lock Screen with... I am using Pushcut to send notes from Drafts to my iOS lock screen.' %}
+</video>
 
 Sometimes I put a post-it note on the back of my phone with I bit of information I need quick access to. Yesterday I was in one of the situations and I had the text already in a Drafts note. Therefore the note is already on my phone, but to view it I have to unlock my phone, go to the homescreen, open [Drafts](https://getdrafts.com), look for the specific note and open it. I would prefer if I could just glance at my phone and view my note.
 
