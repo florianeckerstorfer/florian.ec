@@ -25,9 +25,9 @@
       {% include 'header.njk' %}
       {% include 'main-nav.njk' %}
       <div class="main-wrapper">
-        <main id="main" class="main" tabIndex={-1} role="main">
+        <div id="main" class="main">
           {% block main %}{% endblock %}
-        </main>
+        </div>
       </div>
       {% include 'footer.njk' %}
     </div>

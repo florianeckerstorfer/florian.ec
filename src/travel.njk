@@ -3,7 +3,7 @@ title: Travel
 layout: base
 ---
 
-<div class="content">
+<main role="main" tabindex="-1" class="content">
   <h1>Travel</h1>
 
   <ul class="page-list">
@@ -11,7 +11,7 @@ layout: base
       <li class="page-list__item">
         <article class="page-list__item__article">
         {% if travel.data.link %}
-          <span class="page-list__item__icon" role="img">
+          <span class="page-list__item__icon" role="img" aria-label="link">
             🔗
           </span>
           <a
@@ -33,5 +33,5 @@ layout: base
       </li>
     {%- endfor -%}
   </ul>
-</div>
+</main>
 
