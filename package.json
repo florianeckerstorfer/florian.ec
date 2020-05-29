@@ -20,6 +20,7 @@
     "gulp-newer": "^1.4.0",
     "gulp-rename": "^2.0.0",
     "gulp-responsive": "^3.0.1",
+    "gulp-rezzy": "^0.4.0",
     "parse-numeric-range": "1.2.0",
     "postcss": "^7.0.30",
     "postcss-import": "^12.0.1",
