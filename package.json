@@ -37,7 +37,7 @@
     "build:site": "eleventy --config eleventy-config.js",
     "build": "npm run build:images && npm run build:site",
     "clean": "rimraf dist/",
-    "deploy": "aws s3 sync dist/ s3://florian-ec-prod --profile FlorianEcProd",
+    "deploy": "./scripts/deploy.sh",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "eleventy --config eleventy-config.js --serve"
   },
