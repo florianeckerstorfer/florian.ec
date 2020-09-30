@@ -1,5 +1,5 @@
 ---
-permalink: blog/webclerks-2019/index.html
+permalink: blog/webclerks-2019/
 title: Recap of Webclerks Community Conference 2019
 date: 2019-12-04
 tags: [webclerks, conference]

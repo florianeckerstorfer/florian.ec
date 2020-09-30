@@ -1,5 +1,5 @@
 ---
-permalink: blog/costa-rica-photos/index.html
+permalink: blog/costa-rica-photos/
 title: Costa Rica in July 2018
 date: 2018-11-20T20:00:00.000Z
 category: Photos

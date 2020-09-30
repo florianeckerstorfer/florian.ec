@@ -1,5 +1,5 @@
 ---
-permalink: blog/ios-search-bar-ionic/index.html
+permalink: blog/ios-search-bar-ionic/
 title: 'Replicating the iOS Search Bar with Ionic'
 date: 2015-07-25
 category: Development

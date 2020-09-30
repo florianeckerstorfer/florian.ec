@@ -1,5 +1,5 @@
 ---
-permalink: blog/new-albums-2018-04-20/index.html
+permalink: blog/new-albums-2018-04-20/
 title: New Albums on April 20, 2018
 date: 2018-04-20
 category: Music

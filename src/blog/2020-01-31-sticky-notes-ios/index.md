@@ -1,5 +1,5 @@
 ---
-permalink: blog/sticky-notes-ios-lockscreen/index.html
+permalink: blog/sticky-notes-ios-lockscreen/
 title: Create Sticky Notes on iOS Lockscreen with Drafts
 date: 2020-01-31
 tags: [ios, pushcut, drafts]

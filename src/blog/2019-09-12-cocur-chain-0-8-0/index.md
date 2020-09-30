@@ -1,5 +1,5 @@
 ---
-permalink: blog/cocur-chain-0-8-0/index.html
+permalink: blog/cocur-chain-0-8-0/
 title: cocur/chain v0.8.0 released
 date: 2019-09-12
 category: Development

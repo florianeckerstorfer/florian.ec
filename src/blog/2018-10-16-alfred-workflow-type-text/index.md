@@ -1,5 +1,5 @@
 ---
-permalink: blog/alfred-workflow-type-text/index.html
+permalink: blog/alfred-workflow-type-text/
 title: Alfred Workflow to Type the Text From the Clipboard Into an Input
 date: 2018-10-16T20:00:00.000Z
 category: Automation

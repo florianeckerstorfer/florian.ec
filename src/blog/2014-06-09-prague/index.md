@@ -1,5 +1,5 @@
 ---
-permalink: blog/prague-may-2014/index.html
+permalink: blog/prague-may-2014/
 title: Prague, May 2014
 date: 2014-06-09
 category: Photos

@@ -1,5 +1,5 @@
 ---
-permalink: blog/books-2019/index.html
+permalink: blog/books-2019/
 title: Books I Have Read in 2019
 date: 2020-01-01
 category: Personal

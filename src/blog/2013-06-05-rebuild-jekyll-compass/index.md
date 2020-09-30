@@ -1,5 +1,5 @@
 ---
-permalink: blog/rebuild-jekyll-compass/index.html
+permalink: blog/rebuild-jekyll-compass/
 title: Rebuild Jekyll and Compass when a file changes
 date: 2013-06-05
 category: Development

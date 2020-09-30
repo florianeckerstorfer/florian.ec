@@ -1,5 +1,5 @@
 ---
-permalink: blog/hiking-looesbuehelalm-draugstein/index.html
+permalink: blog/hiking-looesbuehelalm-draugstein/
 title: 'Hiking at Loosbühelalm and Draugstein'
 date: 2015-07-25
 category: Photos

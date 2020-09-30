@@ -1,10 +1,10 @@
 ---
-permalink: blog/why-we-cant-have-nice-things/index.html
+permalink: blog/why-we-cant-have-nice-things/
 title: Why We Can't Have Nice Things
 date: 2020-06-28
 tags: [ios, macos, privacy]
 category: Privacy
-description: Developers abusing system features 
+description: Developers abusing system features
 ---
 
 [TikTok App to Stop Accessing User Clipboards After Being Caught in the Act by iOS 14](https://www.macrumors.com/2020/06/25/tiktok-clipboard-access-ios-14-caught/) by Juli Clover, MacRumors:

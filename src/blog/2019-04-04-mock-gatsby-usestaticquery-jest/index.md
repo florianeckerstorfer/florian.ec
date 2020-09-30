@@ -1,5 +1,5 @@
 ---
-permalink: blog/mock-gatsby-usestaticquery-jest/index.html
+permalink: blog/mock-gatsby-usestaticquery-jest/
 title: Mock Gatsby's useStaticQuery with Jest
 date: 2019-04-04T16:31:00.284Z
 category: Development
@@ -28,4 +28,12 @@ As far as I know it is not possible in Jest to spy on a single export from a mod
 
 ```javascript
 import * as Gatsby from 'gatsby';
+```
+
+Update: if you are mocks in your tests don't forgot to clear them before each test. Only then you can make sure that your test case is not effected by other test cases.
+
+```javascript
+beforeEach(() => {
+  jest.clearAllMocks();
+})
 ```

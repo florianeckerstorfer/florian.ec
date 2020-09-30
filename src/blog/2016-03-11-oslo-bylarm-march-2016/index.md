@@ -1,5 +1,5 @@
 ---
-permalink: blog/oslo-bylarm-march-2016/index.html
+permalink: blog/oslo-bylarm-march-2016/
 title: 'Oslo and By:Larm Festival, March 2016'
 date: 2016-03-11
 category: Photos

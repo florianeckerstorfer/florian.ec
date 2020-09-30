@@ -1,5 +1,5 @@
 ---
-permalink: blog/kinda-like-the-opposite-of-regexp/index.html
+permalink: blog/kinda-like-the-opposite-of-regexp/
 title: Kinda like the opposite of regular expressions
 date: 2013-10-20T18:00:00.000Z
 category: Development

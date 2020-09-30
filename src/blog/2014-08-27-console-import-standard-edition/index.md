@@ -1,5 +1,5 @@
 ---
-permalink: blog/console-import-standard-edition/index.html
+permalink: blog/console-import-standard-edition/
 title: Console Import Standard Edition
 date: 2014-08-27
 category: Development

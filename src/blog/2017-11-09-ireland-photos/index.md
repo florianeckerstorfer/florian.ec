@@ -1,5 +1,5 @@
 ---
-permalink: blog/ireland-photos/index.html
+permalink: blog/ireland-photos/
 title: Belfast and Dublin in November 2017
 date: 2017-11-09T20:00:00.000Z
 category: Photos

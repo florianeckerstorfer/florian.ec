@@ -1,5 +1,5 @@
 ---
-permalink: blog/wien-9-november-2016/index.html
+permalink: blog/wien-9-november-2016/
 title: 'Wien, 9. November 2016'
 date: 2016-11-09
 category: Personal

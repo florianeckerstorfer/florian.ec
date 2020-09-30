@@ -1,5 +1,5 @@
 ---
-permalink: blog/php-pad/index.html
+permalink: blog/php-pad/
 title: PHP Pad
 date: 2014-09-14
 category: Development

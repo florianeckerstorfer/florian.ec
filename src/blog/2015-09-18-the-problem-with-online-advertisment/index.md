@@ -1,5 +1,5 @@
 ---
-permalink: blog/the-problem-with-online-advertisement/index.html
+permalink: blog/the-problem-with-online-advertisement/
 title: 'The Problem with Online Advertisement'
 date: 2015-09-18
 category: Internet

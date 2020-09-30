@@ -1,5 +1,5 @@
 ---
-permalink: blog/inspirational-andy-dwyer-cli/index.html
+permalink: blog/inspirational-andy-dwyer-cli/
 title: Inspirational Andy Dwyer Quotes For My Command Line
 date: 2014-09-07
 category: Development
@@ -8,7 +8,7 @@ tags: [cli, console, andy dwyer, parks and recreation, lolcat, fortune, cowsay]
 
 On Friday I was procrastinating by reading some command line tricks articles and I encountered three commands I haven't noticed before: [`fortune`](<http://en.wikipedia.org/wiki/Fortune_(Unix)>), [`cowsay`](https://en.wikipedia.org/wiki/Cowsay) and [`lolcat`](https://github.com/busyloop/lolcat). A little bit earlier someone also posted this [Buzzfeed article with inspirational Andy Dwyer quotes](http://www.buzzfeed.com/mrloganrhoades/if-andy-dwyer-quotes-were-motivational-posters#4hjk6yw) and one thing let to another.
 
-![Inspirational Andy Dwyer Quotes](login.png)
+{% responsiveImg '/blog/2014-09-07-cli-andy-dwyer/login.png', 'Inspirational Andy Dwyer Quotes' %}
 
 To get inspirational Andy Dwyer quotes into your terminal you need four things: `fortune` (to display a quote), `cowsay` (to make a cow say the quote), `lolcat` (for the rainbow coloring) and, of course, the quotes. On a Mac you can use Homebrew to install `fortune` and `cowsay`:
 
@@ -26,7 +26,7 @@ $ sudo gem install lolcat
 
 Let's try these three programs out. `lolcat` is first.
 
-![Output of the command lolcat in Terminal.app on Mac OS](lolcat.png)
+{% responsiveImg '/blog/2014-09-07-cli-andy-dwyer/lolcat.png', 'Output of the command lolcat in Terminal.app on Mac OS' %}
 
 ## Cowsay
 

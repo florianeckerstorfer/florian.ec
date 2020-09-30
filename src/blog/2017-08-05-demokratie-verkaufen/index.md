@@ -1,5 +1,5 @@
 ---
-permalink: blog/demokratie-verkaufen/index.html
+permalink: blog/demokratie-verkaufen/
 title: Lassen wir uns die Demokratie nicht von der Industrie abkaufen
 date: 2017-08-05
 category: Personal

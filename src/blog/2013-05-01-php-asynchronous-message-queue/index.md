@@ -1,5 +1,5 @@
 ---
-permalink: blog/php-asynchronous-message-queue/index.html
+permalink: blog/php-asynchronous-message-queue/
 title: Implementing an asynchronous message queue in PHP with React
 date: 2013-05-01
 category: Development

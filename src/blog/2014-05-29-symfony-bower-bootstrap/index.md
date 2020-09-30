@@ -1,5 +1,5 @@
 ---
-permalink: blog/symfony-bower-bootstrap/index.html
+permalink: blog/symfony-bower-bootstrap/
 title: Using Bower with Symfony2 and Bootstrap
 date: 2014-05-29T18:00:00.000Z
 category: Development
@@ -151,6 +151,6 @@ You can now create a basic layout and include the Bootstrap CSS and JavaScript a
 
 _Please note that the BootstrapBundle includes a basic layout template you can use. However, there has been a bug in `v2.0._`that caused`bootstrap.js`not to load. We fixed the bug in`v2.1.0-alpha1`.\*
 
-![Screenshot of Login Form](login.png)
+{% responsiveImg '/blog/2014-05-29-symfony-bower-bootstrap/login.png', 'Screenshot of Login Form' %}
 
 In addition to this article I also created a demo project where you can follow the steps in this article in a full Symfony project. The source code of this demo project resides on Github: <code><a href="https://github.com/florianeckerstorfer/symfony-bower-bootstrap">florianeckerstorfer/symfony-bower-bootstrap</a></code>.

@@ -1,5 +1,5 @@
 ---
-permalink: blog/pixar-movie-situation/index.html
+permalink: blog/pixar-movie-situation/
 title: The Pixar Movie Situation
 date: 2014-06-05T18:00:00.000Z
 category: Personal
@@ -10,19 +10,17 @@ Last Saturday I finished reading [Creativity, Inc.](http://www.amazon.de/gp/prod
 
 I really enjoyed reading the book and I think most of the principles do not only apply to movie companies but to all companies that employ creative people. That includes software companies. It also made me want to watch Pixar movies. Last weekend I already saw Toy Story 3 and Brave. Seven more movies to go.
 
-<ul class="bucket-list">
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">A Bug's Life</span></li>
-    <li class="bucket-list__item">Toy Story 2</li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Monsters, Inc.</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Finding Nemo</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">The Incredibles</span></li>
-    <li class="bucket-list__item">Cars</li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Ratatouille</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">WALL-E</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Up</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Toy Story 3</span></li>
-    <li class="bucket-list__item">Cars 2</li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Brave</span></li>
-    <li class="bucket-list__item"><span class="bucket-list__item__strike-through">Monsters University</span></li>
-</ul>
+- <strike>Toy Story</strike>
+- <strike>A Bug's Life</strike>
+- Toy Story 2
+- <strike>Monsters, Inc.</strike>
+- <strike>Finding Nemo</strike>
+- <strike>The Incredibles</strike>
+- Cars
+- <strike>Ratatouille</strike>
+- <strike>WALL-E</strike>
+- <strike>Up</strike>
+- <strike>Toy Story 3</strike>
+- Cars 2
+- <strike>Brave</strike>
+- <strike>Monsters University</strike>

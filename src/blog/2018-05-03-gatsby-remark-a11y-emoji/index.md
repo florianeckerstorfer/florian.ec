@@ -1,5 +1,5 @@
 ---
-permalink: blog/gatsby-a11y-remark-emoji/index.html
+permalink: blog/gatsby-a11y-remark-emoji/
 title: Accessible Emojis with Gatsby
 date: 2018-05-03T23:00:00.000Z
 category: Development

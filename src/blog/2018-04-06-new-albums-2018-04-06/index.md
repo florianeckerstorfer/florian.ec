@@ -1,5 +1,5 @@
 ---
-permalink: blog/new-albums-2018-04-06/index.html
+permalink: blog/new-albums-2018-04-06/
 title: New Albums on April 6, 2018
 date: 2018-04-06
 category: Music

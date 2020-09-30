@@ -1,5 +1,5 @@
 ---
-permalink: blog/new-albums-2018-05-04/index.html
+permalink: blog/new-albums-2018-05-04/
 title: New Albums on May 5, 2018
 date: 2018-05-04
 category: Music

@@ -1,5 +1,5 @@
 ---
-permalink: blog/thoughts-on-apple-music/index.html
+permalink: blog/thoughts-on-apple-music/
 title: 'Thoughts on Apple Music'
 date: 2015-07-09
 category: Apple

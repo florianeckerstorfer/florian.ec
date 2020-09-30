@@ -1,5 +1,5 @@
 ---
-permalink: blog/php-background-processes/index.html
+permalink: blog/php-background-processes/
 title: Running background processes in PHP
 date: 2013-03-27
 category: Development

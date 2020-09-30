@@ -1,5 +1,5 @@
 ---
-permalink: blog/remark-a11y-emoji/index.html
+permalink: blog/remark-a11y-emoji/
 title: "@fec/remark-a11y-emoji v2.0.0 released"
 date: 2020-09-27
 category: Development
