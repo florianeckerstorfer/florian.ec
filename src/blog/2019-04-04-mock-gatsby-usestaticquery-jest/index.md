@@ -30,10 +30,10 @@ As far as I know it is not possible in Jest to spy on a single export from a mod
 import * as Gatsby from 'gatsby';
 ```
 
-Update: if you are mocks in your tests don't forgot to clear them before each test. Only then you can make sure that your test case is not effected by other test cases.
+Update: if you use mocks in your tests don't forgot to clear them before each test. Only then you can make sure that your test does not has side effects on other test cases.
 
 ```javascript
 beforeEach(() => {
   jest.clearAllMocks();
-})
+});
 ```
