@@ -10,12 +10,12 @@ active: false
 
 Generates a list of artists you recently listened to for the first time.
 
-The project is no longer online and I no longer own the domain name _ijustfoundthem.com_.
+<del>http://ijustfoundthem.com</del>
 
-## Technologies &amp; Libraries
+## Technologies & Libraries
 
 PHP, JavaScript, HTML, Sass, jQuery, last.fm API
 
-![Screenshot of the homepage](/content/projects/ijustfoundthem/ijustfoundthem-1.png)
+![Screenshot of the homepage](/projects/ijustfoundthem/ijustfoundthem-1.png)
 
-![Screenshot of the detail view](/content/projects/ijustfoundthem/ijustfoundthem-2.png)
+![Screenshot of the detail view](/projects/ijustfoundthem/ijustfoundthem-2.png)

@@ -10,10 +10,10 @@ active: false
 
 This small tool lets you URL-encode and decode text.
 
-[http://urlencode.theroadtojoy.at](http://urlencode.theroadtojoy.at)
+<del>http://urlencode.theroadtojoy.at</del>
 
-## Technologies &amp; Libraries
+## Technologies & Libraries
 
 HTML, JavaScript, Sass, HTML5 Boilerplate, jQuery
 
-![Screenshot of the homepage](/content/projects/urlencoder/urlencoder-1.png)
+![Screenshot of the homepage](/projects/urlencoder/urlencoder-1.png)

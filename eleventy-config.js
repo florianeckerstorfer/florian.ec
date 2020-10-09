@@ -3,6 +3,7 @@ const dateFilter = require('./src/filters/dateFilter');
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
 const responsiveImg = require('./src/shortcodes/responsiveImg');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const path = require('path');
 
 function isBlogPage(page) {
   return page.inputPath.match(/\.\/src\/blog\//);
@@ -26,11 +27,24 @@ module.exports = eleventyConfig => {
     plugins: [
       require('./src/lib/remark-prism'),
       require('@fec/remark-a11y-emoji'),
+      {
+        plugin: require('@fec/remark-responsive-images'),
+        options: {
+          srcDir: path.join(__dirname, 'src'),
+          targetDir: path.join(__dirname, 'dist'),
+          figureClassName: 'figure',
+          pictureClassName: '',
+          imgClassName: '',
+          figCaptionClassName: 'figure__caption',
+          loadingPolicy: 'lazy',
+        }
+      }
     ],
   });
 
   eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('blog', 'layouts/blog.njk');
+  eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
   eleventyConfig.addLayoutAlias('project', 'layouts/project.njk');
 
   eleventyConfig.addCollection('blog', collection => {
@@ -60,8 +74,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('src/blog/**/*.{png,gif,mp4}');
   eleventyConfig.addPassthroughCopy('src/projects/**/*.{png,gif,mp4}');
   eleventyConfig.addPassthroughCopy({ 'cv-pdf/cv.pdf': 'cv.pdf' });
-  eleventyConfig.addPassthroughCopy({ 'static/content': 'content' });
   eleventyConfig.addPassthroughCopy({ 'static/.well-known': '.well-known' });
+  eleventyConfig.addPassthroughCopy({ 'static/imagesi': 'imagesi' });
 
   eleventyConfig.addFilter('date', dateFilter);
   eleventyConfig.addShortcode('currentYear', currentYearShortcode);

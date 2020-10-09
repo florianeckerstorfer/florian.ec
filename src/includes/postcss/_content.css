@@ -29,6 +29,10 @@
   margin-bottom: 2rem;
 }
 
+.content figure img {
+  display: block;
+}
+
 .content figcaption {
   padding-bottom: 0.25rem;
   padding-left: var(--pageSpacing);

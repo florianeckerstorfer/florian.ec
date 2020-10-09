@@ -10,10 +10,10 @@ active: false
 
 Displays a map with all the places where a Twitter user has been.
 
-[http://trypapp.com](http://trypapp.com) (The app no longer works)</p>
+<del>http://trypapp.com</del>
 
-## Technologies &amp; Libraries
+## Technologies & Libraries
 
 PHP, JavaScript, HTML, Sass, HTML5 Boilerplate, Cocur Dispatcher, Twig, jQuery, Google Maps API, Twitter API
 
-![Screenshot of the map showing a users locations](/content/projects/tryp/tryp-1.png)
+![Screenshot of the map showing a users locations](/projects/tryp/tryp-1.png)

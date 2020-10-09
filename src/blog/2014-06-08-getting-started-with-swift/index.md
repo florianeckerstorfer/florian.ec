@@ -31,11 +31,11 @@ To get started with Swift you need the new Xcode 6 Beta. You can download it fro
 
 Open Xcode and create a new file (File > New > File) and select the **Playground** template in iOS > Source:
 
-{% responsiveImg '/blog/2014-06-08-getting-started-with-swift/xcode-new-file.png', 'Xcode 6 Beta New File Dialog' %}
+![Xcode 6 Beta New File Dialog](/blog/2014-06-08-getting-started-with-swift/xcode-new-file.png)
 
 Next you need to select a folder where to save your playground file and enter a filename. If you have done that you should see a new window where you can start to write some Swift code.
 
-{% responsiveImg '/blog/2014-06-08-getting-started-with-swift/xcode-new-swift-file.png', 'New Swift Playground in Xcode 6 Beta' %}
+![New Swift Playground in Xcode 6 Beta](/blog/2014-06-08-getting-started-with-swift/xcode-new-swift-file.png)
 
 ## Constants & Variables
 
@@ -159,7 +159,7 @@ for house in houses {
 
 **Note:** If you type this code in a playground in Xcode you will see the number of times the body of the loop is executed. In the example above this would be four times. You can click on the circle icon right to this to view the value of the variable <code>house</code> in each iteration.
 
-{% responsiveImg '/blog/2014-06-08-getting-started-with-swift/xcode-for-in.png', 'Value of variable in for-in loop in Xcode' %}
+![Value of variable in for-in loop in Xcode](/blog/2014-06-08-getting-started-with-swift/xcode-for-in.png)
 
 If you don't want to iterate through an array or collection but rather iterate to a range of values you can use the range operator. In fact, in Swift there are two range operators. The **closed range operator** is `a...b` and returns all numbers between `a` and `b` including `a` and `b`. The **half-closed range operator** is `a..b` and returns the numbers between `a` and `b` including `a` but excluding `b`.
 

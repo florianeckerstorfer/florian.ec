@@ -16,4 +16,4 @@ The project is no longer online and I no longer own the domain name <em>regexpte
 
 PHP, HTML, CSS
 
-![Screenshot of the visualised expression](regexptester-1.png)
+![Screenshot of the visualised expression](/projects/regexptester/regexptester-1.png)

@@ -10,12 +10,12 @@ active: false
 
 A graphical display of all albums a user has listened to.
 
-[http://musicshelf.theroadtojoy.at](http://musicshelf.theroadtojoy.at)
+<del>http://musicshelf.theroadtojoy.at</del>
 
-## Technologies &amp; Libraries
+## Technologies & Libraries
 
 PHP, HTML, Sass, HTML5 Boilerplate, Symfony Templating, Last.fm API
 
-![Screenshot of the homepage](/content/projects/musicshelf/musicshelf-1.png)
+![Screenshot of the homepage](/projects/musicshelf/musicshelf-1.png)
 
-![Screenshot of the shelf view](/content/projects/musicshelf/musicshelf-2.png)
+![Screenshot of the shelf view](/projects/musicshelf/musicshelf-2.png)

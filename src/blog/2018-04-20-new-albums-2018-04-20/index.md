@@ -12,7 +12,7 @@ After a break last week because I was graduating from university I have two new 
 
 The first one is Hippo Lite by DRINKS. DRINKS is a collaboration between Cate Le Bon and Tim Presley (White Fence) and Hippo Lite is their second album after Hermits on Holiday from 2015.
 
-{% responsiveImg '/blog/2018-04-20-new-albums-2018-04-20/drinks-hippo-lite.jpg', 'Album cover of Hippo Lite by DRINKS' %}
+![Album cover of Hippo Lite by DRINKS](/blog/2018-04-20-new-albums-2018-04-20/drinks-hippo-lite.jpg)
 
 You can also watch the music video for [Corner Shops](https://www.youtube.com/watch?v=V87KEg_J3hg).
 
@@ -24,7 +24,7 @@ You can also watch the music video for [Corner Shops](https://www.youtube.com/wa
 
 When I read _Exitmusic_ my mind will always wander to [Exit Music (For a Film)](https://open.spotify.com/track/4Na0siMtWOW9pJoWJ1Ponv). Exitmusic (the band), however, are making dream pop since 2003 and their new album The Recognitions is perfect for a nice spring evening.
 
-{% responsiveImg '/blog/2018-04-20-new-albums-2018-04-20/exitmusic-the-recognitions.jpg', 'Album cover The Recognitions by Exitmusic' %}
+![Album cover The Recognitions by Exitmusic](/blog/2018-04-20-new-albums-2018-04-20/exitmusic-the-recognitions.jpg)
 
 I would recommend [Iowa](https://exitmusic.bandcamp.com/track/iowa) for a start, which you can stream from Bandcamp.
 

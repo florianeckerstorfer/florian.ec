@@ -13,91 +13,91 @@ I have created an Apple Music playlist, [Florians Favourite Albums 2019][am-play
 
 ## Angel Olsen - All Mirrors
 
-![Album cover of All Mirrors by Angel Olsen](/content/blog/2019-12-22-favourite-albums-2019/angel-olsen-all-mirrors.jpg)
+![Album cover of All Mirrors by Angel Olsen](/blog/2019-12-22-favourite-albums-2019/angel-olsen-all-mirrors.jpg)
 
 Listen to *All Mirrors* on [Bandcamp][angel-bandcamp], [Apple Music][angel-am] or [Spotify][angel-spotify].
 
 ## Big Thief - Two Hands
 
-![Album cover of Two Hands by Big Thief](/content/blog/2019-12-22-favourite-albums-2019/big-thief-two-hands.jpg)
+![Album cover of Two Hands by Big Thief](/blog/2019-12-22-favourite-albums-2019/big-thief-two-hands.jpg)
 
 Listen to *Two Hands* on [Bandcamp][big-thief-bandcamp], [Apple Music][big-thief-am] or [Spotify][big-thief-spotify]
 
 ## Chastity Belt - Chastity Belt
 
-![Album cover of Chastity Belt by Chastity Belt](/content/blog/2019-12-22-favourite-albums-2019/chastity-belt-chastity-belt.jpg)
+![Album cover of Chastity Belt by Chastity Belt](/blog/2019-12-22-favourite-albums-2019/chastity-belt-chastity-belt.jpg)
 
 Listen to *Chastity Belt* on [Bandcamp][chastity-bandcamp], [Apple Music][chastity-am] or [Spotify][chastity-spotify].
 
 ## Lana Del Rey - Norman Fucking Rockwell!
 
-![Album cover of Norman Fucking Rockwell! by Lana Del Rey](/content/blog/2019-12-22-favourite-albums-2019/lana-del-rey-norman-fucking-rockwell.jpg)
+![Album cover of Norman Fucking Rockwell! by Lana Del Rey](/blog/2019-12-22-favourite-albums-2019/lana-del-rey-norman-fucking-rockwell.jpg)
 
 Listen to *Norman Fucking Rockwell!* on [Apple Music][lana-am] or [Spotify][lana-spotify].
 
 ## Marika Hackman - Any Human Friend
 
-![Album cover of Any Human Friend by Marika Hackman](/content/blog/2019-12-22-favourite-albums-2019/marika-hackman-any-human-friend.jpg)
+![Album cover of Any Human Friend by Marika Hackman](/blog/2019-12-22-favourite-albums-2019/marika-hackman-any-human-friend.jpg)
 
 Listen to *Any Human Friend* on [Bandcamp][marika-bandcamp], [Apple Music][marika-am] or [Spotify][marika-spotify].
 
 ## Nilüfer Yanya - Miss Universe
 
-![Album cover of Miss Universe by Nilüfer Yanya](/content/blog/2019-12-22-favourite-albums-2019/niluefer-yanya-miss-universe.jpg)
+![Album cover of Miss Universe by Nilüfer Yanya](/blog/2019-12-22-favourite-albums-2019/niluefer-yanya-miss-universe.jpg)
 
 Listen to *Miss Universe* on [Bandcamp][yanya-am], [Apple Music][yanya-am] or [Spotify][yanya-spotify].
 
 ## Sharon Van Etten - Remind Me Tomorrow
 
-![Album cover of Remind Me Tomorrow by Sharon Van Etten](/content/blog/2019-12-22-favourite-albums-2019/sharon-van-etten-remind-me-tomorrow.jpg)
+![Album cover of Remind Me Tomorrow by Sharon Van Etten](/blog/2019-12-22-favourite-albums-2019/sharon-van-etten-remind-me-tomorrow.jpg)
 
 Listen to *Remind Me Tomorrow* on [Bandcamp][sharon-bandcamp], [Apple Music][sharon-am] or [Spotify][sharon-spotify].
 
 ## Weyes Blood - Titanic Rising
 
-![Album cover of Titanic Rising by Weyes Blood](/content/blog/2019-12-22-favourite-albums-2019/weyes-blood-titanic-rising.jpg)
+![Album cover of Titanic Rising by Weyes Blood](/blog/2019-12-22-favourite-albums-2019/weyes-blood-titanic-rising.jpg)
 
 Listen to *Titanic Rising* on [Bandcamp][weyes-bandcamp], [Apple Music][weyes-am] or [Spotify][weyes-spotify].
 
 ## Sleater-Kinney - The Center Won't Hold
 
-![Album cover of The Center Won't Hold by Sleater-Kinney](/content/blog/2019-12-22-favourite-albums-2019/sleater-kinney-the-center-wont-hold.jpg)
+![Album cover of The Center Won't Hold by Sleater-Kinney](/blog/2019-12-22-favourite-albums-2019/sleater-kinney-the-center-wont-hold.jpg)
 
 Listen to *The Center Won't Hold* on [Bandcamp][sleater-bandcamp], [Apple Music][sleater-am] or [Spotify][sleater-spotify].
 
 ## Honeyblood - In Plain Sight
 
-![Album cover of In Plain Sight by Honeyblood](/content/blog/2019-12-22-favourite-albums-2019/honeyblood-in-plain-sight.jpg)
+![Album cover of In Plain Sight by Honeyblood](/blog/2019-12-22-favourite-albums-2019/honeyblood-in-plain-sight.jpg)
 
 Listen to *In Plain Sight* on [Apple Music][honeyblood-am] or [Spotify][honeyblood-spotify].
 
 ## Cherry Glazerr - Stuffed & Ready
 
-![Album cover of Stuffed & Readey by Cherry Glazerr](/content/blog/2019-12-22-favourite-albums-2019/cherry-glazerr-stuffed-and-ready.jpg)
+![Album cover of Stuffed & Readey by Cherry Glazerr](/blog/2019-12-22-favourite-albums-2019/cherry-glazerr-stuffed-and-ready.jpg)
 
 Listen to *Stuffed & Ready* on [Bandcamp][cherry-bandcamp], [Apple Music][cherry-am] or [Spotify][cherry-spotify].
 
 ## Jenny Lewis - On The Line
 
-![Album cover of On The Line by Jenny Lewis](/content/blog/2019-12-22-favourite-albums-2019/jenny-lewis-on-the-line.jpg)
+![Album cover of On The Line by Jenny Lewis](/blog/2019-12-22-favourite-albums-2019/jenny-lewis-on-the-line.jpg)
 
 Listen to *On The Line* on [Apple Music][jenny-am] or [Spotify][jenny-spotify].
 
 ## Girlpool - What Chaos Is Imaginary
 
-![Album cover of What Chaos Is Imaginary by Girlpool](/content/blog/2019-12-22-favourite-albums-2019/girlpool-what-chaos-is-imaginary.jpg)
+![Album cover of What Chaos Is Imaginary by Girlpool](/blog/2019-12-22-favourite-albums-2019/girlpool-what-chaos-is-imaginary.jpg)
 
 Listen to What Chaos Is Imaginary on [Bandcamp][girlpool-bandcamp], [Apple Music][girlpool-am] or [Spotify][girlpool-spotify].
 
 ## Jenny Hval - The Practice of Love
 
-![Album cover of The Practice of Love by Jenny Hval](/content/blog/2019-12-22-favourite-albums-2019/jenny-hval-the-practice-of-love.jpg)
+![Album cover of The Practice of Love by Jenny Hval](/blog/2019-12-22-favourite-albums-2019/jenny-hval-the-practice-of-love.jpg)
 
 Listen to *The Practice of Love* on [Bandcamp][hval-bandcamp], [Apple Music][hval-am] or [Spotify][hval-spotify].
 
 ## Florist - Emily Alone
 
-![Album cover of Emily Alone by Florist](/content/blog/2019-12-22-favourite-albums-2019/florist-emily-alone.jpg)
+![Album cover of Emily Alone by Florist](/blog/2019-12-22-favourite-albums-2019/florist-emily-alone.jpg)
 
 Listen to *Emily Alone* on [Bandcamp][florist-bandcamp], [Apple Music][florist-am] or [Spotify][florist-spotify].
 

@@ -3,7 +3,7 @@ const $ = require('gulp-load-plugins')();
 
 function build() {
   return gulp
-    .src('src/**/*.{jpg,jpeg,png}')
+    .src('static/images/**/*.{jpg,jpeg,png}')
     .pipe($.rename({ suffix: '-320' }))
     .pipe($.newer('dist'))
     .pipe(
@@ -21,7 +21,7 @@ function build() {
         { width: 320, suffix: '-320' },
       ])
     )
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/images'));
 }
 
 exports.default = build;

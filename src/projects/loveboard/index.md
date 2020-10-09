@@ -10,12 +10,12 @@ active: false
 
 A experimental real time dashboard for likes and +1s. The source code is available on [GitHub](http://github.com/florianeckerstorfer/loveboard).
 
-[http://loveboard.theroadtojoy.at](http://loveboard.theroadtojoy.at)
+<del>http://loveboard.theroadtojoy.at</del>
 
 ## Technologies &amp; Libraries
 
 PHP, JavaScript, HTML, CSS, HTML5 Boilerplate, jQuery, Pusher
 
-![Screenshot of the watched site](/content/projects/loveboard/loveboard-1.png)
+![Screenshot of the watched site](/projects/loveboard/loveboard-1.png)
 
-![Screenshot of the dashboard](/content/projects/loveboard/loveboard-2.png)
+![Screenshot of the dashboard](/projects/loveboard/loveboard-2.png)

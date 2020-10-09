@@ -10,7 +10,7 @@ A collection of songs I like to listen to this summer. When I walk through the s
 
 ## Summer 2017
 
-{% responsiveImg '/blog/2017-08-12-summer-2017-playlist/summer-2017-playlist.jpg', 'Summer 2017 Paylist' %}
+![Summer 2017 Paylist](/blog/2017-08-12-summer-2017-playlist/summer-2017-playlist.jpg)
 
 - **No Coffee** by Amber Coffman
 - **Candy May** by Alex Cameron
