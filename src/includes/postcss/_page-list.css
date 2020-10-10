@@ -36,6 +36,20 @@
   text-decoration: none;
 }
 
+.page-list__item__url {
+  display: block;
+  font-family: var(--monospaceFont);
+  font-size: var(--monospaceFontSize);
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+.page-list__item__url:link,
+.page-list__item__url:active,
+.page-list__item__url:visited {
+  color: var(--darkGrey);
+}
+
 .page-list__item__meta {
   font-size: var(--smallFontSize);
   line-height: 1.5;

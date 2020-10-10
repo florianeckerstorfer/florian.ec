@@ -10,7 +10,7 @@ layout: page
       <article class="page-list__item__article">
         {% if project.data.link %}
           <span class="page-list__item__icon" role="img" aria-label="external link">
-            🔗
+            ➤
           </span>
           <a
             href="{{project.data.link}}"
@@ -20,6 +20,7 @@ layout: page
           >
             {{project.data.title}}
           </a>
+          <a href="{{project.data.link}}" class="page-list__item__url" target="_blank" rel="noopener">{{project.data.link | replace('https://', '')}}</a>
         {% else %}
           <a class="page-list__item__link" href="{{ project.url }}">{{ project.data.title }}</a>
         {% endif %}

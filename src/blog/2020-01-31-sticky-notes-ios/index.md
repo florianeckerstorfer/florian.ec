@@ -19,7 +19,7 @@ The first step is to create a new notification in Pushcut, we just need a name a
 
 Since we now have the Webhook URL we now can create a new action in Drafts (I am using the Mac version, but this should also work on iOS) and add a *Script* step.
 
-{% responsiveImg '/blog/2020-01-31-sticky-notes-ios/drafts-script.png', 'Screenshot of Drafts Edit Action Screen, the depicted code is shown below', '' %}
+![Screenshot of Drafts Edit Action Screen, the depicted code is shown below](/blog/2020-01-31-sticky-notes-ios/drafts-script.png)
 
 Drafts provides a pretty nice API to send HTTP requests, so we use it to `POST` the `title` and `text` of the notification to the *Webhook URL*.
 

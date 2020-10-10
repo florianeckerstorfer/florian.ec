@@ -2,7 +2,7 @@
   "name": "florian.ec",
   "private": true,
   "description": "Personal website and blog of Florian Eckerstorfer",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.2",

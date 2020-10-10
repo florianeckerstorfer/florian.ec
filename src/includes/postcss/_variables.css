@@ -15,6 +15,9 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --bodyFontSize: 1.125rem;
 
+  --monospaceFont: 'Source Code', Consolas, Menlo, 'Courier New', Courier, monospace;
+  --monospaceFontSize: 0.9rem;
+
   --logoFont: 'League Spartan';
   --logoWeight: bold;
   --logoLineHeight: 1;
