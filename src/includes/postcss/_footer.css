@@ -2,7 +2,6 @@
   background: var(--violet);
   border-top: 2px solid var(--violet);
   color: var(--white);
-  font-size: var(--smallFontSize);
   grid-area: footer;
   padding: 1rem var(--pageSpacing);
   position: relative;
@@ -15,16 +14,18 @@
   left: 0;
   position: absolute;
   top: 2px;
-  transition: top 600ms var(--easeInOutBack);
+  transition: top 600ms var(--easeInOutBack),
+    border-top 600ms var(--easeInOutBack);
   width: 100%;
 }
 
 .footer:hover::before {
-  top: 8px;
+  border-top: 3px solid var(--violet);
+  top: -8px;
 }
 
 .footer p {
-  margin: 0 auto;
+  margin: 0;
   max-width: var(--maxContentWidth);
 }
 

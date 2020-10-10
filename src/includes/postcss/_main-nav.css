@@ -127,6 +127,12 @@
   width: 0px;
 }
 
+.main-nav__link:link::after,
+.main-nav__link:active::after,
+.main-nav__link:visited::after {
+  background: var(--violet);
+}
+
 .main-nav__link:hover::after,
 .mobile-nav__link:hover::after {
   width: 100%;
