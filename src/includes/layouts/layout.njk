@@ -25,12 +25,46 @@
       {% include 'header.njk' %}
       {% include 'main-nav.njk' %}
       <div class="main-wrapper">
-        <div id="main" class="main">
-          {% block main %}{% endblock %}
-        </div>
+        {% block main %}{% endblock %}
       </div>
       {% include 'footer.njk' %}
     </div>
+
+    <script type="text/javascript">
+      const mainNav = document.querySelector('#main-nav');
+      const bg = document.querySelector('#main-nav-background');
+
+      document
+        .querySelector('#show-main-nav-btn')
+        .addEventListener('click', (event) => {
+          event.preventDefault();
+          mainNav
+            .classList
+            .add('main-nav--open');
+          mainNav.style.display = 'flex';
+          window.setImmediate(() => {
+            bg
+              .classList
+              .add('main-nav-background--open');
+          });
+        });
+
+      document
+        .querySelector('#hide-main-nav-btn')
+        .addEventListener('click', (event) => {
+          event.preventDefault();
+          const mainNav = document.querySelector('#main-nav');
+          mainNav
+            .classList
+            .remove('main-nav--open');
+          bg
+            .classList
+            .remove('main-nav-background--open');
+          window.setTimeout(() => {
+            mainNav.style.display = 'none';
+          }, 250);
+        });
+    </script>
 
     <script data-goatcounter="https://florianec.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </body>

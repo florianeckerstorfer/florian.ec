@@ -1,15 +1,13 @@
 ---
 title: Travel
-layout: base
+layout: page
 ---
+<h1>Travel</h1>
 
-<main role="main" tabindex="-1" class="content">
-  <h1>Travel</h1>
-
-  <ul class="page-list">
-    {%- for travel in collections.travels | reverse -%}
-      <li class="page-list__item">
-        <article class="page-list__item__article">
+<ul class="page-list">
+  {%- for travel in collections.travels | reverse -%}
+    <li class="page-list__item">
+      <article class="page-list__item__article">
         {% if travel.data.link %}
           <span class="page-list__item__icon" role="img" aria-label="link">
             🔗
@@ -22,16 +20,14 @@ layout: base
           >
             {{travel.data.title}}
           </a>
-          {% else %}
+        {% else %}
           {{ travel.data.title }}
-          {% endif %}
-          <div class="page-list__item__meta">
-            {{ travel.data.date_start|date('MMMM D, YYYY') }} -
+        {% endif %}
+        <div class="page-list__item__meta">
+          {{ travel.data.date_start|date('MMMM D, YYYY') }} -
             {{ travel.data.date_end|date('MMMM D, YYYY') }}
-          </div>
-        </article>
-      </li>
-    {%- endfor -%}
-  </ul>
-</main>
-
+        </div>
+      </article>
+    </li>
+  {%- endfor -%}
+</ul>

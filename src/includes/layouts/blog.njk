@@ -1,20 +1,20 @@
 ---
 title: Florian Eckerstorfer
 ---
-{% extends 'layouts/layout.njk' %}
+{% extends 'layouts/base.njk' %}
 
 {% block main %}
-<main tabindex="-1" role="main">
-  <article class="page">
-    <div class="page__header">
-    <h1>{{ title }}</h1>
-    <div class="page__meta">
-      {{date|date('MMMM D, YYYY')}}
-    </div>
-    </div>
-    <div class="content">
-    {{ content | safe }}
-    </div>
-  </article>
-</main>
+  <main tabindex="-1" role="main" id="main" class="main">
+    <article class="page">
+      <div class="page__header">
+        <h1>{{ title }}</h1>
+        <div class="page__meta">
+          {{date|date('MMMM D, YYYY')}}
+        </div>
+      </div>
+      <div class="content">
+        {{ content | safe }}
+      </div>
+    </article>
+  </main>
 {% endblock %}

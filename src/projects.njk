@@ -1,14 +1,13 @@
 ---
 title: Projects
-layout: base
+layout: page
 ---
-<main class="content" tabindex="-1" role="main">
-  <h1>Projects</h1>
+<h1>Projects</h1>
 
-  <ul class="page-list">
-    {%- for project in collections.projects | reverse -%}
-      <li class="page-list__item">
-        <article class="page-list__item__article">
+<ul class="page-list">
+  {%- for project in collections.projects | reverse -%}
+    <li class="page-list__item">
+      <article class="page-list__item__article">
         {% if project.data.link %}
           <span class="page-list__item__icon" role="img" aria-label="external link">
             🔗
@@ -21,17 +20,16 @@ layout: base
           >
             {{project.data.title}}
           </a>
-          {% else %}
+        {% else %}
           <a class="page-list__item__link" href="{{ project.url }}">{{ project.data.title }}</a>
-          {% endif %}
-          <div class="page-list__item__meta">
-            <span class="label">
-              {{ project.data.category }}
-            </span>
-            {{ project.data.date|date('MMMM D, YYYY') }}
-          </div>
-        </article>
-      </li>
-    {%- endfor -%}
-  </ul>
-</div>
+        {% endif %}
+        <div class="page-list__item__meta">
+          <span class="label">
+            {{ project.data.category }}
+          </span>
+          {{ project.data.date|date('MMMM D, YYYY') }}
+        </div>
+      </article>
+    </li>
+  {%- endfor -%}
+</ul>

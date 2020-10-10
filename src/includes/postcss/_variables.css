@@ -26,6 +26,9 @@
   --pageSpacing: 0.5rem;
   --maxContentWidth: 640px;
   --maxPageWidth: 960px;
+  --sidebarWidth: 150px;
+
+  --sidebarBreakpoint: calc(var(--maxContentWidth) + var(--sidebarWidth));
 
   --easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

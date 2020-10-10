@@ -1,28 +1,35 @@
 .footer {
+  background: var(--violet);
   border-top: 2px solid var(--violet);
+  color: var(--white);
   font-size: var(--smallFontSize);
   grid-area: footer;
-  margin-top: 3rem;
-  padding: 0.5rem var(--pageSpacing);
+  padding: 1rem var(--pageSpacing);
   position: relative;
 }
 
 .footer::before {
-  border-top: 1px solid var(--violet);
+  border-top: 1px solid var(--white);
   content: '';
   display: block;
   left: 0;
   position: absolute;
-  top: -4px;
+  top: 2px;
   transition: top 600ms var(--easeInOutBack);
   width: 100%;
 }
 
 .footer:hover::before {
-  top: -16px;
+  top: 8px;
 }
 
 .footer p {
   margin: 0 auto;
   max-width: var(--maxContentWidth);
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:active {
+  color: var(--white);
 }

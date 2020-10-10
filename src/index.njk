@@ -1,24 +1,26 @@
 ---
 layout: base
 ---
-<main class="content" tabindex="-1" role="main">
-  <h1 class="visually-hidden">Blog Posts</h1>
+<main class="main" tabindex="-1" role="main">
+  <div class="content">
+    <h1 class="visually-hidden">Blog Posts</h1>
 
-  <ul class="page-list">
-    {%- for post in collections.blog | reverse -%}
-      <li class="page-list__item">
-        <article>
-          <a class="page-list__item__link" href="{{ post.url }}">{{ post.data.title }}</a>
-          <div class="page-list__item__meta">
-            <span class="label">
-              {{ post.data.category }}
-            </span>
-            {{ post.data.date|date('MMMM D, YYYY') }}
-          </div>
-        </article>
-      </li>
-    {%- endfor -%}
-  </ul>
+    <ul class="page-list">
+      {%- for post in collections.blog | reverse -%}
+        <li class="page-list__item">
+          <article>
+            <a class="page-list__item__link" href="{{ post.url }}">{{ post.data.title }}</a>
+            <div class="page-list__item__meta">
+              <span class="label">
+                {{ post.data.category }}
+              </span>
+              {{ post.data.date|date('MMMM D, YYYY') }}
+            </div>
+          </article>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
 </main>
 
 {% include "feed-links-aside.njk" %}

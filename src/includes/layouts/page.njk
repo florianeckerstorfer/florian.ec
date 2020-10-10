@@ -4,7 +4,9 @@ title: Florian Eckerstorfer
 {% extends 'layouts/layout.njk' %}
 
 {% block main %}
-    <main tabindex="-1" role="main" class="content">
-        {{ content | safe }}
-    </main>
+  <main tabindex="-1" role="main" id="main" class="main">
+    <div class="content">
+      {{ content | safe }}
+    </div>
+  </main>
 {% endblock %}

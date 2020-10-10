@@ -1,19 +1,55 @@
-<nav class="main-nav">
-    <ul class="main-nav__list">
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="/">
-          Blog
-        </a>
+<nav class="mobile-nav">
+  <ul class="mobile-nav__list">
+    <li class="mobile-nav__item">
+      <a class="mobile-nav__link mobile-nav__link--primary" href="/">Blog</a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="mobile-nav__link mobile-nav__link--primary" href="/projects">Projects</a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="mobile-nav__link mobile-nav__link--primary" href="/about">About</a>
+    </li>
+    <li class="mobile-nav__item">
+      <a id="show-main-nav-btn" class="mobile-nav__link" href="#">More</a>
+    </li>
+  </ul>
+</nav>
+<div id="main-nav-background" class="main-nav-background"></div>
+<nav id="main-nav" class="main-nav">
+  <ul class="main-nav__list">
+  <li class="main-nav__item main-nav__item--close">
+      <a id="hide-main-nav-btn" class="main-nav__link" href="#">Close</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link main-nav__link--primary" href="/">Blog</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link main-nav__link--primary" href="/projects">Projects</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link main-nav__link--primary" href="/about">About</a>
+    </li>
+    <li class="main-nav__item main-nav__item--headline">Subscribe</li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="/rss.xml">RSS</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="/atom.xml">Atom</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="/feed.json">JSON Feed</a>
+    </li>
+    <li class="main-nav__item main-nav__item--headline">
+        Follow Florian
       </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="/projects">
-          Projects
-        </a>
-      </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="/about">
-          About
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="https://micro.florian.ec" rel="noreferrer">Micro.blog</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="https://mastodon.social/@florianec" rel="noreferrer">Mastodon</a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__link" href="https://twitter.com/Florian_" rel="noreferrer">Twitter</a>
+    </li>
+  </ul>
+</nav>

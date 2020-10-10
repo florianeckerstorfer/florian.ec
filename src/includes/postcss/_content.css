@@ -53,7 +53,16 @@
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 790px) {
+  .content img,
+  .content video,
+  .content pre[class*='language-'],
+  .content figure {
+    --margin: calc((640px - 100vw + (var(--sidebarWidth) + 2 * var(--pageSpacing) + 2px)) / 2);
+  }
+}
+
+@media screen and (min-width: 1100px) {
   .content img,
   .content video,
   .content pre[class*='language-'],
