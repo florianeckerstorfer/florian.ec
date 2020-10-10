@@ -14,7 +14,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@fec/remark-a11y-emoji": "^2.0.0",
-    "@fec/remark-responsive-images": "0.1.2-alpha",
+    "@fec/remark-responsive-images": "0.1.3-alpha",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-load-plugins": "^2.0.5",
