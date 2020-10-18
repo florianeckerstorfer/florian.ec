@@ -78,7 +78,7 @@ remark-images currently only handles the generation of the responsive versions a
 
 - Adding an elastic container to the markup that acts as a placeholder while the image loads to prevent layout jumps.
 - Implementing the “blur up” technique.
-- Adding an option to dynamically modify the target path. For example, on this site all posts are in a folder `/blog/YYYY-MM-DD-slug`, but the date is removed so that the target path is `/blog/slug`. However, the images are saved in a folder that still includes the date.
+- Adding an option to dynamically modify the target path. For example, on this site all posts are in a folder `/blog/YYYY-MM-DD-slug`, but the date is removed so that the target path is `/blog/slug`. The plugin does not know anything about the permalinks and stores the images in a folder called `/blog/YYYY-MM-DD-slug`.
 - Adding support for image links, including when the image contains a caption.
 - Extend support to HTML-in-Markdown. Since it is legal to put HTML in a Markdown file, the plugin should also process HTML tags that contain an image.
 
