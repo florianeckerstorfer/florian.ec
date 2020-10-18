@@ -76,7 +76,7 @@ Over the weekend I have released a couple of versions and already replaced my Nu
 
 remark-images currently only handles the generation of the responsive versions and the markup. I plan to implement the missing two techniques from gatsby-remark-images in the next couple of weeks together with some other missing features:
 
-- Adding an elastic container to the markup that acts as a placeholder while the image loads to prevent layout jumps.
+- <del datetime="2020-10-18T15:54:15.593Z">Adding an elastic container to the markup that acts as a placeholder while the image loads to prevent layout jumps.</del> Elastic containers are supported in `@fec/remark-images` since v0.3.0-alpha.
 - Implementing the “blur up” technique.
 - Adding an option to dynamically modify the target path. For example, on this site all posts are in a folder `/blog/YYYY-MM-DD-slug`, but the date is removed so that the target path is `/blog/slug`. The plugin does not know anything about the permalinks and stores the images in a folder called `/blog/YYYY-MM-DD-slug`.
 - Adding support for image links, including when the image contains a caption.

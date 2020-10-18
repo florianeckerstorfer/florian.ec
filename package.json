@@ -5,16 +5,16 @@
   "version": "3.2.1",
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
-    "dayjs": "^1.9.1",
+    "dayjs": "^1.9.3",
     "feed": "^4.2.1",
-    "prismjs": "^1.21.0"
+    "prismjs": "^1.22.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@fec/eleventy-plugin-remark": "^2.0.0",
     "@fec/remark-a11y-emoji": "^2.0.0",
-    "@fec/remark-images": "0.2.0-alpha",
+    "@fec/remark-images": "0.3.0-alpha",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-load-plugins": "^2.0.5",
@@ -26,9 +26,9 @@
     "postcss": "^8.1.1",
     "postcss-import": "^12.0.1",
     "prettier": "^2.1.2",
-    "remark": "^12.0.1",
+    "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "sharp": "^0.26.1",
+    "sharp": "^0.26.2",
     "unist-util-visit": "^2.0.3"
   },
   "keywords": [],

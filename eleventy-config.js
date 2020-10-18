@@ -28,7 +28,7 @@ module.exports = eleventyConfig => {
       require('./src/lib/remark-prism'),
       require('@fec/remark-a11y-emoji'),
       {
-        plugin: require('@fec/remark-responsive-images'),
+        plugin: require('@fec/remark-images'),
         options: {
           srcDir: path.join(__dirname, 'src'),
           targetDir: path.join(__dirname, 'dist'),
