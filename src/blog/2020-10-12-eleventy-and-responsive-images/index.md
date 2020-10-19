@@ -6,7 +6,11 @@ category: Development
 tags: [eleventy, remark]
 description: I have created a remark plugin called @fec/remark-images that can be used with Eleventy to automatically generate responsive images.
 ---
-Trailer: I have created a plugin to generate responsive images on an Eleventy site by using [remark](https://remark.js.org) and [eleventy-plugin-remark](https://github.com/florianeckerstorfer/eleventy-plugin-remark). The plugin is called [@fec/remark-images](#) and currently it can generate multiple versions of an image and insert the correct markup in your Eleventy site.
+Trailer: I have created a plugin to generate responsive images on an Eleventy site by using [remark](https://remark.js.org) and [eleventy-plugin-remark](https://github.com/florianeckerstorfer/eleventy-plugin-remark). The plugin is called [@fec/remark-images](https://github.com/florianeckerstorfer/remark-images) and currently it can generate multiple versions of an image and insert the correct markup in your Eleventy site.
+
+**Update on October 18, 2020:** v0.3.0-alpha of `@fec/remark-images` supports elastic containers. I have updated this post to reflect the update.
+
+**Update on October 19, 2020:** v0.4.0-alpha supports showing a blurred background while the image is loading. 
 
 ## Origin Story
 
@@ -16,7 +20,7 @@ When I switched from [Gatsby](https://www.gatsbyjs.com) to [Eleventy](https://ww
 > - Generating multiple versions of images at different widths and sets the srcset and sizes of the img element so regardless of the width of the device, the correct image is downloaded.
 > - Using the “blur up” technique popularized by Medium and Facebook where a small 20px wide version of the image is shown as a placeholder until the actual image is downloaded.
 
-When I moved from Gatsby to Eleventy I did not find an easy to use these techniques and instead implemented a [Nunjucks shortcode for responsive images](https://github.com/florianeckerstorfer/florian.ec/blob/3a2e714e2c7b8ecc8e942953ab63beb7e640812d/src/shortcodes/responsiveImg.js). This shortcode generates the HTML markup for multiple versions of the image, which I generate using [Gulp](https://github.com/florianeckerstorfer/florian.ec/blob/685d2dd498008e2ad502a71d27287a0081d666ce/gulpfile.js). By separating the image generation and rendering the markup it was fast to implement, but I could not implement the “blur up” technique and setting the size of the image.
+When I moved from Gatsby to Eleventy I did not find an easy to use these techniques and instead implemented a [Nunjucks shortcode for responsive images](https://github.com/florianeckerstorfer/florian.ec/blob/3a2e714e2c7b8ecc8e942953ab63beb7e640812d/src/shortcodes/responsiveImg.js). This shortcode generates the HTML markup for multiple versions of the image, which I generate using [Gulp](https://github.com/florianeckerstorfer/florian.ec/blob/685d2dd498008e2ad502a71d27287a0081d666ce/gulpfile.js). By separating the image generation and rendering the markup it was fast to implement, but I did not yet implement the “blur up” technique and setting the size of the image.
 
 ## Training Montage
 
@@ -74,10 +78,10 @@ Over the weekend I have released a couple of versions and already replaced my Nu
 
 ## Sequels
 
-remark-images currently only handles the generation of the responsive versions and the markup. I plan to implement the missing two techniques from gatsby-remark-images in the next couple of weeks together with some other missing features:
+remark-images currently only handles the generation of the responsive versions and the markup. I plan to implement the missing <del datetime="2020-10-18T15:54:15.593Z">two</del> one technique from gatsby-remark-images in the next couple of weeks together with some other missing features:
 
 - <del datetime="2020-10-18T15:54:15.593Z">Adding an elastic container to the markup that acts as a placeholder while the image loads to prevent layout jumps.</del> Elastic containers are supported in `@fec/remark-images` since v0.3.0-alpha.
-- Implementing the “blur up” technique.
+- <del datetime="2020-10-19T19:30:20.948Z">Implementing the “blur up” technique.</del> v0.4.0-alpha shows a blurred version of the image while it is loading
 - Adding an option to dynamically modify the target path. For example, on this site all posts are in a folder `/blog/YYYY-MM-DD-slug`, but the date is removed so that the target path is `/blog/slug`. The plugin does not know anything about the permalinks and stores the images in a folder called `/blog/YYYY-MM-DD-slug`.
 - Adding support for image links, including when the image contains a caption.
 - Extend support to HTML-in-Markdown. Since it is legal to put HTML in a Markdown file, the plugin should also process HTML tags that contain an image.
