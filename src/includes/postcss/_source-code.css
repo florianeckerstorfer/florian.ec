@@ -3,7 +3,6 @@
   font-weight: 200 400 500 900;
   font-style: normal;
   font-stretch: normal;
-  src: url('/fonts/source-code/source-code.ttf.woff2') format('woff2'),
-       url('/fonts/source-code/source-code.ttf.woff') format('woff'),
-       url('/fonts/source-code/source-code.ttf') format('truetype');
+  src: url('/fonts/source-code/source-code.woff2') format('woff2'),
+       url('/fonts/source-code/source-code.woff') format('woff');
 }
