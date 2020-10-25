@@ -1,10 +1,10 @@
 ---
-permalink: blog/firefox-source-code-pro-color/
-title: Firefox cannot render Source Code Pro in color
+permalink: blog/firefox-source-code-pro-colour/
+title: Firefox cannot render Source Code Pro in colour
 date: 2020-10-25
 category: Development
-tags: [firefox, source code pro]
-description: Firefox cannot render text that uses the font Source Code Pro in color. In this article I'm going to show how to fix this bug.
+tags: [firefox, source code pro, browser bug]
+description: Firefox cannot render text that uses the font Source Code Pro in colour. In this article I'm going to show how to fix this bug by subsetting Source Code Pro.
 ---
 Yesterday I encountered a weird bug where the code examples on this website are always black in Firefox. This is a problem since black text on a dark grey background is basically unreadable. 
 
