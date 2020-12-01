@@ -2,7 +2,6 @@ const currentYearShortcode = require('./src/shortcodes/currentYearShortcode');
 const dateFilter = require('./src/filters/dateFilter');
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
 const responsiveImg = require('./src/shortcodes/responsiveImg');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const path = require('path');
 
 function isBlogPage(page) {
@@ -21,12 +20,9 @@ function byDate(page1, page2) {
   return page1.data.date - page2.data.date;
 }
 
-module.exports = eleventyConfig => {
-  eleventyConfig.addPlugin(syntaxHighlight);
+module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(eleventyRemark, {
     plugins: [
-      require('./src/lib/remark-prism'),
-      require('@fec/remark-a11y-emoji'),
       {
         plugin: require('@fec/remark-images'),
         options: {
@@ -37,8 +33,10 @@ module.exports = eleventyConfig => {
           imgClassName: '',
           figCaptionClassName: 'figure__caption',
           loadingPolicy: 'lazy',
-        }
-      }
+        },
+      },
+      require('./src/lib/remark-prism'),
+      require('@fec/remark-a11y-emoji'),
     ],
   });
 
@@ -47,25 +45,16 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
   eleventyConfig.addLayoutAlias('project', 'layouts/project.njk');
 
-  eleventyConfig.addCollection('blog', collection => {
-    return collection
-      .getAll()
-      .filter(isBlogPage)
-      .sort(byDate);
+  eleventyConfig.addCollection('blog', (collection) => {
+    return collection.getAll().filter(isBlogPage).sort(byDate);
   });
 
-  eleventyConfig.addCollection('projects', collection => {
-    return collection
-      .getAll()
-      .filter(isProjectPage)
-      .sort(byDate);
+  eleventyConfig.addCollection('projects', (collection) => {
+    return collection.getAll().filter(isProjectPage).sort(byDate);
   });
 
-  eleventyConfig.addCollection('travels', collection =>
-    collection
-      .getAll()
-      .filter(isTravelPage)
-      .sort(byDate)
+  eleventyConfig.addCollection('travels', (collection) =>
+    collection.getAll().filter(isTravelPage).sort(byDate)
   );
 
   eleventyConfig.addPassthroughCopy('src/_redirects');
