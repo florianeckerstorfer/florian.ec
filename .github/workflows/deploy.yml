@@ -12,9 +12,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: '14'
-      - run: node -v
-      - run: npm -v
+          node-version: '12'
+      - run: node --version
+      - run: npm --version
+      - run: aws --version
       - run: mkdir -p ~/.aws
       - run: echo "[florian.ec]" > ~/.aws/credentials
       - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >> ~/.aws/credentials
