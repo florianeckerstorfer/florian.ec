@@ -62,7 +62,8 @@
   .content video,
   .content pre[class*='language-'],
   .content figure {
-    --margin: calc((640px - 100vw + (var(--sidebarWidth) + 2 * var(--pageSpacing) + 2px)) / 2);
+    --margin: 0;
+    width: 100%;
   }
 }
 
@@ -71,7 +72,7 @@
   .content video,
   .content pre[class*='language-'],
   .content figure {
-    --margin: calc((640px - 960px) / 2 - var(--pageSpacing));
+    --margin: calc((640px - var(--maxPageWidth)) / 2 - var(--pageSpacing));
     width: var(--maxPageWidth);
   }
 }
