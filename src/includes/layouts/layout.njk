@@ -34,36 +34,33 @@
       const mainNav = document.querySelector('#main-nav');
       const bg = document.querySelector('#main-nav-background');
 
+      function handleOpenNavEvent(event) {
+        event.preventDefault();
+        mainNav.classList.add('main-nav--open');
+        bg.style.display = 'block';
+        window.setTimeout(() => {
+          bg.classList.add('main-nav-background--open');
+        });
+      }
+
+      function handleCloseNavEvent(event) {
+        event.preventDefault();
+        mainNav.classList.remove('main-nav--open');
+        bg.classList.remove('main-nav-background--open');
+        window.setTimeout(() => {
+          bg.style.display = 'none';
+        }, 250);
+      }
+
       document
         .querySelector('#show-main-nav-btn')
-        .addEventListener('click', (event) => {
-          event.preventDefault();
-          mainNav
-            .classList
-            .add('main-nav--open');
-          mainNav.style.display = 'flex';
-          window.setImmediate(() => {
-            bg
-              .classList
-              .add('main-nav-background--open');
-          });
-        });
+        .addEventListener('click', handleOpenNavEvent);
 
       document
         .querySelector('#hide-main-nav-btn')
-        .addEventListener('click', (event) => {
-          event.preventDefault();
-          const mainNav = document.querySelector('#main-nav');
-          mainNav
-            .classList
-            .remove('main-nav--open');
-          bg
-            .classList
-            .remove('main-nav-background--open');
-          window.setTimeout(() => {
-            mainNav.style.display = 'none';
-          }, 250);
-        });
+        .addEventListener('click', handleCloseNavEvent);
+
+      bg.addEventListener('click', handleCloseNavEvent);
     </script>
 
     <script data-goatcounter="https://florianec.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
