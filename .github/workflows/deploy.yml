@@ -22,4 +22,4 @@ jobs:
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> ~/.aws/credentials
       - run: npm install
       - run: npm run build
-      - run: AWS_EC2_METADATA_DISABLED=true npm run deploy
+      - run: npm run deploy
