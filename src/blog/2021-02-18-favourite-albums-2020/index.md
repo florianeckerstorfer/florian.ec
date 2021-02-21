@@ -1,6 +1,6 @@
 ---
 permalink: blog/favourite-albums-2020/
-title: My Favourite Albums of 2021
+title: My Favourite Albums of 2020
 date: 2021-02-18
 category: Personal
 tags: [music]
