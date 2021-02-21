@@ -8,6 +8,7 @@
   top: 0;
   width: 100vw;
   transition: opacity 250ms var(--easeInOutBack);
+  z-index: 99;
 }
 
 .main-nav-background--open {
@@ -26,6 +27,7 @@
   top: 0;
   transition: width 250ms var(--easeInOutBack);
   width: 0;
+  z-index: 100;
 }
 
 .main-nav--open {
