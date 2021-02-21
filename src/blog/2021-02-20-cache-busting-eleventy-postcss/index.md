@@ -9,7 +9,7 @@ description: This article describes a simple technique to add cache busting to a
 
 Last night I was fixing a few CSS bugs on this site and after deploying them I noticed that the changes were not visible yet. I forgot to implement some kind of cache busting on this site 🤦‍♂️
 
-The best practice for caching CSS assets in recent years have been to set a pretty high cache time for these files and to bust the cache by changing the filename when the content changes. Most commonly a hash of the content is used as part of the filename. Tools like [Webpack](https://webpack.js.org) or [Parcel](https://parceljs.org) will do this automatically, but for this site I decided to not use any kind of bundler and instead use [PostCSS](https://postcss.org) directly to transpile my CSS. By invoking PostCSS through an [JavaScript template in Eleventy](https://www.11ty.dev/docs/languages/javascript/) I am avoiding having another command I need to run when I want to build the site.
+The best practice for caching CSS assets in recent years has been to set a pretty high cache time for these files and to bust the cache by changing the filename when the content changes. Most commonly a hash of the content is used as part of the filename. Tools like [Webpack](https://webpack.js.org) or [Parcel](https://parceljs.org) will do this automatically, but for this site I decided to not use any kind of bundler and instead use [PostCSS](https://postcss.org) directly to transpile my CSS. By invoking PostCSS through an [JavaScript template in Eleventy](https://www.11ty.dev/docs/languages/javascript/) I am avoiding having another command I need to run when I want to build the site.
 
 To implement cache busting I need three things:
 
