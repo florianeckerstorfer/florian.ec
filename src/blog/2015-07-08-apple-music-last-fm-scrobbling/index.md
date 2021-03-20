@@ -10,6 +10,8 @@ Ever since Apple announced [Apple Music](https://www.apple.com/music/) at WWDC I
 
 In this post I am going to explore third-party apps that allow scrobbling on OS X and iOS and explain when and what will be scrobbled.
 
+**Update (March 20, 2021):** [Last.fm and Apple Music in 2021](/blog/last-fm-apple-music-2021/)
+
 ## iTunes on OS X
 
 Scrobbling played songs from iTunes always required a third-party application. There is the [official Last.fm Mac app](http://www.last.fm/download), but for the last couple of years I used [Simplify](https://geo.itunes.apple.com/us/app/simplify-for-spotify-rdio/id448003584?mt=12&uo=4&partnerId=11&at=11lSjE). Simplify can scrobble from iTunes, Rdio, Spotify and others and can also display the currently playing song in the menu bar. But does Simplify work with Apple Music? It depends.

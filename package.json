@@ -34,7 +34,8 @@
     "clean": "rimraf dist/",
     "deploy": "./scripts/deploy.sh",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "eleventy --config eleventy-config.js --serve"
+    "start": "eleventy --config eleventy-config.js --serve",
+    "new:blog": "./scripts/new-blog.sh"
   },
   "repository": {
     "type": "git",
