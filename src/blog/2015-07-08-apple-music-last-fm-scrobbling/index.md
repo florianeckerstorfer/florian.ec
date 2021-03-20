@@ -49,4 +49,5 @@ I am [feredir](http://www.last.fm/user/feredir) on Last.fm.
 
 ## Updates
 
-- _8 July 2015, 18:15:_ Add note about background scrobbling in QuietScrob
+- _July 8, 2015, 18:15:_ Add note about background scrobbling in QuietScrob
+- _March 20, 2021, 17:54:_ Add link to new article on this topic: [Last.fm and Apple Music in 2021](/blog/last-fm-apple-music-2021/)
