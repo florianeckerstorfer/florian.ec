@@ -7,7 +7,7 @@ tags: [apple music, last.fm, music, streaming]
 description:
 ---
 
-In 2015, shortly after Apple Music came out I [wrote an article about Apple Music and scrobbling to Last.fm](/blog/apple-music-last-fm-scrobbling/) and I still get occasionally questions about it. Instead of replying to everyone, I thought it might be time to revisit the topic.
+In 2015, shortly after Apple Music came out I [wrote an article about Apple Music and scrobbling to Last.fm](/blog/apple-music-last-fm-scrobbling/) and I still get occasionally questions about it. To celebrate the 15th anniversary of [my Last.fm account](https://www.last.fm/user/feredir), I thought it might be time to revisit the topic.
 
 ## Mac OS
 
