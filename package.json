@@ -2,7 +2,7 @@
   "name": "florian.ec",
   "private": true,
   "description": "Personal website and blog of Florian Eckerstorfer",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "author": "Florian Eckerstorfer <florian@eckerstorfer.net>",
   "dependencies": {
     "dayjs": "^1.10.4",
