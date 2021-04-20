@@ -8,8 +8,8 @@ class RssFeed {
     };
   }
 
-  render(data) {
-    return generateFeed(data.collections.blog).rss2();
+  async render(data) {
+    return (await generateFeed(data.collections.blog)).rss2();
   }
 }
 

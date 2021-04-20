@@ -8,8 +8,8 @@ class FeedJson {
     };
   }
 
-  render(data) {
-    return generateFeed(data.collections.blog).json1();
+  async render(data) {
+    return (await generateFeed(data.collections.blog)).json1();
   }
 }
 

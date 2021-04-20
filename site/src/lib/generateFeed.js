@@ -1,30 +1,38 @@
 const { Feed } = require('feed');
+const promisify = require('util').promisify;
+const fs = require('fs');
 
-const author = {
-  name: 'Florian Eckerstorfer',
-  email: 'florian@eckerstorfer.net',
-  link: 'https://florian.ec',
-};
+const readFile = promisify(fs.readFile);
 
-function generateFeed(posts) {
+async function generateFeed(posts) {
+  const metadata = JSON.parse(
+    await readFile(`${__dirname}/../../data/metadata.json`)
+  );
+
+  const author = {
+    name: metadata.title,
+    email: metadata.author.email,
+    link: metadata.url,
+  };
+
   const feed = new Feed({
-    title: 'Florian Eckerstorfer',
-    description: 'Personal website and blog of Florian Eckerstorfer',
-    id: 'https://florian.ec',
-    link: 'https://florian.ec',
+    title: metadata.title,
+    description: metadata.description,
+    id: metadata.url,
+    link: metadata.url,
     language: 'en',
-    image: 'https://florian.ec/image.png',
-    favicon: 'https://florian.ec/favicon.ico',
-    copyright: `All rights reserved 2013-2020, Florian Eckerstorfer`,
+    image: `${metadata.url}/image.png`,
+    favicon: `${metadata.url}/images/favicon.png`,
+    copyright: `All rights reserved 2013-${new Date().getYear()}, Florian Eckerstorfer`,
     updated: new Date(),
     feedLinks: {
-      json: 'https://florian.ec/feed.json',
-      atom: 'https://florian.ec/atom.xml',
+      json: `${metadata.url}/feed.json`,
+      atom: `${metadata.url}/atom.xml`,
     },
     author,
   });
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     feed.addItem({
       content: post.templateContent,
       description: post.data.description,
@@ -36,7 +44,7 @@ function generateFeed(posts) {
     });
   });
 
-  feed.addCategory('Personal');
+  feed.addCategory(metadata.category);
 
   return feed;
 }

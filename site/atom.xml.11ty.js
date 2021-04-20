@@ -8,8 +8,8 @@ class FeedAtom {
     };
   }
 
-  render(data) {
-    return generateFeed(data.collections.blog).atom1();
+  async render(data) {
+    return (await generateFeed(data.collections.blog)).atom1();
   }
 }
 
