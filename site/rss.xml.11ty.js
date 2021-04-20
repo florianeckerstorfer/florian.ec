@@ -1,4 +1,4 @@
-const generateFeed = require('./lib/generateFeed');
+const generateFeed = require('./src/lib/generateFeed');
 
 class RssFeed {
   data() {

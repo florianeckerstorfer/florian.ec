@@ -1,7 +1,7 @@
 const path = require('path');
-const generateCssHash = require('../lib/generateCssHash');
+const generateCssHash = require('../src/lib/generateCssHash');
 
-const cssDir = path.join(__dirname, '..', 'includes', 'postcss');
+const cssDir = path.join(__dirname, '..', 'src', 'includes', 'postcss');
 const hash = generateCssHash(cssDir);
 
 module.exports = {

@@ -1,7 +1,7 @@
-const currentYearShortcode = require('./site/shortcodes/currentYearShortcode');
-const dateFilter = require('./site/filters/dateFilter');
+const currentYearShortcode = require('./site/src/shortcodes/currentYearShortcode');
+const dateFilter = require('./site/src/filters/dateFilter');
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
-const responsiveImg = require('./site/shortcodes/responsiveImg');
+const responsiveImg = require('./site/src/shortcodes/responsiveImg');
 const path = require('path');
 const rehypeRaw = require('rehype-raw');
 const remarkRehype = require('remark-rehype');
@@ -39,7 +39,7 @@ module.exports = (eleventyConfig) => {
           loadingPolicy: 'lazy',
         },
       },
-      require('./site/lib/remark-prism'),
+      require('./site/src/lib/remark-prism'),
       require('@fec/remark-a11y-emoji'),
       {
         plugin: remarkRehype,
@@ -82,7 +82,7 @@ module.exports = (eleventyConfig) => {
   return {
     dir: {
       data: 'data',
-      includes: 'includes',
+      includes: 'src/includes',
       input: 'site',
       output: 'dist',
     },

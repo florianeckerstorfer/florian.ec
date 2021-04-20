@@ -34,6 +34,10 @@ class Manifest {
   }
 
   async render() {
+    const metadata = JSON.parse(
+      await readFile(`${__dirname}/data/metadata.json`)
+    );
+
     const iconSizes = [48, 72, 96, 144, 192, 256, 384, 512];
     const originalIcon = await this.readOriginalIcon();
     const icons = await Promise.all(
@@ -41,7 +45,8 @@ class Manifest {
     );
 
     return JSON.stringify({
-      name: 'Florian Eckerstorfer',
+      name: metadata.title,
+      lang: metadata.lang,
       short_name: 'florian.ec',
       start_url: '/',
       background_color: '#7b00fd',
