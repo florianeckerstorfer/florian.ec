@@ -6,7 +6,7 @@ const readFile = promisify(fs.readFile);
 
 class AppleTouchIcon {
   async readOriginalIcon() {
-    return await readFile('./src/images/apple-touch-icon.png');
+    return await readFile('./site/images/apple-touch-icon.png');
   }
 
   async resizeIcon(icon, size) {
@@ -20,7 +20,7 @@ class AppleTouchIcon {
     const iconSizes = [120, 152, 167, 180];
     const originalIcon = await this.readOriginalIcon();
     await Promise.all(
-      iconSizes.map(async size => {
+      iconSizes.map(async (size) => {
         this.resizeIcon(originalIcon, size);
       })
     );

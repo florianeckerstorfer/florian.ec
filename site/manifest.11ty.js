@@ -13,7 +13,7 @@ class Manifest {
   }
 
   async readOriginalIcon() {
-    return await readFile('./src/images/manifest-icon.png');
+    return await readFile('./site/images/manifest-icon.png');
   }
 
   async resizeIcon(icon, size) {
@@ -23,7 +23,7 @@ class Manifest {
   }
 
   renderIconManifestCb(originalIcon) {
-    return async size => {
+    return async (size) => {
       this.resizeIcon(originalIcon, size);
       return {
         src: `/images/manifest-icon-${size}x${size}.png`,
