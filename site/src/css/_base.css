@@ -13,12 +13,12 @@ body {
 }
 
 h1 {
-  font-weight: bold;
+  font-weight: var(--headlineFontWeight);
   font-size: var(--headlineFontSize);
   font-family: var(--headlineFont);
   line-height: 1.1;
   margin: 3rem 0 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 h2 {

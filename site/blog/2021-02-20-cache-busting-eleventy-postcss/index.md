@@ -13,13 +13,13 @@ The best practice for caching CSS assets in recent years has been to set a prett
 
 To implement cache busting I need three things:
 
-1. A method that takes a directory of CSS files and returns a hash of content of all files in this directory.
-2. A way to include the content hash in the filename when writing the transformed CSS.
-3. The filename with the content hash in the template that references the stylesheet in the HTML.
+1. A method that takes a directory of CSS files and returns a hash of the content of all files in this directory,
+2. a way to include the content hash in the filename when writing the transformed CSS,
+3. and I need to be able to reference the filename with the content hash in my layout to link the stylesheet.
 
 ## Generating a content hash
 
-Generating a content hash is pretty straight forward: first I read all the files in the given directory, concatenate them into a single string and then use a hashing function to generate a hash.
+Generating a content hash is straight forward: first I read all the files in the given directory, concatenate them into a single string and then use a hashing function to generate a hash.
 
 ```javascript
 // src/lib/generateCssHash.js
@@ -98,7 +98,7 @@ We now have a CSS file with the content hash in its filename, but we need the ha
 
 This technique doesn't work for my setup, because PostCSS is run as a JavaScript template and I can't be sure that this code is executed before the hashed filename is required in the HTML pages. Luckily, the solution is quite simple: in a Eleventy [Data File](https://www.11ty.dev/docs/data-js/) I run the function that generates the content hash again. The content of the CSS files does not change, reading all CSS files, concatenating and hashing them does not take a noticeable amount of time and the hashing algorithm is deterministic.
 
-For a programmer reading a bunch of files and then executing an hashing algorithm twice sounds like a waste, but in this case it makes no difference, Eleventy build already reads and writes hundreds of images, reading a dozen CSS files does not impact the build time in any way. The other plus point is that the code is straight forwards:
+For a programmer reading a bunch of files and then executing an hashing algorithm twice sounds like a waste, but in this case it makes no difference. My Eleventy build already reads and writes hundreds of images, reading a dozen CSS files does not impact the build time in any meaningful way. And this way the code is straight forward:
 
 ```javascript
 // src/data/css.js
@@ -121,4 +121,4 @@ This is an Eleventy Data File and I can access the values in any Eleventy templa
 <link rel="stylesheet" href="{{"{{ css.stylesCss }}"}}" />
 ```
 
-Done. When I started thinking about adding cache busting I thought that this maybe will get overly complicated, but in reality it works very nicely, does only need one additional dependency and does not effect the performance of the build script and dev server in any noticeable way.
+Done. When I started thinking about adding cache busting I thought that this maybe will get overly complicated, but in reality it works nicely, does only need one additional dependency, and does not effect the performance of the build script and dev server in any noticeable way.

@@ -6,14 +6,11 @@
   --grey-1: #eeecf0;
   --darkGrey: #666;
 
-  --headlineFont: 'Source Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+  --headlineFont: Faune, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
-  --bodyFont: 'Source Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --bodyFontSize: 1.125rem;
+  --headlineFontSize: 4rem;
+  --headlineFontWeight: 900;
 
   --monospaceFont: 'Source Code', Consolas, Menlo, 'Courier New', Courier,
     monospace;
@@ -22,6 +19,8 @@
   --logoFont: 'League Spartan';
   --logoWeight: bold;
   --logoLineHeight: 1;
+  --logoFontSize: 4rem;
+  --logoLeftCorrection: -4px;
 
   --smallFontSize: 0.85rem;
 
@@ -38,8 +37,18 @@
 }
 
 html {
-  --headlineFontSize: 1.5rem;
-  --logoFontSize: 3rem;
+  --bodyFont: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --bodyFontSize: 1.125rem;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    --bodyFont: 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  }
 }
 
 @media screen and (min-width: 375px) {

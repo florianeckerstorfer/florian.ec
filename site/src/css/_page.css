@@ -1,0 +1,19 @@
+.page__header {
+  margin: 0;
+  max-width: var(--maxPageWidth);
+  padding: 0 var(--pageSpacing);
+}
+
+@media screen and (min-width: 825px) {
+  .page__header {
+    margin-left: 2rem;
+  }
+}
+
+.page__meta {
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+  font-weight: bold;
+  margin: 1rem 0 3rem;
+  max-width: var(--maxContentWidth);
+}

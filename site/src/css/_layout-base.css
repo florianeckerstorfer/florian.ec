@@ -1,14 +1,16 @@
 .body {
   align-items: flex-start;
+  display: grid;
   font-family: var(--bodyFont);
   font-size: var(--bodyFontSize);
-  display: grid;
+  font-weight: 420;
   grid-template-areas:
     'header mainnav'
     'main main'
     'footer footer';
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
+  letter-spacing: -0.004em;
 }
 
 .main-wrapper {

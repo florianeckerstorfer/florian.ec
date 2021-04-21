@@ -104,7 +104,7 @@ Now you can create a `Gulpfile.js` and require the `gulp` module:
 ```javascript
 var gulp = require('gulp');
 
-gulp.task('default', function() {});
+gulp.task('default', function () {});
 ```
 
 ## Stylesheets
@@ -162,7 +162,7 @@ Because of the way how I import everything I need into my master Sass file the c
 
 var sass = (sass = require('gulp-sass'));
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   gulp
     .src('./web/bundles/acmefrontend/sass/master.scss')
     .pipe(sass({ sourceComments: 'map' }))
@@ -189,7 +189,7 @@ Bootstrap includes Glyphicons, an icon font, in its stylesheets by referencing t
 
 var copy = (copy = require('gulp-copy'));
 
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
   return gulp
     .src('./web/components/bootstrap-sass-official/assets/fonts/bootstrap/*')
     .pipe(copy('./web/fonts', { prefix: 7 }));
@@ -246,8 +246,8 @@ The interesting part in the above code is the last line: it tells RequireJS to l
 ```javascript
 // src/Acme/Bundle/FrontendBundle/Resources/public/js/main.js
 
-define(function(require) {
-  require(['jquery', 'bootstrap/alert'], function() {
+define(function (require) {
+  require(['jquery', 'bootstrap/alert'], function () {
     $('.alert').alert();
   });
 });
@@ -276,8 +276,8 @@ The `main.js` of the _AcmeUserBundle_ can now require other modules.
 ```javascript
 // src/Acme/Bundle/UserBundle/Resources/public/js/main.js
 
-define(function(require) {
-  require(['jquery'], function() {
+define(function (require) {
+  require(['jquery'], function () {
     $('.alert').addClass('hello-world');
   });
 });
@@ -290,7 +290,7 @@ Actually, in my current setup I don't really build JavaScript files. Because I u
 ```javascript
 // Gulpfile.js
 
-gulp.task('js', function() {
+gulp.task('js', function () {
   gulp
     .src([
       './web/bundles/*/js/**/*.js',
@@ -313,8 +313,8 @@ Gulp includes the `watch()` function by default. I use a glob pattern to watch S
 ```javascript
 // Gulpfile.js
 
-gulp.task('watch', function() {
-  var onChange = function(event) {
+gulp.task('watch', function () {
+  var onChange = function (event) {
     console.log('File ' + event.path + ' has been ' + event.type);
   };
   gulp
@@ -325,6 +325,7 @@ gulp.task('watch', function() {
     .on('change', onChange);
 });
 ```
+
 ### Reloading
 
 LiveReload is a great tool to reload the browser window when a file changes. First I install the [gulp-livereload](https://github.com/vohof/gulp-livereload) plugin and then I include a snippet in my layout. It's also possible to use a browser extension, but I prefer having everything I need in the repository. After installing the plugin I need to adapt the code of the `watch` task to inform LiveReload about the changed files.
@@ -334,8 +335,8 @@ LiveReload is a great tool to reload the browser window when a file changes. Fir
 
 var livereload = require('gulp-livereload');
 
-gulp.task('watch', function() {
-  var onChange = function(event) {
+gulp.task('watch', function () {
+  var onChange = function (event) {
     console.log('File ' + event.path + ' has been ' + event.type);
     // Tell LiveReload to reload the window
     livereload.changed();
@@ -380,7 +381,7 @@ I use the `task()` function to create a new task with the name `test`. The `src(
 
 var phpunit = (phpunit = require('gulp-phpunit'));
 
-gulp.task('test', function() {
+gulp.task('test', function () {
   return gulp.src('./src/Acme/Bundle/*/Tests/**/*.php').pipe(
     phpunit('./bin/phpunit', {
       debug: false,
@@ -395,7 +396,7 @@ I can execute the task using `gulp test`. The `gulp-phpunit` plugin provides a w
 ```javascript
 // Gulpfile.js
 
-gulp.task('coverage', function() {
+gulp.task('coverage', function () {
   return gulp.src('./src/Tvst/Bundle/*/Tests/**/*.php').pipe(
     phpunit('./bin/phpunit', {
       debug: false,
@@ -415,7 +416,7 @@ To run PHP_CodeSniffer I use the [gulp-phpcs](https://github.com/JustBlackBird/g
 
 var phpcs = require('gulp-phpcs');
 
-gulp.task('checkstyle', function() {
+gulp.task('checkstyle', function () {
   return gulp
     .src(['src/Tvst/Bundle/**/*.php'])
     .pipe(phpcs({ bin: './bin/phpcs', standard: 'PSR2', warningSeverity: 0 }))
@@ -440,12 +441,12 @@ During my build process I also need to run Symfony2 commands. Instead of using a
 
 var exec = require('child_process').exec;
 
-gulp.task('installAssets', function() {
+gulp.task('installAssets', function () {
   exec('php app/console assets:install --symlink', logStdOutAndErr);
 });
 
 // Without this function exec() will not show any output
-var logStdOutAndErr = function(err, stdout, stderr) {
+var logStdOutAndErr = function (err, stdout, stderr) {
   console.log(stdout + stderr);
 };
 ```

@@ -5,7 +5,8 @@
     var(--logoFont);
   grid-area: header;
   justify-content: flex-start;
-  padding: 1rem var(--pageSpacing) 0;
+  margin-left: var(--logoLeftCorrection);
+  padding: 0;
   text-transform: uppercase;
 }
 
@@ -14,7 +15,6 @@
 .header__logo:visited {
   color: var(--violet);
   display: inline-block;
-  margin-top: 3px;
   text-decoration: none;
 }
 

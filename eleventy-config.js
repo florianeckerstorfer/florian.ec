@@ -79,6 +79,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addShortcode('currentYear', currentYearShortcode);
   eleventyConfig.addShortcode('responsiveImg', responsiveImg);
 
+  eleventyConfig.addWatchTarget('site/src/css/');
+
   return {
     dir: {
       data: 'data',

@@ -1,6 +1,6 @@
 ---
 permalink: blog/remark-a11y-emoji/
-title: "@fec/remark-a11y-emoji v2.0.0 released"
+title: '@fec/remark-a11y-emoji v2.0.0 released'
 date: 2020-09-27
 category: Development
 tags: [javascript, remark, emoji]
@@ -16,7 +16,7 @@ In addition I added a real build process, switch to using `import`, updated all 
 You can install the library with:
 
 ```bash
-npm install -@fec/remark-a11y-emoji
+npm install -S @fec/remark-a11y-emoji
 ```
 
 Then you can use the plugin with Remark:

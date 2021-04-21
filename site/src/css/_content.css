@@ -6,8 +6,15 @@
 }
 
 .content h2 {
-  font: bold 1.7rem var(--headlineFont);
+  font: 900 2rem var(--headlineFont);
   margin: 2rem 0 1rem 0;
+}
+
+.content blockquote {
+  font-size: 1.5rem;
+  font-weight: 250;
+  font-style: italic;
+  margin: 2rem 2.5rem;
 }
 
 .content img,
