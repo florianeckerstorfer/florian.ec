@@ -124,7 +124,7 @@
   background: var(--black);
   content: '';
   display: block;
-  height: 2px;
+  height: 3px;
   transition: width 250ms var(--easeInOutBack);
   width: 0px;
 }
@@ -133,6 +133,12 @@
 .main-nav__link:active::after,
 .main-nav__link:visited::after {
   background: var(--violet);
+}
+
+.main-nav__link--primary:link::after,
+.main-nav__link--primary:active::after,
+.main-nav__link--primary:visited::after {
+  background: var(--black);
 }
 
 .main-nav__link:hover::after,
