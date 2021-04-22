@@ -3,8 +3,6 @@ title: About
 layout: page
 ---
 
-# About
-
 Hello, my name is Florian Eckerstorfer and I am a web developer living in Vienna, Europe. I have a Masters degree in _Software Engineering and Internet Computing_ from the Technical University of Vienna.
 
 I like reading, music, going to [concerts](/concerts), [travelling](/travel) and going on walks.

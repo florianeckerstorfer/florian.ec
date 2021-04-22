@@ -1,6 +1,27 @@
-.aside-links {
-  background: var(--grey-1);
-  padding: 1px var(--pageSpacing);
+.aside {
+  background: var(--black);
+  color: var(--white);
+  margin-left: -3px;
+  padding: 2rem var(--pageSpacing);
+}
+
+.aside a:link,
+.aside a:active,
+.aside a:visited {
+  color: var(--white);
+}
+
+.aside-links__title {
+  font-family: var(--bodyFont);
+  font-size: var(--bodyFontSize);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.aside__content {
+  margin: 0 auto;
+  max-width: var(--maxContentWidth);
+  padding: 0 0 1rem 0;
 }
 
 .aside-links__list {
@@ -20,7 +41,7 @@
 }
 
 .aside-links__item::after {
-  background: black;
+  background: var(--white);
   border-radius: 3px;
   content: '';
   display: block;

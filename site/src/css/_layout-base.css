@@ -4,17 +4,19 @@
   font-family: var(--bodyFont);
   font-size: var(--bodyFontSize);
   font-weight: 420;
+  min-height: 100%;
   grid-template-areas:
     'header mainnav'
     'main main'
     'footer footer';
   grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   letter-spacing: -0.004em;
 }
 
 .main-wrapper {
   grid-area: main;
+  height: 100%;
 }
 
 .main {
@@ -26,7 +28,7 @@
     grid-template-areas:
       'header main'
       'mainnav main'
-      'footer footer';
+      'mainnav footer';
     justify-content: flex-start;
   }
 

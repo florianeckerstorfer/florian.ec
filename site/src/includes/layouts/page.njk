@@ -5,8 +5,13 @@ title: Florian Eckerstorfer
 
 {% block main %}
   <main tabindex="-1" role="main" id="main" class="main">
-    <div class="content">
-      {{ content | safe }}
-    </div>
+  <article class="page">
+    <div class="page__header">
+      <h1>{{ title }}</h1>
+      </div>
+      <div class="content">
+        {{ content | safe }}
+      </div>
+    </article>
   </main>
 {% endblock %}
