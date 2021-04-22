@@ -5,8 +5,7 @@
     var(--logoFont);
   grid-area: header;
   justify-content: flex-start;
-  margin-left: var(--logoLeftCorrection);
-  padding: 0;
+  padding: 1rem var(--pageSpacing) 0;
   text-transform: uppercase;
 }
 

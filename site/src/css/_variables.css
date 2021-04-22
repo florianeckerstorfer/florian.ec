@@ -19,7 +19,7 @@
   --logoFont: 'League Spartan';
   --logoWeight: bold;
   --logoLineHeight: 1;
-  --logoFontSize: 4rem;
+  --logoFontSize: 3rem;
   --logoLeftCorrection: -4px;
 
   --smallFontSize: 0.85rem;
@@ -41,14 +41,6 @@ html {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --bodyFontSize: 1.125rem;
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    --bodyFont: 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  }
 }
 
 @media screen and (min-width: 375px) {
