@@ -7,7 +7,7 @@ read -p "Tags: " tags
 read -p "Description: " description
 
 currentDate=`date +"%Y-%m-%d"`
-newDir="src/blog/$currentDate-$slug"
+newDir="site/blog/$currentDate-$slug"
 newFile="$newDir/index.md"
 mkdir -p $newDir
 echo "---" > $newFile
