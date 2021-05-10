@@ -18,3 +18,6 @@ echo "category: $category" >> $newFile
 echo "tags: [$tags]" >> $newFile
 echo "description: $description" >> $newFile
 echo "---" >> $newFile
+
+echo $newFile
+

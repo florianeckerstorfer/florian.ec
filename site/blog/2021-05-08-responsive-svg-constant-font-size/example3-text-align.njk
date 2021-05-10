@@ -1,0 +1,135 @@
+---
+permalink: blog/responsive-svg-constant-font-size/example3-text-align.html
+eleventyExcludeFromCollections: true
+layout:
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Responsive SVGs with Scaling Font Size</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .graphic svg {
+        display: block;
+        width: 100%;
+      }
+
+      .graphic svg .checker-h, .graphic svg .checker-v {
+        fill: rgba(200, 200, 200, 0.25);
+      }
+
+      .graphic svg .checker-h {
+        height: 8px;
+        width: 320px;
+        x: 0;
+      }
+
+      .graphic svg .checker-v {
+        height: 104px;
+        width: 8px;
+        y: 0;
+      }
+
+      .graphic svg text.left-top {
+        dominant-baseline: hanging;
+        text-anchor: start;
+      }
+
+      .graphic svg text.right-top {
+        dominant-baseline: hanging;
+        text-anchor: end;
+      }
+
+      .graphic svg text.center-top {
+        dominant-baseline: hanging;
+        text-anchor: middle;
+      }
+
+      .graphic svg text.left-center {
+        dominant-baseline: middle;
+        text-anchor: start;
+      }
+
+      .graphic svg text.right-center {
+        dominant-baseline: middle;
+        text-anchor: end;
+      }
+
+      .graphic svg text.center-center {
+        dominant-baseline: middle;
+        text-anchor: middle;
+      }
+
+      .graphic svg text.left-bottom {
+        dominant-baseline: auto;
+        text-anchor: start;
+      }
+
+      .graphic svg text.right-bottom {
+        dominant-baseline: auto;
+        text-anchor: end;
+      }
+
+      .graphic svg text.center-bottom {
+        dominant-baseline: auto;
+        text-anchor: middle;
+      }
+
+      .graphic svg text {
+        fill: black;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      @media (min-width: 470px) {
+        svg text {
+          font-size: 12px;
+        }
+      }
+
+      @media (min-width: 640px) {
+        .graphic svg text {
+          font-size: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="graphic">
+      <svg
+        viewBox="0 0 320 104"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        {% for y in range(0, 104, 16) %}
+        <rect class="checker-h" y="{{ y }}"></rect>
+        {% endfor %}
+        {% for x in range(8, 320, 16) %}
+        <rect class="checker-v" x="{{ x }}"></rect>
+        {% endfor %}
+        <text class="left-top" x="8" y="8">Left/Top</text>
+        <text class="center-top" x="150" y="8">Center/Top</text>
+        <text class="right-top" x="312" y="8">Right/Top</text>
+        <text class="left-center" x="8" y="50">Left/Center</text>
+        <text class="center-center" x="150" y="50">Center/Center</text>
+        <text class="right-center" x="312" y="50">Right/Center</text>
+        <text class="left-bottom" x="8" y="96">Left/Bottom</text>
+        <text class="center-bottom" x="150" y="96">Center/Bottom</text>
+        <text class="right-bottom" x="312" y="96">Right/Bottom</text>
+      </svg>
+    </div>
+  </body>
+</html>

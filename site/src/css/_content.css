@@ -10,6 +10,10 @@
   margin: 2rem 0 1rem 0;
 }
 
+.content iframe {
+  border: 0;
+}
+
 .content blockquote {
   font-size: 1.5rem;
   font-weight: 250;

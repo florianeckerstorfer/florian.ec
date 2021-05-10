@@ -1,0 +1,79 @@
+---
+permalink: blog/responsive-svg-constant-font-size/example1-scaling.html
+eleventyExcludeFromCollections: true
+layout:
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Responsive SVGs with Scaling Font Size</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .graphic svg {
+        display: block;
+        width: 100%;
+      }
+
+      .graphic svg .checker-h, .graphic svg .checker-v {
+        fill: rgba(200, 200, 200, 0.25);
+      }
+
+      .graphic svg .checker-h {
+        height: 8px;
+        width: 320px;
+        x: 0;
+      }
+
+      .graphic svg .checker-v {
+        height: 104px;
+        width: 8px;
+        y: 0;
+      }
+
+      .graphic svg text {
+        fill: black;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="graphic">
+      <svg
+        viewBox="0 0 320 104"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        {% for y in range(0, 104, 16) %}
+        <rect class="checker-h" y="{{ y }}"></rect>
+        {% endfor %}
+        {% for x in range(8, 320, 16) %}
+        <rect class="checker-v" x="{{ x }}"></rect>
+        {% endfor %}
+        <text x="8" y="26.5">Left/Top</text>
+        <text x="120.865" y="26.5">Center/Top</text>
+        <text x="244.41" y="26.5">Right/Top</text>
+        <text x="8" y="59.25">Left/Center</text>
+        <text x="109.75" y="59.25">Center/Center</text>
+        <text x="222.17" y="59.25">Right/Center</text>
+        <text x="8" y="96">Left/Bottom</text>
+        <text x="108.42" y="96">Center/Bottom</text>
+        <text x="219.16" y="96">Right/Bottom</text>
+      </svg>
+    </div>
+  </body>
+</html>
