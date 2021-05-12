@@ -17,7 +17,7 @@
     "fast-glob": "^3.2.5",
     "md5": "^2.3.0",
     "parse-numeric-range": "1.2.0",
-    "postcss": "^8.2.8",
+    "postcss": "^8.2.10",
     "postcss-clean": "^1.2.2",
     "postcss-import": "^14.0.0",
     "prettier": "^2.2.1",
