@@ -19,8 +19,9 @@ function isTravelPage(page) {
   return page.inputPath.match(/\.\/site\/travels/);
 }
 
-function byDate(page1, page2) {
-  return page1.data.date - page2.data.date;
+function byDate(field) {
+  field = field || 'date';
+  return (page1, page2) => page1.data[field] - page2.data[field];
 }
 
 module.exports = (eleventyConfig) => {
@@ -56,15 +57,15 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addLayoutAlias('project', 'layouts/project.njk');
 
   eleventyConfig.addCollection('blog', (collection) => {
-    return collection.getAll().filter(isBlogPage).sort(byDate);
+    return collection.getAll().filter(isBlogPage).sort(byDate());
   });
 
   eleventyConfig.addCollection('projects', (collection) => {
-    return collection.getAll().filter(isProjectPage).sort(byDate);
+    return collection.getAll().filter(isProjectPage).sort(byDate());
   });
 
   eleventyConfig.addCollection('travels', (collection) =>
-    collection.getAll().filter(isTravelPage).sort(byDate)
+    collection.getAll().filter(isTravelPage).sort(byDate('date_start'))
   );
 
   eleventyConfig.addPassthroughCopy('site/_redirects');
