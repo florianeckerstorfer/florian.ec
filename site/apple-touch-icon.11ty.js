@@ -25,7 +25,7 @@ class AppleTouchIcon {
       })
     );
 
-    return false;
+    return undefined;
   }
 }
 
