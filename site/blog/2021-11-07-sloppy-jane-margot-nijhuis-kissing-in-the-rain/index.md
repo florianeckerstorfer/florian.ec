@@ -7,7 +7,7 @@ tags: [music]
 description:
 ---
 
-If there is an indie rock band that has the same name as an Ibiza DJ, they are the same band for *"the algorithm"*. Yes, computers are very stupid. However, occassionally, and I want to stress the word occassionally, this namespace pollution leads to an happy accident.
+If there is an indie rock band that has the same name as an Ibiza DJ, they are the same band for *"the algorithm"*. Yes, computers are very stupid. However, occassionally, and I want to stress the word occassionally, this namespace pollution leads to a happy accident.
 
 I use an app called [MusicHarbor](https://apps.apple.com/us/app/musicharbor/id1440405750) to inform me about new releases of bands that I like. Back in March it informed me that Sloppy Jane has released a new album. They are a New York-based punk rock orchestra and I've listened to their first album [Willow](https://sloppyjanemusic.bandcamp.com/album/willow-2) a couple of times. A couple of days after adding *Kissing in the Rain* to my library, I listened to it and immediately liked it. But something was wrong. It did not sound like an album from a New York-based punk rock orchestra, that are famous for their [*intense* live shows](https://www.gazettemusicale.com/live/2017/9/8/sloppy-jane) (👈 NSFW). I checked Sloppy Jane's social media, Bandcamp, website; no mention of a new album.
 
