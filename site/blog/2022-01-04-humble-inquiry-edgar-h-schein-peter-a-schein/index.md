@@ -1,6 +1,6 @@
 ---
 permalink: blog/humble-inquiry/
-title: Humble Inquiry by Edgar H. Schein, Peter A. Schein (2021)
+title: Humble Inquiry by Edgar H. Schein, Peter A. Schein
 date: 2022-01-04
 category: Leadership
 tags: [leadership, management, books]

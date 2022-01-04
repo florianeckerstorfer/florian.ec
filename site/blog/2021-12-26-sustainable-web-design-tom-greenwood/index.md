@@ -1,6 +1,6 @@
 ---
 permalink: blog/sustainable-web-design-tom-greenwood/
-title: Sustainable Web Design by Tom Greenwood (2021)
+title: Sustainable Web Design by Tom Greenwood
 date: 2021-12-26
 category: Development
 tags: [development, sustainability]
@@ -16,3 +16,5 @@ The book finishes with a chapter on the challenges the climate crisis brings for
 While I think about my impact on the environment on a daily basis, I never really thought about the impact my websites and code have before. In the _Selling Sustainable Web Design_ chapter Greenwood explains that many of the things that make a website more sustainable are just good web design, Sustainable Web Design has opened my eyes to include environmental impact in my design and development decisions.
 
 PS: In the past I would have included a picture of the cover in this blog post. After you have read this book you know why I didn't this time.
+
+★★★★☆
