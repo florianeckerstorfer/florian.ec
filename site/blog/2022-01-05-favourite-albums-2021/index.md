@@ -7,7 +7,7 @@ tags: [music, year-in-review]
 description: I'm closing 2021 by compiling the list of my favorite albums of the year.
 ---
 
-This is the fifth consecutive year where I'm posting the list of my favourite albums. Now it's a tradition. As always, in no particular order.
+This is the fifth consecutive year where I'm posting the list of my favourite albums. Now it's a tradition. As always, in no particular order. My Last.fm profile has [all the music I listening to in 2021](https://www.last.fm/user/feredir/library/albums?from=2021-01-01&rangetype=year).
 
 ## Thirstier by TORRES
 
