@@ -3,9 +3,6 @@ const dateFilter = require('./site/src/filters/dateFilter');
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
 const responsiveImg = require('./site/src/shortcodes/responsiveImg');
 const path = require('path');
-const rehypeRaw = require('rehype-raw');
-const remarkRehype = require('remark-rehype');
-const rehypeStringify = require('rehype-stringify');
 
 function isBlogPage(page) {
   return page.inputPath.match(/\.\/site\/blog\//);
@@ -43,11 +40,11 @@ module.exports = (eleventyConfig) => {
       require('./site/src/lib/remark-prism'),
       require('@fec/remark-a11y-emoji'),
       {
-        plugin: remarkRehype,
+        plugin: 'remark-rehype',
         options: { allowDangerousHtml: true },
       },
-      rehypeRaw,
-      rehypeStringify,
+      'rehype-raw',
+      'rehype-stringify',
     ],
   });
 
