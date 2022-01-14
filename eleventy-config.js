@@ -3,6 +3,7 @@ const dateFilter = require('./site/src/filters/dateFilter');
 const eleventyRemark = require('@fec/eleventy-plugin-remark');
 const responsiveImg = require('./site/src/shortcodes/responsiveImg');
 const path = require('path');
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 function isBlogPage(page) {
   return page.inputPath.match(/\.\/site\/blog\//);
@@ -22,6 +23,8 @@ function byDate(field) {
 }
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addPlugin(UpgradeHelper);
+
   eleventyConfig.addPlugin(eleventyRemark, {
     enableRehype: false,
     plugins: [
