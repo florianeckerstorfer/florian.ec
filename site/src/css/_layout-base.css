@@ -4,7 +4,7 @@
   font-family: var(--bodyFont);
   font-size: var(--bodyFontSize);
   font-weight: 420;
-  min-height: 100%;
+  min-height: 100vh;
   grid-template-areas:
     'header mainnav'
     'main main'
