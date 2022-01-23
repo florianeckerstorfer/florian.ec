@@ -15,12 +15,16 @@ jobs:
           node-version: '12'
       - run: node --version
       - run: npm --version
-      - name: Setup SSH Keys and known_hosts
+      - name: Setup SSH Keys
         env:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+          eval $(ssh-agent)
+          ssh-add - <<< "$SSH_KEY"
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
       - run: npm install
       - run: npm run build
       - run: npm run deploy
