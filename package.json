@@ -7,7 +7,7 @@
   "dependencies": {
     "dayjs": "^1.10.7",
     "feed": "^4.2.2",
-    "prismjs": "^1.26.0"
+    "prismjs": "^1.27.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
